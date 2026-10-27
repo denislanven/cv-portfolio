@@ -301,12 +301,7 @@ a:hover{text-decoration-color:var(--accent)}
 .btn.primary{background:var(--ink);color:var(--bg)}
 .btn.primary:hover{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 0 1px var(--blue),0 10px 40px -6px var(--glow)}
 .btn.ghost:hover{background:rgba(111,141,255,.12);border-color:var(--accent);box-shadow:0 0 28px -6px var(--glow)}
-/* marquee */
-.marquee{overflow:hidden;border-block:1px solid var(--line);padding:18px 0;background:var(--bg)}
-.mq-track{display:flex;gap:34px;width:max-content;animation:mq 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:clamp(26px,4vw,48px);white-space:nowrap;color:var(--accent)}
-.mq-track i{font-style:normal;font-size:.6em;align-self:center;color:var(--ink);opacity:.5}
-.marquee:hover .mq-track{animation-play-state:paused}
-@keyframes mq{to{transform:translateX(-50%)}}
+
 /* bento */
 .bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-flow:dense;gap:14px;margin-top:48px}
 .bx{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,2.4vw,30px);display:flex;flex-direction:column;justify-content:flex-end;min-height:220px;
@@ -501,7 +496,8 @@ body{position:relative;isolation:isolate}
 h1,h2,h3{text-wrap:balance}p,li{text-wrap:pretty}
 .tool-group{margin:46px 0 6px;padding-top:24px;border-top:1px solid var(--line)}
 </style>
-<link rel="stylesheet" href="booking-link.css"></head>
+<link rel="stylesheet" href="booking-link.css"><link rel="stylesheet" href="motion-design.css">
+</head>
 <body>
 
 <!-- [NEW] Живые аврора-пятна: фиксированный фон, анимируются только transform -->
@@ -524,7 +520,7 @@ h1,h2,h3{text-wrap:balance}p,li{text-wrap:pretty}
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
+  <div class="wrap motion-hero-grid"><div class="motion-hero-copy">
     <p class="eyebrow reveal">HR Strategy Partner · People & Culture</p>
     <h1 class="reveal" style="--d:.1s"><span>Культура, которую <em>чувствуют</em>,</span> <span>а не&nbsp;только <em>описывают</em>.</span></h1>
     <p class="lead reveal" style="--d:.2s">HR Strategy Partner с опытом 9+ лет в IT, digital и e-commerce. Строю HR-функцию и корпоративную культуру: стратегия, оргдизайн, внутренние коммуникации, ивенты и HR-tech инструменты — от выездных корпоративов до ботов в мессенджерах.</p>
@@ -532,13 +528,13 @@ h1,h2,h3{text-wrap:balance}p,li{text-wrap:pretty}
       <a class="btn primary" href="#cases">Смотреть кейсы</a>
       <a class="btn ghost" href="#contact">Связаться</a>
     </div>
-  </div>
+  </div><div class="motion-art" aria-label="Скульптура в синих очках"><img src="assets/museum-bust.webp" alt="Скульптура в синих очках" width="1086" height="1448" fetchpriority="high"><span class="motion-art-star" aria-hidden="true">✳</span><button type="button" class="motion-sticker" data-motion-text="sticker" aria-pressed="false">МЕНЬШЕ СОГЛАСОВАНИЙ.<br>БОЛЬШЕ ДИАЛОГА. ↗</button></div></div>
 </header>
 
 
-<!-- [NEW] Бегущая строка: единственный «шумный» элемент, акцент electric blue -->
-<div class="marquee" aria-hidden="true"><div class="mq-track"><span>Experience Design</span><i>✦</i><span>Corporate Culture</span><i>✦</i><span>eNPS</span><i>✦</i><span>Internal Comms</span><i>✦</i><span>Offsites</span><i>✦</i><span>Gamification</span><i>✦</i><span>CSR</span><i>✦</i>
-<span>Experience Design</span><i>✦</i><span>Corporate Culture</span><i>✦</i><span>eNPS</span><i>✦</i><span>Internal Comms</span><i>✦</i><span>Offsites</span><i>✦</i><span>Gamification</span><i>✦</i><span>CSR</span><i>✦</i></div></div>
+<!-- Editorial motion / People, Culture, Business -->
+<section class="motion-story" aria-label="People, culture, business"><div class="wrap"><div class="motion-kicker"><span data-motion-text="principle">ЛЮДИ. СИСТЕМА. РЕЗУЛЬТАТ.</span><span aria-hidden="true">↘</span></div><div class="motion-words" aria-hidden="true"><div>PEOPLE<span class="motion-star">✳</span></div><div class="motion-outline">CULTURE</div><div class="motion-business">BUSINESS<span class="motion-dot">.</span></div></div><p class="motion-bottom" data-motion-text="bridge">Человечный подход. Измеримый результат.</p></div></section>
+<div class="wrap motion-deck" aria-label="HR-инструменты"><a class="motion-project" href="people-economics.html"><span class="motion-project-meta">PEOPLE SYSTEMS / 01</span><h3>People<br>Economics</h3><div class="motion-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><span class="motion-project-foot" data-motion-text="economics">Экономика команды ↗</span></a><a class="motion-project" href="pulselink.html"><span class="motion-project-meta">TEAM EXPERIENCE / 02</span><h3>Pulse<br>Link</h3><span class="motion-project-symbol" aria-hidden="true">↗</span><span class="motion-project-foot" data-motion-text="pulse">Услышать команду ↗</span></a><a class="motion-project motion-lime" href="release.html"><span class="motion-project-meta">MANAGEMENT / 03</span><h3 data-motion-text="release">Кто сорвал<br>релиз?</h3><span class="motion-project-symbol" aria-hidden="true">?!</span><span class="motion-project-foot" data-motion-text="scenario">Проверить решения ↗</span></a></div>
 
 <!-- [NEW] Блок «Идеальный порядок»: Bento-сетка с оцифрованным масштабом (только подтверждённые цифры) -->
 <section id="bento" aria-labelledby="bento-h">
@@ -1129,5 +1125,5 @@ let l='ru';try{const q=new URLSearchParams(location.search).get('lang');const sv
  if(q)l=q;else if(sv)l=sv;else{const n=(navigator.language||'ru').slice(0,2);if(['uk','en','es','pl'].includes(n))l=n}}catch(e){}
 if(l!=='ru')setLang(l,false);})();
 </script>
-<script src="booking-link.js"></script></body>
+<script src="booking-link.js"></script><script src="motion-design.js"></script></body>
 </html>
