@@ -96,7 +96,8 @@ th{font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercas
 </main>
 <div class="toast" id="toast" role="status"></div>
 
-<script>
+<link rel="stylesheet" href="tool-language.css"><script src="tool-language.js"></script><script src="tool-translations.js"></script><script>window.HRLang.localizeDOM();</script><script>
+
 (()=>{
 const $=id=>document.getElementById(id);
 const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
@@ -108,7 +109,7 @@ const FONT='"Press Start 2P",monospace';
 let snd=false,AC=null;
 function beep(f,d=.08,type='square',v=.035){if(!snd)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;g.gain.value=v;o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.stop(AC.currentTime+d)}catch(e){}}
 const jingle=n=>n.forEach((f,i)=>setTimeout(()=>beep(f,.14),i*120));
-$('snd').addEventListener('click',()=>{snd=!snd;$('snd').textContent='Звук: '+(snd?'вкл':'выкл');$('snd').setAttribute('aria-pressed',String(snd));beep(660)});
+$('snd').addEventListener('click',()=>{snd=!snd;$('snd').textContent=window.HRLang.t('Звук: ')+(snd?window.HRLang.t('вкл'):window.HRLang.t('выкл'));$('snd').setAttribute('aria-pressed',String(snd));beep(660)});
 
 /* ---------- спрайты (оригинальные) ---------- */
 const PERSON=["...oooooo...","..oHHHHHHo..",".oHHHHHHHHo.",".oHSSSSSSHo.",".oSeSSSSeSo.",".oSSSSSSSSo.","..oSSSSSSo..","..oBBBBBBo..",".oBBBBBBBBo.",".oSBBBBBBSo.","..oBBBBBBo..","..oPPPPPPo..","..oPPooPPo..","..ooo..ooo.."];
@@ -155,7 +156,7 @@ const ENT=[
  {id:'artem',x:15,y:3,p:PAL.artem},{id:'board',x:16,y:1,obj:1,clue:2},
  {id:'misha',x:3,y:9,p:PAL.misha,clue:3},{id:'viktor',x:16,y:9,p:PAL.viktor},
  {id:'term',x:10,y:8,obj:1,clue:4}];
-const CL=[['Деплой','Деплой в пятницу в 18:42 без плана отката.'],['Тесты','Регрессию отключили флагом SKIP_QA: «не успеваем».'],['Объём','3 задачи добавили после фриза, без тикетов.'],['Срок','Директор: «Релиз до выходных любой ценой».'],['Чат','В чате релиза никто не написал «стоп».']];
+const CL=[[window.HRLang.t('Деплой'),window.HRLang.t('Деплой в пятницу в 18:42 без плана отката.')],[window.HRLang.t('Тесты'),window.HRLang.t('Регрессию отключили флагом SKIP_QA: «не успеваем».')],[window.HRLang.t('Объём'),window.HRLang.t('3 задачи добавили после фриза, без тикетов.')],[window.HRLang.t('Срок'),window.HRLang.t('Директор: «Релиз до выходных любой ценой».')],[window.HRLang.t('Чат'),window.HRLang.t('В чате релиза никто не написал «стоп».')]];
 let clues=[0,0,0,0,0];
 const nClues=()=>clues.reduce((a,b)=>a+b,0);
 function drawClues(){$('clues').innerHTML=CL.map((c,i)=>`<div class="chip ${clues[i]?'on':''}"><b>${i+1}</b>${clues[i]?c[0]:'???'}</div>`).join('')}
@@ -205,117 +206,117 @@ const entAt=(x,y)=>ENT.find(e=>e.x===x&&e.y===y);
 function tryMove(dx,dy){if(P.ox||P.oy)return;P.d=[dx,dy];const nx=P.x+dx,ny=P.y+dy;
   if(nx<0||ny<0||nx>=TW||ny>=TH||SOLID.includes(MAP[ny][nx])||entAt(nx,ny)){beep(120,.04);return}
   P.x=nx;P.y=ny;P.ox=-dx*16;P.oy=-dy*16;beep(220,.02,'triangle',.02)}
-const MAPHINT='Стрелки или WASD: идти. Enter, пробел или A: действие. Ищи значок «!» над коллегами и предметами.';
+const MAPHINT=window.HRLang.t('Стрелки или WASD: идти. Enter, пробел или A: действие. Ищи значок «!» над коллегами и предметами.');
 async function interact(){const tx_=P.x+P.d[0],ty=P.y+P.d[1],e=entAt(tx_,ty);
   if(!e&&MAP[ty]&&MAP[ty][tx_]==='D'){busy=true;try{await door()}finally{busy=false;if(mode==='map')hint(MAPHINT)}return}
   if(!e)return;busy=true;try{await INT[e.id]()}finally{busy=false;if(mode==='map')hint(MAPHINT)}}
-async function gain(i){clues[i]=1;drawClues();jingle([523,659,784,1047]);await say('УЛИКА '+nClues()+' ИЗ 5',CL[i][1]);
-  if(nClues()===5){unlocked=true;jingle([392,523,659,784,1047]);await say('','Все улики собраны. Дверь серверной «PROD» открылась. Пора назвать виновного.')}}
+async function gain(i){clues[i]=1;drawClues();jingle([523,659,784,1047]);await say(window.HRLang.t('УЛИКА ')+nClues()+window.HRLang.t(' ИЗ 5'),CL[i][1]);
+  if(nClues()===5){unlocked=true;jingle([392,523,659,784,1047]);await say('',window.HRLang.t('Все улики собраны. Дверь серверной «PROD» открылась. Пора назвать виновного.'))}}
 
 /* ---------- диалоги и головоломки ---------- */
 const INT={
  async gosha(){
-  if(clues[0]){await say('Гоша, DevOps','Я катил по просьбе сверху. Но откат надо было готовить заранее. Это на мне тоже.');return}
-  await talk('Гоша, DevOps',['Прод лежит, а я смотрю на график и не верю. Вот журнал деплоя. Что-то в нём не так.']);
-  for(;;){const a=await choose('Какая строка журнала выбивается?',['17:55  build #482 passed','18:42  deploy prod --no-rollback (ПТ)','18:44  health-check: 503']);
-   if(a===1)break;await say('Гоша, DevOps','Это не то. Смотри, что именно запустили и в какой день недели.')}
+  if(clues[0]){await say(window.HRLang.t('Гоша, DevOps'),window.HRLang.t('Я катил по просьбе сверху. Но откат надо было готовить заранее. Это на мне тоже.'));return}
+  await talk(window.HRLang.t('Гоша, DevOps'),[window.HRLang.t('Прод лежит, а я смотрю на график и не верю. Вот журнал деплоя. Что-то в нём не так.')]);
+  for(;;){const a=await choose(window.HRLang.t('Какая строка журнала выбивается?'),['17:55  build #482 passed',window.HRLang.t('18:42  deploy prod --no-rollback (ПТ)'),'18:44  health-check: 503']);
+   if(a===1)break;await say(window.HRLang.t('Гоша, DevOps'),window.HRLang.t('Это не то. Смотри, что именно запустили и в какой день недели.'))}
   await gain(0)},
  async lena(){
-  if(clues[1]){await say('Лена, QA','Я говорила, что регрессия займёт ночь. Нам сказали: «успеем так». Не успели.');return}
-  await talk('Лена, QA',['Мои тесты были красными, а потом их просто пропустили. Помоги восстановить порядок событий.']);
-  const E=['Добавили задачи после заморозки','Отключили регрессию флагом SKIP_QA','Релиз ушёл в прод'];let left=[0,1,2];
+  if(clues[1]){await say(window.HRLang.t('Лена, QA'),window.HRLang.t('Я говорила, что регрессия займёт ночь. Нам сказали: «успеем так». Не успели.'));return}
+  await talk(window.HRLang.t('Лена, QA'),[window.HRLang.t('Мои тесты были красными, а потом их просто пропустили. Помоги восстановить порядок событий.')]);
+  const E=[window.HRLang.t('Добавили задачи после заморозки'),window.HRLang.t('Отключили регрессию флагом SKIP_QA'),window.HRLang.t('Релиз ушёл в прод')];let left=[0,1,2];
   for(let step=0;step<2;step++){
-   for(;;){const sh=shuffle(left),a=await choose(step?'А что случилось ВТОРЫМ?':'Что случилось ПЕРВЫМ?',sh.map(i=>E[i]));
+   for(;;){const sh=shuffle(left),a=await choose(step?window.HRLang.t('А что случилось ВТОРЫМ?'):window.HRLang.t('Что случилось ПЕРВЫМ?'),sh.map(i=>E[i]));
     if(sh[a]===left[0]){left=left.filter(i=>i!==sh[a]);break}
-    await say('Лена, QA','Нет. Сначала появились причины, а потом последствия.')}}
-  await say('Лена, QA','Всё верно: объём вырос, тесты выключили, и только потом релиз. Берите это в улики.');await gain(1)},
+    await say(window.HRLang.t('Лена, QA'),window.HRLang.t('Нет. Сначала появились причины, а потом последствия.'))}}
+  await say(window.HRLang.t('Лена, QA'),window.HRLang.t('Всё верно: объём вырос, тесты выключили, и только потом релиз. Берите это в улики.'));await gain(1)},
  async artem(){
-  if(clues[2]){await say('Артём, продакт','Должен был завести тикеты. Урок получен. Три мелочи на пять минут оказались не мелочами.');return}
-  await talk('Артём, продакт',['Я просто уточнял у заказчика. Три мелочи, на пять минут.','Если что, всё записано на доске. Загляни туда.'])},
+  if(clues[2]){await say(window.HRLang.t('Артём, продакт'),window.HRLang.t('Должен был завести тикеты. Урок получен. Три мелочи на пять минут оказались не мелочами.'));return}
+  await talk(window.HRLang.t('Артём, продакт'),[window.HRLang.t('Я просто уточнял у заказчика. Три мелочи, на пять минут.'),window.HRLang.t('Если что, всё записано на доске. Загляни туда.')])},
  async board(){
-  if(clues[2]){await say('Доска','Стикеры на месте. Свежие три висят без номеров тикетов.');return}
-  await say('Доска релиза','ДО ЗАМОРОЗКИ: 8 задач, все с тикетами.\nПОСЛЕ ЗАМОРОЗКИ (стикеры, 18:20):\n+ оплата через СБП\n+ новый баннер\n+ экспорт в CSV');
-  for(;;){const a=await choose('Сколько задач добавили после заморозки?',['2','3','4']);if(a===1)break;await say('Доска релиза','Пересчитай стикеры после строки «18:20».')}
+  if(clues[2]){await say(window.HRLang.t('Доска'),window.HRLang.t('Стикеры на месте. Свежие три висят без номеров тикетов.'));return}
+  await say(window.HRLang.t('Доска релиза'),window.HRLang.t('ДО ЗАМОРОЗКИ: 8 задач, все с тикетами.\nПОСЛЕ ЗАМОРОЗКИ (стикеры, 18:20):\n+ оплата через СБП\n+ новый баннер\n+ экспорт в CSV'));
+  for(;;){const a=await choose(window.HRLang.t('Сколько задач добавили после заморозки?'),['2','3','4']);if(a===1)break;await say(window.HRLang.t('Доска релиза'),window.HRLang.t('Пересчитай стикеры после строки «18:20».'))}
   await gain(2)},
  async misha(){
-  if(clues[3]){await say('Миша, стажёр','Я просто варил кофе! Но теперь спать спокойно не смогу.');return}
-  await talk('Миша, стажёр',['Я варил кофе в 18:30 и слышал, как в переговорке кричали про срок.','Один человек сказал это очень громко. Тот, что в костюме.']);
-  for(;;){const a=await choose('Кто сказал: «Релиз до выходных любой ценой»?',['Гоша, DevOps','Артём, продакт','Виктор, директор']);if(a===2)break;await say('Миша, стажёр','Нет, у того был галстук.')}
+  if(clues[3]){await say(window.HRLang.t('Миша, стажёр'),window.HRLang.t('Я просто варил кофе! Но теперь спать спокойно не смогу.'));return}
+  await talk(window.HRLang.t('Миша, стажёр'),[window.HRLang.t('Я варил кофе в 18:30 и слышал, как в переговорке кричали про срок.'),window.HRLang.t('Один человек сказал это очень громко. Тот, что в костюме.')]);
+  for(;;){const a=await choose(window.HRLang.t('Кто сказал: «Релиз до выходных любой ценой»?'),[window.HRLang.t('Гоша, DevOps'),window.HRLang.t('Артём, продакт'),window.HRLang.t('Виктор, директор')]);if(a===2)break;await say(window.HRLang.t('Миша, стажёр'),window.HRLang.t('Нет, у того был галстук.'))}
   await gain(3)},
  async viktor(){
-  if(nClues()>=4){await talk('Виктор, директор',['Я сказал «любой ценой»? Хм. Пожалуй, это было лишним.','Пожалуйста, найдите причины. Я не буду искать виноватого заранее.']);return}
-  await talk('Виктор, директор',['Мне позвонил клиент. Я лишь сказал, что хорошо бы успеть до выходных.','Теперь давайте быстро выясним, кто сорвал релиз.'])},
+  if(nClues()>=4){await talk(window.HRLang.t('Виктор, директор'),[window.HRLang.t('Я сказал «любой ценой»? Хм. Пожалуй, это было лишним.'),window.HRLang.t('Пожалуйста, найдите причины. Я не буду искать виноватого заранее.')]);return}
+  await talk(window.HRLang.t('Виктор, директор'),[window.HRLang.t('Мне позвонил клиент. Я лишь сказал, что хорошо бы успеть до выходных.'),window.HRLang.t('Теперь давайте быстро выясним, кто сорвал релиз.')])},
  async term(){
-  if(clues[4]){await say('Чат релиза','Больше ничего. Тишина тоже улика.');return}
-  await say('Чат «Релиз Феникс»','Виктор: Катим сегодня?\nАртём: +\nГоша: ок\nЛена: …\nГоша: катим.\n18:44 Бот: прод недоступен.');
-  for(;;){const a=await choose('Какого слова не написал никто?',['«Да»','«Стоп»','«Ок»']);if(a===1)break;await say('Чат «Релиз Феникс»','Оно как раз есть в чате. Ищи слово, которого там нет.')}
+  if(clues[4]){await say(window.HRLang.t('Чат релиза'),window.HRLang.t('Больше ничего. Тишина тоже улика.'));return}
+  await say(window.HRLang.t('Чат «Релиз Феникс»'),window.HRLang.t('Виктор: Катим сегодня?\nАртём: +\nГоша: ок\nЛена: …\nГоша: катим.\n18:44 Бот: прод недоступен.'));
+  for(;;){const a=await choose(window.HRLang.t('Какого слова не написал никто?'),[window.HRLang.t('«Да»'),window.HRLang.t('«Стоп»'),window.HRLang.t('«Ок»')]);if(a===1)break;await say(window.HRLang.t('Чат «Релиз Феникс»'),window.HRLang.t('Оно как раз есть в чате. Ищи слово, которого там нет.'))}
   await gain(4)}
 };
 
 async function door(){
-  if(!unlocked){await say('Дверь «PROD»','Заперто. Нужно собрать 5 улик. Сейчас: '+nClues()+' из 5.');return}
-  await say('','Ты открываешь дверь. На серверах мигают красные лампочки. Время назвать виновного.');
+  if(!unlocked){await say(window.HRLang.t('Дверь «PROD»'),window.HRLang.t('Заперто. Нужно собрать 5 улик. Сейчас: ')+nClues()+window.HRLang.t(' из 5.'));return}
+  await say('',window.HRLang.t('Ты открываешь дверь. На серверах мигают красные лампочки. Время назвать виновного.'));
   const REB=[
-   'Гоша выкатил релиз, но по давлению сверху и без окна на тесты. Это звено цепочки, а не причина.',
-   'Лена предупреждала про сроки. Тесты отключили не по её решению. Она не виновата.',
-   'Артём добавил задачи, но ему тоже дали жёсткий срок. Без остальных звеньев релиз бы устоял.',
-   'Виктор поставил срок, но не просил отключать проверки. Он усилил давление, а не сломал релиз.'];
-  for(;;){const a=await choose('Кто сорвал релиз?',['Гоша, DevOps','Лена, QA','Артём, продакт','Виктор, директор','Никто в одиночку: сработала цепочка решений под давлением срока']);
-   if(a===4)break;await say('Улики не сходятся',REB[a]+' Посмотри на пять улик целиком.')}
-  await talk('',['Верно. Одну ошибку закрыл бы любой коллега. Но тишина, давление и спешка сложились в цепочку.','Земля дрожит. Из серверов поднимается тот, кто питается молчанием.']);
+   window.HRLang.t('Гоша выкатил релиз, но по давлению сверху и без окна на тесты. Это звено цепочки, а не причина.'),
+   window.HRLang.t('Лена предупреждала про сроки. Тесты отключили не по её решению. Она не виновата.'),
+   window.HRLang.t('Артём добавил задачи, но ему тоже дали жёсткий срок. Без остальных звеньев релиз бы устоял.'),
+   window.HRLang.t('Виктор поставил срок, но не просил отключать проверки. Он усилил давление, а не сломал релиз.')];
+  for(;;){const a=await choose(window.HRLang.t('Кто сорвал релиз?'),[window.HRLang.t('Гоша, DevOps'),window.HRLang.t('Лена, QA'),window.HRLang.t('Артём, продакт'),window.HRLang.t('Виктор, директор'),window.HRLang.t('Никто в одиночку: сработала цепочка решений под давлением срока')]);
+   if(a===4)break;await say(window.HRLang.t('Улики не сходятся'),REB[a]+window.HRLang.t(' Посмотри на пять улик целиком.'))}
+  await talk('',[window.HRLang.t('Верно. Одну ошибку закрыл бы любой коллега. Но тишина, давление и спешка сложились в цепочку.'),window.HRLang.t('Земля дрожит. Из серверов поднимается тот, кто питается молчанием.')]);
   await battle()}
 
 /* ---------- босс ---------- */
 const BQ=[
- {c:3,boss:'«РЕЛИЗ ДО ВЫХОДНЫХ! ЛЮБОЙ ЦЕНОЙ!»',q:'Как реагируем на давление дедлайна?',o:['Говорим о рисках вслух и предлагаем сократить объём','Молча соглашаемся и работаем по ночам','Ищем, кто виноват в задержке'],hint:'Хороший ответ открывает разговор о цене и объёме, а не прячет проблему.',win:'Дедлайн дрогнул: цена спешки стала видна всем.'},
- {c:2,boss:'«ЕЩЁ ТРИ МЕЛОЧИ! НИКТО НЕ ЗАМЕТИТ!»',q:'Заказчик просит ещё 3 задачи после заморозки.',o:['Берём через тикет и решаем, что убираем взамен','Добавим тихонько, как-нибудь успеем','Отказываем без объяснений'],hint:'Объём после фриза не добавляют молча. Его меняют осознанно.',win:'Фриз удержан. Объём снова виден и управляем.'},
- {c:1,boss:'«ТЕСТЫ? НЕТ ВРЕМЕНИ! ВЫКЛЮЧАЙ!»',q:'Времени на тесты не хватает. Что делаем?',o:['Не отключаем регрессию и сокращаем объём релиза','Включаем SKIP_QA, потом починим','Проверяем только то, что любим'],hint:'Качество не режем. Режем то, что можно сделать позже.',win:'Регрессия осталась на месте. Дедлайн-завр отшатнулся.'},
- {c:0,boss:'«ПЯТНИЦА, ВЕЧЕР! САМОЕ ВРЕМЯ ДЛЯ ДЕПЛОЯ!»',q:'Деплой назначен на вечер пятницы.',o:['Переносим на будний день и готовим план отката','Катим, в прошлый раз же сработало','Катим без отката, так быстрее'],hint:'Хороший деплой можно откатить, и проверять его некому ночью.',win:'Деплой перенесён. Откат готов. Босс теряет силу.'},
- {c:4,boss:'«ТИШИНА... МОЯ ЛЮБИМАЯ ЕДА...»',q:'Как не молчать перед релизом?',o:['Вводим право на «стоп»: любой может остановить релиз без последствий','Решает только директор, остальные не спорят','Просто надеемся, что всё пройдёт'],hint:'Безопасность перед релизом начинается с права сказать «стоп».',win:'Кто-то в чате написал «стоп». Тишина разбита.'}];
-const SKILLS=[['Кодер','Дебаг','убирает один неверный ответ'],['Баг-охотник','Регрессия','даёт подсказку по раунду'],['Роадмап','Приоритизация','щит: следующая ошибка бесплатна'],['Целитель (HR)','Забота','возвращает 30 духа команды']];
+ {c:3,boss:window.HRLang.t('«РЕЛИЗ ДО ВЫХОДНЫХ! ЛЮБОЙ ЦЕНОЙ!»'),q:window.HRLang.t('Как реагируем на давление дедлайна?'),o:[window.HRLang.t('Говорим о рисках вслух и предлагаем сократить объём'),window.HRLang.t('Молча соглашаемся и работаем по ночам'),window.HRLang.t('Ищем, кто виноват в задержке')],hint:window.HRLang.t('Хороший ответ открывает разговор о цене и объёме, а не прячет проблему.'),win:window.HRLang.t('Дедлайн дрогнул: цена спешки стала видна всем.')},
+ {c:2,boss:window.HRLang.t('«ЕЩЁ ТРИ МЕЛОЧИ! НИКТО НЕ ЗАМЕТИТ!»'),q:window.HRLang.t('Заказчик просит ещё 3 задачи после заморозки.'),o:[window.HRLang.t('Берём через тикет и решаем, что убираем взамен'),window.HRLang.t('Добавим тихонько, как-нибудь успеем'),window.HRLang.t('Отказываем без объяснений')],hint:window.HRLang.t('Объём после фриза не добавляют молча. Его меняют осознанно.'),win:window.HRLang.t('Фриз удержан. Объём снова виден и управляем.')},
+ {c:1,boss:window.HRLang.t('«ТЕСТЫ? НЕТ ВРЕМЕНИ! ВЫКЛЮЧАЙ!»'),q:window.HRLang.t('Времени на тесты не хватает. Что делаем?'),o:[window.HRLang.t('Не отключаем регрессию и сокращаем объём релиза'),window.HRLang.t('Включаем SKIP_QA, потом починим'),window.HRLang.t('Проверяем только то, что любим')],hint:window.HRLang.t('Качество не режем. Режем то, что можно сделать позже.'),win:window.HRLang.t('Регрессия осталась на месте. Дедлайн-завр отшатнулся.')},
+ {c:0,boss:window.HRLang.t('«ПЯТНИЦА, ВЕЧЕР! САМОЕ ВРЕМЯ ДЛЯ ДЕПЛОЯ!»'),q:window.HRLang.t('Деплой назначен на вечер пятницы.'),o:[window.HRLang.t('Переносим на будний день и готовим план отката'),window.HRLang.t('Катим, в прошлый раз же сработало'),window.HRLang.t('Катим без отката, так быстрее')],hint:window.HRLang.t('Хороший деплой можно откатить, и проверять его некому ночью.'),win:window.HRLang.t('Деплой перенесён. Откат готов. Босс теряет силу.')},
+ {c:4,boss:window.HRLang.t('«ТИШИНА... МОЯ ЛЮБИМАЯ ЕДА...»'),q:window.HRLang.t('Как не молчать перед релизом?'),o:[window.HRLang.t('Вводим право на «стоп»: любой может остановить релиз без последствий'),window.HRLang.t('Решает только директор, остальные не спорят'),window.HRLang.t('Просто надеемся, что всё пройдёт')],hint:window.HRLang.t('Безопасность перед релизом начинается с права сказать «стоп».'),win:window.HRLang.t('Кто-то в чате написал «стоп». Тишина разбита.')}];
+const SKILLS=[[window.HRLang.t('Кодер'),window.HRLang.t('Дебаг'),window.HRLang.t('убирает один неверный ответ')],[window.HRLang.t('Баг-охотник'),window.HRLang.t('Регрессия'),window.HRLang.t('даёт подсказку по раунду')],[window.HRLang.t('Роадмап'),window.HRLang.t('Приоритизация'),window.HRLang.t('щит: следующая ошибка бесплатна')],[window.HRLang.t('Целитель (HR)'),window.HRLang.t('Забота'),window.HRLang.t('возвращает 30 духа команды')]];
 let used,shield,rankS;
 function setBars(){$('bb').firstChild.style.width=bossHP+'%';$('bm').firstChild.style.width=morale+'%'}
 function addFloat(txt,x,y,col){floats.push({txt,x,y,col,t:0})}
 async function battle(){
   mode='battle';$('hud').classList.add('on');$('ttl').hidden=true;flash=1;jingle([196,185,175,165]);
   bossHP=100;morale=100;used=[0,0,0,0];shield=false;setBars();
-  await talk('ДЕДЛАЙН-ЗАВР',['ГРРР! Я ЖИВУ В ПЯТНИЧНЫХ ВЕЧЕРАХ!','ВЫ БОИТЕСЬ СКАЗАТЬ «СТОП»? ТОГДА Я НЕПОБЕДИМ!']);
+  await talk(window.HRLang.t('ДЕДЛАЙН-ЗАВР'),[window.HRLang.t('ГРРР! Я ЖИВУ В ПЯТНИЧНЫХ ВЕЧЕРАХ!'),window.HRLang.t('ВЫ БОИТЕСЬ СКАЗАТЬ «СТОП»? ТОГДА Я НЕПОБЕДИМ!')]);
   for(let r=0;r<5;){
     const Q=BQ[r],opts=shuffle(Q.o.map((t,i)=>({t,ok:i===0}))),off=new Set();
-    await say('ДЕДЛАЙН-ЗАВР',Q.boss);
+    await say(window.HRLang.t('ДЕДЛАЙН-ЗАВР'),Q.boss);
     while(true){
-      const cmd=await choose(`Раунд ${r+1} из 5. Что делает команда?`,['ОТВЕТИТЬ','НАВЫК','УЛИКА','БЕЖАТЬ']);
+      const cmd=await choose(window.HRLang.template`Раунд ${r+1} из 5. Что делает команда?`,[window.HRLang.t('ОТВЕТИТЬ'),window.HRLang.t('НАВЫК'),window.HRLang.t('УЛИКА'),window.HRLang.t('БЕЖАТЬ')]);
       if(cmd===0){
-        const idx=opts.map((_,i)=>i).filter(i=>!off.has(i)),a=await choose(Q.q,[...idx.map(i=>opts[i].t),'НАЗАД']);
+        const idx=opts.map((_,i)=>i).filter(i=>!off.has(i)),a=await choose(Q.q,[...idx.map(i=>opts[i].t),window.HRLang.t('НАЗАД')]);
         if(a===idx.length)continue;const o=opts[idx[a]];
-        if(o.ok){lunge=r%4;lungeT=0;hurt=20;shake=RM?0:10;bossHP-=20;setBars();addFloat('-20',70,48,'#ffd84a');beep(880,.1);jingle([523,784]);await say('КОМАНДА',Q.win);r++;break}
+        if(o.ok){lunge=r%4;lungeT=0;hurt=20;shake=RM?0:10;bossHP-=20;setBars();addFloat('-20',70,48,'#ffd84a');beep(880,.1);jingle([523,784]);await say(window.HRLang.t('КОМАНДА'),Q.win);r++;break}
         off.add(idx[a]);
-        if(shield){shield=false;await say('Роадмап','Щит приоритетов поглотил удар. Ответ неверный, но дух цел.')}
-        else{morale=Math.max(0,morale-25);setBars();shake=RM?0:12;addFloat('-25',250,40,'#ff5a3c');beep(110,.2,'sawtooth');await say('ДЕДЛАЙН-ЗАВР','ХА! МОЛЧАНИЕ И СПЕШКА! ДУХ КОМАНДЫ: '+morale+'%.')}
-        if(morale<=0){await talk('',['Команда выгорела. Дедлайн-завр хохочет.','Но вы собрали улики. Попробуем ещё раз с тем же знанием.']);bossHP=100;morale=100;used=[0,0,0,0];shield=false;setBars();r=0;break}
+        if(shield){shield=false;await say(window.HRLang.t('Роадмап'),window.HRLang.t('Щит приоритетов поглотил удар. Ответ неверный, но дух цел.'))}
+        else{morale=Math.max(0,morale-25);setBars();shake=RM?0:12;addFloat('-25',250,40,'#ff5a3c');beep(110,.2,'sawtooth');await say(window.HRLang.t('ДЕДЛАЙН-ЗАВР'),window.HRLang.t('ХА! МОЛЧАНИЕ И СПЕШКА! ДУХ КОМАНДЫ: ')+morale+'%.')}
+        if(morale<=0){await talk('',[window.HRLang.t('Команда выгорела. Дедлайн-завр хохочет.'),window.HRLang.t('Но вы собрали улики. Попробуем ещё раз с тем же знанием.')]);bossHP=100;morale=100;used=[0,0,0,0];shield=false;setBars();r=0;break}
       }else if(cmd===1){
-        const s=await choose('Чей навык используем? (один раз за бой)',SKILLS.map((k,i)=>`${k[0]}: «${k[1]}» ${used[i]?'(использован)':'— '+k[2]}`).concat('НАЗАД'));
-        if(s===4)continue;if(used[s]){await say('','Этот навык уже использован.');continue}
+        const s=await choose(window.HRLang.t('Чей навык используем? (один раз за бой)'),SKILLS.map((k,i)=>`${k[0]}: «${k[1]}» ${used[i]?window.HRLang.t('(использован)'):'— '+k[2]}`).concat(window.HRLang.t('НАЗАД')));
+        if(s===4)continue;if(used[s]){await say('',window.HRLang.t('Этот навык уже использован.'));continue}
         used[s]=1;beep(990,.12);
-        if(s===0){const w=opts.map((_,i)=>i).filter(i=>!opts[i].ok&&!off.has(i));if(w.length)off.add(w[rnd(w.length)]);await say('Кодер','Дебаг: один неверный вариант убран.')}
-        else if(s===1)await say('Баг-охотник',Q.hint);
-        else if(s===2){shield=true;await say('Роадмап','Приоритизация: следующая ошибка ничего не стоит.')}
-        else{morale=Math.min(100,morale+30);setBars();addFloat('+30',250,110,'#6fe0a0');await say('Целитель','Забота: команда выдохнула. Дух: '+morale+'%.')}
-      }else if(cmd===2)await say('УЛИКА',CL[Q.c][0]+'. '+CL[Q.c][1]);
-      else await say('','Дедлайн не отпускает. Бежать нельзя, но можно договориться.')}
+        if(s===0){const w=opts.map((_,i)=>i).filter(i=>!opts[i].ok&&!off.has(i));if(w.length)off.add(w[rnd(w.length)]);await say(window.HRLang.t('Кодер'),window.HRLang.t('Дебаг: один неверный вариант убран.'))}
+        else if(s===1)await say(window.HRLang.t('Баг-охотник'),Q.hint);
+        else if(s===2){shield=true;await say(window.HRLang.t('Роадмап'),window.HRLang.t('Приоритизация: следующая ошибка ничего не стоит.'))}
+        else{morale=Math.min(100,morale+30);setBars();addFloat('+30',250,110,'#6fe0a0');await say(window.HRLang.t('Целитель'),window.HRLang.t('Забота: команда выдохнула. Дух: ')+morale+'%.')}
+      }else if(cmd===2)await say(window.HRLang.t('УЛИКА'),CL[Q.c][0]+'. '+CL[Q.c][1]);
+      else await say('',window.HRLang.t('Дедлайн не отпускает. Бежать нельзя, но можно договориться.'))}
   }
   await victory()}
 async function victory(){
   dissolve=1;jingle([523,659,784,1047,784,1047,1319]);
-  await talk('',['Дедлайн-завр рассыпается на сотни маленьких таймеров. Все они показывают «понедельник».','Прод снова жив. Команда выдыхает.']);
+  await talk('',[window.HRLang.t('Дедлайн-завр рассыпается на сотни маленьких таймеров. Все они показывают «понедельник».'),window.HRLang.t('Прод снова жив. Команда выдыхает.')]);
   const usedN=used.reduce((a,b)=>a+b,0);rankS=morale>=75&&usedN<=1?'S':morale>=50?'A':'B';
   mode='end';$('hud').classList.remove('on');hint('');
-  $('rk').textContent=rankS;$('rkt').textContent=`Дух команды ${morale}%. Навыков использовано: ${usedN} из 4.`;
-  $('rules').innerHTML=[[3,'Говорим о рисках и сроках вслух'],[2,'Новые задачи после фриза только через тикет'],[1,'Регрессию не отключаем'],[0,'Не катим вечером в пятницу и готовим откат'],[4,'У каждого есть право сказать «стоп»']].map(r=>`<tr><td><b>${r[1]}</b></td><td>${CL[r[0]][1]}</td></tr>`).join('');
+  $('rk').textContent=rankS;$('rkt').textContent=window.HRLang.template`Дух команды ${morale}%. Навыков использовано: ${usedN} из 4.`;
+  $('rules').innerHTML=[[3,window.HRLang.t('Говорим о рисках и сроках вслух')],[2,window.HRLang.t('Новые задачи после фриза только через тикет')],[1,window.HRLang.t('Регрессию не отключаем')],[0,window.HRLang.t('Не катим вечером в пятницу и готовим откат')],[4,window.HRLang.t('У каждого есть право сказать «стоп»')]].map(r=>`<tr><td><b>${r[1]}</b></td><td>${CL[r[0]][1]}</td></tr>`).join('');
   $('end').hidden=false;$('end').scrollIntoView({block:'start',behavior:RM?'auto':'smooth'})}
 $('again').addEventListener('click',()=>newGame());
-$('copy').addEventListener('click',async()=>{const t=`Кто сорвал релиз: ранг ${rankS}, дух команды ${morale}%.\nПравила: 1) говорим о рисках вслух; 2) объём после фриза через тикет; 3) не отключаем регрессию; 4) не деплоим вечером в пятницу без отката; 5) у каждого есть право на «стоп».`;
-  try{await navigator.clipboard.writeText(t);toast('Итоги скопированы')}catch(e){toast('Не удалось скопировать, выделите текст вручную')}});
+$('copy').addEventListener('click',async()=>{const t=window.HRLang.template`Кто сорвал релиз: ранг ${rankS}, дух команды ${morale}%.\nПравила: 1) говорим о рисках вслух; 2) объём после фриза через тикет; 3) не отключаем регрессию; 4) не деплоим вечером в пятницу без отката; 5) у каждого есть право на «стоп».`;
+  try{await navigator.clipboard.writeText(t);toast(window.HRLang.t('Итоги скопированы'))}catch(e){toast(window.HRLang.t('Не удалось скопировать, выделите текст вручную'))}});
 let tt;function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('show'),2400)}
 
 /* ---------- рисование ---------- */
@@ -370,14 +371,15 @@ requestAnimationFrame(frame);
 async function newGame(){
   mode='title';H=null;busy=false;clues=[0,0,0,0,0];unlocked=false;drawClues();P.x=9;P.y=6;P.ox=P.oy=0;P.d=[0,-1];lunge=-1;dissolve=0;floats=[];
   $('end').hidden=true;$('hud').classList.remove('on');$('ttl').hidden=false;window.scrollTo({top:0});
-  for(;;){hint('');const a=await choose('Пятница, 18:50. Релиз упал. Кто виноват?',['НАЧАТЬ РАССЛЕДОВАНИЕ','КАК ИГРАТЬ']);
+  for(;;){hint('');const a=await choose(window.HRLang.t('Пятница, 18:50. Релиз упал. Кто виноват?'),[window.HRLang.t('НАЧАТЬ РАССЛЕДОВАНИЕ'),window.HRLang.t('КАК ИГРАТЬ')]);
    if(a===0)break;
-   await say('КАК ИГРАТЬ','Ходи по офису, говори с коллегами (Enter или A) и решай небольшие головоломки. За каждую получишь улику. Когда их будет 5, откроется дверь «PROD». Один экран на всю команду: обсуждайте ответы вместе.')}
+   await say(window.HRLang.t('КАК ИГРАТЬ'),window.HRLang.t('Ходи по офису, говори с коллегами (Enter или A) и решай небольшие головоломки. За каждую получишь улику. Когда их будет 5, откроется дверь «PROD». Один экран на всю команду: обсуждайте ответы вместе.'))}
   $('ttl').hidden=true;
-  await talk('',['Пятница, 18:50. Релиз «Феникс» упал в проде. Клиенты пишут, директор молчит.','Вы — аварийная команда: Кодер, Баг-охотник, Роадмап и Целитель из HR. Обойдите офис и соберите 5 улик.','Подсказка: ищи значок «!» над коллегами и предметами.']);
+  await talk('',[window.HRLang.t('Пятница, 18:50. Релиз «Феникс» упал в проде. Клиенты пишут, директор молчит.'),window.HRLang.t('Вы — аварийная команда: Кодер, Баг-охотник, Роадмап и Целитель из HR. Обойдите офис и соберите 5 улик.'),window.HRLang.t('Подсказка: ищи значок «!» над коллегами и предметами.')]);
   mode='map';hint(MAPHINT)}
 newGame();
 })();
+
 </script>
 
 </body></html>
