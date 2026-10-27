@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>People Economics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#0d0e11}
+.hrx{--bg:#0d0e11;--s1:#15161a;--s2:#1c1d22;--line:#2b2c33;--ink:#eceae4;--mut:#9ea0a9;--acc:#7c93ff;--acc2:#a78bfa;--ok:#3ddc97;--warn:#ffb020;--bad:#ff5d5d;
+font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+.hrx *,.hrx *::before,.hrx *::after{box-sizing:border-box}
+.hrx button{font:inherit;color:inherit;cursor:pointer}
+.hrx :focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.hrx .wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,3vw,32px)}
+.hrx .top{position:sticky;top:0;z-index:30;background:rgba(13,14,17,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.hrx .top .wrap{display:flex;align-items:center;gap:16px;padding-block:12px;flex-wrap:wrap}
+.hrx .back{font-size:13px;color:var(--mut);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:7px 13px;white-space:nowrap}
+.hrx .back:hover{color:var(--ink);border-color:var(--acc)}
+.hrx .brand{display:flex;align-items:center;gap:10px;min-width:0}
+.hrx .logo{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;flex:none}
+.hrx .logo svg{width:16px;height:16px}
+.hrx .brand b{display:block;font-size:15px;letter-spacing:-.01em}
+.hrx .brand small{display:block;font-size:12px;color:var(--mut);max-width:34ch;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hrx .tabs{display:flex;gap:4px;background:var(--s1);border:1px solid var(--line);border-radius:12px;padding:4px;margin-left:auto}
+.hrx .tabs button{border:0;background:none;padding:8px 14px;border-radius:9px;font-size:14px;font-weight:600;color:var(--mut);white-space:nowrap}
+.hrx .tabs button[aria-selected=true]{background:var(--acc);color:#0b0c10}
+.hrx .lang{position:relative;flex:none}
+.hrx .lang-btn{display:inline-flex;align-items:center;gap:8px;background:var(--s1);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-size:13px;font-weight:600;letter-spacing:.06em}
+.hrx .lang-btn:hover,.hrx .lang-btn[aria-expanded=true]{border-color:var(--acc)}
+.hrx .lang-btn .chev{transition:transform .25s}.hrx .lang-btn[aria-expanded=true] .chev{transform:rotate(180deg)}
+.hrx .lang-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:60;list-style:none;margin:0;padding:6px;min-width:min(220px,calc(100vw - 32px));background:var(--s2);border:1px solid var(--line);border-radius:14px;box-shadow:0 30px 60px -20px #000;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s,transform .18s,visibility 0s linear .18s}
+.hrx .lang.open .lang-menu{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.hrx .lang-menu li{display:flex;justify-content:space-between;gap:20px;padding:10px 12px;border-radius:9px;font-size:14px;color:var(--mut);cursor:pointer;outline:none}
+.hrx .lang-menu li b{font-size:11px;letter-spacing:.1em}
+.hrx .lang-menu li:hover,.hrx .lang-menu li:focus-visible{background:rgba(255,255,255,.07);color:var(--ink)}
+.hrx .lang-menu li[aria-selected=true]{color:var(--ink)}.hrx .lang-menu li[aria-selected=true] b{color:var(--acc)}
+.hrx main{padding-block:clamp(30px,5vw,56px) clamp(30px,5vw,56px)}
+.hrx .actions{margin-bottom:4px}
+.hrx h1,.hrx h2,.hrx h3,.hrx h4{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+.hrx .head h1{font:500 clamp(26px,3.6vw,42px)/1.1 Fraunces,Georgia,serif;letter-spacing:-.02em}
+.hrx .head p{margin:10px 0 0;color:var(--mut);max-width:70ch;font-size:15px}
+.hrx .grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:20px;margin-top:26px;align-items:start}
+.hrx .stack{display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.hrx .card{background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,2.2vw,24px);min-width:0}
+.hrx .card h2{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:600;margin-bottom:16px}
+.hrx .fld{margin-bottom:20px}
+.hrx .fl{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:14px}
+.hrx .fl label{flex:1;min-width:0}
+.hrx .fl output{font-weight:700;font-variant-numeric:tabular-nums;background:var(--s2);border:1px solid var(--line);border-radius:8px;padding:3px 9px;font-size:13px;white-space:nowrap}
+.hrx .tipb{width:20px;height:20px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--mut);font-size:11px;font-weight:700;font-style:italic;font-family:Georgia,serif;display:grid;place-items:center;padding:0;flex:none}
+.hrx .tipb:hover,.hrx .tipb:focus-visible{color:var(--ink);border-color:var(--acc)}
+.hrx input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;margin:0;cursor:pointer;background:linear-gradient(90deg,var(--acc) var(--p,50%),var(--s2) var(--p,50%));border:0}
+.hrx input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--acc);box-shadow:0 2px 8px rgba(0,0,0,.5);transition:transform .15s}
+.hrx input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--acc)}
+.hrx input[type=range]:active::-webkit-slider-thumb{transform:scale(1.15)}
+.hrx details.as{border-top:1px solid var(--line);padding-top:14px;margin-top:4px}
+.hrx details.as summary{cursor:pointer;font-size:13px;color:var(--mut);font-weight:600;list-style:none;display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.hrx details.as summary::before{content:"▸";transition:transform .2s}.hrx details.as[open] summary::before{transform:rotate(90deg)}
+.hrx .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hrx .k{background:var(--s1);border:1px solid var(--line);border-radius:18px;padding:clamp(16px,2vw,22px);min-width:0}
+.hrx .k.wide{grid-column:1/-1}
+.hrx .kt{display:flex;align-items:center;gap:8px;font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);font-weight:600;margin-bottom:10px}
+.hrx .big{font-size:clamp(28px,3.4vw,40px);font-weight:700;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05;overflow-wrap:anywhere}
+.hrx .sub{font-size:13px;color:var(--mut);margin-top:6px}
+.hrx .bad{color:var(--bad)}.hrx .warn{color:var(--warn)}.hrx .ok{color:var(--ok)}
+.hrx .gauge{position:relative;height:10px;border-radius:99px;margin:14px 0 8px;background:linear-gradient(90deg,var(--ok) 0 35%,var(--warn) 35% 65%,var(--bad) 65% 100%);opacity:.92}
+.hrx .gauge i{position:absolute;top:-5px;width:4px;height:20px;border-radius:3px;background:#fff;box-shadow:0 0 0 3px rgba(0,0,0,.45);transition:left .35s cubic-bezier(.2,.8,.2,1);transform:translateX(-2px)}
+.hrx .gl{display:flex;justify-content:space-between;font-size:11px;color:var(--mut)}
+.hrx .roirow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:14px}
+.hrx .mini{background:var(--s2);border-radius:12px;padding:10px 12px;min-width:0}
+.hrx .mini span{display:block;font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.hrx .mini b{display:block;font-size:17px;margin-top:3px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.hrx .ba{display:grid;gap:8px;margin-top:14px}
+.hrx .ba div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;font-size:13px;align-items:center;border-top:1px solid var(--line);padding-top:8px}
+.hrx .ba div span:last-child{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.hrx .ba .arr{color:var(--mut);padding:0 4px}
+.hrx svg.chart{width:100%;height:auto;display:block;overflow:visible}
+.hrx .chart text{fill:var(--mut);font-size:11px;font-family:Inter,sans-serif}
+.hrx .actions{display:flex;flex-wrap:wrap;gap:10px}
+.hrx .btn{border:1px solid var(--line);background:var(--s2);border-radius:12px;padding:11px 18px;font-weight:600;font-size:14px;transition:border-color .15s,transform .1s}
+.hrx .btn:hover{border-color:var(--acc)}.hrx .btn:active{transform:translateY(1px)}
+.hrx .btn.pri{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#0b0c10;border-color:transparent}
+.hrx .ctx{font-size:13px;color:var(--mut);margin-top:12px;border:1px dashed var(--line);border-radius:12px;padding:9px 13px}
+.hrx .meter{height:10px;border-radius:99px;background:var(--s2);overflow:hidden;margin:10px 0 8px}
+.hrx .meter i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width .3s}
+.hrx .meter.over i{background:linear-gradient(90deg,var(--warn),var(--bad))}
+.hrx .mline{display:flex;justify-content:space-between;gap:12px;font-size:13px;flex-wrap:wrap}
+.hrx .bl{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.hrx .it{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px;background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:16px 18px;align-items:center;transition:border-color .2s}
+.hrx .it.on{border-color:rgba(124,147,255,.55)}
+.hrx .it h3{font-size:15px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hrx .it p{margin:6px 0 0;font-size:13px;color:var(--mut)}
+.hrx .chip{font-size:11px;font-weight:600;border-radius:99px;padding:2px 9px;background:rgba(124,147,255,.14);color:var(--acc);letter-spacing:.02em}
+.hrx .ctl .fl{margin-bottom:8px;font-size:13px}
+.hrx .itm{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:var(--mut);margin-top:8px;flex-wrap:wrap}
+.hrx .roib{font-weight:700;font-variant-numeric:tabular-nums}
+.hrx .linkb{border:0;background:none;color:var(--acc);font-size:12px;font-weight:600;padding:0;text-decoration:underline;text-underline-offset:3px}
+.hrx .outg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.hrx .mixbar{display:flex;height:14px;border-radius:99px;overflow:hidden;background:var(--s2);margin:12px 0 10px}
+.hrx .mixbar i{display:block;height:100%;transition:width .3s}
+.hrx .leg{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--mut)}
+.hrx .leg span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:3px;background:var(--c);margin-right:6px}
+.hrx footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--mut);font-size:12px}
+.hrx #tipbox{position:fixed;z-index:200;max-width:min(340px,calc(100vw - 24px));background:#23242b;border:1px solid #3a3b44;border-radius:12px;padding:11px 13px;font-size:12.5px;line-height:1.5;color:var(--ink);box-shadow:0 20px 50px -10px #000;pointer-events:none}
+.hrx dialog{background:var(--s1);color:var(--ink);border:1px solid var(--line);border-radius:20px;padding:0;width:min(720px,calc(100vw - 24px));max-height:calc(100vh - 40px);box-shadow:0 40px 100px -20px #000}
+.hrx dialog::backdrop{background:rgba(5,5,8,.7);backdrop-filter:blur(4px)}
+.hrx .mh{display:flex;align-items:center;gap:12px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.hrx .mh h3{flex:1;font-size:17px}
+.hrx .mx{border:1px solid var(--line);background:none;border-radius:10px;width:34px;height:34px;font-size:18px;line-height:1}
+.hrx .mb{padding:20px 22px;overflow:auto;max-height:calc(100vh - 190px)}
+.hrx .mb p{margin:0 0 12px;font-size:14.5px}
+.hrx .mb h4{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--mut);margin:18px 0 8px}
+.hrx .mf{padding:14px 22px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.hrx table{width:100%;border-collapse:collapse;font-size:13.5px}
+.hrx th,.hrx td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.hrx th{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em}
+.hrx td.n,.hrx th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.hrx .fm{font-family:ui-monospace,Menlo,monospace;font-size:12.5px;color:var(--mut);margin:0 0 6px}
+.hrx .note{font-size:12.5px;color:var(--mut);border-left:2px solid var(--acc);padding-left:12px;margin-top:14px}
+body.emb .hrx .back,body.emb .hrx footer{display:none}
+@media (max-width:980px){.hrx .grid{grid-template-columns:minmax(0,1fr)}.hrx .tabs{margin-left:0;order:5;width:100%}.hrx .tabs button{flex:1}.hrx .lang{margin-left:auto}.hrx .it{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.hrx .kpis,.hrx .outg,.hrx .roirow{grid-template-columns:minmax(0,1fr)}.hrx .brand small{display:none}}
+@media (prefers-reduced-motion:reduce){.hrx *{transition:none!important}}
+.hrx .span2{grid-column:span 2}
+@media (max-width:560px){.hrx .span2{grid-column:auto}}
+
+.hrx .grid2{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;margin-top:20px;align-items:start}
+.hrx .side{display:grid;gap:16px;grid-template-columns:minmax(0,1fr);position:sticky;top:84px}
+.hrx .cathead{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:14px}
+.hrx .h2s{font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut);font-weight:600;margin:0 0 4px}
+.hrx .filters{display:flex;gap:6px;flex-wrap:wrap}
+.hrx .filters button{border:1px solid var(--line);background:none;border-radius:99px;padding:6px 12px;font-size:12.5px;font-weight:600;color:var(--mut)}
+.hrx .filters button[aria-pressed=true]{background:var(--ink);color:#0b0c10;border-color:var(--ink)}
+.hrx .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.hrx .cd{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:grid;gap:10px;grid-template-columns:minmax(0,1fr);cursor:grab;transition:border-color .2s,opacity .2s,transform .15s}
+.hrx .cd:hover{border-color:#43454f}
+.hrx .cd.on{border-color:var(--acc);background:linear-gradient(180deg,rgba(124,147,255,.10),var(--s1))}
+.hrx .cd.na{opacity:.5}
+.hrx .cd.dragging{opacity:.4;transform:scale(.98)}
+.hrx .cd.shake{animation:shk .35s}
+@keyframes shk{20%{transform:translateX(-5px)}40%{transform:translateX(5px)}60%{transform:translateX(-3px)}80%{transform:translateX(3px)}}
+.hrx .cdh{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.hrx .cd h3{font-size:14.5px;line-height:1.3;letter-spacing:-.01em;min-height:2.6em}
+.hrx .cost{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.hrx .ty{font-size:11px;font-weight:700;border-radius:99px;padding:2px 9px;letter-spacing:.02em}
+.hrx .ty.quick{background:rgba(255,176,32,.15);color:var(--warn)}.hrx .ty.mid{background:rgba(255,255,255,.08);color:var(--mut)}.hrx .ty.sys{background:rgba(61,220,151,.14);color:var(--ok)}
+.hrx .dots{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 8px;font-size:11.5px;color:var(--mut);align-items:center}
+.hrx .dots .bar{grid-column:1/-1;display:grid;grid-template-columns:repeat(10,1fr);gap:3px}
+.hrx .dots .bar i{height:5px;border-radius:3px;background:var(--s2)}
+.hrx .dots .bar i.f{background:var(--c)}
+.hrx .dots b{color:var(--ink);font-variant-numeric:tabular-nums}
+.hrx .cd .btn{padding:8px 12px;font-size:13px;width:100%}
+.hrx .cd.on .btn{background:none}
+.hrx .drop{transition:border-color .2s,background .2s}
+.hrx .drop.over{border-color:var(--acc);background:rgba(124,147,255,.08)}
+.hrx .bkrow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:10px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:13px}
+.hrx .bkrow:first-child{border-top:0}
+.hrx .bkrow b{font-variant-numeric:tabular-nums}
+.hrx .bkrow button{border:1px solid var(--line);background:none;border-radius:8px;width:26px;height:26px;line-height:1;color:var(--mut)}
+.hrx .bkrow button:hover{color:var(--bad);border-color:var(--bad)}
+.hrx .bkempty{font-size:13px;color:var(--mut);border:1px dashed var(--line);border-radius:12px;padding:18px;text-align:center}
+.hrx .wm i{background:linear-gradient(90deg,var(--ok),var(--acc))}
+.hrx .wallet.low .wm i{background:linear-gradient(90deg,var(--warn),var(--bad))}
+.hrx .gauge.g3{background:linear-gradient(90deg,var(--bad) 0 40%,var(--warn) 40% 70%,var(--ok) 70% 100%)}
+.hrx .strat{margin-top:6px;font-size:16px;font-weight:700}.hrx .strat p{font-size:13px;font-weight:400;color:var(--mut);margin:4px 0 0}
+.hrx .ins{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.hrx .ins li{font-size:13px;color:var(--ink);padding-left:16px;position:relative}
+.hrx .ins li::before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;border-radius:50%;background:var(--c,var(--acc))}
+.hrx #toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);z-index:300;background:#2a1d1d;border:1px solid var(--bad);color:var(--ink);padding:11px 16px;border-radius:12px;font-size:13.5px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;max-width:calc(100vw - 32px)}
+.hrx #toast.show{opacity:1;transform:translate(-50%,0)}
+@media (max-width:1060px){.hrx .grid2{grid-template-columns:minmax(0,1fr)}.hrx .side{display:contents}.hrx .wallet{order:-1;position:sticky;top:64px;z-index:12;box-shadow:0 12px 30px -12px #000}.hrx .audit{order:3}.hrx .drop{order:2}.hrx .catw{order:1}}
+@media (max-width:560px){.hrx .cards{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:980px){.hrx .tabs button{white-space:normal;min-width:0;padding:8px 8px;font-size:13px;line-height:1.2}.hrx .tabs{min-width:0}}
+</style></head><body>
+<div class="hrx" id="hrx">
+<header class="top"><div class="wrap">
+ <a class="back" id="back" href="index.html" data-i="back"></a>
+ <div class="brand"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="#0b0c10" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><div><b>People Economics</b><small data-i="brandSub"></small></div></div>
+ <nav class="tabs" role="tablist"><button role="tab" id="tab1" aria-selected="true" aria-controls="m1" data-i="tab1"></button><button role="tab" id="tab2" aria-selected="false" aria-controls="m2" data-i="tab2"></button></nav>
+ <div class="lang" id="lang"><button type="button" class="lang-btn" id="lang-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu" aria-label="Language"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.7 3.9 5.7 3.9 9s-1.3 6.3-3.9 9c-2.6-2.7-3.9-5.7-3.9-9S9.4 5.7 12 3z"/></svg><span class="lang-cur">EN</span><svg class="chev" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+ <ul class="lang-menu" id="lang-menu" role="listbox" aria-label="Language"><li role="option" data-l="en" lang="en" tabindex="-1"><span>English</span><b>EN</b></li><li role="option" data-l="ru" lang="ru" tabindex="-1"><span>Русский</span><b>RU</b></li><li role="option" data-l="pl" lang="pl" tabindex="-1"><span>Polski</span><b>PL</b></li><li role="option" data-l="es" lang="es" tabindex="-1"><span>Español</span><b>ES</b></li><li role="option" data-l="uk" lang="uk" tabindex="-1"><span>Українська</span><b>UA</b></li></ul></div>
+</div></header>
+<main class="wrap">
+<section id="m1" role="tabpanel" aria-labelledby="tab1">
+ <div class="head"><h1 data-i="m1title"></h1><p data-i="m1sub"></p></div>
+ <div class="grid">
+  <div class="card"><h2 data-i="inputs"></h2><div id="f1"></div>
+   <details class="as"><summary data-i="assump"></summary><div id="fa"></div></details></div>
+  <div class="stack">
+   <div class="kpis">
+    <div class="k"><div class="kt"><span data-i="k_loss"></span><button class="tipb" data-tipk="tip_loss" aria-label="info">i</button></div><div class="big bad" id="loss"></div><div class="sub" id="loss_s"></div><div class="sub" id="loss_p"></div></div>
+    <div class="k"><div class="kt"><span data-i="k_bi"></span><button class="tipb" data-tipk="tip_bi" aria-label="info">i</button></div><div class="big" id="bi"></div><div class="gauge"><i id="bimark"></i></div><div class="gl"><span data-i="lvl_low"></span><span data-i="lvl_mid"></span><span data-i="lvl_crit"></span></div><div class="sub" data-i="bi_hint"></div></div>
+    <div class="k wide"><div class="kt"><span data-i="k_roi"></span><button class="tipb" data-tipk="tip_roi" aria-label="info">i</button></div>
+     <div class="big ok" id="roi"></div><div class="sub" id="roi_s"></div>
+     <div class="roirow"><div class="mini"><span data-i="k_sav"></span><b id="sav"></b></div><div class="mini"><span data-i="k_cost"></span><b id="cost"></b></div><div class="mini"><span data-i="k_net"></span><b id="net"></b></div></div>
+     <div class="roirow"><div class="mini"><span data-i="k_pb"></span><b id="pb"></b></div><div class="mini span2"><span data-i="k_cons"></span><b id="cons"></b></div></div>
+     <div class="ba" id="ba"></div></div>
+   </div>
+   <div class="card"><h2 data-i="chart_t"></h2><svg class="chart" id="chart" viewBox="0 0 560 190" role="img"></svg></div>
+   <div class="actions"><button class="btn pri" id="bexec" data-i="btn_exec"></button><button class="btn" id="bdet" data-i="btn_det"></button></div>
+  </div>
+ </div>
+</section>
+<section id="m2" role="tabpanel" aria-labelledby="tab2" hidden>
+ <div class="head"><h1 data-i="m2title"></h1><p data-i="m2sub"></p></div>
+ <div class="ctx" id="ctx"></div>
+ <div class="grid2">
+  <div class="catw">
+   <div class="cathead"><div><h2 class="h2s" data-i="cat_t"></h2><div class="sub" data-i="cat_hint"></div></div><div class="filters" id="filters" role="group"></div></div>
+   <div class="cards" id="cards"></div>
+  </div>
+  <aside class="side">
+   <div class="card wallet"><div class="kt"><span data-i="w_t"></span></div><div class="big" id="w_left"></div><div class="sub" id="w_of"></div><div class="meter wm" id="wm"><i id="wmi"></i></div></div>
+   <div class="card drop" id="basket"><h2 data-i="bk_t"></h2><div id="bk"></div></div>
+   <div class="card audit"><h2 data-i="aud_t"></h2>
+    <div class="kt"><span data-i="bal_idx"></span><button class="tipb" data-tipk="tip_bal" aria-label="info">i</button></div>
+    <div class="big" id="bal"></div><div class="gauge g3"><i id="balmark"></i></div>
+    <div class="strat" id="strat"></div>
+    <h2 class="h2s" style="margin:18px 0 0" data-i="sp_t"></h2><div class="mixbar" id="spbar"></div><div class="leg" id="spleg"></div>
+    <h2 class="h2s" style="margin:16px 0 0" data-i="cm_t"></h2><div class="mixbar" id="mixbar"></div><div class="leg" id="leg"></div>
+    <h2 class="h2s" style="margin:18px 0 8px"><span data-i="fc_t"></span> <button class="tipb" data-tipk="tip_fc" aria-label="info" style="display:inline-grid;vertical-align:middle">i</button></h2>
+    <div class="ba" id="fc" style="margin:0"></div>
+    <h2 class="h2s" style="margin:18px 0 6px" data-i="ins_t"></h2><ul class="ins" id="ins"></ul>
+    <div class="actions" style="margin-top:16px"><button class="btn pri" id="bexp" data-i="btn_exp"></button><button class="btn" id="bsug" data-i="btn_sug"></button><button class="btn" id="bclr" data-i="btn_clr"></button></div>
+   </div>
+  </aside>
+ </div>
+</section>
+</main>
+<footer><div class="wrap" data-i="disc"></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="tipbox" role="tooltip" hidden></div>
+<dialog id="dlg" aria-labelledby="dtitle"><div class="mh"><h3 id="dtitle"></h3><button class="mx" id="dclose" aria-label="Close">×</button></div><div class="mb" id="dbody"></div><div class="mf" id="dfoot"></div></dialog>
+</div>
+
+<script>
+const L={
+brandSub:["ROI calculator & budget simulator for HR leaders","ROI-калькулятор и симулятор бюджета для HR-руководителей","Kalkulator ROI i symulator budżetu dla liderów HR","Calculadora de ROI y simulador de presupuesto para líderes de RR. HH.","ROI-калькулятор і симулятор бюджету для HR-керівників"],
+back:["← Portfolio","← Портфолио","← Portfolio","← Portafolio","← Портфоліо"],
+tab1:["Cost of burnout & ROI","Цена выгорания и ROI","Koszt wypalenia i ROI","Coste del burnout y ROI","Ціна вигорання та ROI"],
+m1title:["The cost of burnout and the payback of initiatives","Цена выгорания и окупаемость инициатив","Koszt wypalenia i zwrot z inicjatyw","El coste del burnout y el retorno de las iniciativas","Ціна вигорання та окупність ініціатив"],
+m1sub:["Link people metrics to financial loss and justify the budget for preventive measures.","Свяжите People-метрики с финансовыми потерями и обоснуйте бюджет на превентивные меры.","Powiąż metryki People ze stratami finansowymi i uzasadnij budżet na działania prewencyjne.","Conecta las métricas de personas con las pérdidas financieras y justifica el presupuesto de medidas preventivas.","Пов'яжіть People-метрики з фінансовими втратами та обґрунтуйте бюджет на превентивні заходи."],
+inputs:["Inputs","Входные данные","Dane wejściowe","Datos de entrada","Вхідні дані"],
+f_n:["Headcount","Численность сотрудников","Liczba pracowników","Plantilla","Чисельність співробітників"],
+f_attr:["Attrition rate (annual)","Текучесть (attrition rate, год)","Rotacja (attrition rate, rocznie)","Tasa de rotación (attrition rate, anual)","Плинність (attrition rate, рік)"],
+f_enps:["Current eNPS","Текущий eNPS","Aktualny eNPS","eNPS actual","Поточний eNPS"],
+f_freq:["Pulse survey cadence","Частота пульс-опросов","Częstotliwość badań pulse","Frecuencia de encuestas pulse","Частота пульс-опитувань"],
+f_inv:["Preventive programme, per employee / year","Превентивная программа, на сотрудника / год","Program prewencyjny, na pracownika / rok","Programa preventivo, por empleado / año","Превентивна програма, на співробітника / рік"],
+tip_n:["Scales every financial result. Exits = headcount × attrition rate.","Масштабирует все финансовые результаты. Увольнения = численность × текучесть.","Skaluje wszystkie wyniki finansowe. Odejścia = liczba pracowników × rotacja.","Escala todos los resultados financieros. Salidas = plantilla × rotación.","Масштабує всі фінансові результати. Звільнення = чисельність × плинність."],
+tip_attr:["Share of employees who leave per year (voluntary + involuntary). Exits = Headcount × Attrition rate.","Доля сотрудников, покидающих компанию за год (по инициативе сотрудника и компании). Увольнения = численность × текучесть.","Odsetek pracowników odchodzących w ciągu roku (z inicjatywy pracownika i firmy). Odejścia = liczba pracowników × rotacja.","Porcentaje de empleados que salen al año (voluntarias e involuntarias). Salidas = plantilla × rotación.","Частка співробітників, що залишають компанію за рік (з ініціативи працівника та компанії). Звільнення = чисельність × плинність."],
+tip_enps:["Employee Net Promoter Score = % promoters − % detractors. A leading indicator of attrition and burnout. Range −100…+100.","Employee Net Promoter Score = % промоутеров − % критиков. Опережающий индикатор текучести и выгорания. Диапазон −100…+100.","Employee Net Promoter Score = % promotorów − % krytyków. Wskaźnik wyprzedzający rotacji i wypalenia. Zakres −100…+100.","Employee Net Promoter Score = % promotores − % detractores. Indicador adelantado de rotación y burnout. Rango −100…+100.","Employee Net Promoter Score = % промоутерів − % критиків. Випереджальний індикатор плинності та вигорання. Діапазон −100…+100."],
+tip_freq:["The less often you listen, the later risk reaches HRBPs and managers. Weights 20% of the Burnout Index.","Чем реже вы слушаете команду, тем позже риск доходит до HRBP и руководителей. Вес в индексе выгорания: 20%.","Im rzadziej słuchasz zespołu, tym później ryzyko dociera do HRBP i menedżerów. Waga w indeksie wypalenia: 20%.","Cuanto menos se escucha, más tarde llega el riesgo a HRBP y managers. Peso en el índice de burnout: 20 %.","Що рідше ви слухаєте команду, то пізніше ризик доходить до HRBP і керівників. Вага в індексі вигорання: 20%."],
+tip_inv:["Annual spend on preventive measures (manager enablement, stay interviews, workload and wellbeing). Cost = Headcount × investment per employee. Returns have diminishing effect: capture = 70% × (1 − e^(−investment/250)).","Годовые затраты на превентивные меры (развитие руководителей, stay-интервью, нагрузка и wellbeing). Стоимость = численность × инвестиции на сотрудника. Эффект убывающий: захват = 70% × (1 − e^(−инвестиции/250)).","Roczne wydatki na działania prewencyjne (rozwój menedżerów, stay interviews, obciążenie i wellbeing). Koszt = liczba pracowników × inwestycja na pracownika. Efekt maleje: udział = 70% × (1 − e^(−inwestycja/250)).","Gasto anual en medidas preventivas (desarrollo de managers, stay interviews, carga de trabajo y wellbeing). Coste = plantilla × inversión por empleado. Rendimientos decrecientes: captura = 70 % × (1 − e^(−inversión/250)).","Річні витрати на превентивні заходи (розвиток керівників, stay-інтерв'ю, навантаження та wellbeing). Вартість = чисельність × інвестиції на співробітника. Ефект спадний: захоплення = 70% × (1 − e^(−інвестиції/250))."],
+freq0:["Once a year","Раз в год","Raz w roku","Una vez al año","Раз на рік"],
+freq1:["Twice a year","Раз в полгода","Co pół roku","Cada seis meses","Раз на півроку"],
+freq2:["Quarterly","Ежеквартально","Kwartalnie","Trimestral","Щокварталу"],
+freq3:["Monthly","Ежемесячно","Miesięcznie","Mensual","Щомісяця"],
+freq4:["Every two weeks","Раз в две недели","Co dwa tygodnie","Quincenal","Раз на два тижні"],
+freq5:["Weekly","Еженедельно","Co tydzień","Semanal","Щотижня"],
+assump:["Model assumptions","Допущения модели","Założenia modelu","Supuestos del modelo","Припущення моделі"],
+a_sal:["Average fully-loaded annual salary","Средняя годовая стоимость сотрудника (fully-loaded)","Średni roczny koszt pracownika (fully-loaded)","Coste anual medio por empleado (fully-loaded)","Середня річна вартість співробітника (fully-loaded)"],
+a_fac:["Replacement cost, % of salary","Стоимость замены, % от зарплаты","Koszt zastąpienia, % wynagrodzenia","Coste de reemplazo, % del salario","Вартість заміни, % від зарплати"],
+a_prev:["Preventable share of attrition","Доля предотвратимой текучести","Udział rotacji do uniknięcia","Parte evitable de la rotación","Частка плинності, якої можна уникнути"],
+tip_sal:["Salary + taxes + benefits. Drives the cost of one exit.","Зарплата + налоги + льготы. Определяет стоимость одного ухода.","Wynagrodzenie + podatki + benefity. Wyznacza koszt jednego odejścia.","Salario + impuestos + beneficios. Determina el coste de una salida.","Зарплата + податки + пільги. Визначає вартість одного звільнення."],
+tip_fac:["Industry benchmarks range from 50% to 200% of annual salary (recruiting, onboarding, ramp-up, handover). Default 70%. Cost per exit = salary × factor.","Отраслевые ориентиры: от 50% до 200% годовой зарплаты (подбор, онбординг, выход на продуктивность, передача дел). По умолчанию 70%. Стоимость ухода = зарплата × коэффициент.","Benchmarki branżowe: od 50% do 200% rocznego wynagrodzenia (rekrutacja, onboarding, dojście do produktywności, przekazanie zadań). Domyślnie 70%. Koszt odejścia = wynagrodzenie × współczynnik.","Referencias del sector: del 50 % al 200 % del salario anual (selección, onboarding, curva de productividad, traspaso). Por defecto 70 %. Coste de salida = salario × factor.","Галузеві орієнтири: від 50% до 200% річної зарплати (підбір, онбординг, вихід на продуктивність, передача справ). За замовчуванням 70%. Вартість звільнення = зарплата × коефіцієнт."],
+tip_prev:["Share of exits that targeted measures can realistically influence (excludes retirement, relocation, etc.).","Доля уходов, на которые реально влияют целевые меры (без пенсии, переезда и т. п.).","Odsetek odejść, na które realnie wpływają działania celowane (bez emerytury, przeprowadzki itp.).","Parte de las salidas que las medidas específicas pueden influir de forma realista (sin jubilación, traslados, etc.).","Частка звільнень, на які реально впливають цільові заходи (без пенсії, переїзду тощо)."],
+k_loss:["Cost of turnover","Финансовые потери от текучести","Koszt rotacji","Coste de la rotación","Фінансові втрати від плинності"],
+k_loss_sub:["≈ {x} exits × {y} per exit","≈ {x} увольнений × {y} за уход","≈ {x} odejść × {y} za odejście","≈ {x} salidas × {y} por salida","≈ {x} звільнень × {y} за звільнення"],
+k_loss_pay:["{x}% of annual payroll","{x}% годового фонда оплаты труда","{x}% rocznego funduszu płac","{x} % de la masa salarial anual","{x}% річного фонду оплати праці"],
+tip_loss:["Cost of turnover = exits × salary × replacement factor. Breakdown: recruiting 30%, onboarding 15%, lost productivity during ramp-up 35%, knowledge handover & manager time 20%.","Потери = уходы × зарплата × коэффициент замены. Структура: подбор 30%, онбординг 15%, потеря продуктивности при выходе на уровень 35%, передача знаний и время руководителя 20%.","Koszt rotacji = odejścia × wynagrodzenie × współczynnik zastąpienia. Struktura: rekrutacja 30%, onboarding 15%, utrata produktywności w okresie wdrożenia 35%, przekazanie wiedzy i czas menedżera 20%.","Coste de la rotación = salidas × salario × factor de reemplazo. Desglose: selección 30 %, onboarding 15 %, pérdida de productividad en la curva de aprendizaje 35 %, traspaso de conocimiento y tiempo del manager 20 %.","Втрати = звільнення × зарплата × коефіцієнт заміни. Структура: підбір 30%, онбординг 15%, втрата продуктивності під час виходу на рівень 35%, передача знань і час керівника 20%."],
+k_bi:["Burnout Index","Индекс риска выгорания","Indeks ryzyka wypalenia","Índice de riesgo de burnout","Індекс ризику вигорання"],
+lvl_low:["Low","Низкий","Niski","Bajo","Низький"],
+lvl_mid:["Medium","Средний","Średni","Medio","Середній"],
+lvl_crit:["Critical","Критический","Krytyczny","Crítico","Критичний"],
+tip_bi:["Index (0–100) = 50% × eNPS gap + 30% × attrition pressure + 20% × listening gap. eNPS gap = (80 − eNPS)/110; attrition pressure = (attrition − 5)/35; listening gap = 1 − cadence/5. Bands: <35 low, 35–65 medium, >65 critical.","Индекс (0–100) = 50% × разрыв eNPS + 30% × давление текучести + 20% × разрыв обратной связи. Разрыв eNPS = (80 − eNPS)/110; давление текучести = (текучесть − 5)/35; разрыв обратной связи = 1 − частота/5. Зоны: <35 низкий, 35–65 средний, >65 критический.","Indeks (0–100) = 50% × luka eNPS + 30% × presja rotacji + 20% × luka w słuchaniu. Luka eNPS = (80 − eNPS)/110; presja rotacji = (rotacja − 5)/35; luka w słuchaniu = 1 − częstotliwość/5. Strefy: <35 niski, 35–65 średni, >65 krytyczny.","Índice (0–100) = 50 % × brecha de eNPS + 30 % × presión de rotación + 20 % × brecha de escucha. Brecha eNPS = (80 − eNPS)/110; presión de rotación = (rotación − 5)/35; brecha de escucha = 1 − frecuencia/5. Zonas: <35 bajo, 35–65 medio, >65 crítico.","Індекс (0–100) = 50% × розрив eNPS + 30% × тиск плинності + 20% × розрив зворотного зв'язку. Розрив eNPS = (80 − eNPS)/110; тиск плинності = (плинність − 5)/35; розрив зворотного зв'язку = 1 − частота/5. Зони: <35 низький, 35–65 середній, >65 критичний."],
+bi_hint:["Driven by eNPS, listening cadence and attrition pressure","Формируют eNPS, частота обратной связи и давление текучести","Kształtują eNPS, częstotliwość słuchania i presja rotacji","Lo determinan el eNPS, la frecuencia de escucha y la presión de rotación","Формують eNPS, частота зворотного зв'язку та тиск плинності"],
+k_roi:["Projected ROI of HR initiatives","Прогнозируемый ROI HR-инициатив","Prognozowany ROI inicjatyw HR","ROI previsto de las iniciativas de RR. HH.","Прогнозований ROI HR-ініціатив"],
+k_sav:["Savings from avoided exits","Экономия от предотвращённых уходов","Oszczędności z uniknięcia odejść","Ahorro por salidas evitadas","Економія від запобігання звільненням"],
+k_cost:["Programme cost","Стоимость программы","Koszt programu","Coste del programa","Вартість програми"],
+k_net:["Net annual benefit","Чистая годовая выгода","Roczna korzyść netto","Beneficio neto anual","Чиста річна вигода"],
+k_roi_pct:["ROI","ROI","ROI","ROI","ROI"],
+k_pb:["Payback","Срок окупаемости","Okres zwrotu","Periodo de recuperación","Термін окупності"],
+k_cons:["Conservative case (50% effect)","Консервативный сценарий (50% эффекта)","Scenariusz zachowawczy (50% efektu)","Escenario conservador (50 % del efecto)","Консервативний сценарій (50% ефекту)"],
+mo:["mo","мес.","mies.","meses","міс."],
+tip_roi:["ROI = (savings − cost) / cost. Savings = avoided exits × cost per exit. Avoided exits = headcount × attrition × preventable share × capture × effectiveness. Effectiveness = 0.6 + 0.4 × Burnout Index/100. Productivity gains are excluded (conservative).","ROI = (экономия − затраты) / затраты. Экономия = предотвращённые уходы × стоимость ухода. Предотвращённые уходы = численность × текучесть × доля предотвратимой × захват × эффективность. Эффективность = 0,6 + 0,4 × индекс выгорания/100. Прирост продуктивности не учитывается (консервативно).","ROI = (oszczędności − koszt) / koszt. Oszczędności = uniknięte odejścia × koszt odejścia. Uniknięte odejścia = liczba pracowników × rotacja × udział do uniknięcia × udział skuteczny × skuteczność. Skuteczność = 0,6 + 0,4 × indeks wypalenia/100. Wzrost produktywności pominięty (podejście zachowawcze).","ROI = (ahorro − coste) / coste. Ahorro = salidas evitadas × coste por salida. Salidas evitadas = plantilla × rotación × parte evitable × captura × eficacia. Eficacia = 0,6 + 0,4 × índice de burnout/100. No se incluyen ganancias de productividad (criterio conservador).","ROI = (економія − витрати) / витрати. Економія = запобігнуті звільнення × вартість звільнення. Запобігнуті звільнення = чисельність × плинність × частка запобіжної × захоплення × ефективність. Ефективність = 0,6 + 0,4 × індекс вигорання/100. Приріст продуктивності не враховано (консервативно)."],
+ba_t:["Before → after the programme","До → после программы","Przed → po programie","Antes → después del programa","До → після програми"],
+ba_attr:["Attrition rate","Текучесть","Rotacja","Rotación","Плинність"],
+ba_enps:["eNPS","eNPS","eNPS","eNPS","eNPS"],
+ba_bi:["Burnout Index","Индекс выгорания","Indeks wypalenia","Índice de burnout","Індекс вигорання"],
+chart_t:["Net benefit vs. investment per employee","Чистая выгода и инвестиции на сотрудника","Korzyść netto a inwestycja na pracownika","Beneficio neto vs. inversión por empleado","Чиста вигода та інвестиції на співробітника"],
+chart_opt:["Optimum ≈ {v} per employee","Оптимум ≈ {v} на сотрудника","Optimum ≈ {v} na pracownika","Óptimo ≈ {v} por empleado","Оптимум ≈ {v} на співробітника"],
+chart_cur:["Selected","Выбрано","Wybrano","Seleccionado","Обрано"],
+btn_exec:["Generate Executive Summary","Сгенерировать Executive Summary","Generuj Executive Summary","Generar Executive Summary","Згенерувати Executive Summary"],
+btn_det:["Detailed analytics","Детальная аналитика","Szczegółowa analityka","Analítica detallada","Детальна аналітика"],
+close:["Close","Закрыть","Zamknij","Cerrar","Закрити"],
+copied:["Copied ✓","Скопировано ✓","Skopiowano ✓","Copiado ✓","Скопійовано ✓"],
+exec_title:["Executive Summary · C-level brief","Executive Summary · тезис для C-level","Executive Summary · teza dla C-level","Executive Summary · resumen para C-level","Executive Summary · теза для C-level"],
+ex_p1:["At {n} employees, a {attr}% attrition rate means about {leavers} exits a year. At a fully-loaded replacement cost of {cpd} per exit, turnover costs the business {loss} annually, which is {pct}% of payroll.","При численности {n} человек текучесть {attr}% означает около {leavers} уходов в год. При полной стоимости замены {cpd} за уход текучесть обходится бизнесу в {loss} ежегодно, то есть {pct}% фонда оплаты труда.","Przy zatrudnieniu {n} osób rotacja {attr}% oznacza około {leavers} odejść rocznie. Przy pełnym koszcie zastąpienia {cpd} za odejście rotacja kosztuje firmę {loss} rocznie, czyli {pct}% funduszu płac.","Con {n} empleados, una rotación del {attr} % implica unas {leavers} salidas al año. Con un coste de reemplazo total de {cpd} por salida, la rotación cuesta al negocio {loss} al año, el {pct} % de la masa salarial.","При чисельності {n} осіб плинність {attr}% означає близько {leavers} звільнень на рік. За повної вартості заміни {cpd} за звільнення плинність коштує бізнесу {loss} щороку, тобто {pct}% фонду оплати праці."],
+ex_p2:["Current signals: eNPS {enps}, pulse cadence «{freq}», so the Burnout Index is {bi}/100 ({lvl}). The lower the eNPS and the rarer the listening, the later risk becomes visible to management.","Текущие сигналы: eNPS {enps}, частота пульс-опросов «{freq}», индекс выгорания {bi}/100 ({lvl}). Чем ниже eNPS и реже обратная связь, тем позже риск становится виден руководству.","Aktualne sygnały: eNPS {enps}, częstotliwość badań pulse „{freq}”, indeks wypalenia {bi}/100 ({lvl}). Im niższy eNPS i rzadsze słuchanie, tym później ryzyko staje się widoczne dla zarządu.","Señales actuales: eNPS {enps}, frecuencia de pulse «{freq}», índice de burnout {bi}/100 ({lvl}). Cuanto más bajo el eNPS y menos frecuente la escucha, más tarde ve la dirección el riesgo.","Поточні сигнали: eNPS {enps}, частота пульс-опитувань «{freq}», індекс вигорання {bi}/100 ({lvl}). Що нижчий eNPS і рідший зворотний зв'язок, то пізніше ризик стає видимим для керівництва."],
+ex_p3:["A preventive programme (HRBP-led manager enablement, stay interviews, workload and wellbeing measures) at {inv} per employee ({cost} a year) is projected to avoid about {avoided} exits and save {sav}. Net benefit: {net}, ROI {roi}%, payback {pb} months. Under a 50% haircut ROI remains {roiC}%.","Превентивная программа (развитие руководителей силами HRBP, stay-интервью, меры по нагрузке и wellbeing) при {inv} на сотрудника ({cost} в год) позволит предотвратить около {avoided} уходов и сэкономить {sav}. Чистая выгода: {net}, ROI {roi}%, окупаемость {pb} мес. При консервативном допущении в 50% эффекта ROI остаётся {roiC}%.","Program prewencyjny (rozwój menedżerów prowadzony przez HRBP, stay interviews, działania dot. obciążenia i wellbeing) przy {inv} na pracownika ({cost} rocznie) pozwoli uniknąć około {avoided} odejść i zaoszczędzić {sav}. Korzyść netto: {net}, ROI {roi}%, zwrot w {pb} mies. Przy założeniu 50% efektu ROI wynosi nadal {roiC}%.","Un programa preventivo (desarrollo de managers liderado por HRBP, stay interviews, medidas de carga y wellbeing) con {inv} por empleado ({cost} al año) evitaría unas {avoided} salidas y ahorraría {sav}. Beneficio neto: {net}, ROI {roi} %, recuperación en {pb} meses. Con solo el 50 % del efecto, el ROI sigue siendo {roiC} %.","Превентивна програма (розвиток керівників силами HRBP, stay-інтерв'ю, заходи щодо навантаження та wellbeing) при {inv} на співробітника ({cost} на рік) дозволить запобігти близько {avoided} звільнень і заощадити {sav}. Чиста вигода: {net}, ROI {roi}%, окупність {pb} міс. За консервативного припущення 50% ефекту ROI залишається {roiC}%."],
+ex_p3n:["At the current assumptions, {inv} per employee ({cost} a year) does not pay back (net {net}). Recommendation: narrow the scope to the highest-risk teams or move closer to the optimum of about {opt} per employee.","При текущих допущениях {inv} на сотрудника ({cost} в год) не окупаются (чистый результат {net}). Рекомендация: сузить охват до команд с максимальным риском или приблизиться к оптимуму около {opt} на сотрудника.","Przy obecnych założeniach {inv} na pracownika ({cost} rocznie) nie zwraca się (wynik netto {net}). Rekomendacja: zawęzić zakres do zespołów o najwyższym ryzyku lub zbliżyć się do optimum ok. {opt} na pracownika.","Con los supuestos actuales, {inv} por empleado ({cost} al año) no se recupera (neto {net}). Recomendación: acotar el alcance a los equipos de mayor riesgo o acercarse al óptimo de unos {opt} por empleado.","За поточних припущень {inv} на співробітника ({cost} на рік) не окупаються (чистий результат {net}). Рекомендація: звузити охоплення до команд із максимальним ризиком або наблизитися до оптимуму близько {opt} на співробітника."],
+ex_ask:["Decision requested: approve an annual retention and wellbeing budget of {cost}. Targets within 12 months: attrition {a0}% → {a1}%, eNPS {e0} → {e1}, Burnout Index {b0} → {b1}; progress reviewed quarterly through pulse data.","Запрос решения: утвердить годовой бюджет на удержание и wellbeing в размере {cost}. Цели на 12 месяцев: текучесть {a0}% → {a1}%, eNPS {e0} → {e1}, индекс выгорания {b0} → {b1}; прогресс отслеживается ежеквартально по данным пульс-опросов.","Decyzja do podjęcia: zatwierdzenie rocznego budżetu na retencję i wellbeing w wysokości {cost}. Cele na 12 miesięcy: rotacja {a0}% → {a1}%, eNPS {e0} → {e1}, indeks wypalenia {b0} → {b1}; postępy monitorowane kwartalnie na podstawie badań pulse.","Decisión solicitada: aprobar un presupuesto anual de retención y wellbeing de {cost}. Objetivos a 12 meses: rotación {a0} % → {a1} %, eNPS {e0} → {e1}, índice de burnout {b0} → {b1}; seguimiento trimestral con datos de pulse.","Запит на рішення: затвердити річний бюджет на утримання та wellbeing у розмірі {cost}. Цілі на 12 місяців: плинність {a0}% → {a1}%, eNPS {e0} → {e1}, індекс вигорання {b0} → {b1}; прогрес відстежується щокварталу за даними пульс-опитувань."],
+note:["Illustrative model: calibrate cost per exit and programme effectiveness with your own HRIS and finance data before presenting.","Иллюстративная модель: перед презентацией откалибруйте стоимость ухода и эффективность программы по данным вашей HRIS и финансов.","Model ilustracyjny: przed prezentacją skalibruj koszt odejścia i skuteczność programu na danych z własnego HRIS i finansów.","Modelo ilustrativo: antes de presentarlo, calibra el coste por salida y la eficacia del programa con tus datos de HRIS y finanzas.","Ілюстративна модель: перед презентацією відкалібруйте вартість звільнення та ефективність програми за даними вашої HRIS і фінансів."],
+det_title:["Detailed analytics · cost of turnover","Детальная аналитика · потери от текучести","Szczegółowa analityka · koszt rotacji","Analítica detallada · coste de la rotación","Детальна аналітика · втрати від плинності"],
+th_item:["Component","Компонент","Składnik","Componente","Компонент"],
+th_exit:["Per exit","На один уход","Na odejście","Por salida","На одне звільнення"],
+th_total:["Per year","В год","Rocznie","Por año","На рік"],
+c_rec:["Recruiting & sourcing (30%)","Подбор и сорсинг (30%)","Rekrutacja i sourcing (30%)","Selección y sourcing (30 %)","Підбір і сорсинг (30%)"],
+c_onb:["Onboarding & training (15%)","Онбординг и обучение (15%)","Onboarding i szkolenia (15%)","Onboarding y formación (15 %)","Онбординг і навчання (15%)"],
+c_ramp:["Lost productivity in ramp-up (35%)","Потеря продуктивности при выходе на уровень (35%)","Utrata produktywności we wdrożeniu (35%)","Pérdida de productividad en la rampa (35 %)","Втрата продуктивності під час виходу на рівень (35%)"],
+c_hand:["Knowledge handover & manager time (20%)","Передача знаний и время руководителя (20%)","Przekazanie wiedzy i czas menedżera (20%)","Traspaso de conocimiento y tiempo del manager (20 %)","Передача знань і час керівника (20%)"],
+c_tot:["Total cost of turnover","Итого потери от текучести","Razem koszt rotacji","Coste total de la rotación","Разом втрати від плинності"],
+det_scen:["Initiative scenarios","Сценарии инициативы","Scenariusze inicjatywy","Escenarios de la iniciativa","Сценарії ініціативи"],
+sc_base:["Base","Базовый","Bazowy","Base","Базовий"],
+sc_cons:["Conservative","Консервативный","Zachowawczy","Conservador","Консервативний"],
+det_form:["Formulas","Формулы","Wzory","Fórmulas","Формули"],
+fm1:["Exits = Headcount × Attrition rate","Уходы = численность × текучесть","Odejścia = liczba pracowników × rotacja","Salidas = plantilla × rotación","Звільнення = чисельність × плинність"],
+fm2:["Cost per exit = Salary × Replacement factor","Стоимость ухода = зарплата × коэффициент замены","Koszt odejścia = wynagrodzenie × współczynnik zastąpienia","Coste por salida = salario × factor de reemplazo","Вартість звільнення = зарплата × коефіцієнт заміни"],
+fm3:["Avoided exits = Exits × Preventable share × Capture × Effectiveness","Предотвращённые уходы = уходы × доля предотвратимой × захват × эффективность","Uniknięte odejścia = odejścia × udział do uniknięcia × udział skuteczny × skuteczność","Salidas evitadas = salidas × parte evitable × captura × eficacia","Запобігнуті звільнення = звільнення × частка запобіжної × захоплення × ефективність"],
+fm4:["ROI = (Savings − Programme cost) / Programme cost; Payback = Cost / Savings × 12","ROI = (экономия − стоимость программы) / стоимость программы; окупаемость = стоимость / экономия × 12","ROI = (oszczędności − koszt programu) / koszt programu; zwrot = koszt / oszczędności × 12","ROI = (ahorro − coste del programa) / coste del programa; recuperación = coste / ahorro × 12","ROI = (економія − вартість програми) / вартість програми; окупність = вартість / економія × 12"],
+disc:["Illustrative model for demonstration. Coefficients are planning assumptions, not benchmarks of any specific company.","Иллюстративная модель для демонстрации. Коэффициенты — плановые допущения, а не данные какой-либо конкретной компании.","Model ilustracyjny do demonstracji. Współczynniki to założenia planistyczne, a nie dane żadnej konkretnej firmy.","Modelo ilustrativo de demostración. Los coeficientes son supuestos de planificación, no datos de una empresa concreta.","Ілюстративна модель для демонстрації. Коефіцієнти — планові припущення, а не дані конкретної компанії."]
+};
+/*M2*/
+Object.assign(L,{
+tab2:["Culture budget simulator","Симулятор бюджета","Symulator budżetu","Simulador de presupuesto","Симулятор бюджету"],
+m2title:["Wellbeing & culture backlog builder","Конструктор бэклога Wellbeing и Culture-бюджета","Konstruktor backlogu Wellbeing i Culture","Constructor de backlog de Wellbeing y Culture","Конструктор беклогу Wellbeing і Culture-бюджету"],
+m2sub:["Allocate a fixed quarterly budget between quick wins and systemic change, then audit how balanced your People portfolio is.","Распределите фиксированный квартальный бюджет между быстрыми радостями и системными изменениями и проверьте, насколько сбалансирован ваш People-портфель.","Rozdziel stały kwartalny budżet między szybkie przyjemności a zmiany systemowe i sprawdź, jak zrównoważony jest Twój portfel People.","Reparte un presupuesto trimestral fijo entre alegrías rápidas y cambios sistémicos y comprueba cuán equilibrada es tu cartera People.","Розподіліть фіксований квартальний бюджет між швидкими радощами та системними змінами й перевірте, наскільки збалансований ваш People-портфель."],
+ctx:["Context from tab 1: {n} employees · attrition {a}% · eNPS {e}. Change it there to recalculate the forecast.","Контекст из вкладки 1: {n} сотрудников · текучесть {a}% · eNPS {e}. Измените данные там, чтобы пересчитать прогноз.","Kontekst z zakładki 1: {n} pracowników · rotacja {a}% · eNPS {e}. Zmień dane tam, aby przeliczyć prognozę.","Contexto de la pestaña 1: {n} empleados · rotación {a} % · eNPS {e}. Cámbialo allí para recalcular la previsión.","Контекст із вкладки 1: {n} співробітників · плинність {a}% · eNPS {e}. Змініть дані там, щоб перерахувати прогноз."],
+w_t:["Quarterly budget","Квартальный бюджет","Budżet kwartalny","Presupuesto trimestral","Квартальний бюджет"],
+w_left:["remaining","осталось","pozostało","disponible","залишилось"],
+w_of:["of {x} per quarter · spent {y}","из {x} на квартал · потрачено {y}","z {x} na kwartał · wydano {y}","de {x} por trimestre · gastado {y}","із {x} на квартал · витрачено {y}"],
+cat_t:["Initiative catalogue","Каталог инициатив","Katalog inicjatyw","Catálogo de iniciativas","Каталог ініціатив"],
+cat_hint:["Click a card or drag it into the backlog.","Нажмите на карточку или перетащите её в бэклог.","Kliknij kartę lub przeciągnij ją do backlogu.","Haz clic en una tarjeta o arrástrala al backlog.","Натисніть на картку або перетягніть її в беклог."],
+f_all:["All","Все","Wszystkie","Todas","Усі"],
+c_well:["Wellbeing & Mental Health","Wellbeing и ментальное здоровье","Wellbeing i zdrowie psychiczne","Wellbeing y salud mental","Wellbeing і ментальне здоров'я"],
+c_lead:["Learning & Leadership","Обучение и лидерство","Rozwój i przywództwo","Aprendizaje y liderazgo","Навчання та лідерство"],
+c_team:["Team-building & Events","Тимбилдинг и события","Teambuilding i wydarzenia","Team building y eventos","Тімбілдинг і події"],
+c_perk:["Perks & Compensation","Бенефиты и компенсации","Benefity i wynagrodzenie","Beneficios y compensación","Бенефіти та компенсації"],
+cost:["Cost","Стоимость","Koszt","Coste","Вартість"],
+imp_enps:["eNPS impact","Влияние на eNPS","Wpływ na eNPS","Impacto en eNPS","Вплив на eNPS"],
+imp_ret:["Long-term retention","Долгосрочное удержание","Retencja w długim terminie","Retención a largo plazo","Довгострокове утримання"],
+tip_ie:["How strongly the initiative lifts eNPS within the quarter (scale 1–10).","Насколько сильно инициатива повышает eNPS в течение квартала (шкала 1–10).","Jak mocno inicjatywa podnosi eNPS w ciągu kwartału (skala 1–10).","Cuánto eleva la iniciativa el eNPS durante el trimestre (escala 1–10).","Наскільки сильно ініціатива підвищує eNPS протягом кварталу (шкала 1–10)."],
+tip_ir:["Long-term effect on retention (scale 1–10). Scores 1–3 are quick wins, 6–10 are systemic changes.","Долгосрочный эффект на удержание (шкала 1–10). Оценки 1–3 — быстрые радости, 6–10 — системные изменения.","Długoterminowy wpływ na retencję (skala 1–10). Oceny 1–3 to szybkie przyjemności, 6–10 to zmiany systemowe.","Efecto a largo plazo en la retención (escala 1–10). Las notas 1–3 son alegrías rápidas y 6–10 cambios sistémicos.","Довгостроковий ефект на утримання (шкала 1–10). Оцінки 1–3 — швидкі радощі, 6–10 — системні зміни."],
+ty_quick:["Quick win","Быстрая радость","Szybka przyjemność","Alegría rápida","Швидка радість"],
+ty_mid:["Mixed","Смешанный","Mieszany","Mixto","Змішаний"],
+ty_sys:["Systemic","Системное","Systemowe","Sistémico","Системне"],
+add:["Add","Добавить","Dodaj","Añadir","Додати"],
+rem:["Remove","Убрать","Usuń","Quitar","Прибрати"],
+toast_over:["Not enough budget: this costs {x}, {y} remaining.","Не хватает бюджета: стоимость {x}, осталось {y}.","Za mało budżetu: koszt {x}, pozostało {y}.","Presupuesto insuficiente: cuesta {x}, quedan {y}.","Не вистачає бюджету: вартість {x}, залишилось {y}."],
+bk_t:["Quarterly backlog","Квартальный бэклог","Backlog kwartalny","Backlog trimestral","Квартальний беклог"],
+bk_empty:["Drag initiatives here or click “Add”.","Перетащите инициативы сюда или нажмите «Добавить».","Przeciągnij inicjatywy tutaj lub kliknij „Dodaj”.","Arrastra iniciativas aquí o pulsa «Añadir».","Перетягніть ініціативи сюди або натисніть «Додати»."],
+aud_t:["Balance & audit","Баланс и аудит","Bilans i audyt","Equilibrio y auditoría","Баланс і аудит"],
+bal_idx:["Portfolio balance index","Индекс сбалансированности портфеля","Indeks zrównoważenia portfela","Índice de equilibrio de la cartera","Індекс збалансованості портфеля"],
+tip_bal:["Index 0–100 = 40% systemic share (target 55–70% of spend) + 30% category diversity (evenness across 4 categories) + 20% coverage of Leadership and Wellbeing (target ≥50% combined) + 10% budget utilisation.","Индекс 0–100 = 40% доля системных мер (цель 55–70% бюджета) + 30% разнообразие категорий (равномерность по 4 категориям) + 20% покрытие лидерства и wellbeing (цель ≥50% вместе) + 10% использование бюджета.","Indeks 0–100 = 40% udział działań systemowych (cel 55–70% budżetu) + 30% różnorodność kategorii (równomierność w 4 kategoriach) + 20% pokrycie przywództwa i wellbeing (cel ≥50% łącznie) + 10% wykorzystanie budżetu.","Índice 0–100 = 40 % peso de medidas sistémicas (objetivo 55–70 % del gasto) + 30 % diversidad de categorías (equilibrio entre 4 categorías) + 20 % cobertura de liderazgo y wellbeing (objetivo ≥50 % combinado) + 10 % uso del presupuesto.","Індекс 0–100 = 40% частка системних заходів (ціль 55–70% бюджету) + 30% різноманітність категорій (рівномірність за 4 категоріями) + 20% покриття лідерства та wellbeing (ціль ≥50% разом) + 10% використання бюджету."],
+st_empty:["Portfolio is empty","Портфель пуст","Portfel jest pusty","La cartera está vacía","Портфель порожній"],
+st_empty_d:["Add initiatives from the catalogue to see the audit.","Добавьте инициативы из каталога, чтобы увидеть аудит.","Dodaj inicjatywy z katalogu, aby zobaczyć audyt.","Añade iniciativas del catálogo para ver la auditoría.","Додайте ініціативи з каталогу, щоб побачити аудит."],
+st_fun:["Skewed towards entertainment","Перекос в развлечения","Przechył w stronę rozrywki","Sesgo hacia el entretenimiento","Перекіс у розваги"],
+st_fun_d:["Over half of the budget goes to quick wins that lift mood for weeks, not retention for years.","Больше половины бюджета уходит на быстрые радости: они поднимают настроение на недели, а не удержание на годы.","Ponad połowa budżetu idzie na szybkie przyjemności: poprawiają nastrój na tygodnie, a nie retencję na lata.","Más de la mitad del presupuesto va a alegrías rápidas: mejoran el ánimo semanas, no la retención durante años.","Понад половина бюджету йде на швидкі радощі: вони піднімають настрій на тижні, а не утримання на роки."],
+st_burn:["Burned-out managers","Выжженные менеджеры","Wypaleni menedżerowie","Managers quemados","Вигорілі менеджери"],
+st_burn_d:["Almost nothing goes into leadership capability: managers carry the pressure without tools, and burnout moves up the line.","Почти ничего не вложено в развитие руководителей: менеджеры несут давление без инструментов, и выгорание поднимается вверх по цепочке.","Prawie nic nie trafia w kompetencje przywódcze: menedżerowie dźwigają presję bez narzędzi, a wypalenie rośnie w górę linii.","Casi nada se invierte en capacidad de liderazgo: los managers soportan la presión sin herramientas y el burnout sube por la línea.","Майже нічого не вкладено в розвиток керівників: менеджери несуть тиск без інструментів, і вигорання піднімається вгору по ланцюжку."],
+st_bal:["Balanced People portfolio","Сбалансированный People-портфель","Zrównoważony portfel People","Cartera People equilibrada","Збалансований People-портфель"],
+st_bal_d:["Quick wins support morale, while systemic measures (leadership, wellbeing, flexibility) carry retention.","Быстрые радости поддерживают настроение, а системные меры (лидерство, wellbeing, гибкость) отвечают за удержание.","Szybkie przyjemności wspierają nastrój, a środki systemowe (przywództwo, wellbeing, elastyczność) odpowiadają za retencję.","Las alegrías rápidas sostienen el ánimo y las medidas sistémicas (liderazgo, wellbeing, flexibilidad) sostienen la retención.","Швидкі радощі підтримують настрій, а системні заходи (лідерство, wellbeing, гнучкість) відповідають за утримання."],
+st_narrow:["Narrow portfolio","Узкий портфель","Wąski portfel","Cartera estrecha","Вузький портфель"],
+st_narrow_d:["The mix covers too few areas or is not systemic enough yet. Broaden it before the quarter starts.","Набор охватывает слишком мало направлений или ещё недостаточно системный. Расширьте его до начала квартала.","Zestaw obejmuje zbyt mało obszarów lub nie jest jeszcze wystarczająco systemowy. Poszerz go przed startem kwartału.","La combinación cubre pocas áreas o aún no es suficientemente sistémica. Amplíala antes de que empiece el trimestre.","Набір охоплює надто мало напрямів або ще недостатньо системний. Розширте його до початку кварталу."],
+sp_t:["Quick wins vs. systemic change","Быстрые радости и системные изменения","Szybkie przyjemności a zmiany systemowe","Alegrías rápidas frente a cambio sistémico","Швидкі радощі та системні зміни"],
+cm_t:["Spend by category","Расходы по категориям","Wydatki wg kategorii","Gasto por categoría","Витрати за категоріями"],
+fc_t:["Forecast","Прогноз","Prognoza","Previsión","Прогноз"],
+fc_enps:["Projected eNPS uplift","Прогнозируемый прирост eNPS","Prognozowany wzrost eNPS","Aumento previsto de eNPS","Прогнозований приріст eNPS"],
+fc_attr:["Attrition rate (annualised)","Текучесть (в годовом выражении)","Rotacja (w ujęciu rocznym)","Rotación (anualizada)","Плинність (у річному вимірі)"],
+fc_exits:["Exits avoided per year","Предотвращённые уходы в год","Uniknięte odejścia rocznie","Salidas evitadas al año","Запобігнуті звільнення на рік"],
+fc_val:["Value of avoided exits (12 months)","Ценность предотвращённых уходов (12 мес.)","Wartość unikniętych odejść (12 mies.)","Valor de las salidas evitadas (12 meses)","Цінність запобіганих звільнень (12 міс.)"],
+fc_roi:["Return on this quarter's spend","Возврат на расходы квартала","Zwrot z wydatków kwartału","Retorno del gasto del trimestre","Повернення на витрати кварталу"],
+fc_be:["Break-even","Точка безубыточности","Próg rentowności","Punto de equilibrio","Точка беззбитковості"],
+fc_be_v:["{x} avoided exits","{x} предотвращённых уходов","{x} unikniętych odejść","{x} salidas evitadas","{x} запобіганих звільнень"],
+tip_fc:["Reach = min(1, 300 / headcount). eNPS uplift = 22 × (1 − e^(−Σ eNPS impact × reach / 70)). Attrition reduction = attrition × preventable share × 0.5 × (1 − e^(−Σ retention × reach / 100)) × effectiveness. Value = avoided exits × cost per exit.","Охват = min(1, 300 / численность). Прирост eNPS = 22 × (1 − e^(−Σ влияния на eNPS × охват / 70)). Снижение текучести = текучесть × доля предотвратимой × 0,5 × (1 − e^(−Σ удержания × охват / 100)) × эффективность. Ценность = предотвращённые уходы × стоимость ухода.","Zasięg = min(1, 300 / liczba pracowników). Wzrost eNPS = 22 × (1 − e^(−Σ wpływu na eNPS × zasięg / 70)). Redukcja rotacji = rotacja × udział do uniknięcia × 0,5 × (1 − e^(−Σ retencji × zasięg / 100)) × skuteczność. Wartość = uniknięte odejścia × koszt odejścia.","Alcance = min(1, 300 / plantilla). Aumento de eNPS = 22 × (1 − e^(−Σ impacto en eNPS × alcance / 70)). Reducción de rotación = rotación × parte evitable × 0,5 × (1 − e^(−Σ retención × alcance / 100)) × eficacia. Valor = salidas evitadas × coste por salida.","Охоплення = min(1, 300 / чисельність). Приріст eNPS = 22 × (1 − e^(−Σ впливу на eNPS × охоплення / 70)). Зниження плинності = плинність × частка запобіжної × 0,5 × (1 − e^(−Σ утримання × охоплення / 100)) × ефективність. Цінність = запобігнуті звільнення × вартість звільнення."],
+ins_t:["Audit findings","Выводы аудита","Wnioski z audytu","Hallazgos de la auditoría","Висновки аудиту"],
+ins_quick:["Quick wins take {x}% of spend (threshold 50%): morale lifts, retention barely moves.","Быстрые радости занимают {x}% бюджета (порог 50%): настроение растёт, удержание почти не меняется.","Szybkie przyjemności zajmują {x}% budżetu (próg 50%): nastrój rośnie, retencja prawie się nie zmienia.","Las alegrías rápidas se llevan el {x} % del gasto (umbral 50 %): sube el ánimo, la retención apenas cambia.","Швидкі радощі займають {x}% бюджету (поріг 50%): настрій зростає, утримання майже не змінюється."],
+ins_lead:["Learning & Leadership gets only {x}% of spend, although managers are the strongest retention lever.","На обучение и лидерство приходится лишь {x}% бюджета, хотя руководители — самый сильный рычаг удержания.","Na rozwój i przywództwo przypada tylko {x}% budżetu, a menedżerowie to najsilniejsza dźwignia retencji.","Aprendizaje y liderazgo recibe solo el {x} % del gasto, aunque los managers son la palanca de retención más fuerte.","На навчання та лідерство припадає лише {x}% бюджету, хоча керівники — найсильніший важіль утримання."],
+ins_sys:["Systemic initiatives take {x}% of spend (target 55–70%).","Системные инициативы занимают {x}% бюджета (цель 55–70%).","Inicjatywy systemowe zajmują {x}% budżetu (cel 55–70%).","Las iniciativas sistémicas suponen el {x} % del gasto (objetivo 55–70 %).","Системні ініціативи займають {x}% бюджету (ціль 55–70%)."],
+ins_well:["Wellbeing & Mental Health gets {x}% of spend: burnout risk stays unaddressed.","На wellbeing и ментальное здоровье приходится {x}% бюджета: риск выгорания остаётся без ответа.","Na wellbeing i zdrowie psychiczne przypada {x}% budżetu: ryzyko wypalenia pozostaje bez odpowiedzi.","Wellbeing y salud mental recibe el {x} % del gasto: el riesgo de burnout queda sin atender.","На wellbeing і ментальне здоров'я припадає {x}% бюджету: ризик вигорання залишається без відповіді."],
+ins_cash:["{x} of the budget is still unallocated.","Ещё не распределено {x} бюджета.","Nieprzydzielone pozostaje {x} budżetu.","Aún quedan {x} del presupuesto sin asignar.","Ще не розподілено {x} бюджету."],
+ins_ok:["The mix is inside the target corridor: no structural gaps detected.","Структура в целевом коридоре: структурных перекосов не найдено.","Struktura mieści się w docelowym korytarzu: nie wykryto luk strukturalnych.","La estructura está en el rango objetivo: no se detectan desequilibrios.","Структура в цільовому коридорі: структурних перекосів не виявлено."],
+btn_exp:["Export quarterly backlog","Экспортировать квартальный бэклог","Eksportuj backlog kwartalny","Exportar backlog trimestral","Експортувати квартальний беклог"],
+btn_sug:["Suggest balanced portfolio","Предложить сбалансированный портфель","Zaproponuj zrównoważony portfel","Proponer cartera equilibrada","Запропонувати збалансований портфель"],
+btn_clr:["Clear backlog","Очистить бэклог","Wyczyść backlog","Vaciar backlog","Очистити беклог"],
+rp_title:["Quarterly People Backlog","Квартальный People-бэклог","Kwartalny backlog People","Backlog trimestral de People","Квартальний People-беклог"],
+rp_sub:["{q} · {n} employees","{q} · {n} сотрудников","{q} · {n} pracowników","{q} · {n} empleados","{q} · {n} співробітників"],
+rp_sum:["Summary","Резюме","Podsumowanie","Resumen","Резюме"],
+rp_used:["Budget used","Использовано бюджета","Wykorzystany budżet","Presupuesto utilizado","Використано бюджету"],
+rp_strat:["Strategy assessment","Оценка стратегии","Ocena strategii","Evaluación de la estrategia","Оцінка стратегії"],
+rp_fc:["Forecast","Прогноз","Prognoza","Previsión","Прогноз"],
+rp_month:["Month {m}","Месяц {m}","Miesiąc {m}","Mes {m}","Місяць {m}"],
+th_init:["Initiative","Инициатива","Inicjatywa","Iniciativa","Ініціатива"],
+th_cat:["Category","Категория","Kategoria","Categoría","Категорія"],
+th_cost:["Cost","Стоимость","Koszt","Coste","Вартість"],
+th_kpi:["Success metric","Метрика успеха","Miara sukcesu","Métrica de éxito","Метрика успіху"],
+th_own:["Owner","Ответственный","Właściciel","Responsable","Відповідальний"],
+rp_total:["Total","Итого","Razem","Total","Разом"],
+rp_risk:["Risks & dependencies","Риски и зависимости","Ryzyka i zależności","Riesgos y dependencias","Ризики та залежності"],
+rp_risk_t:["Effects are modelled, not guaranteed: validate with the next pulse survey. Systemic initiatives need manager sponsorship; quick wins fade within weeks and should not replace them.","Эффекты смоделированы, а не гарантированы: проверьте их следующим пульс-опросом. Системным инициативам нужна поддержка руководителей; быстрые радости выцветают за недели и не должны их заменять.","Efekty są modelowane, a nie gwarantowane: zweryfikuj je kolejnym badaniem pulse. Inicjatywy systemowe wymagają sponsoringu menedżerów; szybkie przyjemności blakną po tygodniach i nie powinny ich zastępować.","Los efectos son modelados, no garantizados: valídalos con la próxima encuesta pulse. Las iniciativas sistémicas necesitan patrocinio de los managers; las alegrías rápidas se desvanecen en semanas y no deben sustituirlas.","Ефекти змодельовані, а не гарантовані: перевірте їх наступним пульс-опитуванням. Системним ініціативам потрібна підтримка керівників; швидкі радощі вигасають за тижні й не мають їх замінювати."],
+rp_empty:["The backlog is empty. Add initiatives first.","Бэклог пуст. Сначала добавьте инициативы.","Backlog jest pusty. Najpierw dodaj inicjatywy.","El backlog está vacío. Añade iniciativas primero.","Беклог порожній. Спочатку додайте ініціативи."],
+btn_dl:["Download .md","Скачать .md","Pobierz .md","Descargar .md","Завантажити .md"],
+btn_pr:["Print / PDF","Печать / PDF","Drukuj / PDF","Imprimir / PDF","Друк / PDF"],
+kp_well:["Session utilisation ≥ 15%; burnout index −5 pts","Использование сессий ≥ 15%; индекс выгорания −5 п.","Wykorzystanie sesji ≥ 15%; indeks wypalenia −5 pkt","Uso de sesiones ≥ 15 %; índice de burnout −5 pts","Використання сесій ≥ 15%; індекс вигорання −5 п."],
+kp_lead:["100% of people managers covered; manager eNPS +5","Охвачены 100% руководителей; eNPS по руководителям +5","Objęcie 100% menedżerów; eNPS menedżerów +5","100 % de managers cubiertos; eNPS de managers +5","Охоплено 100% керівників; eNPS за керівниками +5"],
+kp_team:["Participation ≥ 70%; team cohesion pulse +0.3","Участие ≥ 70%; пульс сплочённости команды +0,3","Udział ≥ 70%; pulse spójności zespołu +0,3","Participación ≥ 70 %; pulse de cohesión +0,3","Участь ≥ 70%; пульс згуртованості команди +0,3"],
+kp_perk:["Adoption ≥ 80%; eNPS pulse and offer-acceptance rate","Использование ≥ 80%; пульс eNPS и доля принятых офферов","Wykorzystanie ≥ 80%; pulse eNPS i odsetek przyjętych ofert","Adopción ≥ 80 %; pulse de eNPS y tasa de aceptación de ofertas","Використання ≥ 80%; пульс eNPS і частка прийнятих офферів"],
+ow_well:["HRBP + Wellbeing lead","HRBP + ответственный за wellbeing","HRBP + lider wellbeing","HRBP + responsable de wellbeing","HRBP + відповідальний за wellbeing"],
+ow_lead:["L&D lead + HRD","Руководитель L&D + HRD","Lider L&D + HRD","Responsable de L&D + HRD","Керівник L&D + HRD"],
+ow_team:["People Ops / Culture","People Ops / Culture","People Ops / Culture","People Ops / Culture","People Ops / Culture"],
+ow_perk:["C&B + People Ops","C&B + People Ops","C&B + People Ops","C&B + People Ops","C&B + People Ops"],
+copy:["Copy text","Скопировать текст","Kopiuj tekst","Copiar texto","Скопіювати текст"]
+});
+const NAMES={
+well1:["EAP psychologist session pack","Пакет сессий с психологом (EAP)","Pakiet sesji z psychologiem (EAP)","Paquete de sesiones con psicólogo (EAP)","Пакет сесій із психологом (EAP)"],
+well2:["Burnout-prevention workshop series","Цикл воркшопов по профилактике выгорания","Cykl warsztatów profilaktyki wypalenia","Ciclo de talleres de prevención del burnout","Цикл воркшопів з профілактики вигорання"],
+well3:["Quiet zones & ergonomics upgrade","Тихие зоны и эргономика рабочих мест","Strefy ciszy i ergonomia stanowisk","Zonas de silencio y ergonomía","Тихі зони та ергономіка робочих місць"],
+well4:["Meditation & sleep app licences","Лицензии на приложение для медитации и сна","Licencje aplikacji do medytacji i snu","Licencias de app de meditación y sueño","Ліцензії на застосунок для медитації та сну"],
+lead1:["HRBP-led manager training (1:1s, feedback)","Обучение руководителей от HRBP (1:1, обратная связь)","Szkolenie menedżerów prowadzone przez HRBP (1:1, feedback)","Formación de managers liderada por HRBP (1:1, feedback)","Навчання керівників від HRBP (1:1, зворотний зв'язок)"],
+lead2:["Mentorship programme","Программа наставничества","Program mentoringu","Programa de mentoring","Програма наставництва"],
+lead3:["Learning budget pool (courses)","Фонд обучения (курсы)","Pula budżetu szkoleniowego (kursy)","Fondo de formación (cursos)","Фонд навчання (курси)"],
+lead4:["Career framework workshops","Воркшопы по карьерным трекам","Warsztaty ścieżek kariery","Talleres de marco de carrera","Воркшопи з кар'єрних треків"],
+team1:["Pizza Fridays (full quarter)","Пицца-пятницы (весь квартал)","Piątki z pizzą (cały kwartał)","Viernes de pizza (todo el trimestre)","Піца-п'ятниці (весь квартал)"],
+team2:["Team offsite day","Выездной день команды","Wyjazdowy dzień zespołu","Jornada de equipo fuera de la oficina","Виїзний день команди"],
+team3:["Online quiz & game night","Онлайн-квиз и игровой вечер","Quiz online i wieczór gier","Quiz online y noche de juegos","Онлайн-квіз і ігровий вечір"],
+team4:["Volunteering day","День волонтёрства","Dzień wolontariatu","Día de voluntariado","День волонтерства"],
+perk1:["Branded merch pack","Мерч с символикой компании","Firmowy pakiet gadżetów","Pack de merchandising de marca","Фірмовий мерч"],
+perk2:["Flexible schedule & workload policy","Гибкий график и политика нагрузки","Elastyczny grafik i polityka obciążenia","Horario flexible y política de carga","Гнучкий графік і політика навантаження"],
+perk3:["Wellness stipend","Wellness-стипендия сотрудникам","Stypendium wellness","Asignación de wellness","Wellness-стипендія працівникам"],
+perk4:["Spot-bonus & recognition fund","Фонд спот-бонусов и признания","Fundusz bonusów spot i uznania","Fondo de bonos puntuales y reconocimiento","Фонд спот-бонусів і визнання"]};
+Object.keys(NAMES).forEach(k=>L['n_'+k]=NAMES[k]);
+
+(()=>{
+const $=id=>document.getElementById(id),clamp=(x,a,b)=>Math.min(b,Math.max(a,x));
+const LANGS=['en','ru','pl','es','uk'],LOC={en:'en-US',ru:'ru-RU',pl:'pl-PL',es:'es-ES',uk:'uk-UA'},CODE={en:'EN',ru:'RU',pl:'PL',es:'ES',uk:'UA'};
+let lang='en';
+const EMB=new URLSearchParams(location.search).get('embed')==='1';if(EMB)document.body.classList.add('emb');
+const t=(k,p)=>{const a=L[k];let s=a?(a[LANGS.indexOf(lang)]||a[0]):k;if(p)s=s.replace(/\{(\w+)\}/g,(_,x)=>p[x]!==undefined?p[x]:'');return s};
+const cur=v=>new Intl.NumberFormat(LOC[lang],{style:'currency',currency:'USD',maximumFractionDigits:0}).format(Math.round(v));
+const num=(v,d=0)=>new Intl.NumberFormat(LOC[lang],{maximumFractionDigits:d,minimumFractionDigits:d}).format(v);
+const sg=v=>(v>0?'+':v<0?'−':'')+num(Math.abs(v));
+/* ---------- model ---------- */
+const S={n:500,attr:18,enps:10,freq:2,inv:180,sal:60000,fac:70,prev:30,sel:['team1','team2','team3','perk1','perk3']};
+const BUDGET=10000;
+const CATS=['well','lead','team','perk'],CC={well:'#3ddc97',lead:'#7c93ff',team:'#f472b6',perk:'#ffb020'};
+const INIT=[['well1','well',2400,6,8],['well2','well',1500,5,6],['well3','well',1200,5,4],['well4','well',1800,4,3],['lead1','lead',3000,7,9],['lead2','lead',1200,5,7],['lead3','lead',2500,6,6],['lead4','lead',1800,5,8],['team1','team',600,4,1],['team2','team',3500,6,3],['team3','team',400,3,1],['team4','team',1000,4,3],['perk1','perk',800,3,1],['perk2','perk',1500,7,8],['perk3','perk',2800,5,4],['perk4','perk',2000,6,4]].map(a=>({id:a[0],cat:a[1],cost:a[2],e:a[3],r:a[4],ty:a[4]<=3?'quick':a[4]>=6?'sys':'mid'}));
+const byId=id=>INIT.find(x=>x.id===id);
+const cpd=()=>S.sal*S.fac/100;
+const bidx=(e,a,q)=>100*(.5*clamp((80-e)/110,0,1)+.3*clamp((a-5)/35,0,1)+.2*(1-clamp(q,0,5)/5));
+const lvl=b=>b<35?['lvl_low','ok']:b<65?['lvl_mid','warn']:['lvl_crit','bad'];
+function m1(inv){const B=bidx(S.enps,S.attr,S.freq),cap=.7*(1-Math.exp(-inv/250)),eff=.6+.4*B/100,red=S.attr*S.prev/100*cap*eff,avoided=S.n*red/100,sav=avoided*cpd(),cost=S.n*inv;
+ return{B,cap,eff,red,avoided,sav,cost,net:sav-cost,roi:cost>0?(sav-cost)/cost*100:0,pb:sav>0&&cost>0?cost/sav*12:null}}
+function m1x(){const r=m1(S.inv),gain=18*(1-Math.exp(-S.inv/250)),e1=Math.min(80,S.enps+gain),a1=S.attr-r.red,b1=bidx(e1,a1,S.freq);
+ const c=r.sav*.5,cn=c-r.cost;return{...r,e1,a1,b1,leavers:S.n*S.attr/100,loss:S.n*S.attr/100*cpd(),cons:{sav:c,net:cn,roi:r.cost>0?cn/r.cost*100:0}}}
+function opt(){let best=0,bv=-1e18;for(let i=0;i<=600;i+=5){const v=m1(i).net;if(v>bv){bv=v;best=i}}return best}
+/* ---------- controls ---------- */
+const F1=[['n',50,5000,10],['attr',5,40,.5],['enps',-30,80,1],['freq',0,5,1],['inv',0,600,10]],FA=[['sal',20000,200000,1000],['fac',30,150,5],['prev',10,60,5]],F2=[];
+const fv=(id,v)=>({n:()=>num(v),attr:()=>num(v,1)+'%',enps:()=>sg(v),freq:()=>t('freq'+v),inv:()=>cur(v),sal:()=>cur(v),fac:()=>v+'%',prev:()=>v+'%'}[id]());
+function build(box,list){const h=$(box);h.innerHTML=list.map(([id,mi,ma,st])=>`<div class="fld"><div class="fl"><label for="r_${id}" data-i="${id==='sal'?'a_sal':id==='fac'?'a_fac':id==='prev'?'a_prev':'f_'+id}"></label><button class="tipb" data-tipk="tip_${id}" aria-label="info">i</button><output id="o_${id}" for="r_${id}"></output></div><input type="range" id="r_${id}" min="${mi}" max="${ma}" step="${st}" value="${S[id]}"></div>`).join('');
+ list.forEach(([id])=>$('r_'+id).addEventListener('input',e=>{S[id]=+e.target.value;render()}))}
+function sync(){[...F1,...FA,...F2].forEach(([id,mi,ma])=>{const r=$('r_'+id);if(!r)return;r.value=S[id];r.style.setProperty('--p',((S[id]-mi)/(ma-mi)*100)+'%');$('o_'+id).textContent=fv(id,S[id])})}
+/* ---------- render ---------- */
+function setText(id,v){const e=$(id);if(e.textContent!==v)e.textContent=v}
+function render(){sync();const r=m1x(),[lk,lc]=lvl(r.B);
+ setText('loss',cur(r.loss));setText('loss_s',t('k_loss_sub',{x:num(r.leavers),y:cur(cpd())}));setText('loss_p',t('k_loss_pay',{x:num(r.loss/(S.n*S.sal)*100,1)}));
+ const bi=$('bi');bi.innerHTML=Math.round(r.B)+'<span style="font-size:15px;font-weight:600;color:var(--mut)"> / 100</span> <span style="font-size:18px;font-weight:700">· '+t(lk)+'</span>';bi.className='big '+lc;$('bimark').style.left=clamp(r.B,0,100)+'%';
+ const ro=$('roi');ro.textContent=S.inv>0?num(r.roi)+'%':'—';ro.className='big '+(r.net>=0?'ok':'bad');setText('roi_s',t('k_roi_pct')+' = ('+cur(r.sav)+' − '+cur(r.cost)+') / '+cur(r.cost));
+ setText('sav',cur(r.sav));setText('cost',cur(r.cost));setText('net',cur(r.net));$('net').className=r.net>=0?'ok':'bad';
+ setText('pb',r.pb?num(r.pb,1)+' '+t('mo'):'—');setText('cons',cur(r.cons.net)+' · '+(S.inv>0?num(r.cons.roi)+'%':'—'));
+ $('ba').innerHTML=`<div><span style="font-weight:600;color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.08em">${t('ba_t')}</span><span></span></div>`+[['ba_attr',num(S.attr,1)+'%',num(r.a1,1)+'%'],['ba_enps',sg(S.enps),sg(Math.round(r.e1))],['ba_bi',Math.round(r.B),Math.round(r.b1)]].map(([k,a,b])=>`<div><span>${t(k)}</span><span>${a}<span class="arr">→</span><span class="ok">${b}</span></span></div>`).join('');
+ chart(r);render2()}
+function chart(r){const W=560,H=190,pl=8,pr=8,pt=14,pb=26,xs=i=>pl+i/600*(W-pl-pr);const pts=[];for(let i=0;i<=600;i+=10)pts.push([i,m1(i).net]);
+ let mn=Math.min(0,...pts.map(p=>p[1])),mx=Math.max(1,...pts.map(p=>p[1]));const ys=v=>pt+(1-(v-mn)/(mx-mn))*(H-pt-pb),y0=ys(0),o=opt(),ov=m1(o).net;
+ const d=pts.map((p,i)=>(i?'L':'M')+xs(p[0]).toFixed(1)+' '+ys(p[1]).toFixed(1)).join(' ');
+ const cv=m1(S.inv).net,ox=xs(o);
+ $('chart').innerHTML=`<defs><linearGradient id="gA" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#7c93ff" stop-opacity=".35"/><stop offset="1" stop-color="#7c93ff" stop-opacity="0"/></linearGradient></defs>
+ <line x1="${pl}" x2="${W-pr}" y1="${y0}" y2="${y0}" stroke="#3a3b44" stroke-dasharray="3 4"/>
+ <path d="${d} L${xs(600)} ${y0} L${xs(0)} ${y0}Z" fill="url(#gA)"/><path d="${d}" fill="none" stroke="#7c93ff" stroke-width="2.2"/>
+ <line x1="${xs(S.inv)}" x2="${xs(S.inv)}" y1="${pt}" y2="${H-pb}" stroke="#fff" stroke-opacity=".35"/>
+ <circle cx="${xs(S.inv)}" cy="${ys(cv)}" r="5" fill="#fff" stroke="#7c93ff" stroke-width="3"/>
+ <circle cx="${ox}" cy="${ys(ov)}" r="4" fill="#3ddc97"/><text x="${clamp(ox,90,W-90)}" y="${Math.max(10,ys(ov)-9)}" text-anchor="middle" fill="#3ddc97" style="fill:#3ddc97">${t('chart_opt',{v:cur(o)})}</text>
+ <text x="${pl}" y="${H-6}">${cur(0)}</text><text x="${W-pr}" y="${H-6}" text-anchor="end">${cur(600)}</text><text x="${xs(S.inv)}" y="${H-6}" text-anchor="middle" style="fill:#eceae4">${t('chart_cur')}: ${cur(S.inv)}</text>`}
+/* ---- module 2 ---- */
+const P=sel=>{const it=sel.map(byId),spend=it.reduce((s,x)=>s+x.cost,0),by=(f)=>it.filter(f).reduce((s,x)=>s+x.cost,0),sh=v=>spend>0?v/spend:0;
+ const cat={};CATS.forEach(c=>cat[c]=sh(by(x=>x.cat===c)));const quick=sh(by(x=>x.ty==='quick')),sys=sh(by(x=>x.ty==='sys')),mid=1-quick-sys;
+ let H=0;CATS.forEach(c=>{if(cat[c]>0)H-=cat[c]*Math.log(cat[c])});const div=H/Math.log(4),cov=Math.min(1,(cat.lead+cat.well)/.5),util=Math.min(1,spend/9000);
+ const d=sys<.55?.55-sys:sys>.7?sys-.7:0,sysS=Math.max(0,1-d/.5),idx=spend>0?100*(.4*sysS+.3*div+.2*cov+.1*util):0;
+ const nc=CATS.filter(c=>cat[c]>=.1).length;let st='st_narrow';
+ if(spend===0)st='st_empty';else if(quick>.5)st='st_fun';else if(cat.lead<.12)st='st_burn';else if(nc>=3&&sys>=.45)st='st_bal';
+ const Re=it.reduce((s,x)=>s+x.e,0),Rr=it.reduce((s,x)=>s+x.r,0),reach=clamp(300/S.n,.15,1),B0=bidx(S.enps,S.attr,S.freq),eff=.6+.4*B0/100;
+ const eg=22*(1-Math.exp(-Re*reach/70)),red=S.attr*S.prev/100*.5*(1-Math.exp(-Rr*reach/100))*eff,avoided=S.n*red/100,val=avoided*cpd(),roi=spend>0?(val-spend)/spend*100:0;
+ return{it,spend,left:BUDGET-spend,cat,quick,sys,mid,idx,st,eg,red,a1:S.attr-red,avoided,val,roi,be:cpd()>0?spend/cpd():0}};
+function suggest(){let best=null,bi=-1;for(let m=1;m<1<<INIT.length;m++){let sp=0;for(let i=0;i<INIT.length;i++)if(m>>i&1){sp+=INIT[i].cost;if(sp>BUDGET)break}if(sp>BUDGET)continue;
+  const sel=INIT.filter((_,i)=>m>>i&1).map(x=>x.id),p=P(sel);if(p.st!=='st_bal')continue;const sc=p.idx+p.eg*.3+p.red*2;if(sc>bi){bi=sc;best=sel}}return best||S.sel}
+let filt='all',toastT=null;
+function toast(m){const e=$('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>e.classList.remove('show'),2600)}
+function add(id){if(S.sel.includes(id))return;const it=byId(id),left=BUDGET-P(S.sel).spend;if(it.cost>left){toast(t('toast_over',{x:cur(it.cost),y:cur(left)}));const el=$('cd_'+id);if(el){el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake')}return}S.sel.push(id);render()}
+function rem(id){S.sel=S.sel.filter(x=>x!==id);render()}
+const dots=(v,c)=>`<span class="bar" style="--c:${c}">${Array.from({length:10},(_,i)=>`<i class="${i<v?'f':''}"></i>`).join('')}</span>`;
+function buildCat(){$('filters').innerHTML=['all',...CATS].map(c=>`<button data-f="${c}" aria-pressed="${filt===c}">${c==='all'?t('f_all'):t('c_'+c)}</button>`).join('');
+ $('filters').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{filt=b.dataset.f;buildCat()}));
+ $('cards').innerHTML=INIT.filter(x=>filt==='all'||x.cat===filt).map(x=>`<div class="cd" id="cd_${x.id}" draggable="true" data-id="${x.id}"><div class="cdh"><span class="chip" style="color:${CC[x.cat]};background:${CC[x.cat]}22">${t('c_'+x.cat)}</span><span class="ty ${x.ty}">${t('ty_'+x.ty)}</span></div><h3>${t('n_'+x.id)}</h3><div class="cost">${cur(x.cost)}</div>
+ <div class="dots"><span>${t('imp_enps')}</span><b>${x.e}/10</b>${dots(x.e,'#7c93ff')}</div><div class="dots"><span>${t('imp_ret')}</span><b>${x.r}/10</b>${dots(x.r,'#3ddc97')}</div><button class="btn" data-a="${x.id}"></button></div>`).join('');
+ $('cards').querySelectorAll('.cd').forEach(el=>{const id=el.dataset.id;el.querySelector('[data-a]').addEventListener('click',()=>S.sel.includes(id)?rem(id):add(id));
+  el.addEventListener('dragstart',e=>{el.classList.add('dragging');e.dataTransfer.setData('text/plain',id);e.dataTransfer.effectAllowed='copy'});el.addEventListener('dragend',()=>el.classList.remove('dragging'))});
+ render2()}
+(()=>{const bk=$('basket');bk.addEventListener('dragover',e=>{e.preventDefault();bk.classList.add('over')});bk.addEventListener('dragleave',()=>bk.classList.remove('over'));bk.addEventListener('drop',e=>{e.preventDefault();bk.classList.remove('over');const id=e.dataTransfer.getData('text/plain');if(byId(id))add(id)})})();
+function render2(){const p=P(S.sel);$('ctx').textContent=t('ctx',{n:num(S.n),a:num(S.attr,1),e:sg(S.enps)});
+ $('w_left').textContent=cur(p.left);$('w_left').className='big '+(p.left<1500?'warn':'ok');$('w_of').textContent=t('w_of',{x:cur(BUDGET),y:cur(p.spend)});$('wmi').style.width=p.left/BUDGET*100+'%';document.querySelector('.wallet').classList.toggle('low',p.left<1500);
+ INIT.forEach(x=>{const el=$('cd_'+x.id);if(!el)return;const on=S.sel.includes(x.id);el.classList.toggle('on',on);el.classList.toggle('na',!on&&x.cost>p.left);const b=el.querySelector('[data-a]');b.textContent=on?t('rem'):t('add');b.classList.toggle('pri',!on&&x.cost<=p.left)});
+ $('bk').innerHTML=p.it.length?p.it.map(x=>`<div class="bkrow"><span>${t('n_'+x.id)}</span><b>${cur(x.cost)}</b><button data-r="${x.id}" aria-label="${t('rem')}">×</button></div>`).join(''):`<div class="bkempty">${t('bk_empty')}</div>`;
+ $('bk').querySelectorAll('[data-r]').forEach(b=>b.addEventListener('click',()=>rem(b.dataset.r)));
+ const bal=Math.round(p.idx),bc=bal>=70?'ok':bal>=40?'warn':'bad';$('bal').innerHTML=`${bal}<span style="font-size:15px;font-weight:600;color:var(--mut)"> / 100</span>`;$('bal').className='big '+bc;$('balmark').style.left=bal+'%';
+ const sc={st_bal:'ok',st_empty:'',st_narrow:'warn',st_fun:'bad',st_burn:'bad'}[p.st];$('strat').innerHTML=`<span class="${sc}">${t(p.st)}</span><p>${t(p.st+'_d')}</p>`;
+ const sp=[['quick',p.quick,'#ffb020'],['mid',p.mid,'#8b8d98'],['sys',p.sys,'#3ddc97']];
+ $('spbar').innerHTML=sp.map(([k,v,c])=>`<i style="width:${Math.max(0,v)*100}%;background:${c}"></i>`).join('');$('spleg').innerHTML=sp.filter(x=>x[1]>.001).map(([k,v,c])=>`<span style="--c:${c}">${t('ty_'+k)} ${num(v*100)}%</span>`).join('')||'—';
+ $('mixbar').innerHTML=CATS.map(c=>`<i style="width:${p.cat[c]*100}%;background:${CC[c]}"></i>`).join('');$('leg').innerHTML=CATS.filter(c=>p.cat[c]>.001).map(c=>`<span style="--c:${CC[c]}">${t('c_'+c)} ${num(p.cat[c]*100)}%</span>`).join('')||'—';
+ $('fc').innerHTML=[['fc_enps','+'+num(p.eg,1)+' ('+sg(S.enps)+' → '+sg(Math.round(S.enps+p.eg))+')'],['fc_attr',num(S.attr,1)+'% → '+num(p.a1,1)+'%'],['fc_exits',num(p.avoided,1)],['fc_val',cur(p.val)],['fc_roi',p.spend>0?num(p.roi)+'%':'—'],['fc_be',p.spend>0?t('fc_be_v',{x:num(p.be,2)}):'—']].map(([k,v])=>`<div><span>${t(k)}</span><span>${v}</span></div>`).join('');
+ const I=[];if(p.spend>0){if(p.quick>.5)I.push(['bad',t('ins_quick',{x:num(p.quick*100)})]);if(p.cat.lead<.12)I.push(['bad',t('ins_lead',{x:num(p.cat.lead*100)})]);if(p.sys<.5)I.push(['warn',t('ins_sys',{x:num(p.sys*100)})]);if(p.cat.well<.1)I.push(['warn',t('ins_well',{x:num(p.cat.well*100)})]);if(p.left>1000)I.push(['acc',t('ins_cash',{x:cur(p.left)})]);if(!I.some(x=>x[0]!=='acc'))I.unshift(['ok',t('ins_ok')])}
+ $('ins').innerHTML=I.map(([k,x])=>`<li style="--c:var(--${k==='acc'?'acc':k})">${x}</li>`).join('')}
+/* export */
+const qLabel=()=>{const d=new Date(),q=Math.floor(d.getMonth()/3)+1;return 'Q'+(q%4+1)+' '+(d.getFullYear()+(q===4?1:0))};
+function plan(p){const m=[[],[],[]],ld=[0,0,0];[...p.it].sort((a,b)=>b.r-a.r||b.cost-a.cost).forEach(x=>{let k=ld.indexOf(Math.min(...ld));m[k].push(x);ld[k]+=x.cost});return m.map(a=>a.sort((x,y)=>y.r-x.r))}
+function repData(){const p=P(S.sel);return{p,m:plan(p)}}
+function repHTML(){const {p,m}=repData();if(!p.it.length)return `<p>${t('rp_empty')}</p>`;
+ const row=x=>`<tr><td>${t('n_'+x.id)}</td><td>${t('c_'+x.cat)}</td><td class="n">${cur(x.cost)}</td><td>${t('kp_'+x.cat)}</td><td>${t('ow_'+x.cat)}</td></tr>`;
+ return `<p><b>${t('rp_sub',{q:qLabel(),n:num(S.n)})}</b></p><h4>${t('rp_sum')}</h4><table><tbody><tr><td>${t('rp_used')}</td><td class="n">${cur(p.spend)} / ${cur(BUDGET)}</td></tr><tr><td>${t('rp_strat')}</td><td class="n">${t(p.st)} · ${Math.round(p.idx)}/100</td></tr><tr><td>${t('fc_enps')}</td><td class="n">+${num(p.eg,1)}</td></tr><tr><td>${t('fc_attr')}</td><td class="n">${num(S.attr,1)}% → ${num(p.a1,1)}%</td></tr><tr><td>${t('fc_val')}</td><td class="n">${cur(p.val)}</td></tr></tbody></table>`+
+ m.map((a,i)=>a.length?`<h4>${t('rp_month',{m:i+1})} · ${cur(a.reduce((s,x)=>s+x.cost,0))}</h4><table><thead><tr><th>${t('th_init')}</th><th>${t('th_cat')}</th><th class="n">${t('th_cost')}</th><th>${t('th_kpi')}</th><th>${t('th_own')}</th></tr></thead><tbody>${a.map(row).join('')}</tbody></table>`:'').join('')+`<h4>${t('rp_risk')}</h4><div class="note" style="margin-top:0">${t('rp_risk_t')}</div>`}
+function repMD(){const {p,m}=repData();if(!p.it.length)return t('rp_empty');const L=[`# ${t('rp_title')}`,`**${t('rp_sub',{q:qLabel(),n:num(S.n)})}**`,'',`## ${t('rp_sum')}`,`- ${t('rp_used')}: ${cur(p.spend)} / ${cur(BUDGET)}`,`- ${t('rp_strat')}: ${t(p.st)} (${Math.round(p.idx)}/100)`,`- ${t('fc_enps')}: +${num(p.eg,1)}`,`- ${t('fc_attr')}: ${num(S.attr,1)}% → ${num(p.a1,1)}%`,`- ${t('fc_val')}: ${cur(p.val)}`];
+ m.forEach((a,i)=>{if(!a.length)return;L.push('',`## ${t('rp_month',{m:i+1})} · ${cur(a.reduce((s,x)=>s+x.cost,0))}`,`| ${t('th_init')} | ${t('th_cat')} | ${t('th_cost')} | ${t('th_kpi')} | ${t('th_own')} |`,'|---|---|---:|---|---|');a.forEach(x=>L.push(`| ${t('n_'+x.id)} | ${t('c_'+x.cat)} | ${cur(x.cost)} | ${t('kp_'+x.cat)} | ${t('ow_'+x.cat)} |`))});
+ L.push('',`## ${t('rp_risk')}`,t('rp_risk_t'));return L.join('\n')}
+function expFoot(){return `<button class="btn" id="dcopy2">${t('copy')}</button><button class="btn" id="ddl">${t('btn_dl')}</button><button class="btn" id="dpr">${t('btn_pr')}</button><button class="btn pri" onclick="document.getElementById('dclose').click()">${t('close')}</button>`}
+function wireExp(){const dl=$('ddl'),pr=$('dpr');if(dl)dl.onclick=()=>{try{const b=new Blob([repMD()],{type:'text/markdown;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='quarterly-people-backlog.md';document.body.appendChild(a);a.click();a.remove()}catch(e){}};
+ if(pr)pr.onclick=()=>{const f=document.createElement('iframe');f.style.cssText='position:fixed;width:0;height:0;border:0;right:0;bottom:0';document.body.appendChild(f);const d=f.contentWindow.document;d.open();d.write(`<!doctype html><meta charset="utf-8"><title>${t('rp_title')}</title><style>body{font:13px/1.5 Inter,Arial,sans-serif;color:#111;margin:24px}table{width:100%;border-collapse:collapse;margin:6px 0 14px}th,td{border-bottom:1px solid #ccc;padding:6px 4px;text-align:left;vertical-align:top}.n{text-align:right;white-space:nowrap}h4{margin:16px 0 4px;text-transform:uppercase;font-size:11px;letter-spacing:.08em;color:#555}h1{font-size:22px;margin:0 0 6px}</style><h1>${t('rp_title')}</h1>${repHTML()}`);d.close();setTimeout(()=>{f.contentWindow.focus();f.contentWindow.print();setTimeout(()=>f.remove(),1500)},250)}}
+$('bexp').addEventListener('click',()=>{openD(t('rp_title'),repHTML(),expFoot(),()=>[t('rp_title'),repHTML()]);wireExp();const cp=$('dcopy2');cp.addEventListener('click',()=>{const done=()=>{cp.textContent=t('copied');setTimeout(()=>cp.textContent=t('copy'),1600)};if(navigator.clipboard)navigator.clipboard.writeText(repMD()).then(done,done);else done()})});
+$('bsug').addEventListener('click',()=>{S.sel=suggest();render()});$('bclr').addEventListener('click',()=>{S.sel=[];render()});
+/* ---------- modals ---------- */
+const dlg=$('dlg');let lastFocus=null,dFill=null;
+function openD(title,body,foot,fill){lastFocus=document.activeElement;dFill=fill||null;$('dtitle').textContent=title;$('dbody').innerHTML=body;$('dfoot').innerHTML=foot||'';$('dclose').setAttribute('aria-label',t('close'));if(dlg.showModal)dlg.showModal();else dlg.setAttribute('open','');
+ const cp=$('dcopy');if(cp)cp.addEventListener('click',()=>{const tx=$('dbody').innerText;const done=()=>{cp.textContent=t('copied');setTimeout(()=>cp.textContent=t('copy'),1600)};if(navigator.clipboard)navigator.clipboard.writeText(tx).then(done,done);else done()})}
+function closeD(){if(dlg.close)dlg.close();else dlg.removeAttribute('open');dFill=null;if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+$('dclose').addEventListener('click',closeD);dlg.addEventListener('click',e=>{if(e.target===dlg)closeD()});dlg.addEventListener('cancel',e=>{e.preventDefault();closeD()});
+const copyBtn=()=>`<button class="btn" id="dcopy">${t('copy')}</button><button class="btn pri" onclick="document.getElementById('dclose').click()">${t('close')}</button>`;
+function execHTML(){const r=m1x(),[lk]=lvl(r.B),pay=S.n*S.sal,o=opt(),pbs=r.pb?num(r.pb,1):'—';
+ const p={n:num(S.n),attr:num(S.attr,1),leavers:num(r.leavers),cpd:cur(cpd()),loss:cur(r.loss),pct:num(r.loss/pay*100,1),enps:sg(S.enps),freq:t('freq'+S.freq),bi:Math.round(r.B),lvl:t(lk).toLowerCase(),inv:cur(S.inv),cost:cur(r.cost),avoided:num(r.avoided,1),sav:cur(r.sav),net:cur(r.net),roi:num(r.roi),pb:pbs,roiC:num(r.cons.roi),opt:cur(o),a0:num(S.attr,1),a1:num(r.a1,1),e0:sg(S.enps),e1:sg(Math.round(r.e1)),b0:Math.round(r.B),b1:Math.round(r.b1)};
+ const paras=[t('ex_p1',p),t('ex_p2',p),r.net>=0&&S.inv>0?t('ex_p3',p):t('ex_p3n',p),t('ex_ask',p)];
+ return paras.map(x=>`<p>${x}</p>`).join('')+`<div class="note">${t('note')}</div>`}
+$('bexec').addEventListener('click',()=>openD(t('exec_title'),execHTML(),copyBtn(),()=>[t('exec_title'),execHTML()]));
+function detHTML(){const r=m1x(),L1=cpd(),parts=[['c_rec',.30],['c_onb',.15],['c_ramp',.35],['c_hand',.20]];
+ return `<table><thead><tr><th>${t('th_item')}</th><th class="n">${t('th_exit')}</th><th class="n">${t('th_total')}</th></tr></thead><tbody>`+parts.map(([k,w])=>`<tr><td>${t(k)}</td><td class="n">${cur(L1*w)}</td><td class="n">${cur(L1*w*r.leavers)}</td></tr>`).join('')+`<tr><td><b>${t('c_tot')}</b></td><td class="n"><b>${cur(L1)}</b></td><td class="n"><b>${cur(r.loss)}</b></td></tr></tbody></table>
+ <h4>${t('det_scen')}</h4><table><thead><tr><th></th><th class="n">${t('sc_base')}</th><th class="n">${t('sc_cons')}</th></tr></thead><tbody>
+ <tr><td>${t('k_sav')}</td><td class="n">${cur(r.sav)}</td><td class="n">${cur(r.cons.sav)}</td></tr><tr><td>${t('k_cost')}</td><td class="n">${cur(r.cost)}</td><td class="n">${cur(r.cost)}</td></tr>
+ <tr><td>${t('k_net')}</td><td class="n">${cur(r.net)}</td><td class="n">${cur(r.cons.net)}</td></tr><tr><td>${t('k_roi_pct')}</td><td class="n">${S.inv>0?num(r.roi)+'%':'—'}</td><td class="n">${S.inv>0?num(r.cons.roi)+'%':'—'}</td></tr>
+ <tr><td>${t('k_pb')}</td><td class="n">${r.pb?num(r.pb,1)+' '+t('mo'):'—'}</td><td class="n">${r.pb?num(r.pb*2,1)+' '+t('mo'):'—'}</td></tr></tbody></table>
+ <h4>${t('det_form')}</h4>${['fm1','fm2','fm3','fm4'].map(k=>`<p class="fm">${t(k)}</p>`).join('')}<div class="note">${t('note')}</div>`}
+$('bdet').addEventListener('click',()=>openD(t('det_title'),detHTML(),`<button class="btn pri" onclick="document.getElementById('dclose').click()">${t('close')}</button>`,()=>[t('det_title'),detHTML()]));
+/* ---------- tabs ---------- */
+function tab(n){[1,2].forEach(i=>{$('tab'+i).setAttribute('aria-selected',String(i===n));$('m'+i).hidden=i!==n});try{sessionStorage.setItem('hxtab',n)}catch(e){}}
+$('tab1').addEventListener('click',()=>tab(1));$('tab2').addEventListener('click',()=>tab(2));
+/* ---------- tooltips ---------- */
+const tb=$('tipbox');let tipEl=null;
+function showTip(el){tipEl=el;tb.textContent=t(el.dataset.tipk);tb.hidden=false;const r=el.getBoundingClientRect(),w=tb.offsetWidth,h=tb.offsetHeight;let x=clamp(r.left+r.width/2-w/2,8,innerWidth-w-8),y=r.top-h-10;if(y<8)y=r.bottom+10;tb.style.left=x+'px';tb.style.top=y+'px'}
+function hideTip(){tipEl=null;tb.hidden=true}
+document.addEventListener('mouseover',e=>{const b=e.target.closest&&e.target.closest('[data-tipk]');if(b)showTip(b)});
+document.addEventListener('mouseout',e=>{if(e.target.closest&&e.target.closest('[data-tipk]'))hideTip()});
+document.addEventListener('focusin',e=>{const b=e.target.closest&&e.target.closest('[data-tipk]');if(b)showTip(b);else hideTip()});
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('[data-tipk]');if(b){e.preventDefault();tipEl===b&&!tb.hidden&&e.detail===0?hideTip():showTip(b)}else hideTip()});
+addEventListener('scroll',hideTip,{passive:true});document.addEventListener('keydown',e=>{if(e.key==='Escape')hideTip()});
+/* ---------- language ---------- */
+function applyI18n(){document.querySelectorAll('[data-i]').forEach(e=>{e.textContent=t(e.dataset.i)})}
+function setLang(l,save){if(!LANGS.includes(l))l='en';lang=l;document.documentElement.lang=l;
+ applyI18n();buildCat();$('lang').querySelector('.lang-cur').textContent=CODE[l];document.querySelectorAll('#lang-menu li').forEach(x=>x.setAttribute('aria-selected',String(x.dataset.l===l)));
+ document.title='People Economics · '+t('tab1');$('back').href='index.html?lang='+(l==='uk'?'uk':l);
+ if(save){try{localStorage.setItem('lang',l)}catch(e){}}
+ render();if(dlg.open&&dFill){const [ti,bo]=dFill();$('dtitle').textContent=ti;$('dbody').innerHTML=bo}}
+(()=>{const box=$('lang'),lb=$('lang-btn'),menu=$('lang-menu'),opts=[...menu.querySelectorAll('li')];const isO=()=>box.classList.contains('open');
+ const op=f=>{box.classList.add('open');lb.setAttribute('aria-expanded','true');(f||opts.find(x=>x.getAttribute('aria-selected')==='true')||opts[0]).focus({preventScroll:true})};
+ const cl=b=>{box.classList.remove('open');lb.setAttribute('aria-expanded','false');if(b)lb.focus({preventScroll:true})};
+ lb.addEventListener('click',()=>isO()?cl(false):op());
+ lb.addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();op(e.key==='ArrowUp'?opts[opts.length-1]:null)}});
+ opts.forEach((x,i)=>{x.addEventListener('click',()=>{setLang(x.dataset.l,true);cl(true)});x.addEventListener('keydown',e=>{const k=e.key;
+  if(k==='ArrowDown'){e.preventDefault();opts[(i+1)%5].focus()}else if(k==='ArrowUp'){e.preventDefault();opts[(i+4)%5].focus()}else if(k==='Enter'||k===' '){e.preventDefault();x.click()}else if(k==='Escape'){e.preventDefault();cl(true)}else if(k==='Tab')cl(false)})});
+ document.addEventListener('pointerdown',e=>{if(isO()&&!box.contains(e.target))cl(false)})})();
+addEventListener('message',e=>{const d=e.data;if(d&&d.type==='lang'&&typeof d.l==='string')setLang(d.l,false)});
+build('f1',F1);build('fa',FA);
+let l0='en';try{const q=new URLSearchParams(location.search).get('lang'),sv=localStorage.getItem('lang');if(q)l0=q;else if(sv)l0=sv;else{const n=(navigator.language||'en').slice(0,2);if(LANGS.includes(n))l0=n}}catch(e){}
+setLang(l0,false);
+try{const tt=sessionStorage.getItem('hxtab');if(tt==='2')tab(2)}catch(e){}
+window.__hx={S,m1x,P,suggest,setLang,INIT,tab,add,rem};
+})();
+
+</script></body></html>

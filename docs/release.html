@@ -1,0 +1,383 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Кто сорвал релиз</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one retro "console" column. Pixel canvas (office map / title / battle) on top, a blue JRPG text window beneath it (readable at phone widths), evidence tracker, on-screen D-pad for touch. Dark-only on purpose. All art is original and drawn in code. */
+:root{--bg:#0a0a18;--ink:#f4f1e8;--muted:#9a9ab8;--gold:#ffd84a;--red:#ff5a3c;--green:#6fe0a0;--w1:#2d41d8;--w2:#0e1670;--px:'Press Start 2P',ui-monospace,Menlo,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 14px/1.5 'Inter',system-ui,sans-serif;min-height:100vh;
+  padding-block:16px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background-image:radial-gradient(circle at 50% -10%,#1a1a4a,transparent 60%)}
+.game{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.lg{font:400 11px var(--px);color:var(--gold);letter-spacing:.04em;text-shadow:2px 2px #000}
+.btn{font:400 10px var(--px);color:var(--ink);background:#1a1a3a;border:2px solid #4a4a8a;border-radius:6px;padding:9px 12px;cursor:pointer}
+.btn:hover{border-color:var(--gold)}
+:is(.btn,.opt,.pad button,.chip):focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.scr{position:relative;container-type:inline-size;border:4px solid #fff;border-radius:10px;overflow:hidden;background:#000;box-shadow:0 0 0 3px #05051a,0 20px 60px -20px rgba(80,90,255,.5)}
+#cv{display:block;width:100%;height:auto;image-rendering:pixelated;aspect-ratio:320/208}
+#ttl{position:absolute;inset:0;display:grid;align-content:start;justify-items:center;padding-top:9cqw;text-align:center;pointer-events:none}
+#ttl b{font:400 8.4cqw/1.25 var(--px);color:var(--gold);text-shadow:.6cqw .6cqw 0 #6a1a00,.6cqw .6cqw 0 #000}
+#ttl span{font:400 2.5cqw var(--px);color:#fff;margin-top:3cqw;text-shadow:2px 2px #000}
+.win{position:relative;min-height:168px;padding:16px 18px 18px;border:3px solid #fff;border-radius:10px;background:linear-gradient(#2d41d8,#0e1670);box-shadow:0 0 0 3px #05051a,inset 0 0 0 2px #0a0f50;font:400 12px/1.9 var(--px);text-shadow:2px 2px #000;color:#fff;cursor:default}
+.nm{display:inline-block;font:400 10px var(--px);background:#05051a;color:var(--gold);padding:5px 9px;border-radius:5px;margin:0 0 10px;text-shadow:none}
+#tx{white-space:pre-wrap;overflow-wrap:anywhere}
+#ch{display:grid;gap:6px;margin-top:12px}
+.opt{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:20px 1fr;align-items:start;gap:4px;padding:8px 10px;border-radius:6px;font:400 11px/1.7 var(--px);color:#fff;text-shadow:2px 2px #000;border:2px solid transparent}
+.opt i{font-style:normal;color:var(--gold);visibility:hidden}
+.opt.on{background:rgba(0,0,40,.55);border-color:rgba(255,255,255,.55)}
+.opt.on i{visibility:visible;animation:blk .7s steps(2) infinite}
+.nx{position:absolute;right:16px;bottom:10px;color:var(--gold);animation:blk .8s steps(2) infinite}
+@keyframes blk{50%{opacity:0}}
+.hud{display:none;grid-template-columns:1fr 1fr;gap:12px}
+.hud.on{display:grid}
+.hud div{font:400 9px var(--px);color:var(--muted)}
+.bar{height:12px;margin-top:6px;border:2px solid #fff;border-radius:4px;background:#05051a;overflow:hidden}
+.bar i{display:block;height:100%;width:100%;transition:width .5s steps(8)}
+#bb i{background:var(--red)}#bm i{background:var(--green)}
+.clues{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.chip{border:2px solid #34346a;border-radius:8px;padding:8px 6px;background:#10102a;text-align:center;font:400 8px/1.6 var(--px);color:var(--muted);min-height:50px;display:grid;align-content:center;gap:4px}
+.chip b{font:400 10px var(--px);color:#4a4a8a}
+.chip.on{border-color:var(--gold);color:var(--ink);background:#1d1a3a}
+.chip.on b{color:var(--gold)}
+.pad{display:none;justify-content:space-between;align-items:center;padding:4px 6px}
+@media (hover:none),(max-width:700px){.pad{display:flex}}
+.cross{display:grid;grid-template-columns:repeat(3,56px);grid-template-rows:repeat(3,56px);gap:4px}
+.pad button{all:unset;box-sizing:border-box;cursor:pointer;display:grid;place-items:center;border-radius:12px;background:#1a1a3a;border:2px solid #4a4a8a;font:400 16px var(--px);color:#fff;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.pad button:active{background:#2d41d8}
+.pad .A{width:84px;height:84px;border-radius:50%;font-size:20px;background:#6a1a2a;border-color:#ff5a3c}
+.help{font:400 9px/1.9 var(--px);color:var(--muted);text-align:center}
+.end{border:3px solid var(--gold);border-radius:12px;background:#10102a;padding:20px;display:grid;gap:14px}
+.end h2{font:400 18px/1.4 var(--px);margin:0;color:var(--gold)}
+.rank{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.rank b{font:400 40px var(--px);color:var(--gold);text-shadow:3px 3px #6a1a00}
+.rank span{font-size:14px;color:#d8d8ee}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid #2a2a5a;vertical-align:top}
+th{font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tw{overflow-x:auto}
+.end ul{margin:0;padding-left:18px;display:grid;gap:6px;color:#d8d8ee}
+.end .lab{font:600 11px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:#fff;color:#0a0a18;padding:10px 16px;border-radius:99px;font:600 13px 'Inter',sans-serif;opacity:0;pointer-events:none;transition:opacity .3s,transform .3s}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+[hidden]{display:none!important}
+@media (max-width:560px){.win{font-size:11px;padding:14px}.opt{font-size:10px}.chip{font-size:7px;padding:6px 3px}.chip b{font-size:9px}.clues{gap:5px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<main class="game">
+  <div class="top">
+    <div class="lg">КТО СОРВАЛ РЕЛИЗ</div>
+    <button class="btn" id="snd" type="button" aria-pressed="false">Звук: выкл</button>
+  </div>
+  <div class="scr"><canvas id="cv" width="320" height="208" role="img" aria-label="Пиксельный офис и бой с боссом"></canvas>
+    <div id="ttl"><b>КТО СОРВАЛ<br>РЕЛИЗ?</b><span>ДЕТЕКТИВ-RPG ДЛЯ КОМАНДЫ</span></div></div>
+  <div class="hud" id="hud"><div>ДЕДЛАЙН-ЗАВР<div class="bar" id="bb"><i></i></div></div><div>ДУХ КОМАНДЫ<div class="bar" id="bm"><i></i></div></div></div>
+  <div class="win" id="win" role="log" aria-live="polite"><div class="nm" id="nm" hidden></div><div id="tx"></div><div id="ch"></div><span class="nx" id="nx" hidden>▼</span></div>
+  <div class="clues" id="clues" aria-label="Улики"></div>
+  <div class="pad" id="pad">
+    <div class="cross"><span></span><button data-d="0,-1" aria-label="Вверх">▲</button><span></span><button data-d="-1,0" aria-label="Влево">◀</button><span></span><button data-d="1,0" aria-label="Вправо">▶</button><span></span><button data-d="0,1" aria-label="Вниз">▼</button><span></span></div>
+    <button class="A" id="btnA" aria-label="Действие">A</button>
+  </div>
+  <div class="help" id="help">СТРЕЛКИ / WASD — ХОДИТЬ · ENTER / ПРОБЕЛ — ДЕЙСТВИЕ · 1–3 — ВЫБОР</div>
+
+  <section class="end" id="end" hidden>
+    <h2>Дело закрыто</h2>
+    <div class="rank"><b id="rk">S</b><span id="rkt"></span></div>
+    <div class="tw"><table><thead><tr><th>Правило релиза</th><th>Улика</th></tr></thead><tbody id="rules"></tbody></table></div>
+    <div><div class="lab">Обсудите командой</div><ul><li>Где у нас звучит «стоп» и кто имеет право его сказать?</li><li>Какая из пяти улик знакома нашей команде больше всего?</li><li>Какое одно правило вводим в следующем релизе и кто за него отвечает?</li></ul></div>
+    <div class="row"><button class="btn" id="again" type="button">Сыграть ещё раз</button><button class="btn" id="copy" type="button">Копировать итоги</button></div>
+  </section>
+  <div class="help">Все персонажи вымышлены. Любые совпадения с реальными людьми случайны.</div>
+</main>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(()=>{
+const $=id=>document.getElementById(id);
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const cv=$('cv'),cx=cv.getContext('2d');cx.imageSmoothingEnabled=false;
+const win=$('win'),nm=$('nm'),tx=$('tx'),ch=$('ch'),nx=$('nx');
+const FONT='"Press Start 2P",monospace';
+
+/* ---------- звук ---------- */
+let snd=false,AC=null;
+function beep(f,d=.08,type='square',v=.035){if(!snd)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=type;o.frequency.value=f;g.gain.value=v;o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.stop(AC.currentTime+d)}catch(e){}}
+const jingle=n=>n.forEach((f,i)=>setTimeout(()=>beep(f,.14),i*120));
+$('snd').addEventListener('click',()=>{snd=!snd;$('snd').textContent='Звук: '+(snd?'вкл':'выкл');$('snd').setAttribute('aria-pressed',String(snd));beep(660)});
+
+/* ---------- спрайты (оригинальные) ---------- */
+const PERSON=["...oooooo...","..oHHHHHHo..",".oHHHHHHHHo.",".oHSSSSSSHo.",".oSeSSSSeSo.",".oSSSSSSSSo.","..oSSSSSSo..","..oBBBBBBo..",".oBBBBBBBBo.",".oSBBBBBBSo.","..oBBBBBBo..","..oPPPPPPo..","..oPPooPPo..","..ooo..ooo.."];
+function pal(h,s,b,p){return{o:'#10101c',H:h,S:s,e:'#10101c',B:b,P:p}}
+const PAL={
+ hero:pal('#2a2a3a','#f0c8a8','#3a6aff','#222a3a'),
+ gosha:pal('#3a2a1a','#e8b890','#2e8a4a','#222a3a'),
+ lena:pal('#d04a2a','#f0c8a8','#8a4ac0','#2a2a44'),
+ artem:pal('#d8c070','#f0c8a8','#2a8ac8','#33334a'),
+ misha:pal('#6a3a1a','#e0a880','#f0a030','#3a3a55'),
+ viktor:pal('#b0b0b8','#e8b890','#5a1a2a','#1a1a28'),
+ b1:pal('#2a2a3a','#f0c8a8','#3a6aff','#222a3a'),
+ b2:pal('#c0392b','#f0c8a8','#3fb06a','#2a2a44'),
+ b3:pal('#e6c36a','#f0c8a8','#8a5ad8','#33334a'),
+ b4:pal('#6a3a1a','#e0a880','#ff9a4a','#3a3a55')};
+function spr(p,x,y,s=1){for(let r=0;r<PERSON.length;r++)for(let c=0;c<12;c++){const k=PERSON[r][c];if(k==='.')continue;cx.fillStyle=p[k];cx.fillRect(Math.round(x+c*s),Math.round(y+r*s),s,s)}}
+
+/* ---------- карта ---------- */
+const TW=20,TH=13;
+const MAP=["#########DD#########","#SSSS#ffffffff#WWWW#","#gggg#fXXffXXf#wwww#","#gggg#ffffffff#wTTw#","#gggg#fXXffXXf#wTTw#","#ggggffffffffffwwww#","######ffffffff######","#yyyyyffffffffffffP#","#KKKKyffffXXffXXfff#","#yyyyyfffffffffffff#","#yyyyyfffffffffffff#","#yyyyyfffffffffffff#","####################"];
+const SOLID='#SXTKPWD';
+const baseOf=(x,y)=>(x<=4&&y>=1&&y<=5)?'g':(x>=15&&y<=5)?'w':(x<=5&&y>=7)?'y':'f';
+let unlocked=false;
+function tile(c,x,y,t){const X=x*16,Y=y*16,R=(col,a,b,w,h)=>{cx.fillStyle=col;cx.fillRect(X+a,Y+b,w,h)};
+ const flo=ch=>{switch(ch){
+  case'f':R((x+y)%2?'#4a4e73':'#444868',0,0,16,16);break;
+  case'g':R('#1d2336',0,0,16,16);R('#2b3550',0,0,16,1);R('#2b3550',0,0,1,16);R('#3b4a6e',8,8,2,2);break;
+  case'w':R('#8a5a3a',0,0,16,16);R('#74492d',0,5,16,1);R('#74492d',0,11,16,1);R('#74492d',(x*5)%12+2,0,1,5);break;
+  case'y':R((x+y)%2?'#cfcab9':'#bdb8a7',0,0,16,16);break}};
+ if('#SXTKPWD'.indexOf(c)<0){flo(c);return}
+ switch(c){
+ case'#':R('#26264a',0,0,16,16);R('#3a3a72',0,0,16,3);R('#1a1a34',0,8,16,1);R('#1a1a34',((x+y)%2)*8+4,0,1,8);R('#1a1a34',((x+y)%2)*8,9,1,7);break;
+ case'S':flo('g');R('#0e0e18',1,0,14,16);R('#2a2a44',2,1,12,4);R('#2a2a44',2,7,12,4);const on=(((t/350)|0)+x)%2;R(on?'#6fe0a0':'#1c4a34',3,2,2,2);R(on?'#1c4a34':'#ff5a3c',6,2,2,2);R('#6fe0a0',3,8,2,2);R('#2a2a44',2,12,12,3);break;
+ case'X':flo(baseOf(x,y));R('#6b4a2f',0,6,16,8);R('#3a2716',0,13,16,1);R('#161628',3,0,10,7);R('#4aa8ff',4,1,8,4);R('#161628',7,7,2,1);break;
+ case'T':flo('w');R('#a06a3f',0,0,16,16);R('#b57c4b',0,0,16,3);R('#6b4426',0,13,16,3);if(x===16&&y===3){R('#f1ede4',3,5,6,5)}if(x===17&&y===4){R('#2a8ac8',5,6,5,3)}break;
+ case'K':flo('y');R('#d9d5c8',0,0,16,10);R('#8f8a7a',0,10,16,6);R('#6d6a5f',0,10,16,1);if(x===2){R('#222',4,0,8,8);R('#c33',7,2,2,2);R('#f1ede4',6,9,4,0)}break;
+ case'P':flo(baseOf(x,y));R('#8a4a2a',4,10,8,5);R('#3fa34d',3,2,10,9);R('#2d7a38',5,4,6,5);break;
+ case'W':R('#26264a',0,0,16,16);R('#e8e8f0',1,2,14,11);R('#999',1,13,14,1);R('#ffd84a',3,4,3,3);R('#ff8aa0',7,4,3,3);R('#6fe0a0',11,4,3,3);R('#555',3,9,10,1);break;
+ case'D':R('#26264a',0,0,16,16);R(unlocked?'#2a7a4a':'#7a1d2e',1,1,14,15);R('#e0b84a',1,1,14,1);R('#e0b84a',1,1,1,15);R('#e0b84a',14,1,1,15);const g=((t/300)|0)%2;R(unlocked?'#6fe0a0':(g?'#ff5a3c':'#c0381e'),(x===9?10:3),8,3,3);R('#0e0e18',3,4,10,2);break}}
+
+/* ---------- сущности ---------- */
+const ENT=[
+ {id:'gosha',x:3,y:3,p:PAL.gosha,clue:0},{id:'lena',x:9,y:3,p:PAL.lena,clue:1},
+ {id:'artem',x:15,y:3,p:PAL.artem},{id:'board',x:16,y:1,obj:1,clue:2},
+ {id:'misha',x:3,y:9,p:PAL.misha,clue:3},{id:'viktor',x:16,y:9,p:PAL.viktor},
+ {id:'term',x:10,y:8,obj:1,clue:4}];
+const CL=[['Деплой','Деплой в пятницу в 18:42 без плана отката.'],['Тесты','Регрессию отключили флагом SKIP_QA: «не успеваем».'],['Объём','3 задачи добавили после фриза, без тикетов.'],['Срок','Директор: «Релиз до выходных любой ценой».'],['Чат','В чате релиза никто не написал «стоп».']];
+let clues=[0,0,0,0,0];
+const nClues=()=>clues.reduce((a,b)=>a+b,0);
+function drawClues(){$('clues').innerHTML=CL.map((c,i)=>`<div class="chip ${clues[i]?'on':''}"><b>${i+1}</b>${clues[i]?c[0]:'???'}</div>`).join('')}
+drawClues();
+
+/* ---------- состояние ---------- */
+let mode='title',H=null,busy=false,shake=0,flash=0,floats=[],lunge=-1,lungeT=0,hurt=0,dissolve=0,bossHP=100,morale=100;
+const P={x:9,y:6,ox:0,oy:0,d:[0,-1]};
+const rnd=n=>Math.floor(Math.random()*n);
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=rnd(i+1);[a[i],a[j]]=[a[j],a[i]]}return a};
+
+/* ---------- окно диалогов ---------- */
+function hint(t){nm.hidden=true;nx.hidden=true;ch.innerHTML='';tx.textContent=t||''}
+function say(who,text){return new Promise(res=>{
+  nm.textContent=who||'';nm.hidden=!who;ch.innerHTML='';tx.textContent='';nx.hidden=true;
+  let n=0,timer=null;
+  const done=()=>{clearInterval(timer);tx.textContent=text;nx.hidden=false;H={say:1,a:()=>{H=null;nx.hidden=true;res()}}};
+  if(RM){done();return}
+  H={say:1,a:done};
+  timer=setInterval(()=>{n++;tx.textContent=text.slice(0,n);if(n%3===0)beep(300,.02,'square',.012);if(n>=text.length)done()},20)})}
+async function talk(who,arr){for(const l of arr)await say(who,l)}
+function choose(q,opts,start=0){return new Promise(res=>{
+  tx.textContent=q;nx.hidden=true;ch.innerHTML='';let i=start;
+  const btns=opts.map((o,k)=>{const b=document.createElement('button');b.type='button';b.className='opt';const m=document.createElement('i');m.textContent='▶';b.append(m,o);b.addEventListener('click',()=>{i=k;pick()});ch.appendChild(b);return b});
+  const paint=()=>btns.forEach((b,k)=>b.classList.toggle('on',k===i));
+  const pick=()=>{H=null;ch.innerHTML='';beep(660,.06);res(i)};
+  H={dir:(dx,dy)=>{if(dy){i=(i+dy+opts.length)%opts.length;paint();beep(440,.04)}},a:pick,num:n=>{if(n>=1&&n<=opts.length){i=n-1;pick()}}};
+  paint()})}
+win.addEventListener('click',e=>{if(H&&H.say&&!e.target.closest('.opt'))H.a()});
+
+/* ---------- ввод ---------- */
+const DIRS={ArrowUp:[0,-1],w:[0,-1],W:[0,-1],ArrowDown:[0,1],s:[0,1],S:[0,1],ArrowLeft:[-1,0],a:[-1,0],A:[-1,0],ArrowRight:[1,0],d:[1,0],D:[1,0]};
+function dirIn(dx,dy){if(H){H.dir&&H.dir(dx,dy);return}if(mode==='map'&&!busy)tryMove(dx,dy)}
+function actIn(){if(H){H.a&&H.a();return}if(mode==='map'&&!busy)interact()}
+addEventListener('keydown',e=>{if(e.ctrlKey||e.metaKey||e.altKey)return;
+  const d=DIRS[e.key];if(d){e.preventDefault();dirIn(d[0],d[1]);return}
+  if(e.key==='Enter'||e.key===' '||e.key==='e'||e.key==='z'||e.key==='E'||e.key==='Z'){e.preventDefault();actIn();return}
+  if(/^[1-9]$/.test(e.key)&&H&&H.num)H.num(+e.key)});
+document.querySelectorAll('#pad [data-d]').forEach(b=>{let iv;const d=b.dataset.d.split(',').map(Number);
+  const go=()=>dirIn(d[0],d[1]);
+  b.addEventListener('pointerdown',e=>{e.preventDefault();go();clearInterval(iv);iv=setInterval(go,150)});
+  ['pointerup','pointerleave','pointercancel'].forEach(ev=>b.addEventListener(ev,()=>clearInterval(iv)))});
+$('btnA').addEventListener('pointerdown',e=>{e.preventDefault();actIn()});
+
+/* ---------- ходьба и действия ---------- */
+const entAt=(x,y)=>ENT.find(e=>e.x===x&&e.y===y);
+function tryMove(dx,dy){if(P.ox||P.oy)return;P.d=[dx,dy];const nx=P.x+dx,ny=P.y+dy;
+  if(nx<0||ny<0||nx>=TW||ny>=TH||SOLID.includes(MAP[ny][nx])||entAt(nx,ny)){beep(120,.04);return}
+  P.x=nx;P.y=ny;P.ox=-dx*16;P.oy=-dy*16;beep(220,.02,'triangle',.02)}
+const MAPHINT='Стрелки или WASD: идти. Enter, пробел или A: действие. Ищи значок «!» над коллегами и предметами.';
+async function interact(){const tx_=P.x+P.d[0],ty=P.y+P.d[1],e=entAt(tx_,ty);
+  if(!e&&MAP[ty]&&MAP[ty][tx_]==='D'){busy=true;try{await door()}finally{busy=false;if(mode==='map')hint(MAPHINT)}return}
+  if(!e)return;busy=true;try{await INT[e.id]()}finally{busy=false;if(mode==='map')hint(MAPHINT)}}
+async function gain(i){clues[i]=1;drawClues();jingle([523,659,784,1047]);await say('УЛИКА '+nClues()+' ИЗ 5',CL[i][1]);
+  if(nClues()===5){unlocked=true;jingle([392,523,659,784,1047]);await say('','Все улики собраны. Дверь серверной «PROD» открылась. Пора назвать виновного.')}}
+
+/* ---------- диалоги и головоломки ---------- */
+const INT={
+ async gosha(){
+  if(clues[0]){await say('Гоша, DevOps','Я катил по просьбе сверху. Но откат надо было готовить заранее. Это на мне тоже.');return}
+  await talk('Гоша, DevOps',['Прод лежит, а я смотрю на график и не верю. Вот журнал деплоя. Что-то в нём не так.']);
+  for(;;){const a=await choose('Какая строка журнала выбивается?',['17:55  build #482 passed','18:42  deploy prod --no-rollback (ПТ)','18:44  health-check: 503']);
+   if(a===1)break;await say('Гоша, DevOps','Это не то. Смотри, что именно запустили и в какой день недели.')}
+  await gain(0)},
+ async lena(){
+  if(clues[1]){await say('Лена, QA','Я говорила, что регрессия займёт ночь. Нам сказали: «успеем так». Не успели.');return}
+  await talk('Лена, QA',['Мои тесты были красными, а потом их просто пропустили. Помоги восстановить порядок событий.']);
+  const E=['Добавили задачи после заморозки','Отключили регрессию флагом SKIP_QA','Релиз ушёл в прод'];let left=[0,1,2];
+  for(let step=0;step<2;step++){
+   for(;;){const sh=shuffle(left),a=await choose(step?'А что случилось ВТОРЫМ?':'Что случилось ПЕРВЫМ?',sh.map(i=>E[i]));
+    if(sh[a]===left[0]){left=left.filter(i=>i!==sh[a]);break}
+    await say('Лена, QA','Нет. Сначала появились причины, а потом последствия.')}}
+  await say('Лена, QA','Всё верно: объём вырос, тесты выключили, и только потом релиз. Берите это в улики.');await gain(1)},
+ async artem(){
+  if(clues[2]){await say('Артём, продакт','Должен был завести тикеты. Урок получен. Три мелочи на пять минут оказались не мелочами.');return}
+  await talk('Артём, продакт',['Я просто уточнял у заказчика. Три мелочи, на пять минут.','Если что, всё записано на доске. Загляни туда.'])},
+ async board(){
+  if(clues[2]){await say('Доска','Стикеры на месте. Свежие три висят без номеров тикетов.');return}
+  await say('Доска релиза','ДО ЗАМОРОЗКИ: 8 задач, все с тикетами.\nПОСЛЕ ЗАМОРОЗКИ (стикеры, 18:20):\n+ оплата через СБП\n+ новый баннер\n+ экспорт в CSV');
+  for(;;){const a=await choose('Сколько задач добавили после заморозки?',['2','3','4']);if(a===1)break;await say('Доска релиза','Пересчитай стикеры после строки «18:20».')}
+  await gain(2)},
+ async misha(){
+  if(clues[3]){await say('Миша, стажёр','Я просто варил кофе! Но теперь спать спокойно не смогу.');return}
+  await talk('Миша, стажёр',['Я варил кофе в 18:30 и слышал, как в переговорке кричали про срок.','Один человек сказал это очень громко. Тот, что в костюме.']);
+  for(;;){const a=await choose('Кто сказал: «Релиз до выходных любой ценой»?',['Гоша, DevOps','Артём, продакт','Виктор, директор']);if(a===2)break;await say('Миша, стажёр','Нет, у того был галстук.')}
+  await gain(3)},
+ async viktor(){
+  if(nClues()>=4){await talk('Виктор, директор',['Я сказал «любой ценой»? Хм. Пожалуй, это было лишним.','Пожалуйста, найдите причины. Я не буду искать виноватого заранее.']);return}
+  await talk('Виктор, директор',['Мне позвонил клиент. Я лишь сказал, что хорошо бы успеть до выходных.','Теперь давайте быстро выясним, кто сорвал релиз.'])},
+ async term(){
+  if(clues[4]){await say('Чат релиза','Больше ничего. Тишина тоже улика.');return}
+  await say('Чат «Релиз Феникс»','Виктор: Катим сегодня?\nАртём: +\nГоша: ок\nЛена: …\nГоша: катим.\n18:44 Бот: прод недоступен.');
+  for(;;){const a=await choose('Какого слова не написал никто?',['«Да»','«Стоп»','«Ок»']);if(a===1)break;await say('Чат «Релиз Феникс»','Оно как раз есть в чате. Ищи слово, которого там нет.')}
+  await gain(4)}
+};
+
+async function door(){
+  if(!unlocked){await say('Дверь «PROD»','Заперто. Нужно собрать 5 улик. Сейчас: '+nClues()+' из 5.');return}
+  await say('','Ты открываешь дверь. На серверах мигают красные лампочки. Время назвать виновного.');
+  const REB=[
+   'Гоша выкатил релиз, но по давлению сверху и без окна на тесты. Это звено цепочки, а не причина.',
+   'Лена предупреждала про сроки. Тесты отключили не по её решению. Она не виновата.',
+   'Артём добавил задачи, но ему тоже дали жёсткий срок. Без остальных звеньев релиз бы устоял.',
+   'Виктор поставил срок, но не просил отключать проверки. Он усилил давление, а не сломал релиз.'];
+  for(;;){const a=await choose('Кто сорвал релиз?',['Гоша, DevOps','Лена, QA','Артём, продакт','Виктор, директор','Никто в одиночку: сработала цепочка решений под давлением срока']);
+   if(a===4)break;await say('Улики не сходятся',REB[a]+' Посмотри на пять улик целиком.')}
+  await talk('',['Верно. Одну ошибку закрыл бы любой коллега. Но тишина, давление и спешка сложились в цепочку.','Земля дрожит. Из серверов поднимается тот, кто питается молчанием.']);
+  await battle()}
+
+/* ---------- босс ---------- */
+const BQ=[
+ {c:3,boss:'«РЕЛИЗ ДО ВЫХОДНЫХ! ЛЮБОЙ ЦЕНОЙ!»',q:'Как реагируем на давление дедлайна?',o:['Говорим о рисках вслух и предлагаем сократить объём','Молча соглашаемся и работаем по ночам','Ищем, кто виноват в задержке'],hint:'Хороший ответ открывает разговор о цене и объёме, а не прячет проблему.',win:'Дедлайн дрогнул: цена спешки стала видна всем.'},
+ {c:2,boss:'«ЕЩЁ ТРИ МЕЛОЧИ! НИКТО НЕ ЗАМЕТИТ!»',q:'Заказчик просит ещё 3 задачи после заморозки.',o:['Берём через тикет и решаем, что убираем взамен','Добавим тихонько, как-нибудь успеем','Отказываем без объяснений'],hint:'Объём после фриза не добавляют молча. Его меняют осознанно.',win:'Фриз удержан. Объём снова виден и управляем.'},
+ {c:1,boss:'«ТЕСТЫ? НЕТ ВРЕМЕНИ! ВЫКЛЮЧАЙ!»',q:'Времени на тесты не хватает. Что делаем?',o:['Не отключаем регрессию и сокращаем объём релиза','Включаем SKIP_QA, потом починим','Проверяем только то, что любим'],hint:'Качество не режем. Режем то, что можно сделать позже.',win:'Регрессия осталась на месте. Дедлайн-завр отшатнулся.'},
+ {c:0,boss:'«ПЯТНИЦА, ВЕЧЕР! САМОЕ ВРЕМЯ ДЛЯ ДЕПЛОЯ!»',q:'Деплой назначен на вечер пятницы.',o:['Переносим на будний день и готовим план отката','Катим, в прошлый раз же сработало','Катим без отката, так быстрее'],hint:'Хороший деплой можно откатить, и проверять его некому ночью.',win:'Деплой перенесён. Откат готов. Босс теряет силу.'},
+ {c:4,boss:'«ТИШИНА... МОЯ ЛЮБИМАЯ ЕДА...»',q:'Как не молчать перед релизом?',o:['Вводим право на «стоп»: любой может остановить релиз без последствий','Решает только директор, остальные не спорят','Просто надеемся, что всё пройдёт'],hint:'Безопасность перед релизом начинается с права сказать «стоп».',win:'Кто-то в чате написал «стоп». Тишина разбита.'}];
+const SKILLS=[['Кодер','Дебаг','убирает один неверный ответ'],['Баг-охотник','Регрессия','даёт подсказку по раунду'],['Роадмап','Приоритизация','щит: следующая ошибка бесплатна'],['Целитель (HR)','Забота','возвращает 30 духа команды']];
+let used,shield,rankS;
+function setBars(){$('bb').firstChild.style.width=bossHP+'%';$('bm').firstChild.style.width=morale+'%'}
+function addFloat(txt,x,y,col){floats.push({txt,x,y,col,t:0})}
+async function battle(){
+  mode='battle';$('hud').classList.add('on');$('ttl').hidden=true;flash=1;jingle([196,185,175,165]);
+  bossHP=100;morale=100;used=[0,0,0,0];shield=false;setBars();
+  await talk('ДЕДЛАЙН-ЗАВР',['ГРРР! Я ЖИВУ В ПЯТНИЧНЫХ ВЕЧЕРАХ!','ВЫ БОИТЕСЬ СКАЗАТЬ «СТОП»? ТОГДА Я НЕПОБЕДИМ!']);
+  for(let r=0;r<5;){
+    const Q=BQ[r],opts=shuffle(Q.o.map((t,i)=>({t,ok:i===0}))),off=new Set();
+    await say('ДЕДЛАЙН-ЗАВР',Q.boss);
+    while(true){
+      const cmd=await choose(`Раунд ${r+1} из 5. Что делает команда?`,['ОТВЕТИТЬ','НАВЫК','УЛИКА','БЕЖАТЬ']);
+      if(cmd===0){
+        const idx=opts.map((_,i)=>i).filter(i=>!off.has(i)),a=await choose(Q.q,[...idx.map(i=>opts[i].t),'НАЗАД']);
+        if(a===idx.length)continue;const o=opts[idx[a]];
+        if(o.ok){lunge=r%4;lungeT=0;hurt=20;shake=RM?0:10;bossHP-=20;setBars();addFloat('-20',70,48,'#ffd84a');beep(880,.1);jingle([523,784]);await say('КОМАНДА',Q.win);r++;break}
+        off.add(idx[a]);
+        if(shield){shield=false;await say('Роадмап','Щит приоритетов поглотил удар. Ответ неверный, но дух цел.')}
+        else{morale=Math.max(0,morale-25);setBars();shake=RM?0:12;addFloat('-25',250,40,'#ff5a3c');beep(110,.2,'sawtooth');await say('ДЕДЛАЙН-ЗАВР','ХА! МОЛЧАНИЕ И СПЕШКА! ДУХ КОМАНДЫ: '+morale+'%.')}
+        if(morale<=0){await talk('',['Команда выгорела. Дедлайн-завр хохочет.','Но вы собрали улики. Попробуем ещё раз с тем же знанием.']);bossHP=100;morale=100;used=[0,0,0,0];shield=false;setBars();r=0;break}
+      }else if(cmd===1){
+        const s=await choose('Чей навык используем? (один раз за бой)',SKILLS.map((k,i)=>`${k[0]}: «${k[1]}» ${used[i]?'(использован)':'— '+k[2]}`).concat('НАЗАД'));
+        if(s===4)continue;if(used[s]){await say('','Этот навык уже использован.');continue}
+        used[s]=1;beep(990,.12);
+        if(s===0){const w=opts.map((_,i)=>i).filter(i=>!opts[i].ok&&!off.has(i));if(w.length)off.add(w[rnd(w.length)]);await say('Кодер','Дебаг: один неверный вариант убран.')}
+        else if(s===1)await say('Баг-охотник',Q.hint);
+        else if(s===2){shield=true;await say('Роадмап','Приоритизация: следующая ошибка ничего не стоит.')}
+        else{morale=Math.min(100,morale+30);setBars();addFloat('+30',250,110,'#6fe0a0');await say('Целитель','Забота: команда выдохнула. Дух: '+morale+'%.')}
+      }else if(cmd===2)await say('УЛИКА',CL[Q.c][0]+'. '+CL[Q.c][1]);
+      else await say('','Дедлайн не отпускает. Бежать нельзя, но можно договориться.')}
+  }
+  await victory()}
+async function victory(){
+  dissolve=1;jingle([523,659,784,1047,784,1047,1319]);
+  await talk('',['Дедлайн-завр рассыпается на сотни маленьких таймеров. Все они показывают «понедельник».','Прод снова жив. Команда выдыхает.']);
+  const usedN=used.reduce((a,b)=>a+b,0);rankS=morale>=75&&usedN<=1?'S':morale>=50?'A':'B';
+  mode='end';$('hud').classList.remove('on');hint('');
+  $('rk').textContent=rankS;$('rkt').textContent=`Дух команды ${morale}%. Навыков использовано: ${usedN} из 4.`;
+  $('rules').innerHTML=[[3,'Говорим о рисках и сроках вслух'],[2,'Новые задачи после фриза только через тикет'],[1,'Регрессию не отключаем'],[0,'Не катим вечером в пятницу и готовим откат'],[4,'У каждого есть право сказать «стоп»']].map(r=>`<tr><td><b>${r[1]}</b></td><td>${CL[r[0]][1]}</td></tr>`).join('');
+  $('end').hidden=false;$('end').scrollIntoView({block:'start',behavior:RM?'auto':'smooth'})}
+$('again').addEventListener('click',()=>newGame());
+$('copy').addEventListener('click',async()=>{const t=`Кто сорвал релиз: ранг ${rankS}, дух команды ${morale}%.\nПравила: 1) говорим о рисках вслух; 2) объём после фриза через тикет; 3) не отключаем регрессию; 4) не деплоим вечером в пятницу без отката; 5) у каждого есть право на «стоп».`;
+  try{await navigator.clipboard.writeText(t);toast('Итоги скопированы')}catch(e){toast('Не удалось скопировать, выделите текст вручную')}});
+let tt;function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>el.classList.remove('show'),2400)}
+
+/* ---------- рисование ---------- */
+function disc(ox,oy,k,c,cxx,cyy,r,col){cx.fillStyle=col;for(let y=-r;y<=r;y++){const w=Math.floor(Math.sqrt(r*r-y*y));cx.fillRect(ox+(cxx-w)*k,oy+(cyy+y)*k,(2*w+1)*k,k)}}
+function boss(ox,oy,k,t){
+  const px=(x,y,w,h,c)=>{cx.fillStyle=c;cx.fillRect(ox+x*k,oy+y*k,w*k,h*k)};
+  cx.fillStyle='rgba(0,0,0,.35)';cx.fillRect(ox+4*k,oy+39*k,32*k,2*k);
+  for(let i=0;i<7;i++){px(12-i,8-i,3,1,'#e8d8a0');px(25+i,8-i,3,1,'#e8d8a0')}
+  disc(ox,oy,k,0,20,24,16,'#1a0a0a');disc(ox,oy,k,0,20,24,15,'#ff5a3c');disc(ox,oy,k,0,20,24,13,'#f1ede4');
+  for(let i=0;i<12;i++){const a=i*Math.PI/6;px(20+Math.round(11*Math.sin(a)),24-Math.round(11*Math.cos(a)),1,1,'#222')}
+  for(let i=0;i<5;i++){px(13+i,17+(i>>1),1,1,'#1a0a0a');px(27-i,17+(i>>1),1,1,'#1a0a0a')}
+  px(14,21,4,3,'#c01818');px(22,21,4,3,'#c01818');px(16,22,1,1,'#000');px(22,22,1,1,'#000');
+  px(14,29,12,3,'#1a0a0a');[15,18,21,24].forEach(x=>px(x,29,2,1,'#fff'));[16,19,22].forEach(x=>px(x,31,2,1,'#fff'));
+  const sw=Math.sin(t/300)*2;px(1,26+sw,4,4,'#ff5a3c');px(35,26-sw,4,4,'#ff5a3c');
+  // стрелки как моргающий таймер
+  px(20,25,1,1,'#111');px(20,25,1,1,'#111')}
+function title(t){
+  const g=cx.createLinearGradient(0,0,0,208);g.addColorStop(0,'#07071c');g.addColorStop(1,'#2a1a5a');cx.fillStyle=g;cx.fillRect(0,0,320,208);
+  for(let i=0;i<64;i++){const tw=(((t/500)|0)+i)%3;cx.fillStyle=tw?'#fff':'#6a6aa8';cx.fillRect((i*53)%320,(i*37)%120,tw?1:2,tw?1:2)}
+  const pulse=Math.sin(t/400)*2;disc(0,0,1,0,248,64,26+pulse,'#7a1000');disc(0,0,1,0,248,64,22+pulse,'#ff5a3c');disc(0,0,1,0,248,64,19,'#f1ede4');
+  cx.fillStyle='#222';for(let i=0;i<12;i++){const a=i*Math.PI/6;cx.fillRect(Math.round(248+16*Math.sin(a)),Math.round(64-16*Math.cos(a)),2,2)}
+  cx.fillRect(247,52,2,13);cx.fillRect(247,64,9,2);
+  for(let i=0;i<10;i++){const w=24+(i*7)%12,h=50+((i*29)%50),x=i*34-4;cx.fillStyle='#10102a';cx.fillRect(x,208-h,w,h);
+    for(let r=0;r<h/10-1;r++)for(let c=0;c<w/8;c++){const lit=(i*7+r*3+c*5)%4===0||(((t/900)|0)+i+r+c)%11===0;cx.fillStyle=lit?'#ffd84a':'#1c1c3a';cx.fillRect(x+3+c*8,208-h+4+r*10,4,5)}}
+  cx.fillStyle='#07071c';cx.fillRect(0,196,320,12);spr(PAL.b1,126,182,1);spr(PAL.b2,146,182,1);spr(PAL.b3,166,182,1);spr(PAL.b4,186,182,1)}
+function map(t,dt){
+  for(let y=0;y<TH;y++)for(let x=0;x<TW;x++)tile(MAP[y][x],x,y,t);
+  if(P.ox||P.oy){const s=16*dt/110;P.ox=P.ox>0?Math.max(0,P.ox-s):Math.min(0,P.ox+s);P.oy=P.oy>0?Math.max(0,P.oy-s):Math.min(0,P.oy+s)}
+  const list=ENT.filter(e=>!e.obj).map(e=>({y:e.y,f:()=>spr(e.p,e.x*16+2,e.y*16+1+(((t/450)|0)+e.x)%2*0,1)})).concat([{y:P.y,f:()=>spr(PAL.hero,P.x*16+2+P.ox,P.y*16+1+P.oy-(P.ox||P.oy?1:0),1)}]).sort((a,b)=>a.y-b.y);
+  list.forEach(o=>o.f());
+  ENT.forEach(e=>{if(e.clue!=null&&!clues[e.clue]){const by=Math.round(Math.sin(t/220+e.x)*1.5),x=e.x*16+4,y=e.y*16-(e.obj?6:9)+by;cx.fillStyle='#000';cx.fillRect(x-1,y-1,10,13);cx.fillStyle='#ffd84a';cx.fillRect(x,y,8,11);cx.fillStyle='#000';cx.fillRect(x+3,y+1,2,5);cx.fillRect(x+3,y+8,2,2)}});
+  const tx_=P.x+P.d[0],ty=P.y+P.d[1];if(!H&&!busy&&(entAt(tx_,ty)||(MAP[ty]&&MAP[ty][tx_]==='D'))){cx.fillStyle='#fff';cx.fillRect(P.x*16+10,P.y*16-8,9,9);cx.fillStyle='#10101c';cx.font='7px '+FONT;cx.fillText('A',P.x*16+12,P.y*16-1)}}
+function battleScene(t,dt){
+  for(let y=0;y<208;y+=8){const k=y/208;cx.fillStyle=`rgb(${16+k*30|0},${10+k*6|0},${74-k*20|0})`;cx.fillRect(0,y,320,8)}
+  cx.fillStyle='#1a0a2a';cx.fillRect(0,150,320,58);cx.fillStyle='#2a1a44';for(let x=0;x<320;x+=16)cx.fillRect(x,150,1,58);for(let y=150;y<208;y+=14)cx.fillRect(0,y,320,1);
+  if(hurt>0)hurt-=dt/16;if(lungeT<1&&lunge>=0)lungeT+=dt/420;
+  const bob=Math.round(Math.sin(t/280)*3);
+  if(dissolve){dissolve=Math.max(0,dissolve);}
+  if(!(hurt>0&&!RM&&((hurt|0)%2))){ if(!(mode==='end')) boss(24,28+bob,3,t)}
+  for(let i=0;i<4;i++){let ox=0;if(lunge===i&&lungeT<1)ox=-Math.sin(lungeT*Math.PI)*26;cx.fillStyle='rgba(0,0,0,.35)';cx.fillRect(236+ox,i*38+58,24,4);spr(PAL['b'+(i+1)],236+ox,i*38+30,2)}
+  floats.forEach(f=>{f.t+=dt;const a=Math.max(0,1-f.t/900);cx.globalAlpha=a;cx.fillStyle='#000';cx.font='12px '+FONT;cx.fillText(f.txt,f.x+1,f.y-f.t/30+1);cx.fillStyle=f.col;cx.fillText(f.txt,f.x,f.y-f.t/30)});cx.globalAlpha=1;floats=floats.filter(f=>f.t<900)}
+let last=performance.now();
+function frame(now){const dt=Math.min(50,now-last);last=now;
+  cx.save();if(shake>0){shake-=dt/16;cx.translate(Math.round((Math.random()-.5)*6),Math.round((Math.random()-.5)*6))}
+  if(mode==='title')title(now);else if(mode==='map')map(now,dt);else battleScene(now,dt);
+  cx.restore();
+  if(flash>0){cx.globalAlpha=Math.min(1,flash);cx.fillStyle='#fff';cx.fillRect(0,0,320,208);cx.globalAlpha=1;flash-=dt/400}
+  requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+
+/* ---------- старт ---------- */
+async function newGame(){
+  mode='title';H=null;busy=false;clues=[0,0,0,0,0];unlocked=false;drawClues();P.x=9;P.y=6;P.ox=P.oy=0;P.d=[0,-1];lunge=-1;dissolve=0;floats=[];
+  $('end').hidden=true;$('hud').classList.remove('on');$('ttl').hidden=false;window.scrollTo({top:0});
+  for(;;){hint('');const a=await choose('Пятница, 18:50. Релиз упал. Кто виноват?',['НАЧАТЬ РАССЛЕДОВАНИЕ','КАК ИГРАТЬ']);
+   if(a===0)break;
+   await say('КАК ИГРАТЬ','Ходи по офису, говори с коллегами (Enter или A) и решай небольшие головоломки. За каждую получишь улику. Когда их будет 5, откроется дверь «PROD». Один экран на всю команду: обсуждайте ответы вместе.')}
+  $('ttl').hidden=true;
+  await talk('',['Пятница, 18:50. Релиз «Феникс» упал в проде. Клиенты пишут, директор молчит.','Вы — аварийная команда: Кодер, Баг-охотник, Роадмап и Целитель из HR. Обойдите офис и соберите 5 улик.','Подсказка: ищи значок «!» над коллегами и предметами.']);
+  mode='map';hint(MAPHINT)}
+newGame();
+})();
+</script>
+
+</body></html>
