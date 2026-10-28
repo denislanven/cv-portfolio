@@ -1,0 +1,20 @@
+/* Vector symbols preserve the same shape on iOS, Android and desktop. */
+.site-symbol{display:inline-block;width:1em;height:1em;vertical-align:-.1em;flex:none;overflow:visible;color:inherit;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.exec-case summary::after{content:'';width:1em;height:1em;flex:none;background:currentColor;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19L19 5M5 5h14v14' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E") center/contain no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 19L19 5M5 5h14v14' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E") center/contain no-repeat}
+@media(max-width:1100px){
+ nav{position:sticky!important;top:0;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;background:#101116!important}
+ .exec-mobile{position:sticky;top:var(--mobile-nav-height,64px)!important;margin:0;background:#101116!important;backdrop-filter:none;-webkit-backdrop-filter:none;z-index:40;isolation:isolate}
+ .hero{padding-top:30px!important}.hero h1{overflow:visible}
+}
+@media(hover:none),(pointer:coarse){
+ .reveal{animation:none!important;filter:none!important;scale:1!important;opacity:1;transform:none}
+ .reveal.mobile-enter{opacity:0;transform:translate3d(0,12px,0);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1)}
+ .reveal.mobile-enter.mobile-visible{opacity:1;transform:translate3d(0,0,0)}
+ .motion-outline{background-size:100% 100%!important}.motion-words>div,.motion-star,.motion-business,.motion-kicker>span:last-child{transform:none!important}
+ .motion-art img{will-change:auto;transform:none!important}.motion-art{transform:none!important}
+ .exec-case{transition-delay:0ms!important}.exec-case.motion-pending{transform:translate3d(0,12px,0)}
+ .hero h1>span,.hero .lead,.hero .btns{animation-duration:.6s;animation-timing-function:cubic-bezier(.2,.7,.2,1)}
+ .product-dialog,.product-dialog::backdrop{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+}
+@media(prefers-reduced-motion:reduce){.reveal.mobile-enter{opacity:1;transform:none;transition:none}}
+@media(max-width:1100px){html,body{max-width:100%;overflow-x:clip}.exec-mobile{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.exec-mobile::-webkit-scrollbar{display:none}}
