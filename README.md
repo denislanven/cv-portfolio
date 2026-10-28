@@ -25,3 +25,7 @@ Source material and photographs remain the property of their respective owners. 
 See [model methodology](docs/lab-methodology.md) for data provenance, formulas and limitations. Shared deterministic calculations live in `docs/hr-lab-domain.js`; application views in `docs/hr-lab.js`; shared design in `docs/hr-lab.css`. The pixel game retains its own renderer and uses `docs/release-lab.css`.
 
 Run `node --test tests/*.test.cjs`. The offline UI fixture tests logic and translations; it does not render a browser.
+
+Pepe includes a welcome page, role plans and a demo HR workspace with current-session history, architecture and a JSON scenario editor. Public demo credentials (`hr` / `onboard2026`) only switch the interface; they do not secure personal data. Reloading clears answers and scenario edits.
+
+The release game supports physical WASD keys across keyboard layouts and arrow keys. Its original procedural chiptune score is opt-in, has a volume control, changes during combat and pauses when the page is hidden. No external audio files are loaded. Gallery covers share current product titles and descriptions, with versioned demo URLs.

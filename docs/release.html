@@ -69,10 +69,10 @@ th{font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercas
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
-<link rel="stylesheet" href="release-lab.css"><div class="release-shell"><nav class="release-nav"><a href="portfolio.html#tools"><b>DL<span>●</span></b></a><span>RELEASE ROOM / TEAM EXPERIENCE</span><a href="portfolio.html#tools">Все инструменты ↗</a></nav><header class="release-hero"><small>СНАЧАЛА ИГРА. ПОТОМ РАЗГОВОР.</small><h1>Релиз упал.<br><em>Что сломалось в процессе?</em></h1><p>Командный детектив: пять улик, разные роли и бой с Дедлайн-завром. Итог — обсуждение рабочих договоренностей, а не поиск виноватого сотрудника.</p></header></div><main class="game">
+<link rel="stylesheet" href="release-lab.css?v=20261028-r2"><div class="release-shell"><nav class="release-nav"><a href="portfolio.html#tools"><b>DL<span>●</span></b></a><span>RELEASE ROOM / TEAM EXPERIENCE</span><a href="portfolio.html#tools">Все инструменты ↗</a></nav><header class="release-hero"><small>СНАЧАЛА ИГРА. ПОТОМ РАЗГОВОР.</small><h1>Релиз упал.<br><em>Что сломалось в процессе?</em></h1><p>Командный детектив: пять улик, разные роли и бой с Дедлайн-завром. Итог — обсуждение рабочих договоренностей, а не поиск виноватого сотрудника.</p></header></div><main class="game" tabindex="0" aria-label="Игра: WASD или стрелки, Enter — действие">
   <div class="top">
     <div class="lg">КТО СОРВАЛ РЕЛИЗ</div>
-    <button class="btn" id="snd" type="button" aria-pressed="false">Звук: выкл</button>
+    <div class="release-audio"><button class="btn" id="music" type="button" aria-pressed="false">Музыка: выкл</button><label class="release-volume">Громкость<input id="musicVolume" type="range" min="0" max="100" step="5" value="25" aria-label="Громкость музыки"></label></div><button class="btn" id="snd" type="button" aria-pressed="false">Звук: выкл</button>
   </div>
   <div class="scr"><canvas id="cv" width="320" height="208" role="img" aria-label="Пиксельный офис и бой с боссом"></canvas>
     <div id="ttl"><b>КТО СОРВАЛ<br>РЕЛИЗ?</b><span>ДЕТЕКТИВ-RPG ДЛЯ КОМАНДЫ</span></div></div>
@@ -83,7 +83,7 @@ th{font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercas
     <div class="cross"><span></span><button data-d="0,-1" aria-label="Вверх">▲</button><span></span><button data-d="-1,0" aria-label="Влево">◀</button><span></span><button data-d="1,0" aria-label="Вправо">▶</button><span></span><button data-d="0,1" aria-label="Вниз">▼</button><span></span></div>
     <button class="A" id="btnA" aria-label="Действие">A</button>
   </div>
-  <div class="help" id="help">СТРЕЛКИ / WASD — ХОДИТЬ · ENTER / ПРОБЕЛ — ДЕЙСТВИЕ · 1–3 — ВЫБОР</div>
+  <div class="help" id="help">WASD / СТРЕЛКИ — ХОДИТЬ · ENTER / ПРОБЕЛ — ДЕЙСТВИЕ · 1–3 — ВЫБОР</div>
 
   <section class="end" id="end" hidden>
     <h2>Дело закрыто</h2>
@@ -93,10 +93,10 @@ th{font:600 11px 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercas
     <div class="row"><button class="btn" id="again" type="button">Сыграть ещё раз</button><button class="btn" id="copy" type="button">Копировать итоги</button></div>
   </section>
   <div class="help">Все персонажи вымышлены. Любые совпадения с реальными людьми случайны.</div>
-</main><details class="release-method"><summary>Разбор с командой и границы метода</summary><p>Авторская игра для обсуждения коммуникации, приоритетов и готовности релиза. Все персонажи и ситуации вымышлены. Игровой ранг и энергия — механика прохождения, не оценка компетенций или реального состояния команды.</p><h3>После игры: 10 минут на договоренность</h3><p>Сначала каждый называет наблюдение, затем команда выбирает одно изменение процесса. Не используйте игру для обсуждения личных ошибок конкретных коллег.</p><label>Что изменим в следующем релизе?<textarea id="teamRule"></textarea></label><label>Кто владелец и когда проверим результат?<textarea id="teamOwner"></textarea></label><button type="button" class="btn" id="teamSave">Скачать договоренность</button><p>Критерий проверки: наблюдаемый факт выполнения правила, а не впечатление после мероприятия.</p></details>
+</main><details class="release-method"><summary>Разбор с командой и границы метода</summary><p>Авторская игра для обсуждения коммуникации, приоритетов и готовности релиза. Музыка — оригинальная процедурная chiptune-композиция; включается только по кнопке и меняется в бою. Все персонажи и ситуации вымышлены. Игровой ранг и энергия — механика прохождения, не оценка компетенций или реального состояния команды.</p><h3>После игры: 10 минут на договоренность</h3><p>Сначала каждый называет наблюдение, затем команда выбирает одно изменение процесса. Не используйте игру для обсуждения личных ошибок конкретных коллег.</p><label>Что изменим в следующем релизе?<textarea id="teamRule"></textarea></label><label>Кто владелец и когда проверим результат?<textarea id="teamOwner"></textarea></label><button type="button" class="btn" id="teamSave">Скачать договоренность</button><p>Критерий проверки: наблюдаемый факт выполнения правила, а не впечатление после мероприятия.</p></details>
 <div class="toast" id="toast" role="status"></div>
 
-<link rel="stylesheet" href="tool-language.css"><script src="tool-language.js"></script><script src="tool-translations.js"></script><script>window.HRLang.localizeDOM();</script><script>
+<link rel="stylesheet" href="tool-language.css"><script src="tool-language.js"></script><script src="tool-translations.js"></script><script src="tool-updates-i18n.js?v=20261028-r2"></script><script>window.HRLang.localizeDOM();</script><script src="release-controls.js?v=20261028-r2"></script><script>
 
 (()=>{
 const $=id=>document.getElementById(id);
@@ -192,8 +192,8 @@ const DIRS={ArrowUp:[0,-1],w:[0,-1],W:[0,-1],ArrowDown:[0,1],s:[0,1],S:[0,1],Arr
 function dirIn(dx,dy){if(H){H.dir&&H.dir(dx,dy);return}if(mode==='map'&&!busy)tryMove(dx,dy)}
 function actIn(){if(H){H.a&&H.a();return}if(mode==='map'&&!busy)interact()}
 addEventListener('keydown',e=>{if(e.target?.closest?.('input,textarea,select,[contenteditable]'))return;if(e.ctrlKey||e.metaKey||e.altKey)return;
-  const d=DIRS[e.key];if(d){e.preventDefault();dirIn(d[0],d[1]);return}
-  if(e.key==='Enter'||e.key===' '||e.key==='e'||e.key==='z'||e.key==='E'||e.key==='Z'){e.preventDefault();actIn();return}
+  const d=ReleaseControls.direction(e);if(d){e.preventDefault();dirIn(d[0],d[1]);return}
+  if(ReleaseControls.isAction(e)){e.preventDefault();actIn();return}
   if(/^[1-9]$/.test(e.key)&&H&&H.num)H.num(+e.key)});
 document.querySelectorAll('#pad [data-d]').forEach(b=>{let iv;const d=b.dataset.d.split(',').map(Number);
   const go=()=>dirIn(d[0],d[1]);
@@ -358,8 +358,8 @@ function battleScene(t,dt){
   if(!(hurt>0&&!RM&&((hurt|0)%2))){ if(!(mode==='end')) boss(24,28+bob,3,t)}
   for(let i=0;i<4;i++){let ox=0;if(lunge===i&&lungeT<1)ox=-Math.sin(lungeT*Math.PI)*26;cx.fillStyle='rgba(0,0,0,.35)';cx.fillRect(236+ox,i*38+58,24,4);spr(PAL['b'+(i+1)],236+ox,i*38+30,2)}
   floats.forEach(f=>{f.t+=dt;const a=Math.max(0,1-f.t/900);cx.globalAlpha=a;cx.fillStyle='#000';cx.font='12px '+FONT;cx.fillText(f.txt,f.x+1,f.y-f.t/30+1);cx.fillStyle=f.col;cx.fillText(f.txt,f.x,f.y-f.t/30)});cx.globalAlpha=1;floats=floats.filter(f=>f.t<900)}
-let last=performance.now();
-function frame(now){const dt=Math.min(50,now-last);last=now;
+let last=performance.now(),musicMode=null;
+function frame(now){if(musicMode!==mode){window.ReleaseMusic?.setMode(mode);musicMode=mode}const dt=Math.min(50,now-last);last=now;
   cx.save();if(shake>0){shake-=dt/16;cx.translate(Math.round((Math.random()-.5)*6),Math.round((Math.random()-.5)*6))}
   if(mode==='title')title(now);else if(mode==='map')map(now,dt);else battleScene(now,dt);
   cx.restore();
@@ -382,4 +382,4 @@ newGame();
 
 </script>
 
-<script src="release-debrief.js"></script></body></html>
+<script src="release-debrief.js"></script><script src="release-music.js?v=20261028-r2"></script></body></html>
