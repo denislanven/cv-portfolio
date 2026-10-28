@@ -1,7 +1,7 @@
 {
   "ru": {
     "location": "Варшава, Польша · Удаленно / гибрид",
-    "summary": "Строю и масштабирую HR-функцию: стратегия, организационные изменения, эффективность команд и развитие руководителей. 9+ лет в HR, международные и распределенные команды. Управлял HR-командами до 6 человек, работал в компаниях численностью до 850+ сотрудников.",
+    "summary": "9+ лет в HR: от операционного управления до построения HR-функции и партнерства с CEO. Руководил HR-командами до 6 человек в технологических, продуктовых и e-commerce компаниях. Связываю оргструктуру, найм, performance management и развитие руководителей с приоритетами бизнеса; работаю с международными и распределенными командами.",
     "sections": [
       "УПРАВЛЕНЧЕСКИЙ ОПЫТ",
       "ПРЕДЫДУЩИЙ ОПЫТ",
@@ -17,7 +17,7 @@
         [
           "Сформировал основу HR-функции для двух компаний. Объединил найм и HR-администрирование на базе PeopleForce, организовал трудоустройство варшавского офиса через аутсорс-партнера.",
           "Разработал отдельные культурные коды и модель оценки: 9 блоков компетенций, 90+ поведенческих индикаторов. Создал HR-базу знаний.",
-          "Масштабировал процессы на обе компании, закрепил владельцев и регулярную отчетность для CEO. Перевел настройки в повторяемые процессы найма, адаптации и кадрового сопровождения."
+          "Выстроил кадровое сопровождение с учетом польского и украинского контекста: координация договоров, payroll и взаимодействия с внешним партнером. Описал HR-политики и базу знаний в Notion."
         ]
       ],
       [
@@ -27,7 +27,8 @@
         [
           "Сформировал и вел HR-стратегию, связав оргдизайн, People &amp; Culture и операционные процессы с задачами бизнеса.",
           "Управлял HR-командой из четырех человек. Внедрил performance management, карьерные рамки и регулярный сбор обратной связи.",
-          "Объединил внутренние коммуникации, HR-бренд и культурные инициативы. Охват внутреннего HR-бота вырос с 25% до 73-81% команды."
+          "Объединил внутренние коммуникации, HR-бренд и культурные инициативы. Охват внутреннего HR-бота вырос с 25% до 73-81% команды.",
+          "Развивал EVP, sourcing и адаптацию как единый цикл найма. Организовал квартальные HR-дайджесты и коммуникации между функцией, руководителями и командой."
         ]
       ],
       [
@@ -37,6 +38,7 @@
         [
           "Сформировал и вел HR-стратегию в партнерстве с CEO. Построил операционную модель HR, команду из шести специалистов и распределение ответственности по RACI.",
           "Разработал систему грейдов для 13 отделов. Внедрил performance review и регулярную обратную связь, сопровождал найм, вознаграждение и организационные изменения.",
+          "Спроектировал оргструктуру и capacity planning под продуктовые и операционные задачи, устраняя дублирование ролей и перегрузку. Внедрил зарплатный проект через payroll-систему для мультиюрисдикционной команды и автоматизировал HR-метрики.",
           "Снижение текучести ключевых сотрудников на 15% за полгода, рост показателя вовлеченности на 35%."
         ]
       ],
@@ -81,15 +83,19 @@
         ]
       ]
     ],
-    "skills": "HR-стратегия · Оргдизайн и планирование ресурсов · Performance Management · Talent Acquisition · Compensation &amp; Benefits · HR-аналитика · Управление распределенной командой · Корпоративная культура и HR-бренд · L&amp;D",
+    "skills": "HR-стратегия · Оргдизайн и планирование ресурсов · Performance Management · Talent Acquisition · Compensation &amp; Benefits · HR-аналитика",
     "languages": "Русский - родной · Украинский - родной / билингв · Испанский - C2<br/>Польский - B2 · Английский - B2 · Китайский - B1",
     "education": "2023 · ESERP Business School · Relaciones Internacionales<br/>2022 · Universidad Complutense de Madrid (IEB) · Corporate Finance y Banca de Inversiones<br/>2015 · МГППУ, Москва · Клиническая психология<br/>2019 · ScrumTrek · Agile sales / Scrum B2B<br/>2017 · Instituto Cervantes · DELE",
     "references": "Рекомендации CEO, CTO, CPO и HR-руководителей предоставлю по запросу.",
-    "draft": "Версия для согласования фактов"
+    "links": [
+      "Полное резюме",
+      "Портфолио и HR-инструменты"
+    ],
+    "tech": "HR-tech: PeopleForce, Huntflow, Notion; автор интерактивных прототипов для оргдизайна, экономики команды, удержания и HR-сценариев (портфолио)."
   },
   "en": {
     "location": "Warsaw, Poland · Remote / hybrid",
-    "summary": "I build and scale HR functions: strategy, organisational change, team effectiveness and leadership development. 9+ years in HR with international and distributed teams. Led HR teams of up to 6 people and worked in companies with up to 850+ employees.",
+    "summary": "9+ years in HR, from HR operations to building the function and partnering with CEOs. Led HR teams of up to 6 in technology, product and e-commerce companies. Connect organisational design, hiring, performance management and leadership development to business priorities across international and distributed teams.",
     "sections": [
       "HR LEADERSHIP EXPERIENCE",
       "EARLIER EXPERIENCE",
@@ -97,7 +103,6 @@
       "LANGUAGES",
       "EDUCATION & DEVELOPMENT"
     ],
-    "draft": "Draft for factual review",
     "jobs": [
       [
         "Iron Invest Group",
@@ -106,7 +111,7 @@
         [
           "Established the foundations of HR for two companies. Unified recruitment and HR administration in PeopleForce and arranged employment for the Warsaw office through an outsourcing partner.",
           "Designed separate cultural codes and an assessment model: 9 competency blocks and 90+ behavioural indicators. Created an HR knowledge base.",
-          "Scaled processes across both companies, assigned process owners and established regular reporting to the CEO. Turned the initial setup into repeatable recruitment, onboarding and HR administration processes."
+          "Coordinated contracts, payroll and an external employment partner across Polish and Ukrainian contexts. Documented HR policies and built a Notion knowledge base."
         ]
       ],
       [
@@ -116,7 +121,8 @@
         [
           "Designed and led the HR strategy, aligning organisational design, People & Culture and operations with business priorities.",
           "Managed a four-person HR team. Introduced performance management, career frameworks and regular feedback.",
-          "Connected internal communications, employer branding and cultural initiatives. Internal HR bot reach increased from 25% to 73-81% of the team."
+          "Connected internal communications, employer branding and cultural initiatives. Internal HR bot reach increased from 25% to 73-81% of the team.",
+          "Developed EVP, sourcing and onboarding as one hiring cycle. Produced quarterly HR digests and coordinated communication between HR, managers and employees."
         ]
       ],
       [
@@ -126,6 +132,7 @@
         [
           "Designed and led the HR strategy in partnership with the CEO. Built the HR operating model, a six-person team and a RACI responsibility framework.",
           "Designed a grading system for 13 departments. Introduced performance review and regular feedback, supporting recruitment, rewards and organisational change.",
+          "Designed organisational structures and capacity planning around product and operational needs, addressing duplicated roles and overload. Implemented a payroll project for a multi-jurisdiction team and automated HR metrics.",
           "Key employee turnover decreased by 15% over six months; the engagement indicator increased by 35%."
         ]
       ],
@@ -170,14 +177,19 @@
         ]
       ]
     ],
-    "skills": "HR strategy · Organisational design and resource planning · Performance Management · Talent Acquisition · Compensation & Benefits · HR analytics · Distributed team management · Corporate culture and employer branding · L&D",
+    "skills": "HR strategy · Organisational design and resource planning · Performance Management · Talent Acquisition · Compensation & Benefits · HR analytics",
     "languages": "Russian - native · Ukrainian - native / bilingual · Spanish - C2<br/>Polish - B2 · English - B2 · Chinese - B1",
     "education": "2023 · ESERP Business School · Relaciones Internacionales<br/>2022 · Universidad Complutense de Madrid (IEB) · Corporate Finance y Banca de Inversiones<br/>2015 · Moscow State University of Psychology & Education · Clinical Psychology<br/>2019 · ScrumTrek · Agile sales / Scrum B2B<br/>2017 · Instituto Cervantes · DELE",
-    "references": "References from CEOs, CTOs, CPOs and HR leaders available on request."
+    "references": "References from CEOs, CTOs, CPOs and HR leaders available on request.",
+    "links": [
+      "Full CV",
+      "Portfolio and HR tools"
+    ],
+    "tech": "HR tech: PeopleForce, Huntflow, Notion; author of interactive prototypes for organisational design, team economics, retention and HR scenarios (portfolio)."
   },
   "pl": {
     "location": "Warszawa, Polska · Zdalnie / hybrydowo",
-    "summary": "Buduję i skaluję funkcję HR: strategia, zmiany organizacyjne, efektywność zespołów i rozwój liderów. Ponad 9 lat w HR, w zespołach międzynarodowych i rozproszonych. Zarządzałem zespołami HR do 6 osób i pracowałem w firmach zatrudniających do ponad 850 pracowników.",
+    "summary": "Ponad 9 lat w HR: od operacji po budowanie funkcji HR i partnerstwo z CEO. Kierowałem zespołami HR do 6 osób w firmach technologicznych, produktowych i e-commerce. Łączę strukturę organizacyjną, rekrutację, zarządzanie wynikami i rozwój liderów z priorytetami biznesu w międzynarodowych, rozproszonych zespołach.",
     "sections": [
       "DOŚWIADCZENIE W ZARZĄDZANIU HR",
       "WCZEŚNIEJSZE DOŚWIADCZENIE",
@@ -185,7 +197,6 @@
       "JĘZYKI",
       "WYKSZTAŁCENIE I ROZWÓJ"
     ],
-    "draft": "Wersja do weryfikacji faktów",
     "jobs": [
       [
         "Iron Invest Group",
@@ -194,7 +205,7 @@
         [
           "Stworzyłem podstawy funkcji HR dla dwóch firm. Połączyłem rekrutację i administrację HR w PeopleForce oraz zorganizowałem zatrudnienie w warszawskim biurze przez partnera outsourcingowego.",
           "Opracowałem odrębne kodeksy kultury i model oceny: 9 bloków kompetencji, ponad 90 wskaźników behawioralnych. Stworzyłem bazę wiedzy HR.",
-          "Skalowałem procesy na obie firmy, ustaliłem ich właścicieli i regularne raportowanie do CEO. Przekształciłem wstępną konfigurację w powtarzalne procesy rekrutacji, wdrożenia i administracji HR."
+          "Koordynowałem umowy, payroll i współpracę z zewnętrznym partnerem zatrudnienia w kontekście Polski i Ukrainy. Opracowałem polityki HR i bazę wiedzy w Notion."
         ]
       ],
       [
@@ -204,7 +215,8 @@
         [
           "Tworzyłem i realizowałem strategię HR, łącząc projektowanie organizacji, People & Culture i procesy operacyjne z celami biznesowymi.",
           "Zarządzałem czteroosobowym zespołem HR. Wdrożyłem performance management, ścieżki kariery i regularny feedback.",
-          "Połączyłem komunikację wewnętrzną, markę pracodawcy i inicjatywy kulturowe. Zasięg wewnętrznego bota HR wzrósł z 25% do 73-81% zespołu."
+          "Połączyłem komunikację wewnętrzną, markę pracodawcy i inicjatywy kulturowe. Zasięg wewnętrznego bota HR wzrósł z 25% do 73-81% zespołu.",
+          "Rozwijałem EVP, sourcing i onboarding jako spójny cykl rekrutacji. Przygotowywałem kwartalne podsumowania HR i komunikację między HR, menedżerami i pracownikami."
         ]
       ],
       [
@@ -214,6 +226,7 @@
         [
           "Tworzyłem i realizowałem strategię HR w partnerstwie z CEO. Zbudowałem model operacyjny HR, sześcioosobowy zespół i podział odpowiedzialności RACI.",
           "Opracowałem system poziomów stanowisk dla 13 działów. Wdrożyłem performance review i regularny feedback, wspierając rekrutację, wynagrodzenia i zmiany organizacyjne.",
+          "Projektowałem strukturę i planowanie zasobów pod potrzeby produktowe i operacyjne, ograniczając dublowanie ról i przeciążenie. Wdrożyłem projekt płacowy dla zespołu działającego w różnych jurysdykcjach oraz automatyzację metryk HR.",
           "Rotacja kluczowych pracowników spadła o 15% w ciągu pół roku, a wskaźnik zaangażowania wzrósł o 35%."
         ]
       ],
@@ -258,14 +271,19 @@
         ]
       ]
     ],
-    "skills": "Strategia HR · Projektowanie organizacji i planowanie zasobów · Performance Management · Talent Acquisition · Compensation & Benefits · Analityka HR · Zarządzanie zespołem rozproszonym · Kultura organizacyjna i marka pracodawcy · L&D",
+    "skills": "Strategia HR · Projektowanie organizacji i planowanie zasobów · Performance Management · Talent Acquisition · Compensation & Benefits · Analityka HR",
     "languages": "Rosyjski - ojczysty · Ukraiński - ojczysty / dwujęzyczny · Hiszpański - C2<br/>Polski - B2 · Angielski - B2 · Chiński - B1",
     "education": "2023 · ESERP Business School · Relaciones Internacionales<br/>2022 · Universidad Complutense de Madrid (IEB) · Corporate Finance y Banca de Inversiones<br/>2015 · Moskiewski Państwowy Uniwersytet Psychologiczno-Pedagogiczny · Psychologia kliniczna<br/>2019 · ScrumTrek · Agile sales / Scrum B2B<br/>2017 · Instituto Cervantes · DELE",
-    "references": "Referencje od CEO, CTO, CPO i liderów HR dostępne na życzenie."
+    "references": "Referencje od CEO, CTO, CPO i liderów HR dostępne na życzenie.",
+    "links": [
+      "Pełne CV",
+      "Portfolio i narzędzia HR"
+    ],
+    "tech": "HR tech: PeopleForce, Huntflow, Notion; autor interaktywnych prototypów dotyczących struktury organizacyjnej, ekonomiki zespołu, retencji i scenariuszy HR (portfolio)."
   },
   "es": {
     "location": "Varsovia, Polonia · Remoto / híbrido",
-    "summary": "Desarrollo y escalo la función de RR. HH.: estrategia, cambio organizativo, eficacia de los equipos y desarrollo de líderes. Más de 9 años en RR. HH. con equipos internacionales y distribuidos. He dirigido equipos de RR. HH. de hasta 6 personas y trabajado en empresas de hasta más de 850 empleados.",
+    "summary": "Más de 9 años en RR. HH., desde operaciones hasta la creación de la función y la colaboración con CEO. He dirigido equipos de hasta 6 personas en empresas tecnológicas, de producto y e-commerce. Conecto estructura, selección, gestión del desempeño y desarrollo de líderes con las prioridades del negocio en equipos internacionales y distribuidos.",
     "sections": [
       "EXPERIENCIA EN LIDERAZGO DE RR. HH.",
       "EXPERIENCIA ANTERIOR",
@@ -273,7 +291,6 @@
       "IDIOMAS",
       "FORMACIÓN Y DESARROLLO"
     ],
-    "draft": "Borrador para revisión de datos",
     "jobs": [
       [
         "Iron Invest Group",
@@ -282,7 +299,7 @@
         [
           "Creé las bases de RR. HH. para dos empresas. Unifiqué selección y administración en PeopleForce y organicé la contratación de la oficina de Varsovia mediante un socio externo.",
           "Diseñé códigos culturales diferenciados y un modelo de evaluación: 9 bloques de competencias y más de 90 indicadores conductuales. Creé una base de conocimiento de RR. HH.",
-          "Escalé los procesos a ambas empresas, asigné responsables y establecí informes periódicos para el CEO. Convertí la configuración inicial en procesos repetibles de selección, incorporación y administración de personal."
+          "Coordiné contratos, nóminas y un socio externo de contratación en los contextos de Polonia y Ucrania. Documenté políticas de RR. HH. y una base de conocimiento en Notion."
         ]
       ],
       [
@@ -292,7 +309,8 @@
         [
           "Diseñé y dirigí la estrategia de RR. HH., conectando diseño organizativo, People & Culture y operaciones con las prioridades del negocio.",
           "Dirigí un equipo de cuatro personas. Implanté gestión del desempeño, marcos de carrera y feedback periódico.",
-          "Conecté comunicación interna, marca empleadora e iniciativas culturales. El alcance del bot interno de RR. HH. aumentó del 25% al 73-81% del equipo."
+          "Conecté comunicación interna, marca empleadora e iniciativas culturales. El alcance del bot interno de RR. HH. aumentó del 25% al 73-81% del equipo.",
+          "Desarrollé EVP, sourcing y onboarding como un ciclo de selección integrado. Elaboré resúmenes trimestrales de RR. HH. y coordiné la comunicación con responsables y empleados."
         ]
       ],
       [
@@ -302,6 +320,7 @@
         [
           "Diseñé y dirigí la estrategia de RR. HH. con el CEO. Construí el modelo operativo, un equipo de seis personas y una distribución de responsabilidades RACI.",
           "Diseñé un sistema de niveles para 13 departamentos. Implanté evaluaciones del desempeño y feedback periódico, acompañando selección, retribución y cambios organizativos.",
+          "Diseñé la estructura y la planificación de capacidad según necesidades de producto y operaciones, abordando duplicidades y sobrecarga. Implanté un proyecto de nóminas para un equipo en varias jurisdicciones y automaticé métricas de RR. HH.",
           "La rotación de empleados clave se redujo un 15% en seis meses y el indicador de compromiso aumentó un 35%."
         ]
       ],
@@ -346,14 +365,19 @@
         ]
       ]
     ],
-    "skills": "Estrategia de RR. HH. · Diseño organizativo y planificación de recursos · Gestión del desempeño · Talent Acquisition · Compensación y beneficios · Analítica de RR. HH. · Gestión de equipos distribuidos · Cultura y marca empleadora · L&D",
+    "skills": "Estrategia de RR. HH. · Diseño organizativo y planificación de recursos · Gestión del desempeño · Talent Acquisition · Compensación y beneficios · Analítica de RR. HH.",
     "languages": "Ruso - nativo · Ucraniano - nativo / bilingüe · Español - C2<br/>Polaco - B2 · Inglés - B2 · Chino - B1",
     "education": "2023 · ESERP Business School · Relaciones Internacionales<br/>2022 · Universidad Complutense de Madrid (IEB) · Corporate Finance y Banca de Inversiones<br/>2015 · Universidad Estatal de Psicología y Educación de Moscú · Psicología clínica<br/>2019 · ScrumTrek · Agile sales / Scrum B2B<br/>2017 · Instituto Cervantes · DELE",
-    "references": "Referencias de CEO, CTO, CPO y responsables de RR. HH. disponibles a petición."
+    "references": "Referencias de CEO, CTO, CPO y responsables de RR. HH. disponibles a petición.",
+    "links": [
+      "CV completo",
+      "Portfolio y herramientas de RR. HH."
+    ],
+    "tech": "HR tech: PeopleForce, Huntflow, Notion; autor de prototipos interactivos sobre diseño organizativo, economía de equipos, retención y escenarios de RR. HH. (portfolio)."
   },
   "uk": {
     "location": "Варшава, Польща · Віддалено / гібрид",
-    "summary": "Будую й масштабую HR-функцію: стратегія, організаційні зміни, ефективність команд і розвиток керівників. Понад 9 років у HR, міжнародні й розподілені команди. Керував HR-командами до 6 людей, працював у компаніях із чисельністю до 850+ співробітників.",
+    "summary": "9+ років у HR: від операційного управління до побудови HR-функції та партнерства з CEO. Керував HR-командами до 6 людей у технологічних, продуктових та e-commerce компаніях. Пов’язую оргструктуру, найм, performance management і розвиток керівників із пріоритетами бізнесу; працюю з міжнародними та розподіленими командами.",
     "sections": [
       "УПРАВЛІНСЬКИЙ ДОСВІД",
       "ПОПЕРЕДНІЙ ДОСВІД",
@@ -361,7 +385,6 @@
       "МОВИ",
       "ОСВІТА Й РОЗВИТОК"
     ],
-    "draft": "Версія для погодження фактів",
     "jobs": [
       [
         "Iron Invest Group",
@@ -370,7 +393,7 @@
         [
           "Сформував основу HR-функції для двох компаній. Об’єднав найм і HR-адміністрування в PeopleForce, організував працевлаштування варшавського офісу через аутсорс-партнера.",
           "Розробив окремі культурні коди й модель оцінки: 9 блоків компетенцій, 90+ поведінкових індикаторів. Створив HR-базу знань.",
-          "Масштабував процеси на обидві компанії, закріпив власників і регулярну звітність для CEO. Перетворив початкові налаштування на повторювані процеси найму, адаптації й кадрового супроводу."
+          "Організував кадровий супровід з урахуванням польського й українського контексту: координація договорів, payroll та зовнішнього партнера. Описав HR-політики й базу знань у Notion."
         ]
       ],
       [
@@ -380,7 +403,8 @@
         [
           "Сформував і вів HR-стратегію, пов’язавши оргдизайн, People & Culture й операційні процеси з цілями бізнесу.",
           "Керував HR-командою з чотирьох людей. Упровадив performance management, кар’єрні рамки й регулярний зворотний зв’язок.",
-          "Об’єднав внутрішні комунікації, бренд роботодавця й культурні ініціативи. Охоплення внутрішнього HR-бота зросло з 25% до 73-81% команди."
+          "Об’єднав внутрішні комунікації, бренд роботодавця й культурні ініціативи. Охоплення внутрішнього HR-бота зросло з 25% до 73-81% команди.",
+          "Розвивав EVP, sourcing та адаптацію як єдиний цикл найму. Організував квартальні HR-дайджести й комунікацію між HR, керівниками та командою."
         ]
       ],
       [
@@ -390,6 +414,7 @@
         [
           "Сформував і вів HR-стратегію в партнерстві з CEO. Побудував операційну модель HR, команду з шести фахівців і розподіл відповідальності RACI.",
           "Розробив систему грейдів для 13 відділів. Упровадив performance review і регулярний зворотний зв’язок, супроводжував найм, винагороду й організаційні зміни.",
+          "Спроєктував оргструктуру та capacity planning під продуктові й операційні завдання, усуваючи дублювання ролей і перевантаження. Впровадив зарплатний проєкт через payroll-систему для команди в різних юрисдикціях та автоматизував HR-метрики.",
           "Плинність ключових співробітників знизилася на 15% за пів року, показник залученості зріс на 35%."
         ]
       ],
@@ -434,9 +459,14 @@
         ]
       ]
     ],
-    "skills": "HR-стратегія · Оргдизайн і планування ресурсів · Performance Management · Talent Acquisition · Compensation & Benefits · HR-аналітика · Управління розподіленою командою · Корпоративна культура й бренд роботодавця · L&D",
+    "skills": "HR-стратегія · Оргдизайн і планування ресурсів · Performance Management · Talent Acquisition · Compensation & Benefits · HR-аналітика",
     "languages": "Російська - рідна · Українська - рідна / білінгв · Іспанська - C2<br/>Польська - B2 · Англійська - B2 · Китайська - B1",
     "education": "2023 · ESERP Business School · Relaciones Internacionales<br/>2022 · Universidad Complutense de Madrid (IEB) · Corporate Finance y Banca de Inversiones<br/>2015 · МДППУ, Москва · Клінічна психологія<br/>2019 · ScrumTrek · Agile sales / Scrum B2B<br/>2017 · Instituto Cervantes · DELE",
-    "references": "Рекомендації CEO, CTO, CPO й HR-керівників надам за запитом."
+    "references": "Рекомендації CEO, CTO, CPO й HR-керівників надам за запитом.",
+    "links": [
+      "Повне резюме",
+      "Портфоліо та HR-інструменти"
+    ],
+    "tech": "HR-tech: PeopleForce, Huntflow, Notion; автор інтерактивних прототипів для оргдизайну, економіки команди, утримання та HR-сценаріїв (портфоліо)."
   }
 }

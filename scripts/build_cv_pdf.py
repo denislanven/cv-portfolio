@@ -21,18 +21,19 @@ def clean(t):
     return t.replace('ё','е').replace('Ё','Е').replace('—','-').replace('–','-')
 def xml(t):
     return html.escape(html.unescape(clean(t)),quote=False).replace('&lt;br/&gt;','<br/>')
-def flows(d):
+def flows(lang,d):
     pages=[[],[]]
     def add(pg,t,style='body',gap=7,raw=False):pages[pg].append((t,style,gap,raw))
-    def section(pg,t):add(pg,'','body',5);add(pg,t,'heading',8)
+    def section(pg,t):add(pg,'','body',3);add(pg,t,'heading',6)
     def job(pg,j):
         name,role,meta,bullets=j
         add(pg,name,'job',2);add(pg,role,'body',2);add(pg,meta,'meta',5)
-        for b in bullets:add(pg,'• '+b,'body',4)
-        add(pg,'','body',4)
+        for b in bullets:add(pg,'• '+b,'body',3)
+        add(pg,'','body',2)
     add(0,'DENIS LANVEN','title',4)
     add(0,'HR HEAD / PEOPLE & CULTURE LEAD','role',10)
     add(0,xml(d['location'])+'<br/>'+CONTACT,'meta',11,True)
+    add(0,'<link href="https://denislanven.github.io/cv-portfolio/?lang='+lang+'" color="#1638e2">'+xml(d['links'][0])+'</link> · <link href="https://denislanven.github.io/cv-portfolio/portfolio.html?lang='+lang+'" color="#1638e2">'+xml(d['links'][1])+'</link>','meta',10,True)
     add(0,d['summary'],'body',10)
     section(0,d['sections'][0])
     for j in d['jobs'][:3]:job(0,j)
@@ -41,11 +42,12 @@ def flows(d):
     for j in d['jobs'][3:]:job(1,j)
     for label,key,style in [(2,'skills','body'),(3,'languages','body'),(4,'education','meta')]:
         section(1,d['sections'][label]);add(1,d[key],style,9)
+    add(1,d['tech'],'body',8)
     add(1,d['references'],'body',4)
     return pages
 
 def build(lang,d):
-    pages=flows(d)
+    pages=flows(lang,d)
     for scale in [1,.98,.96,.94,.92,.90]:
         styles={k:ParagraphStyle(k,fontName='Bold' if k in ['title','role','heading','job'] else 'Regular',fontSize=z*(scale if k in ['body','meta'] else 1),leading=l*(scale if k in ['body','meta'] else 1),textColor=HexColor('#14202c')) for k,z,l in [('title',28,32),('role',12,17),('heading',11,16),('job',10,15),('body',9,13.5),('meta',8,12)]}
         prepared=[]
@@ -71,7 +73,7 @@ def build(lang,d):
             y-=h+gap
         assert y>54,(lang,page,y)
         c.setStrokeColor(HexColor('#d7dce1'));c.line(44,43,W-44,43)
-        c.setFont('Regular',7);c.setFillColor(HexColor('#68717a'));c.drawString(44,29,d['draft']+' / 28.10.2026');c.drawRightString(W-44,29,f'{page} / 2');c.showPage()
+        c.setFont('Regular',7);c.setFillColor(HexColor('#68717a'));c.drawString(44,29,'Denis Lanven | HR Head / People & Culture Lead');c.drawRightString(W-44,29,f'{page} / 2');c.showPage()
     c.save();print(f'{lang}: 2 pages; text scale {scale}; page heights {heights}; {out.name}')
 
 if __name__=='__main__':
