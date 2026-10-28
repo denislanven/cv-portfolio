@@ -22,13 +22,13 @@ def clean(t):
 def xml(t):
     return html.escape(html.unescape(clean(t)),quote=False).replace('&lt;br/&gt;','<br/>')
 def flows(lang,d):
-    pages=[[],[]]
+    pages=[[],[],[]]
     def add(pg,t,style='body',gap=7,raw=False):pages[pg].append((t,style,gap,raw))
     def section(pg,t):add(pg,'','body',3);add(pg,t,'heading',6)
     def job(pg,j):
         name,role,meta,bullets=j
         add(pg,name,'job',2);add(pg,role,'body',2);add(pg,meta,'meta',5)
-        for b in bullets:add(pg,'• '+b,'body',3)
+        for b in bullets:add(pg,'• '+b,'body',2.5)
         add(pg,'','body',2)
     add(0,'DENIS LANVEN','title',4)
     add(0,'HR HEAD / PEOPLE & CULTURE LEAD','role',10)
@@ -36,20 +36,24 @@ def flows(lang,d):
     add(0,'<link href="https://denislanven.github.io/cv-portfolio/?lang='+lang+'" color="#1638e2">'+xml(d['links'][0])+'</link> · <link href="https://denislanven.github.io/cv-portfolio/portfolio.html?lang='+lang+'" color="#1638e2">'+xml(d['links'][1])+'</link>','meta',10,True)
     add(0,d['summary'],'body',10)
     section(0,d['sections'][0])
-    for j in d['jobs'][:3]:job(0,j)
+    for j in d['jobs'][:2]:job(0,j)
+    section(0,d['sections'][2]);add(0,d['skills'],'body',9)
     add(1,'DENIS LANVEN / HR HEAD','role',14)
-    section(1,d['sections'][1])
-    for j in d['jobs'][3:]:job(1,j)
-    for label,key,style in [(2,'skills','body'),(3,'languages','body'),(4,'education','meta')]:
-        section(1,d['sections'][label]);add(1,d[key],style,9)
-    add(1,d['tech'],'body',8)
-    add(1,d['references'],'body',4)
+    section(1,d['sections'][0])
+    for j in d['jobs'][2:5]:job(1,j)
+    add(2,'DENIS LANVEN / HR HEAD','role',14)
+    section(2,d['sections'][1])
+    for j in d['jobs'][5:]:job(2,j)
+    add(2,d['tech'],'body',8)
+    for label,key,style in [(3,'languages','body'),(4,'education','meta')]:
+        section(2,d['sections'][label]);add(2,d[key],style,9)
+    add(2,d['references'],'body',4)
     return pages
 
 def build(lang,d):
     pages=flows(lang,d)
-    for scale in [1,.98,.96,.94,.92,.90]:
-        styles={k:ParagraphStyle(k,fontName='Bold' if k in ['title','role','heading','job'] else 'Regular',fontSize=z*(scale if k in ['body','meta'] else 1),leading=l*(scale if k in ['body','meta'] else 1),textColor=HexColor('#14202c')) for k,z,l in [('title',28,32),('role',12,17),('heading',11,16),('job',10,15),('body',9,13.5),('meta',8,12)]}
+    for scale in [1,.98,.96]:
+        styles={k:ParagraphStyle(k,fontName='Bold' if k in ['title','role','heading','job'] else 'Regular',fontSize=z*(scale if k in ['body','meta'] else 1),leading=l*(scale if k in ['body','meta'] else 1),textColor=HexColor('#14202c')) for k,z,l in [('title',28,32),('role',12,17),('heading',11,16),('job',10,15),('body',9.5,13.4),('meta',8.5,12)]}
         prepared=[]
         for flow in pages:
             items=[]
@@ -60,7 +64,7 @@ def build(lang,d):
             prepared.append(items)
         heights=[sum(h+gap for q,h,gap in page) for page in prepared]
         if max(heights)<H-42-54:break
-    else:raise ValueError(f'{lang}: two-page layout overflow: {heights}')
+    else:raise ValueError(f'{lang}: three-page layout overflow: {heights}')
     out=ROOT/f'docs/downloads/Denis_Lanven_HR_Head_{lang.upper()}.pdf'
     out.parent.mkdir(parents=True,exist_ok=True)
     c=canvas.Canvas(str(out),pagesize=(W,H));c.setTitle(f'Denis Lanven | HR Head | {lang.upper()}');c.setAuthor('Denis Lanven');c.setSubject(f'Curriculum vitae / {lang}')
@@ -73,8 +77,9 @@ def build(lang,d):
             y-=h+gap
         assert y>54,(lang,page,y)
         c.setStrokeColor(HexColor('#d7dce1'));c.line(44,43,W-44,43)
-        c.setFont('Regular',7);c.setFillColor(HexColor('#68717a'));c.drawString(44,29,'Denis Lanven | HR Head / People & Culture Lead');c.drawRightString(W-44,29,f'{page} / 2');c.showPage()
-    c.save();print(f'{lang}: 2 pages; text scale {scale}; page heights {heights}; {out.name}')
+        c.setFont('Regular',7);c.setFillColor(HexColor('#68717a'));c.drawString(44,29,'Denis Lanven | HR Head / People & Culture Lead');c.drawRightString(W-44,29,f'{page} / 3');c.showPage()
+    c.save();print(f'{lang}: 3 pages; text scale {scale}; page heights {heights}; {out.name}')
 
 if __name__=='__main__':
+    (ROOT/'docs/career-copy.js').write_text('window.CareerCopy='+json.dumps(COPY,ensure_ascii=False,separators=(',',':'))+';\n')
     for lang,d in COPY.items():build(lang,d)
