@@ -295,7 +295,7 @@ const meta=document.querySelector('meta[name=description]'),img=document.querySe
 const o={title:document.title,desc:meta.content,alt:img.alt,nav:nav.getAttribute('aria-label')};
 const box=document.getElementById('lang'),lbtn=document.getElementById('lang-btn'),menu=document.getElementById('lang-menu'),opts=[...menu.querySelectorAll('[role=option]')],cur=box.querySelector('.lang-cur'),CODE={ru:'RU',uk:'UA',en:'EN',es:'ES',pl:'PL'};
 function set(l,save){if(l!=='ru'&&!T[l])l='ru';
- els.forEach((e,i)=>{e.innerHTML=l==='ru'?orig[i]:T[l][i]});
+ els.forEach((e,i)=>{e.innerHTML=l==='ru'?orig[i]:T[l][e.dataset.i]});
  const m=l==='ru'?o:M[l];document.title=m.title;meta.content=m.desc;img.alt=m.alt;nav.setAttribute('aria-label',m.nav);
  document.documentElement.lang=l;cur.textContent=CODE[l];opts.forEach(x=>x.setAttribute('aria-selected',String(x.dataset.l===l)));
  if(save){try{localStorage.setItem('lang',l)}catch(e){}}}
