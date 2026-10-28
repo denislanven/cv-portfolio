@@ -3,3 +3,6 @@
 @media(max-width:520px){.bento{grid-template-columns:minmax(0,1fr)!important}.bento .bx{min-width:0;max-width:100%}.bento .b-full .num{font-size:clamp(25px,7.4vw,38px);white-space:normal;overflow-wrap:anywhere}}
 /* Keep the primary header readable on tablets and long translations. */
 nav .logo{white-space:nowrap} @media(max-width:1100px){nav .nav-links{display:none!important}.exec-mobile{display:flex;gap:8px;flex-wrap:wrap;position:sticky;top:64px;background:#101116f5;z-index:30;padding:10px 16px;border-bottom:1px solid #34383f}.exec-mobile a{padding:8px;font-size:12px;text-decoration:none;min-height:40px}}
+
+/* Published CV and portfolio do not show a project label. */
+.preview-badge{display:none!important}
