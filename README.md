@@ -29,3 +29,9 @@ Run `node --test tests/*.test.cjs`. The offline UI fixture tests logic and trans
 Pepe includes a welcome page, role plans and a demo HR workspace with current-session history, architecture and a JSON scenario editor. Public demo credentials (`hr` / `onboard2026`) only switch the interface; they do not secure personal data. Reloading clears answers and scenario edits.
 
 The release game supports physical WASD keys across keyboard layouts and arrow keys. Its original procedural chiptune score is opt-in, has a volume control, changes during combat and pauses when the page is hidden. No external audio files are loaded. Gallery covers share current product titles and descriptions, with versioned demo URLs.
+
+## Current design
+
+Bold Executive styling, responsive typography, reduced-motion support and language-specific CV PDFs (RU, EN, PL, ES, UK). Generate PDFs with `python scripts/build_cv_pdf.py` (ReportLab and DejaVu Sans required).
+
+Booking runs separately at https://lanven-open-dialogue.livelyprawn258.chatgpt.site/ with its live calendar integration. GitHub Pages does not run the booking backend. Runtime credentials and booking data are not included.
