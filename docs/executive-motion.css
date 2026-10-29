@@ -6,3 +6,7 @@
 @media(max-width:600px){.motion-story{padding:42px 0 38px!important}.motion-kicker{font-size:10px;letter-spacing:.1em;gap:12px;margin-bottom:28px}.motion-words,body:has(.hero-grid) .motion-words{font-size:clamp(43px,12.5vw,76px);line-height:.98}.motion-star{margin-left:12px}.motion-bottom{font-size:13px;max-width:30ch;margin-top:26px}.motion-business{transform:translateX(calc((1 - var(--motion-progress,0))*12px))}.exec-case.motion-pending{transform:translateY(16px)}}
 @media(prefers-reduced-motion:reduce){.hero h1>span,.hero .lead,.hero .btns{animation:none!important;opacity:1;transform:none}.exec-case.motion-pending{opacity:1;transform:none}.exec-case,.exec-case summary::after{transition:none!important}.exec-case:hover{transform:none!important}.motion-outline{background-size:100% 100%!important}.motion-star,.motion-business,.motion-words>div,.motion-kicker>span:last-child{transform:none!important}#tools .product.motion-demo .art *{animation:none!important;opacity:1;translate:none;transform:none}.exec-case details.is-expanding{will-change:auto}}
 @media print{.motion-story{display:none!important}.exec-case{opacity:1!important;transform:none!important}}
+
+/* Negative tracking lets the last glyph paint beyond its advance width.
+   Reserve ink room so the animated background reaches its rightmost edge. */
+.motion-words .motion-outline{padding-inline-end:.12em;background-origin:border-box}
