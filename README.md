@@ -35,3 +35,7 @@ The release game supports physical WASD keys across keyboard layouts and arrow k
 Bold Executive styling, responsive typography, reduced-motion support and language-specific CV PDFs (RU, EN, PL, ES, UK). Generate PDFs with `python scripts/build_cv_pdf.py` (ReportLab and DejaVu Sans required).
 
 Booking runs separately at https://lanven-open-dialogue.livelyprawn258.chatgpt.site/ with its live calendar integration. GitHub Pages does not run the booking backend. Runtime credentials and booking data are not included.
+
+## Waistline strategy case
+
+`docs/waistline-strategy.html` presents a public editorial reconstruction of the author's HR strategy, with three illustrative decision scenarios, CEO questions and explicit separation of targets and documented evidence. Available in all five portfolio languages. The internal source PDF, internal financial parameters and personal records are not included. Measured implementation outcomes await verified evidence.
