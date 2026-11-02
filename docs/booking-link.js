@@ -1,6 +1,6 @@
 (()=>{
 const labels={ru:'Назначить встречу',en:'Book a meeting',pl:'Umów spotkanie',es:'Reservar una reunión',uk:'Призначити зустріч'};
-const bookURL='https://lanven-open-dialogue.livelyprawn258.chatgpt.site/';
+const bookURL='https://lanven-open-dialogue.denis-lanven.chatgpt.site/';
 const places=[document.querySelector('.hero .btns'),document.querySelector('footer .btns')].filter(Boolean);
 for(const p of places){const a=document.createElement('a');a.className='btn booking-link';a.dataset.booking='';p.prepend(a)}
 const nav=document.querySelector('.nav-links');if(nav){const li=document.createElement('li');li.className='booking-nav';const a=document.createElement('a');a.dataset.booking='';li.append(a);nav.append(li)}

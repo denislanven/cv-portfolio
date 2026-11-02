@@ -29,6 +29,7 @@ def flows(lang,d):
         name,role,meta,bullets=j
         add(pg,name,'job',2);add(pg,role,'body',2);add(pg,meta,'meta',5)
         for b in bullets:add(pg,'• '+b,'body',2.5)
+        if name=='Waistline':add(pg,'<link href="https://denislanven.github.io/cv-portfolio/waistline-strategy.html?lang='+lang+'" color="#1638e2">'+xml(d['strategyLink'])+'</link>','meta',5,True)
         add(pg,'','body',2)
     add(0,'DENIS LANVEN','title',4)
     add(0,'HR HEAD / PEOPLE & CULTURE LEAD','role',10)
@@ -37,13 +38,13 @@ def flows(lang,d):
     add(0,d['summary'],'body',10)
     section(0,d['sections'][0])
     for j in d['jobs'][:2]:job(0,j)
-    section(0,d['sections'][2]);add(0,d['skills'],'body',9)
     add(1,'DENIS LANVEN / HR HEAD','role',14)
     section(1,d['sections'][0])
     for j in d['jobs'][2:5]:job(1,j)
     add(2,'DENIS LANVEN / HR HEAD','role',14)
     section(2,d['sections'][1])
     for j in d['jobs'][5:]:job(2,j)
+    section(2,d['sections'][2]);add(2,d['skills'],'body',9)
     add(2,d['tech'],'body',8)
     for label,key,style in [(3,'languages','body'),(4,'education','meta')]:
         section(2,d['sections'][label]);add(2,d[key],style,9)
