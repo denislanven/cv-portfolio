@@ -38,4 +38,4 @@ Booking runs separately at https://lanven-open-dialogue.livelyprawn258.chatgpt.s
 
 ## Waistline strategy case
 
-`docs/waistline-strategy.html` presents a public editorial reconstruction of the author's HR strategy, with three illustrative decision scenarios, CEO questions and explicit separation of targets and documented evidence. Available in all five portfolio languages. The internal source PDF, internal financial parameters and personal records are not included. Measured implementation outcomes await verified evidence.
+`docs/waistline-strategy.html` presents the author-approved Waistline implementation case: business growth and leadership mandate, audit and roadmap, a performance review rollout, measured outcomes with comparison periods and calculation context, regular practices established by end-2025, and the continuation into 2026. Independent portfolio demos follow the company case. Available in all five portfolio languages. The internal source PDF and personal records are not included.

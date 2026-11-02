@@ -1,53 +1,1153 @@
-/* Public editorial reconstruction. Targets are not presented as achieved results. */
+/* Waistline strategy case. Public copy approved by the author; comparison periods and measurement methods accompany the results. */
 globalThis.WaistlineStrategyCopy={
-ru:{
-back:'В портфолио',read:'Разобрать стратегию',try:'Посмотреть решения',caseLabel:'WAISTLINE / СТРАТЕГИЧЕСКИЙ КЕЙС',
-hero:['Рост бизнеса.','Система людей.'],lead:'Как я проектировал HR-стратегию для распределенного fashion-бизнеса: от диагностики проблем до решений о команде, развитии и ресурсах.',
-note:'Автор стратегии: Денис Ланвен. Публичный разбор исходного документа. Цели, гипотезы и результаты обозначены отдельно.',paperTitle:'Рост требует системы.',paperFoot:'Экономика команды / управленческие практики / устойчивость',
-facts:['исходный стратегический документ','направления изменений','ситуации для разбора'],
-chapters:['Контекст','Диагностика','Архитектура','Решения','Последовательность','Защита','Доказательства'],
-contextTitle:'Когда бизнес растет быстрее процессов.',context:'Waistline, fashion-бренд с продажами на маркетплейсах и распределенной командой. В стратегии я рассматривал HR как участника решений о численности, качестве управления и устойчивости бизнеса.',role:'Мой вклад в этом кейсе: диагностика HR-проблем, формулирование направления развития функции, целей, зависимостей и рисков. Этот разбор показывает логику стратегии. Сам документ не подтверждает достижение ее целевых показателей.',quote:'Перед тем как открыть вакансию, разобраться, как устроена работа.',
-diagnosisTitle:'Четыре проблемы. Одна связанная система.',diagnosisIntro:'В исходном документе наблюдения разложены на стикеры. Здесь я сгруппировал их по последствиям для бизнеса.',
-issues:[['Найм без общего плана','Неясно, когда понадобятся новые роли и какие бюджеты потребуются. Требования меняются по ходу поиска.'],['Невидимая нагрузка','Не хватает общего понимания загрузки, пересечений ответственности и потребности в новых позициях.'],['Разные практики руководителей','Адаптация, обратная связь и развитие сотрудников зависят от конкретного руководителя.'],['Зависимость от отдельных людей','Слабая база знаний, недостаток преемственности и ручные операции увеличивают уязвимость процессов.']],
-architectureTitle:'От инициатив к архитектуре HR.',architectureIntro:'Каждое направление связано с решением руководителя. Метрики ниже показывают, что стоит измерять, а не уже полученный эффект.',problem:'Задача',decision:'Решение',measure:'Что проверять',
-domains:[['01 / TEAM ECONOMICS','Численность и ресурсы','Связать запросы на людей с планом бизнеса и доступной загрузкой.','Совместное планирование найма, анализ ролей и нагрузки, прозрачная модель взаимодействия HR и финансов.','Соблюдение плана найма, точность прогноза нагрузки, затраты на команду с учетом качества результата.'],['02 / MANAGEMENT','Качество управления','Сделать ожидания, обратную связь и развитие понятными сотруднику и руководителю.','Ролевые ожидания, регулярные 1:1, матрицы компетенций и performance review. 360 используется как источник обратной связи.','Качество договоренностей и их выполнение; отдельно результаты работы и развитие компетенций.'],['03 / CONTINUITY','Устойчивость процессов','Уменьшить зависимость работы от отдельных сотрудников и ручных операций.','База знаний, преемственность, понятные зоны ответственности и автоматизация типовых HR-запросов.','Готовность замещения ключевых ролей, использование базы знаний, доля запросов без ручной обработки.'],['04 / EXPERIENCE','Культура и обратная связь','Связать обещания работодателя с повседневным опытом команды.','EVP вместе с маркетингом, работа с обратной связью, внутренние коммуникации и поддержка руководителей.','Участие, eNPS и качественная обратная связь; изменения в работе после опросов.']],
-scenarioTitle:'Вакансия или организационная проблема?',scenarioIntro:'Три иллюстративных сценария на основе логики стратегии. Это демонстрация подхода, не отчет о трех реальных проектах.',scenarioSteps:['Проверка','Выбор','Контроль'],
-scenarios:[['Нужен еще один сотрудник','Запрос: «Команда не справляется. Откроем вакансию?»','Сопоставить объем работы, сроки, загрузку и распределение ответственности. Отделить постоянную потребность от сезонного пика и потерь в процессе.','Сравнить найм, перераспределение задач, подрядчика и автоматизацию. Постоянный найм обосновывать устойчивой потребностью и экономикой роли.','Срок выполнения, качество и перегруз команды. Экономия не должна покупаться ценой скрытых переработок.'],['Сильный специалист перегружен','Запрос: «Он незаменим, но устал».','На 1:1 выяснить причины: объем, неясные приоритеты, нехватка навыков у коллег или критическая зависимость от одного человека.','Согласовать приоритеты и нагрузку с руководителем, передать часть знаний, подготовить замещение и план восстановления.','Выполнение договоренностей, устойчивость процесса и состояние сотрудника. Отслеживать фактическое перераспределение работы.'],['Оценки руководителей расходятся','Запрос: «Кого развивать, а кому пересмотреть доход?»','Разделить результаты работы, компетенции и обратную связь о взаимодействии. Проверить примеры и единообразие критериев.','Провести калибровку руководителей, согласовать ожидания и план развития. Не превращать средний балл 360 в автоматическую формулу зарплаты.','Изменения в результатах и поведении в следующем цикле. Проверить, что критерии понятны сотрудникам.']],
-roadTitle:'Сначала данные. Затем пилот. После масштаб.',roadIntro:'Предлагаемая последовательность реализации, собранная из исходных инициатив. Это редакционная реконструкция, а не подтвержденный календарь внедрения.',gate:'Условие перехода',
-phases:[['01 / ДИАГНОСТИКА','Договориться о проблеме','Собрать базовые показатели, владельцев решений, карту ролей и ограничений. Выбрать узкий приоритет вместо одновременного запуска всех инициатив.','Согласованы исходная точка, критерий успеха и ответственность.'],['02 / ПИЛОТ','Проверить на одной команде','Опробовать планирование загрузки, регулярную обратную связь и ролевые ожидания. Оценить время руководителей и удобство инструментов.','Есть данные об использовании, качестве решений и стоимости поддержки.'],['03 / МАСШТАБ','Закрепить работающий подход','Распространять проверенные практики, обучать руководителей, развивать базу знаний и автоматизацию. Регулярно пересматривать приоритеты.','Есть владелец процесса, регулярный обзор и основания продолжать инвестиции.']],
-defenseTitle:'Вопросы, которые должен задать CEO.',defenseIntro:'Как я бы защищал решения стратегии сегодня.',
-defense:[['Почему этим нужно заниматься сейчас?','Потери от непланового найма, перегруза и зависимости от отдельных людей накапливаются по мере роста. Начать стоит с диагностики и одного приоритета, где можно проверить влияние на скорость, качество и ресурсы.'],['Какие ресурсы понадобятся?','В стратегии обозначены участие CEO / COO, финансов, продукта, маркетинга и время руководителей. Следующий шаг: оценить емкость участников, бюджет и стоимость поддержки. Готового согласованного бюджета в документе нет.'],['Что будем делать, если бюджет ограничен?','Приоритизировать управленческие договоренности, ролевую ясность и доступные данные. Автоматизацию начинать с частых запросов. Крупную миграцию системы запускать после проверки потребности и совокупной стоимости владения.'],['Как поймем, что стратегия работает?','Разделить использование инструмента, качество управленческого решения и бизнес-эффект. Регулярность 1:1 сама по себе не доказывает рост результативности, а снижение доли ФОТ не доказывает повышение качества работы.']],
-evidenceTitle:'Что подтверждает этот кейс.',documented:'ПОДТВЕРЖДЕНО ДОКУМЕНТОМ',evidenceHeading:'Разработана стратегия',evidencePoints:['Диагностика организационных и HR-проблем.','Долгосрочное направление, годовые цели и ближайшие инициативы.','Зависимости от других функций и карта рисков.'],targetLabel:'ЦЕЛИ, НЕ ФАКТИЧЕСКИЕ РЕЗУЛЬТАТЫ',targetHeading:'Что планировалось измерять',targetPoints:['Плановый найм, загрузка и эффективность использования ресурсов.','Охват управленческих практик, оценки и автоматизации.','Вовлеченность, устойчивость процессов и преемственность.'],evidenceNote:'Исходная стратегия содержит несколько редакций целей. В этой публичной версии я показываю согласованную логику, не объединяя разные проценты и сроки в якобы достигнутый результат. Измеренный эффект внедрения здесь пока не заявлен.',
-toolsTitle:'От стратегии к демонстрации подхода.',toolsIntro:'Самостоятельные демо из моего портфолио. Они иллюстрируют подход и не являются рабочими системами Waistline или доказательством результатов внедрения.',tools:['Решения о структуре, нагрузке и ресурсах.','Сценарии затрат на удержание и замену.','Прототип HR-сервиса для сотрудников.'],
-reflectionTitle:'Что я усилил бы в следующей версии.',reflection:'Единую редакцию метрик и сроков. Явный выбор того, что откладываем. Бюджет и емкость команды. Критерии пилота. Раздельную оценку компетенций и результатов работы. Путь от каждого HR-решения до проверяемого бизнес-эффекта.',
-endTitle:'Стратегия становится ценной в решениях.',endText:'Мне интересны задачи на стыке HR, управления и экономики команды. Этот кейс показывает, как я подхожу к их проектированию.',contact:'Обсудить задачу',cv:'Резюме',source:'Основа: авторская функциональная HR-стратегия Waistline, горизонт 2025–2028; в документе также есть более поздние ориентиры. Публичная версия переработана для портфолио. Внутренние финансовые параметры и персональные данные не публикуются.',footer:'Денис Ланвен / HR Strategy & People Leadership',preview:'Разобрать кейс',previewTitle:'Waistline / People System',previewText:'Как я связывал диагностику, планирование команды, развитие руководителей и HR-процессы в единую стратегию.'
-},
-en:{back:'Back to portfolio',read:'Explore the strategy',try:'Explore decisions',caseLabel:'WAISTLINE / STRATEGY CASE',hero:['Business growth.','People systems.'],lead:'How I designed an HR strategy for a distributed fashion business, connecting diagnosis with decisions about teams, development and resources.',note:'Strategy author: Denis Lanven. A public reconstruction of the source document. Targets, hypotheses and outcomes are kept separate.',paperTitle:'Growth needs a system.',paperFoot:'Team economics / management practices / resilience',facts:['source strategy document','areas of change','decision scenarios'],chapters:['Context','Diagnosis','Architecture','Decisions','Sequence','Defense','Evidence'],contextTitle:'When business outgrows its processes.',context:'Waistline is a fashion brand selling through marketplaces with a distributed team. I positioned HR as a participant in headcount, management quality and business resilience decisions.',role:'My contribution: HR diagnosis, direction for the function, objectives, dependencies and risks. This case explains the strategy; the document alone does not prove that its targets were achieved.',quote:'Before opening a vacancy, understand how the work is organized.',diagnosisTitle:'Four problems. One connected system.',diagnosisIntro:'The source uses workshop notes. Here they are grouped by their business implications.',issues:[['Unplanned hiring','Unclear future roles and budgets; requirements change during the search.'],['Invisible workload','Limited shared visibility into capacity, overlapping responsibilities and staffing needs.'],['Uneven management practices','Onboarding, feedback and development depend on the individual manager.'],['Key-person dependency','Limited documentation, succession and automation make processes vulnerable.']],architectureTitle:'From initiatives to HR architecture.',architectureIntro:'Each area supports a management decision. Measures below are proposed checks, not achieved outcomes.',problem:'Challenge',decision:'Decision',measure:'What to measure',domains:[['01 / TEAM ECONOMICS','Headcount and resources','Connect staffing requests to business plans and capacity.','Joint hiring plans, role and workload analysis, clear HR-finance collaboration.','Hiring plan adherence, workload forecast accuracy and team costs alongside output quality.'],['02 / MANAGEMENT','Management quality','Clarify expectations, feedback and development.','Role expectations, regular 1:1s, competency frameworks and performance reviews. Use 360 as a feedback source.','Agreement quality and follow-through; assess results separately from competencies.'],['03 / CONTINUITY','Process resilience','Reduce dependency on individuals and manual work.','Knowledge base, succession, clear ownership and automation of routine HR requests.','Replacement readiness, knowledge use and requests resolved without manual handling.'],['04 / EXPERIENCE','Culture and feedback','Connect the employer promise to everyday experience.','EVP with marketing, employee feedback, internal communication and manager support.','Participation, eNPS, qualitative feedback and changes made after surveys.']],scenarioTitle:'A vacancy or an organizational problem?',scenarioIntro:'Three illustrative scenarios based on the strategy, not reports of three actual projects.',scenarioSteps:['Investigate','Choose','Review'],scenarios:[['We need another employee','Request: “The team cannot keep up. Can we hire?”','Compare volume, deadlines, capacity and ownership. Separate structural demand from seasonal peaks and process losses.','Compare hiring, task redistribution, contractors and automation. Justify permanent hiring through sustained need and role economics.','Delivery time, quality and overload. Savings must not depend on hidden overtime.'],['A strong specialist is overloaded','Request: “They are indispensable, but exhausted.”','Use a 1:1 to explore workload, priorities, skill gaps and key-person dependency.','Agree on priorities with the manager, transfer knowledge, prepare backup and a recovery plan.','Follow-through, process resilience and the employee’s experience. Check actual redistribution of work.'],['Managers disagree on ratings','Request: “Who should develop, and whose pay should change?”','Separate delivery, competencies and collaboration feedback. Check examples and consistent criteria.','Calibrate managers, agree expectations and a development plan. Do not turn a 360 average into a pay formula.','Review changes in delivery and behavior next cycle; check that employees understand the criteria.']],roadTitle:'Diagnose. Pilot. Then scale.',roadIntro:'A proposed sequence reconstructed from the source initiatives, not a verified implementation calendar.',gate:'Decision gate',phases:[['01 / DIAGNOSIS','Agree on the problem','Establish baselines, decision owners, roles and constraints. Pick a focused priority.','Baseline, success criterion and ownership agreed.'],['02 / PILOT','Test with one team','Try capacity planning, feedback and role expectations. Assess manager effort and usability.','Evidence of adoption, decision quality and support cost.'],['03 / SCALE','Make useful practices repeatable','Scale tested practices, train managers, improve documentation and automation. Review priorities.','An owner, recurring review and grounds for further investment.']],defenseTitle:'Questions a CEO should ask.',defenseIntro:'How I would defend the strategy today.',defense:[['Why now?','Unplanned hiring, overload and key-person dependency become more costly as a company grows. Start with one measurable priority affecting speed, quality and resources.'],['What resources are needed?','The strategy calls for CEO / COO, finance, product, marketing and manager involvement. Capacity, budget and ongoing support still need estimation; the document contains no approved budget.'],['What if the budget is limited?','Prioritize ownership, role clarity and available data. Automate frequent requests first. Commit to a major system migration only after validating need and total cost.'],['How will we know it works?','Separate tool adoption, management decision quality and business outcomes. Regular 1:1s alone do not prove productivity gains; a lower payroll ratio alone does not prove better work.']],evidenceTitle:'What this case establishes.',documented:'SUPPORTED BY THE DOCUMENT',evidenceHeading:'A strategy was developed',evidencePoints:['Diagnosis of organizational and HR problems.','Long-term direction, annual goals and near-term initiatives.','Cross-functional dependencies and risks.'],targetLabel:'TARGETS, NOT ACHIEVED RESULTS',targetHeading:'Planned measurement areas',targetPoints:['Hiring plans, workload and resource efficiency.','Coverage of management practices, assessments and automation.','Engagement, process resilience and succession.'],evidenceNote:'The source contains several versions of targets. This public edition explains a coherent approach without presenting different percentages and dates as achieved results. Measured implementation impact is not claimed here.',toolsTitle:'From strategy to a working demonstration.',toolsIntro:'Independent portfolio demos. They illustrate the approach; they are not Waistline production systems or evidence of implementation outcomes.',tools:['Structure, capacity and resource decisions.','Retention and replacement cost scenarios.','An employee HR-service prototype.'],reflectionTitle:'What I would strengthen next.',reflection:'A single set of metrics and deadlines. Explicit deprioritization. Budget and capacity. Pilot criteria. Separate assessment of competencies and delivery. A traceable link from each HR decision to a testable business outcome.',endTitle:'Strategy earns its value in decisions.',endText:'I work at the intersection of HR, management and team economics. This case shows how I design that work.',contact:'Discuss a challenge',cv:'CV',source:'Based on my functional HR strategy for Waistline, horizon 2025–2028, with later milestones also present in the source. Adapted for public presentation. Internal financial parameters and personal data are not published.',footer:'Denis Lanven / HR Strategy & People Leadership',preview:'Explore the case',previewTitle:'Waistline / People System',previewText:'How I connected diagnosis, workforce planning, manager development and HR processes in one strategy.'},
-pl:{back:'Do portfolio',read:'Poznaj strategię',try:'Zobacz decyzje',caseLabel:'WAISTLINE / STUDIUM STRATEGII',hero:['Wzrost biznesu.','System pracy z ludźmi.'],lead:'Jak projektowałem strategię HR dla rozproszonej firmy modowej: od diagnozy do decyzji o zespole, rozwoju i zasobach.',note:'Autor strategii: Denis Lanven. Publiczne opracowanie dokumentu. Cele, hipotezy i wyniki są rozdzielone.',paperTitle:'Wzrost wymaga systemu.',paperFoot:'Ekonomika zespołu / zarządzanie / odporność',facts:['dokument strategiczny','obszary zmian','scenariusze decyzyjne'],chapters:['Kontekst','Diagnoza','Architektura','Decyzje','Kolejność','Obrona','Dowody'],contextTitle:'Gdy firma rośnie szybciej niż procesy.',context:'Waistline to marka modowa sprzedająca na platformach marketplace, z rozproszonym zespołem. Strategia łączy HR z zatrudnieniem, jakością zarządzania i odpornością biznesu.',role:'Mój wkład: diagnoza, kierunek rozwoju HR, cele, zależności i ryzyka. Dokument pokazuje plan; nie stanowi dowodu osiągnięcia celów.',quote:'Zanim otworzymy rekrutację, zrozummy organizację pracy.',diagnosisTitle:'Cztery problemy. Jeden system.',diagnosisIntro:'Obserwacje z warsztatu pogrupowane według skutków dla biznesu.',issues:[['Nieplanowana rekrutacja','Niejasne potrzeby i budżety; wymagania zmieniają się w trakcie poszukiwań.'],['Niewidoczne obciążenie','Brak wspólnego obrazu zasobów i nakładania się odpowiedzialności.'],['Różne praktyki menedżerów','Adaptacja, informacja zwrotna i rozwój zależą od konkretnego lidera.'],['Zależność od kluczowych osób','Braki w wiedzy, zastępowalności i automatyzacji zwiększają ryzyko.']],architectureTitle:'Od inicjatyw do architektury HR.',architectureIntro:'Mierniki poniżej to propozycje weryfikacji, nie osiągnięte wyniki.',problem:'Zadanie',decision:'Rozwiązanie',measure:'Co mierzyć',domains:[['01 / TEAM ECONOMICS','Zatrudnienie i zasoby','Połączyć potrzeby kadrowe z planem firmy.','Plan zatrudnienia, analiza ról i obciążenia, współpraca HR z finansami.','Realizacja planu, trafność prognozy i koszty wraz z jakością pracy.'],['02 / MANAGEMENT','Jakość zarządzania','Wyjaśnić oczekiwania i rozwój.','Regularne 1:1, kompetencje i ocena wyników; 360 jako źródło informacji zwrotnej.','Realizacja ustaleń; wyniki oddzielnie od kompetencji.'],['03 / CONTINUITY','Odporność procesów','Ograniczyć zależność od pojedynczych osób.','Baza wiedzy, sukcesja, odpowiedzialność i automatyzacja zgłoszeń HR.','Gotowość zastępstw, użycie wiedzy i obsługa bez pracy ręcznej.'],['04 / EXPERIENCE','Kultura i dialog','Połączyć obietnicę pracodawcy z doświadczeniem.','EVP z marketingiem, opinie zespołu, komunikacja i wsparcie liderów.','Udział, eNPS i zmiany wprowadzone po badaniach.']],scenarioTitle:'Wakat czy problem organizacyjny?',scenarioIntro:'Trzy ilustracyjne sytuacje oparte na strategii, nie opis trzech zrealizowanych projektów.',scenarioSteps:['Sprawdź','Wybierz','Zweryfikuj'],scenarios:[['Potrzebujemy kolejnej osoby','„Zespół nie nadąża. Rekrutujemy?”','Porównać zadania, terminy, obciążenie i odpowiedzialność. Oddzielić sezonowość od stałej potrzeby.','Porównać zatrudnienie, zmianę podziału pracy, wykonawcę i automatyzację.','Czas, jakość i przeciążenie. Bez oszczędności kosztem ukrytych nadgodzin.'],['Ekspert jest przeciążony','„Jest niezastąpiony, ale wyczerpany”.','Sprawdzić priorytety, ilość pracy, luki kompetencyjne i zależność od jednej osoby.','Ustalić priorytety z liderem, przekazać wiedzę i przygotować zastępstwo.','Realna zmiana obciążenia, stan pracownika i ciągłość procesu.'],['Menedżerowie oceniają różnie','„Kogo rozwijać, komu zmienić wynagrodzenie?”','Rozdzielić wyniki, kompetencje i opinie o współpracy. Sprawdzić przykłady.','Skalibrować kryteria, ustalić oczekiwania i plan rozwoju. Nie przeliczać średniej 360 na pensję.','Zmiany wyników i zachowań w kolejnym cyklu; jasność kryteriów.']],roadTitle:'Diagnoza. Pilotaż. Skalowanie.',roadIntro:'Proponowana kolejność na podstawie dokumentu, nie potwierdzony harmonogram wdrożeń.',gate:'Warunek przejścia',phases:[['01 / DIAGNOZA','Uzgodnić problem','Ustalić bazę, role, ograniczenia i jeden priorytet.','Znana baza, kryterium sukcesu i właściciel.'],['02 / PILOTAŻ','Sprawdzić w jednym zespole','Przetestować planowanie, informację zwrotną i oczekiwania wobec ról.','Dane o użyciu, jakości decyzji i kosztach wsparcia.'],['03 / SKALOWANIE','Utrwalić skuteczne praktyki','Szkolenie liderów, dokumentacja, automatyzacja i przegląd priorytetów.','Właściciel procesu i uzasadnienie dalszych inwestycji.']],defenseTitle:'Pytania, które powinien zadać CEO.',defenseIntro:'Jak dziś uzasadniłbym strategię.',defense:[['Dlaczego teraz?','Koszty nieplanowanej rekrutacji, przeciążenia i zależności od ludzi rosną wraz z firmą. Zacząć od mierzalnego priorytetu.'],['Jakie zasoby są potrzebne?','Czas CEO / COO, finansów, produktu, marketingu i liderów. Dokument nie zawiera zatwierdzonego budżetu; trzeba ocenić koszty i dostępność.'],['Co przy ograniczonym budżecie?','Najpierw jasna odpowiedzialność, role i dostępne dane. Automatyzować częste zgłoszenia. Migrację systemu poprzedzić oceną potrzeb i kosztów.'],['Jak poznamy efekt?','Oddzielić użycie narzędzia, jakość decyzji i wynik biznesowy. Same regularne 1:1 nie dowodzą wzrostu produktywności.']],evidenceTitle:'Co potwierdza ten przypadek.',documented:'POTWIERDZONE DOKUMENTEM',evidenceHeading:'Opracowana strategia',evidencePoints:['Diagnoza problemów HR i organizacji.','Kierunek, cele roczne i inicjatywy.','Zależności między funkcjami i ryzyka.'],targetLabel:'CELE, NIE OSIĄGNIĘTE WYNIKI',targetHeading:'Planowane obszary pomiaru',targetPoints:['Rekrutacja, obciążenie i efektywność zasobów.','Praktyki zarządzania, ocena i automatyzacja.','Zaangażowanie, odporność i sukcesja.'],evidenceNote:'Dokument zawiera różne wersje celów. Publiczne opracowanie pokazuje spójną logikę; nie przedstawia procentów i terminów jako osiągniętych wyników. Zmierzony efekt wdrożeń nie jest tu deklarowany.',toolsTitle:'Od strategii do demonstracji.',toolsIntro:'Niezależne demonstracje z portfolio, nie systemy produkcyjne Waistline ani dowód efektów wdrożenia.',tools:['Struktura, obciążenie i zasoby.','Koszty utrzymania i zastąpienia pracownika.','Prototyp serwisu HR dla zespołu.'],reflectionTitle:'Co dopracowałbym w kolejnej wersji.',reflection:'Spójne mierniki i terminy. Świadome odłożenie części inicjatyw. Budżet, zasoby i kryteria pilotażu. Oddzielna ocena kompetencji i wyników. Weryfikowalny związek z biznesem.',endTitle:'Wartość strategii widać w decyzjach.',endText:'Łączę HR, zarządzanie i ekonomikę zespołu. Ten przypadek pokazuje sposób projektowania rozwiązań.',contact:'Porozmawiajmy',cv:'CV',source:'Podstawa: autorska strategia HR Waistline na lata 2025–2028, zawierająca także późniejsze cele. Opracowanie publiczne bez wewnętrznych parametrów finansowych i danych osobowych.',footer:'Denis Lanven / HR Strategy & People Leadership',preview:'Poznaj studium',previewTitle:'Waistline / People System',previewText:'Diagnoza, planowanie zatrudnienia, rozwój liderów i procesy HR w jednej strategii.'},
-es:{back:'Volver al portfolio',read:'Explorar la estrategia',try:'Ver decisiones',caseLabel:'WAISTLINE / CASO ESTRATÉGICO',hero:['Crece el negocio.','Se diseña el equipo.'],lead:'Cómo diseñé una estrategia de RR. HH. para una empresa de moda distribuida: del diagnóstico a las decisiones sobre personas, desarrollo y recursos.',note:'Autor: Denis Lanven. Reconstrucción pública del documento. Los objetivos, las hipótesis y los resultados se distinguen.',paperTitle:'Crecer exige un sistema.',paperFoot:'Economía del equipo / gestión / resiliencia',facts:['documento estratégico','áreas de cambio','escenarios de decisión'],chapters:['Contexto','Diagnóstico','Arquitectura','Decisiones','Secuencia','Defensa','Evidencia'],contextTitle:'Cuando el negocio supera sus procesos.',context:'Waistline es una marca de moda que vende en marketplaces y trabaja con un equipo distribuido. La estrategia conecta RR. HH. con la plantilla, la calidad de gestión y la resiliencia.',role:'Mi aportación: diagnóstico, dirección de la función, objetivos, dependencias y riesgos. El caso explica la estrategia; el documento no demuestra que se alcanzaran sus objetivos.',quote:'Antes de abrir una vacante, entender cómo se organiza el trabajo.',diagnosisTitle:'Cuatro problemas. Un sistema conectado.',diagnosisIntro:'Observaciones del documento agrupadas por sus consecuencias para el negocio.',issues:[['Contratación sin plan común','Necesidades y presupuestos poco claros; requisitos cambiantes.'],['Carga de trabajo invisible','Visibilidad limitada de la capacidad y de las responsabilidades solapadas.'],['Prácticas de gestión desiguales','La incorporación, el feedback y el desarrollo dependen de cada responsable.'],['Dependencia de personas clave','Documentación, sucesión y automatización insuficientes.']],architectureTitle:'De iniciativas a una arquitectura de RR. HH.',architectureIntro:'Las métricas son propuestas de verificación, no resultados logrados.',problem:'Reto',decision:'Decisión',measure:'Qué medir',domains:[['01 / TEAM ECONOMICS','Plantilla y recursos','Relacionar las solicitudes de personal con los planes del negocio.','Planificación conjunta, análisis de roles y carga, colaboración con finanzas.','Cumplimiento del plan, precisión de previsiones y costes junto con calidad.'],['02 / MANAGEMENT','Calidad de gestión','Aclarar expectativas, feedback y desarrollo.','Reuniones 1:1, competencias y evaluación del desempeño; 360 como fuente de feedback.','Cumplimiento de acuerdos; resultados separados de competencias.'],['03 / CONTINUITY','Resiliencia de procesos','Reducir la dependencia individual y el trabajo manual.','Base de conocimiento, sucesión, responsables y automatización de solicitudes.','Cobertura de roles, uso del conocimiento y resolución sin intervención manual.'],['04 / EXPERIENCE','Cultura y diálogo','Conectar la promesa de empleo con la experiencia cotidiana.','EVP con marketing, feedback, comunicación interna y apoyo a líderes.','Participación, eNPS y cambios posteriores a las encuestas.']],scenarioTitle:'¿Una vacante o un problema organizativo?',scenarioIntro:'Tres escenarios ilustrativos basados en la estrategia; no son tres proyectos reales documentados.',scenarioSteps:['Investigar','Elegir','Revisar'],scenarios:[['Necesitamos otra persona','«El equipo no llega. ¿Contratamos?»','Comparar volumen, plazos, capacidad y responsabilidades. Separar picos estacionales de demanda permanente.','Comparar contratación, redistribución, proveedores y automatización. Justificar el puesto por una necesidad sostenida.','Plazos, calidad y sobrecarga. Evitar ahorros basados en horas extra ocultas.'],['Un especialista está sobrecargado','«Es imprescindible, pero está agotado».','Revisar prioridades, volumen, brechas de habilidades y dependencia individual.','Acordar prioridades, transferir conocimiento y preparar respaldo con el responsable.','Redistribución real, continuidad y experiencia de la persona.'],['Los responsables discrepan','«¿A quién desarrollar y a quién subir el salario?»','Separar resultados, competencias y feedback de colaboración. Revisar ejemplos y criterios.','Calibrar evaluaciones y acordar un plan. No convertir la media del 360 en una fórmula salarial.','Cambios en resultados y comportamientos; claridad de criterios.']],roadTitle:'Diagnosticar. Pilotar. Escalar.',roadIntro:'Secuencia propuesta a partir del documento, no un calendario de ejecución verificado.',gate:'Condición para avanzar',phases:[['01 / DIAGNÓSTICO','Acordar el problema','Definir línea base, responsables, restricciones y una prioridad.','Línea base, criterio de éxito y responsabilidad acordados.'],['02 / PILOTO','Probar con un equipo','Probar capacidad, feedback y expectativas; evaluar esfuerzo y utilidad.','Datos de uso, calidad de decisiones y coste de soporte.'],['03 / ESCALA','Consolidar prácticas útiles','Formar líderes, documentar, automatizar y revisar prioridades.','Responsable, revisión periódica y justificación de inversión.']],defenseTitle:'Preguntas que debe hacer un CEO.',defenseIntro:'Cómo defendería hoy la estrategia.',defense:[['¿Por qué ahora?','La contratación no planificada, la sobrecarga y la dependencia aumentan sus costes con el crecimiento. Empezar con una prioridad medible.'],['¿Qué recursos hacen falta?','Tiempo del CEO / COO, finanzas, producto, marketing y responsables. El documento no contiene un presupuesto aprobado; falta estimar capacidad y coste.'],['¿Y con presupuesto limitado?','Priorizar responsabilidades, claridad de roles y datos disponibles. Automatizar solicitudes frecuentes antes de una gran migración de sistemas.'],['¿Cómo sabremos si funciona?','Separar adopción, calidad de decisiones y efecto de negocio. Tener reuniones 1:1 regulares no demuestra por sí solo una mayor productividad.']],evidenceTitle:'Qué demuestra este caso.',documented:'RESPALDADO POR EL DOCUMENTO',evidenceHeading:'Una estrategia desarrollada',evidencePoints:['Diagnóstico de problemas organizativos y de RR. HH.','Dirección, objetivos anuales e iniciativas próximas.','Dependencias entre funciones y riesgos.'],targetLabel:'OBJETIVOS, NO RESULTADOS ALCANZADOS',targetHeading:'Áreas de medición previstas',targetPoints:['Contratación, capacidad y eficiencia de recursos.','Prácticas de gestión, evaluación y automatización.','Compromiso, resiliencia y sucesión.'],evidenceNote:'El documento incluye varias versiones de objetivos. Esta edición explica una lógica coherente sin presentar porcentajes y fechas como resultados logrados. No se declara aquí un impacto de implementación medido.',toolsTitle:'De la estrategia a la demostración.',toolsIntro:'Demos independientes del portfolio, no sistemas de producción de Waistline ni pruebas de resultados.',tools:['Estructura, capacidad y recursos.','Costes de retención y sustitución.','Prototipo de servicio de RR. HH.'],reflectionTitle:'Qué reforzaría en la próxima versión.',reflection:'Métricas y fechas coherentes. Priorización explícita. Presupuesto y capacidad. Criterios de piloto. Competencias separadas de resultados y relación verificable con el negocio.',endTitle:'La estrategia vale por sus decisiones.',endText:'Trabajo entre RR. HH., gestión y economía del equipo. Este caso muestra cómo diseño soluciones.',contact:'Hablemos del reto',cv:'CV',source:'Basado en mi estrategia de RR. HH. para Waistline, horizonte 2025–2028, con hitos posteriores en el documento. Adaptación pública sin parámetros financieros internos ni datos personales.',footer:'Denis Lanven / HR Strategy & People Leadership',preview:'Explorar el caso',previewTitle:'Waistline / People System',previewText:'Diagnóstico, planificación, desarrollo de responsables y procesos de RR. HH. en una estrategia.'},
-uk:{back:'До портфоліо',read:'Розібрати стратегію',try:'Подивитися рішення',caseLabel:'WAISTLINE / СТРАТЕГІЧНИЙ КЕЙС',hero:['Зростання бізнесу.','Система людей.'],lead:'Як я проєктував HR-стратегію для розподіленого fashion-бізнесу: від діагностики до рішень про команду, розвиток і ресурси.',note:'Автор стратегії: Денис Ланвен. Публічне опрацювання документа. Цілі, гіпотези й результати розділено.',paperTitle:'Зростання потребує системи.',paperFoot:'Економіка команди / управління / стійкість',facts:['стратегічний документ','напрями змін','ситуації для розбору'],chapters:['Контекст','Діагностика','Архітектура','Рішення','Послідовність','Захист','Докази'],contextTitle:'Коли бізнес зростає швидше за процеси.',context:'Waistline, fashion-бренд із продажами на маркетплейсах і розподіленою командою. Стратегія пов’язує HR із чисельністю, якістю управління та стійкістю бізнесу.',role:'Мій внесок: діагностика HR-проблем, напрям розвитку функції, цілі, залежності й ризики. Документ показує задум, але не підтверджує досягнення цільових показників.',quote:'Перед відкриттям вакансії зрозуміти, як організована робота.',diagnosisTitle:'Чотири проблеми. Єдина система.',diagnosisIntro:'Спостереження з документа згруповані за наслідками для бізнесу.',issues:[['Найм без спільного плану','Незрозумілі майбутні ролі й бюджети; вимоги змінюються під час пошуку.'],['Невидиме навантаження','Бракує спільного розуміння завантаження й перетинів відповідальності.'],['Різні практики керівників','Адаптація, зворотний зв’язок і розвиток залежать від конкретного керівника.'],['Залежність від окремих людей','Слабка база знань, наступність і ручні операції підвищують вразливість.']],architectureTitle:'Від ініціатив до архітектури HR.',architectureIntro:'Метрики нижче показують, що перевіряти, а не вже досягнутий ефект.',problem:'Завдання',decision:'Рішення',measure:'Що перевіряти',domains:[['01 / TEAM ECONOMICS','Чисельність і ресурси','Пов’язати запити на людей із планом бізнесу.','Спільне планування найму, аналіз ролей і навантаження, взаємодія HR та фінансів.','Виконання плану, точність прогнозу й витрати разом із якістю результату.'],['02 / MANAGEMENT','Якість управління','Зробити очікування й розвиток зрозумілими.','Регулярні 1:1, компетенції, performance review; 360 як джерело зворотного зв’язку.','Виконання домовленостей; результати окремо від компетенцій.'],['03 / CONTINUITY','Стійкість процесів','Зменшити залежність від людей і ручної роботи.','База знань, наступність, відповідальність та автоматизація HR-запитів.','Готовність заміщення, використання знань і обробка без ручної участі.'],['04 / EXPERIENCE','Культура й діалог','Поєднати обіцянки роботодавця з досвідом команди.','EVP із маркетингом, робота з відгуками, комунікації та підтримка керівників.','Участь, eNPS і зміни після опитувань.']],scenarioTitle:'Вакансія чи організаційна проблема?',scenarioIntro:'Три ілюстративні ситуації за логікою стратегії, не звіт про три реальні проєкти.',scenarioSteps:['Перевірка','Вибір','Контроль'],scenarios:[['Потрібен ще один співробітник','«Команда не встигає. Відкриємо вакансію?»','Зіставити обсяг, терміни, навантаження й відповідальність. Відділити сезонний пік від постійної потреби.','Порівняти найм, перерозподіл, підрядника й автоматизацію. Обґрунтувати постійний найм економікою ролі.','Терміни, якість і перевантаження. Без економії за рахунок прихованих перепрацювань.'],['Сильний фахівець перевантажений','«Він незамінний, але виснажений».','Перевірити пріоритети, обсяг, навички колег і залежність від однієї людини.','Узгодити пріоритети з керівником, передати знання, підготувати заміщення.','Фактичний перерозподіл роботи, стан людини та стійкість процесу.'],['Оцінки керівників різняться','«Кого розвивати, кому змінити дохід?»','Розділити результати, компетенції та відгуки про взаємодію. Перевірити приклади й критерії.','Калібрувати оцінки, погодити очікування та план розвитку. Не перетворювати середній бал 360 на формулу зарплати.','Зміни результатів і поведінки наступного циклу; зрозумілість критеріїв.']],roadTitle:'Дані. Пілот. Масштабування.',roadIntro:'Запропонована послідовність на основі документа, не підтверджений календар впровадження.',gate:'Умова переходу',phases:[['01 / ДІАГНОСТИКА','Узгодити проблему','Визначити базу, ролі, обмеження й один пріоритет.','Узгоджені початкова точка, критерій успіху та власник.'],['02 / ПІЛОТ','Перевірити на одній команді','Випробувати планування, зворотний зв’язок і ролеві очікування.','Є дані про використання, якість рішень і витрати підтримки.'],['03 / МАСШТАБ','Закріпити дієві практики','Навчати керівників, документувати, автоматизувати, переглядати пріоритети.','Є власник, регулярний огляд і підстави для інвестицій.']],defenseTitle:'Запитання, які має поставити CEO.',defenseIntro:'Як я захищав би стратегію сьогодні.',defense:[['Чому зараз?','Втрати від непланового найму, перевантаження й залежності від людей зростають разом із бізнесом. Почати з вимірюваного пріоритету.'],['Які ресурси потрібні?','Час CEO / COO, фінансів, продукту, маркетингу та керівників. Узгодженого бюджету в документі немає; потрібна оцінка ресурсів і витрат.'],['Що за обмеженого бюджету?','Пріоритет відповідальності, ясності ролей і доступним даним. Автоматизувати часті запити; міграцію системи починати після перевірки потреби та вартості.'],['Як зрозуміти, що працює?','Розділити використання інструмента, якість рішень і бізнес-ефект. Регулярність 1:1 сама собою не доводить зростання продуктивності.']],evidenceTitle:'Що підтверджує кейс.',documented:'ПІДТВЕРДЖЕНО ДОКУМЕНТОМ',evidenceHeading:'Розроблена стратегія',evidencePoints:['Діагностика HR- та організаційних проблем.','Напрям, річні цілі та найближчі ініціативи.','Залежності між функціями й ризики.'],targetLabel:'ЦІЛІ, НЕ ДОСЯГНУТІ РЕЗУЛЬТАТИ',targetHeading:'Заплановані напрями вимірювання',targetPoints:['Найм, навантаження та ефективність ресурсів.','Управлінські практики, оцінка й автоматизація.','Залученість, стійкість і наступність.'],evidenceNote:'Документ містить кілька редакцій цілей. Публічна версія показує узгоджену логіку, не подаючи відсотки й терміни як досягнуті результати. Виміряний ефект впровадження тут поки не заявлено.',toolsTitle:'Від стратегії до демонстрації.',toolsIntro:'Самостійні демо з портфоліо, не робочі системи Waistline й не докази результатів впровадження.',tools:['Структура, навантаження та ресурси.','Витрати на утримання й заміну.','Прототип HR-сервісу для команди.'],reflectionTitle:'Що посилив би в наступній версії.',reflection:'Єдина редакція метрик і термінів. Чіткі пріоритети. Бюджет і ресурси. Критерії пілота. Окрема оцінка компетенцій і результатів. Зв’язок із перевірюваним бізнес-ефектом.',endTitle:'Цінність стратегії в рішеннях.',endText:'Працюю на перетині HR, управління й економіки команди. Кейс показує, як я проєктую рішення.',contact:'Обговорити завдання',cv:'Резюме',source:'Основа: авторська HR-стратегія Waistline, горизонт 2025–2028; у документі є й пізніші орієнтири. Публічна версія без внутрішніх фінансових параметрів і персональних даних.',footer:'Денис Ланвен / HR Strategy & People Leadership',preview:'Розібрати кейс',previewTitle:'Waistline / People System',previewText:'Діагностика, планування команди, розвиток керівників і HR-процеси в єдиній стратегії.'}
+  "ru": {
+    "back": "В портфолио",
+    "read": "Разобрать стратегию",
+    "try": "Посмотреть решения",
+    "caseLabel": "WAISTLINE / СТРАТЕГИЧЕСКИЙ КЕЙС",
+    "hero": [
+      "Рост бизнеса.",
+      "Система людей."
+    ],
+    "lead": "Как я разрабатывал и реализовывал HR-стратегию для распределенного fashion-бизнеса: от аудита процессов до решений о команде, развитии и ресурсах.",
+    "note": "HR Strategy Partner / HR-команда: 4 специалиста / подчинение CEO и Co-CEO",
+    "paperTitle": "Рост требует системы.",
+    "paperFoot": "Экономика команды / управленческие практики / устойчивость",
+    "facts": [
+      "новичков в единой системе адаптации",
+      "затрат времени на сопровождение",
+      "месяцев наблюдения"
+    ],
+    "chapters": [
+      "Контекст",
+      "Диагностика",
+      "Архитектура",
+      "Решения",
+      "Последовательность",
+      "Результаты"
+    ],
+    "contextTitle": "HR-система для бизнеса, который вырос с 37 до 94 сотрудников за год.",
+    "context": "В 2025 году Waistline масштабировал распределенную команду fashion-бизнеса. Рост требовал системного найма, единой адаптации, понятных критериев развития и финансово обоснованных решений о команде.",
+    "role": "В роли HR Strategy Partner я руководил четырьмя HR-специалистами и подчинялся двум фаундерам, CEO и Co-CEO.",
+    "quote": "Перед тем как открыть вакансию, разобраться, как устроена работа.",
+    "diagnosisTitle": "Четыре проблемы. Одна связанная система.",
+    "diagnosisIntro": "Отправной точкой стратегии стали четыре взаимосвязанные области проблем в организации работы.",
+    "issues": [
+      [
+        "Найм без общего плана",
+        "Неясно, когда понадобятся новые роли и какие бюджеты потребуются. Требования меняются по ходу поиска."
+      ],
+      [
+        "Невидимая нагрузка",
+        "Не хватает общего понимания загрузки, пересечений ответственности и потребности в новых позициях."
+      ],
+      [
+        "Разные практики руководителей",
+        "Адаптация, обратная связь и развитие сотрудников зависят от конкретного руководителя."
+      ],
+      [
+        "Зависимость от отдельных людей",
+        "Слабая база знаний, недостаток преемственности и ручные операции увеличивают уязвимость процессов."
+      ]
+    ],
+    "architectureTitle": "От инициатив к архитектуре HR.",
+    "architectureIntro": "Четыре направления стратегии связывали потребности бизнеса с HR-решениями. Их реализация и результаты раскрыты далее.",
+    "problem": "Задача",
+    "decision": "Решение",
+    "measure": "Контроль",
+    "domains": [
+      [
+        "01 / TEAM ECONOMICS",
+        "Численность и ресурсы",
+        "Связать запросы на людей с планом бизнеса и доступной загрузкой.",
+        "Совместное планирование найма, анализ ролей и нагрузки, прозрачная модель взаимодействия HR и финансов.",
+        "Соблюдение плана найма, точность прогноза нагрузки, затраты на команду с учетом качества результата."
+      ],
+      [
+        "02 / MANAGEMENT",
+        "Качество управления",
+        "Сделать ожидания, обратную связь и развитие понятными сотруднику и руководителю.",
+        "Ролевые ожидания, регулярные 1:1, матрицы компетенций и performance review. 360 используется как источник обратной связи.",
+        "Качество договоренностей и их выполнение; отдельно результаты работы и развитие компетенций."
+      ],
+      [
+        "03 / CONTINUITY",
+        "Устойчивость процессов",
+        "Уменьшить зависимость работы от отдельных сотрудников и ручных операций.",
+        "База знаний, преемственность, понятные зоны ответственности и автоматизация типовых HR-запросов.",
+        "Готовность замещения ключевых ролей, использование базы знаний, доля запросов без ручной обработки."
+      ],
+      [
+        "04 / EXPERIENCE",
+        "Культура и обратная связь",
+        "Связать обещания работодателя с повседневным опытом команды.",
+        "EVP вместе с маркетингом, работа с обратной связью, внутренние коммуникации и поддержка руководителей.",
+        "Участие, eNPS и качественная обратная связь; изменения в работе после опросов."
+      ]
+    ],
+    "roadTitle": "От аудита бизнес-процессов к реализации HR-стратегии.",
+    "roadIntro": "Последовательность работы с момента выхода на позицию HR Strategy Partner.",
+    "phases": [
+      [
+        "01 / АУДИТ",
+        "Аудит HR и подразделений",
+        "Начал с аудита бизнес-процессов HR-функции и каждого отдела. Это стало отправной точкой для определения приоритетов стратегии."
+      ],
+      [
+        "02 / ROADMAP",
+        "Стратегия и roadmap",
+        "Перевел выводы аудита в HR-стратегию с последовательностью инициатив и сроками реализации. Стратегические контуры согласовал с CEO, финансовые последствия и затраты на инициативы проработал с CFO."
+      ],
+      [
+        "03 / РЕАЛИЗАЦИЯ",
+        "Запуск и реализация",
+        "После согласования запустил реализацию roadmap по срокам, установленным в стратегии. Организовал работу HR-команды по внедрению запланированных изменений."
+      ]
+    ],
+    "evidenceTitle": "Результаты внедрения",
+    "toolsTitle": "Самостоятельные HR-инструменты из портфолио",
+    "toolsIntro": "Самостоятельные демо для работы со структурой команды, экономикой HR-решений и сервисами для сотрудников.",
+    "tools": [
+      "Решения о структуре, нагрузке и ресурсах.",
+      "Сценарии затрат на удержание и замену.",
+      "Прототип HR-сервиса для сотрудников."
+    ],
+    "endTitle": "Стратегия становится ценной в решениях.",
+    "endText": "Мне интересны задачи на стыке HR, управления и экономики команды. Этот кейс показывает, как я подхожу к их проектированию.",
+    "contact": "Обсудить задачу",
+    "cv": "Резюме",
+    "source": "Waistline / HR Strategy Partner / 2025–2026.",
+    "footer": "Денис Ланвен / HR Strategy & People Leadership",
+    "preview": "Разобрать кейс",
+    "previewTitle": "Waistline / People System",
+    "previewText": "Как я связывал диагностику, планирование команды, развитие руководителей и HR-процессы в единую стратегию.",
+    "outcome": {
+      "title": "100% новичков в единой системе адаптации. На 27% меньше времени на сопровождение.",
+      "text": "Выстроил единый маршрут онбординга с ботом, базой знаний и материалами для самостоятельного старта. За полугодие система охватила 100% новых сотрудников.",
+      "effect": "Совокупные затраты времени HR-команды и руководителей направлений на сопровождение адаптации сократились на 27% относительно прежнего процесса.",
+      "label": "Результат внедрения / адаптация",
+      "method": "На основе внутреннего сравнения затрат времени до и после внедрения. Период наблюдения: полугодие. Учитывается все сопровождение адаптации HR-командой и руководителями направлений."
+    },
+    "factValues": [
+      "100%",
+      "−27%",
+      "6"
+    ],
+    "assessment": {
+      "label": "Результат внедрения / оценка и развитие",
+      "title": "100% команды прошли оценку за первый квартал после запуска.",
+      "text": "Выстроил систему оценки 240/360 с едиными критериями. Результаты переводили в индивидуальные планы развития, пересмотр ролей и варианты внутренних ротаций по согласованию сотрудника и компании.",
+      "effect": "Оценка стала основой для решений о повышении зарплаты и должностном росте. Критерии повышения определяли заранее, финансовые изменения учитывали при планировании ФОТ."
+    },
+    "hiring": {
+      "label": "Результат внедрения / найм и экономика команды",
+      "title": "За первые полгода доля планового найма выросла с 61% до 94%. Совокупный эффект по ФОТ составил 8% в годовом выражении.",
+      "stats": [
+        [
+          "61% → 94%",
+          "планового найма за первые полгода"
+        ],
+        [
+          "7–30 дней",
+          "обычный срок закрытия позиции"
+        ],
+        [
+          "8% ФОТ",
+          "совокупный эффект в годовом выражении"
+        ]
+      ],
+      "text": "Связал планирование найма с потребностями бизнеса, загрузкой команды и бюджетом. За первое полугодие после внедрения доля планового найма выросла на 33 процентных пункта.",
+      "timing": "Сроки закрытия стали прогнозируемыми и управляемыми: обычно 7–30 дней с учетом грейда и специфики позиции. Для отдельных сложных, экспертных и руководящих ролей на узком fashion-рынке сроки составляли 45–55 дней.",
+      "effect": "Перераспределение задач, автоматизация и перестройка бизнес-процессов позволили снизить затраты и избежать избыточного найма. Совокупный эффект составил 8% годового ФОТ.",
+      "method": "Расчет учитывал данные прошлого года и утвержденный годовой план с предполагаемым наймом. Показатель объединяет снижение затрат и предотвращенные расходы."
+    },
+    "engagement": {
+      "label": "Результат внедрения / обратная связь и удержание",
+      "title": "eNPS компании +82. Оценка HR со стороны команды +97. Текучесть 2,5%.",
+      "stats": [
+        [
+          "+35 → +82",
+          "eNPS компании / за 2025 год"
+        ],
+        [
+          "+56 → +97",
+          "оценка HR командой / за 2025 год"
+        ],
+        [
+          "14% → 2,5%",
+          "текучесть / 2024 → 2025"
+        ]
+      ],
+      "text": "За 2025 год eNPS компании вырос с +35 до +82, а показатель оценки HR со стороны сотрудников с +56 до +97. Итоговые значения зафиксированы в последнем замере года.",
+      "effect": "При сравнении годовых данных текучесть снизилась с 14% в 2024 году до 2,5% по итогам 2025 года."
+    },
+    "mandate": "Работал с высокой автономией: со стороны HR определял подходы и организовывал реализацию стратегии. С CEO согласовывал стратегические контуры, с CFO анализировал финансовые последствия решений и затраты на HR-инициативы.",
+    "review": {
+      "title": "Performance review: от сомнений к понятным решениям о развитии.",
+      "intro": "Переход к performance review с обязательными ИПР начал с мини-запусков в командах продукта и продаж.",
+      "concerns": [
+        [
+          "Сотрудники",
+          "Сотрудники сомневались, даст ли система прозрачные критерии и реальные возможности профессионального и финансового роста."
+        ],
+        [
+          "Руководители",
+          "Руководители опасались, что оценка и сопровождение ИПР потребуют слишком много времени на операционную работу с командой."
+        ]
+      ],
+      "approachTitle": "Модульное внедрение",
+      "approach": "Вместо одновременного запуска на всю компанию внедрял подход модулями в ограниченном формате. ИПР сопровождали через регулярные 1:1, а итоги обсуждали на фасилитационных встречах.",
+      "effectTitle": "Практический эффект для обеих сторон",
+      "effects": [
+        "Сокращение повторяющихся рутинных действий и автоматизация части бизнес-процессов помогли ответить на опасения руководителей.",
+        "Понятные ожидания по результатам, регулярное обсуждение прогресса и условий роста сделали процесс прозрачнее для сотрудников."
+      ],
+      "scaleTitle": "Масштабирование на компанию",
+      "scale": "Результаты мини-запусков использовал как основание для масштабирования подхода на компанию. За первый квартал после запуска системы оценку прошли 100% команды."
+    },
+    "system": {
+      "title": "Что стало системой",
+      "intro": "По итогам 2025 года в регулярной работе закрепились четыре направления HR-практик.",
+      "groups": [
+        [
+          "Ресурсы и адаптация",
+          "Планирование найма, анализ загрузки и численности, планирование ФОТ и единая адаптация вошли в регулярную работу."
+        ],
+        [
+          "Развитие и карьера",
+          "Закрепился цикл управления развитием: 1:1 с руководителями и HR, performance review, оценка 240/360, сопровождение ИПР, пересмотр зарплат и ролей, рассмотрение внутренних ротаций."
+        ],
+        [
+          "Устойчивость процессов",
+          "Постоянной практикой стали обновление базы знаний, распределение ответственности, преемственность и замещение. Работали HR-сервисы и автоматизация запросов."
+        ],
+        [
+          "Обратная связь и результаты",
+          "Регулярно проводились опросы и работа с обратной связью, HR-аналитика, внутренние коммуникации, постановка и пересмотр целей и KPI."
+        ]
+      ],
+      "nextTitle": "Продолжение в 2026 году",
+      "next": "Культура и HR-бренд, а также партнерская модель взаимодействия HR с руководителями были реализованы частично. Их окончательная реализация перешла в 2026 год."
+    }
+  },
+  "en": {
+    "back": "Back to portfolio",
+    "read": "Explore the strategy",
+    "try": "Explore decisions",
+    "caseLabel": "WAISTLINE / STRATEGY CASE",
+    "hero": [
+      "Business growth.",
+      "People systems."
+    ],
+    "lead": "How I developed and implemented an HR strategy for a distributed fashion business, from a process audit to decisions about teams, development and resources.",
+    "note": "HR Strategy Partner / 4 HR specialists / reporting to the CEO and Co-CEO",
+    "paperTitle": "Growth needs a system.",
+    "paperFoot": "Team economics / management practices / resilience",
+    "facts": [
+      "new hires in one onboarding system",
+      "time spent on onboarding support",
+      "months observed"
+    ],
+    "chapters": [
+      "Context",
+      "Diagnosis",
+      "Architecture",
+      "Decisions",
+      "Sequence",
+      "Results"
+    ],
+    "contextTitle": "An HR system for a business that grew from 37 to 94 employees in one year.",
+    "context": "In 2025, Waistline scaled its distributed fashion-business team. Growth required systematic hiring, consistent onboarding, clear development criteria and financially sound team decisions.",
+    "role": "As HR Strategy Partner, I led four HR specialists and reported to two founders, the CEO and Co-CEO.",
+    "quote": "Before opening a vacancy, understand how the work is organized.",
+    "diagnosisTitle": "Four problems. One connected system.",
+    "diagnosisIntro": "Four connected areas of organizational challenges formed the starting point for the strategy.",
+    "issues": [
+      [
+        "Unplanned hiring",
+        "Unclear future roles and budgets; requirements change during the search."
+      ],
+      [
+        "Invisible workload",
+        "Limited shared visibility into capacity, overlapping responsibilities and staffing needs."
+      ],
+      [
+        "Uneven management practices",
+        "Onboarding, feedback and development depend on the individual manager."
+      ],
+      [
+        "Key-person dependency",
+        "Limited documentation, succession and automation make processes vulnerable."
+      ]
+    ],
+    "architectureTitle": "From initiatives to HR architecture.",
+    "architectureIntro": "Four strategic areas connected business needs with HR decisions. Their implementation and results are presented below.",
+    "problem": "Challenge",
+    "decision": "Decision",
+    "measure": "Monitoring",
+    "domains": [
+      [
+        "01 / TEAM ECONOMICS",
+        "Headcount and resources",
+        "Connect staffing requests to business plans and capacity.",
+        "Joint hiring plans, role and workload analysis, clear HR-finance collaboration.",
+        "Hiring plan adherence, workload forecast accuracy and team costs alongside output quality."
+      ],
+      [
+        "02 / MANAGEMENT",
+        "Management quality",
+        "Clarify expectations, feedback and development.",
+        "Role expectations, regular 1:1s, competency frameworks and performance reviews. Use 360 as a feedback source.",
+        "Agreement quality and follow-through; assess results separately from competencies."
+      ],
+      [
+        "03 / CONTINUITY",
+        "Process resilience",
+        "Reduce dependency on individuals and manual work.",
+        "Knowledge base, succession, clear ownership and automation of routine HR requests.",
+        "Replacement readiness, knowledge use and requests resolved without manual handling."
+      ],
+      [
+        "04 / EXPERIENCE",
+        "Culture and feedback",
+        "Connect the employer promise to everyday experience.",
+        "EVP with marketing, employee feedback, internal communication and manager support.",
+        "Participation, eNPS, qualitative feedback and changes made after surveys."
+      ]
+    ],
+    "roadTitle": "From a business-process audit to HR strategy delivery.",
+    "roadIntro": "The sequence of work from the start of my HR Strategy Partner role.",
+    "phases": [
+      [
+        "01 / AUDIT",
+        "Audit of HR and departments",
+        "Started by auditing business processes across the HR function and every department. This provided the starting point for setting strategic priorities."
+      ],
+      [
+        "02 / ROADMAP",
+        "Strategy and roadmap",
+        "Translated audit findings into an HR strategy with a sequence of initiatives and delivery timelines. Aligned the strategic direction with the CEO and worked through financial implications and initiative costs with the CFO."
+      ],
+      [
+        "03 / DELIVERY",
+        "Launch and implementation",
+        "Following approval, launched the roadmap against the timelines set out in the strategy. Organized the HR team’s work to implement the planned changes."
+      ]
+    ],
+    "evidenceTitle": "Implementation results",
+    "toolsTitle": "Independent HR tools from my portfolio",
+    "toolsIntro": "Standalone demos for team structure, HR decision economics and employee services.",
+    "tools": [
+      "Structure, capacity and resource decisions.",
+      "Retention and replacement cost scenarios.",
+      "An employee HR-service prototype."
+    ],
+    "endTitle": "Strategy earns its value in decisions.",
+    "endText": "I work at the intersection of HR, management and team economics. This case shows how I design that work.",
+    "contact": "Discuss a challenge",
+    "cv": "CV",
+    "source": "Waistline / HR Strategy Partner / 2025–2026.",
+    "footer": "Denis Lanven / HR Strategy & People Leadership",
+    "preview": "Explore the case",
+    "previewTitle": "Waistline / People System",
+    "previewText": "How I connected diagnosis, workforce planning, manager development and HR processes in one strategy.",
+    "outcome": {
+      "title": "100% of new hires in one onboarding system. 27% less support time.",
+      "text": "Built a unified onboarding journey with a bot, knowledge base and self-service materials. Over six months, the system covered 100% of new hires.",
+      "effect": "Combined time spent by the HR team and department heads on the full onboarding support process decreased by 27% compared with the previous process.",
+      "label": "Implementation result / onboarding",
+      "method": "Based on an internal comparison of time spent before and after implementation. Observation period: six months. Covers all onboarding support by the HR team and department heads."
+    },
+    "factValues": [
+      "100%",
+      "−27%",
+      "6"
+    ],
+    "assessment": {
+      "label": "Implementation result / assessment and development",
+      "title": "100% of the team assessed in the first quarter after launch.",
+      "text": "Built a 240/360 assessment system with shared criteria. Results informed individual development plans, role reviews and internal rotation options agreed between the employee and the company.",
+      "effect": "Assessment informed salary increases and promotions. Criteria were defined in advance, and financial changes were incorporated into payroll planning."
+    },
+    "hiring": {
+      "label": "Implementation result / hiring and team economics",
+      "title": "Planned hiring grew from 61% to 94% in the first six months. The combined annualized payroll impact was 8%.",
+      "stats": [
+        [
+          "61% → 94%",
+          "planned hiring in the first six months"
+        ],
+        [
+          "7–30 days",
+          "usual time to fill a role"
+        ],
+        [
+          "8%",
+          "combined annualized payroll impact"
+        ]
+      ],
+      "text": "Connected hiring plans with business needs, team capacity and budget. In the first six months after implementation, the share of planned hiring increased by 33 percentage points.",
+      "timing": "Time to fill became predictable and manageable: usually 7–30 days depending on grade and role requirements. A small number of complex, specialist and leadership roles in the narrow fashion talent market took 45–55 days.",
+      "effect": "Redistributing work, automating tasks and redesigning business processes reduced costs and avoided unnecessary hiring. The combined impact amounted to 8% of annual payroll.",
+      "method": "The calculation considered prior-year data and the approved annual payroll plan, including anticipated hiring. The measure combines cost reductions and avoided expenditure."
+    },
+    "engagement": {
+      "label": "Implementation result / feedback and retention",
+      "title": "Company eNPS +82. Team rating of HR +97. Turnover 2.5%.",
+      "stats": [
+        [
+          "+35 → +82",
+          "company eNPS / during 2025"
+        ],
+        [
+          "+56 → +97",
+          "team rating of HR / during 2025"
+        ],
+        [
+          "14% → 2.5%",
+          "turnover / 2024 → 2025"
+        ]
+      ],
+      "text": "During 2025, company eNPS increased from +35 to +82, while the team’s rating of HR rose from +56 to +97. The final values were recorded in the last survey of the year.",
+      "effect": "Comparing annual data, turnover decreased from 14% in 2024 to 2.5% in 2025."
+    },
+    "mandate": "Worked with a high degree of autonomy, defining HR approaches and organizing strategy delivery. Aligned the strategic direction with the CEO and analyzed the financial implications of decisions and HR initiative costs with the CFO.",
+    "review": {
+      "title": "Performance review: from doubts to clear development decisions.",
+      "intro": "Started the move to performance reviews with mandatory individual development plans through small-scale launches in the product and sales teams.",
+      "concerns": [
+        [
+          "Employees",
+          "Employees questioned whether the system would offer transparent criteria and real opportunities for professional and financial growth."
+        ],
+        [
+          "Managers",
+          "Managers feared that assessments and development-plan follow-up would create too much additional operational work with their teams."
+        ]
+      ],
+      "approachTitle": "Modular implementation",
+      "approach": "Rather than launching across the entire company at once, introduced the approach in limited-scope modules. Followed up on individual development plans through regular 1:1s and discussed outcomes in facilitated meetings.",
+      "effectTitle": "Practical value for both sides",
+      "effects": [
+        "Reducing repetitive routine work and automating parts of business processes helped address managers’ concerns.",
+        "Clear expectations for results and regular discussions of progress and growth conditions made the process more transparent for employees."
+      ],
+      "scaleTitle": "Scaling across the company",
+      "scale": "Used the results of the small-scale launches as the basis for company-wide rollout. In the first quarter after the system launched, 100% of the team completed an assessment."
+    },
+    "system": {
+      "title": "What became a system",
+      "intro": "By the end of 2025, four areas of HR practice were established as regular ways of working.",
+      "groups": [
+        [
+          "Resources and onboarding",
+          "Hiring plans, workload and headcount analysis, payroll planning and consistent onboarding became regular practices."
+        ],
+        [
+          "Development and careers",
+          "An ongoing development cycle took hold: 1:1s with managers and HR, performance reviews, 240/360 assessments, individual development plan follow-up, salary and role reviews, and consideration of internal rotations."
+        ],
+        [
+          "Process continuity",
+          "Knowledge-base updates, clear ownership, succession and backup arrangements became regular practices. HR services and request automation were in use."
+        ],
+        [
+          "Feedback and results",
+          "Surveys and feedback follow-up, HR analytics, internal communication, goal setting and reviews of goals and KPIs were conducted regularly."
+        ]
+      ],
+      "nextTitle": "Continuing in 2026",
+      "next": "Culture and employer branding, along with the HR–manager partnership model, were partially implemented. Their full implementation carried over into 2026."
+    }
+  },
+  "pl": {
+    "back": "Do portfolio",
+    "read": "Poznaj strategię",
+    "try": "Zobacz decyzje",
+    "caseLabel": "WAISTLINE / STUDIUM STRATEGII",
+    "hero": [
+      "Wzrost biznesu.",
+      "System pracy z ludźmi."
+    ],
+    "lead": "Jak opracowałem i realizowałem strategię HR dla rozproszonego biznesu fashion: od audytu procesów do decyzji o zespole, rozwoju i zasobach.",
+    "note": "HR Strategy Partner / 4 specjalistów HR / podległość CEO i Co-CEO",
+    "paperTitle": "Wzrost wymaga systemu.",
+    "paperFoot": "Ekonomika zespołu / zarządzanie / odporność",
+    "facts": [
+      "nowych osób w jednym systemie wdrożenia",
+      "czasu na wsparcie wdrożenia",
+      "miesięcy obserwacji"
+    ],
+    "chapters": [
+      "Kontekst",
+      "Diagnoza",
+      "Architektura",
+      "Decyzje",
+      "Kolejność",
+      "Rezultaty"
+    ],
+    "contextTitle": "System HR dla firmy, która w ciągu roku urosła z 37 do 94 pracowników.",
+    "context": "W 2025 roku Waistline rozwijał rozproszony zespół w branży fashion. Wzrost wymagał systematycznej rekrutacji, spójnego onboardingu, jasnych kryteriów rozwoju i finansowo uzasadnionych decyzji dotyczących zespołu.",
+    "role": "Jako HR Strategy Partner kierowałem czterema specjalistami HR i podlegałem dwóm założycielom, CEO i Co-CEO.",
+    "quote": "Zanim otworzymy rekrutację, zrozummy organizację pracy.",
+    "diagnosisTitle": "Cztery problemy. Jeden system.",
+    "diagnosisIntro": "Punktem wyjścia strategii były cztery powiązane obszary problemów w organizacji pracy.",
+    "issues": [
+      [
+        "Nieplanowana rekrutacja",
+        "Niejasne potrzeby i budżety; wymagania zmieniają się w trakcie poszukiwań."
+      ],
+      [
+        "Niewidoczne obciążenie",
+        "Brak wspólnego obrazu zasobów i nakładania się odpowiedzialności."
+      ],
+      [
+        "Różne praktyki menedżerów",
+        "Adaptacja, informacja zwrotna i rozwój zależą od konkretnego lidera."
+      ],
+      [
+        "Zależność od kluczowych osób",
+        "Braki w wiedzy, zastępowalności i automatyzacji zwiększają ryzyko."
+      ]
+    ],
+    "architectureTitle": "Od inicjatyw do architektury HR.",
+    "architectureIntro": "Cztery obszary strategii łączyły potrzeby biznesu z decyzjami HR. Ich realizację i rezultaty przedstawiono poniżej.",
+    "problem": "Zadanie",
+    "decision": "Rozwiązanie",
+    "measure": "Monitorowanie",
+    "domains": [
+      [
+        "01 / TEAM ECONOMICS",
+        "Zatrudnienie i zasoby",
+        "Połączyć potrzeby kadrowe z planem firmy.",
+        "Plan zatrudnienia, analiza ról i obciążenia, współpraca HR z finansami.",
+        "Realizacja planu, trafność prognozy i koszty wraz z jakością pracy."
+      ],
+      [
+        "02 / MANAGEMENT",
+        "Jakość zarządzania",
+        "Wyjaśnić oczekiwania i rozwój.",
+        "Regularne 1:1, kompetencje i ocena wyników; 360 jako źródło informacji zwrotnej.",
+        "Realizacja ustaleń; wyniki oddzielnie od kompetencji."
+      ],
+      [
+        "03 / CONTINUITY",
+        "Odporność procesów",
+        "Ograniczyć zależność od pojedynczych osób.",
+        "Baza wiedzy, sukcesja, odpowiedzialność i automatyzacja zgłoszeń HR.",
+        "Gotowość zastępstw, użycie wiedzy i obsługa bez pracy ręcznej."
+      ],
+      [
+        "04 / EXPERIENCE",
+        "Kultura i dialog",
+        "Połączyć obietnicę pracodawcy z doświadczeniem.",
+        "EVP z marketingiem, opinie zespołu, komunikacja i wsparcie liderów.",
+        "Udział, eNPS i zmiany wprowadzone po badaniach."
+      ]
+    ],
+    "roadTitle": "Od audytu procesów biznesowych do realizacji strategii HR.",
+    "roadIntro": "Kolejność działań od objęcia roli HR Strategy Partner.",
+    "phases": [
+      [
+        "01 / AUDYT",
+        "Audyt HR i działów",
+        "Zacząłem od audytu procesów biznesowych funkcji HR oraz każdego działu. Był to punkt wyjścia do określenia priorytetów strategii."
+      ],
+      [
+        "02 / ROADMAP",
+        "Strategia i roadmap",
+        "Przełożyłem wnioski z audytu na strategię HR z kolejnością inicjatyw i terminami realizacji. Kierunki strategiczne uzgodniłem z CEO, a konsekwencje finansowe i koszty inicjatyw przeanalizowałem z CFO."
+      ],
+      [
+        "03 / REALIZACJA",
+        "Uruchomienie i realizacja",
+        "Po uzgodnieniu uruchomiłem realizację roadmapy według terminów określonych w strategii. Zorganizowałem pracę zespołu HR nad wdrożeniem zaplanowanych zmian."
+      ]
+    ],
+    "evidenceTitle": "Efekty wdrożenia",
+    "toolsTitle": "Samodzielne narzędzia HR z mojego portfolio",
+    "toolsIntro": "Niezależne wersje demonstracyjne dotyczące struktury zespołu, ekonomiki decyzji HR i usług dla pracowników.",
+    "tools": [
+      "Struktura, obciążenie i zasoby.",
+      "Koszty utrzymania i zastąpienia pracownika.",
+      "Prototyp serwisu HR dla zespołu."
+    ],
+    "endTitle": "Wartość strategii widać w decyzjach.",
+    "endText": "Łączę HR, zarządzanie i ekonomikę zespołu. Ten przypadek pokazuje sposób projektowania rozwiązań.",
+    "contact": "Porozmawiajmy",
+    "cv": "CV",
+    "source": "Waistline / HR Strategy Partner / 2025–2026.",
+    "footer": "Denis Lanven / HR Strategy & People Leadership",
+    "preview": "Poznaj studium",
+    "previewTitle": "Waistline / People System",
+    "previewText": "Diagnoza, planowanie zatrudnienia, rozwój liderów i procesy HR w jednej strategii.",
+    "outcome": {
+      "title": "100% nowych osób w jednym systemie onboardingu. O 27% mniej czasu na wsparcie.",
+      "text": "Zbudowałem jednolitą ścieżkę onboardingu z botem, bazą wiedzy i materiałami do samodzielnego startu. W ciągu półrocza system objął 100% nowych pracowników.",
+      "effect": "Łączny czas zespołu HR i kierowników działów poświęcany na całość wsparcia onboardingu zmniejszył się o 27% w porównaniu z poprzednim procesem.",
+      "label": "Efekt wdrożenia / onboarding",
+      "method": "Na podstawie wewnętrznego porównania czasu przed i po wdrozeniu. Okres obserwacji: pół roku. Pomiar obejmuje całość wsparcia onboardingu przez zespół HR i kierowników działów."
+    },
+    "factValues": [
+      "100%",
+      "−27%",
+      "6"
+    ],
+    "assessment": {
+      "label": "Efekt wdrożenia / ocena i rozwój",
+      "title": "100% zespołu przeszło ocenę w pierwszym kwartale po uruchomieniu systemu.",
+      "text": "Zbudowałem system oceny 240/360 ze wspólnymi kryteriami. Wyniki przekładano na indywidualne plany rozwoju, przegląd ról i możliwości rotacji wewnętrznych uzgadniane między pracownikiem a firmą.",
+      "effect": "Ocena stała się podstawą decyzji o podwyżkach wynagrodzeń i awansach. Kryteria ustalano z wyprzedzeniem, a zmiany finansowe uwzględniano w planowaniu funduszu wynagrodzeń."
+    },
+    "hiring": {
+      "label": "Efekt wdrożenia / rekrutacja i ekonomika zespołu",
+      "title": "W pierwszym półroczu udział planowanej rekrutacji wzrósł z 61% do 94%. Łączny efekt w ujęciu rocznym wyniósł 8% funduszu wynagrodzeń.",
+      "stats": [
+        [
+          "61% → 94%",
+          "planowanej rekrutacji w pierwszym półroczu"
+        ],
+        [
+          "7–30 dni",
+          "typowy czas obsadzenia stanowiska"
+        ],
+        [
+          "8%",
+          "rocznego funduszu wynagrodzeń: łączny efekt"
+        ]
+      ],
+      "text": "Powiązałem planowanie rekrutacji z potrzebami biznesu, obciążeniem zespołu i budżetem. W pierwszym półroczu po wdrożeniu udział planowanej rekrutacji wzrósł o 33 punkty procentowe.",
+      "timing": "Czas obsadzania stanowisk stał się przewidywalny i możliwy do kontrolowania: zwykle 7–30 dni, zależnie od poziomu i specyfiki roli. Nieliczne złożone stanowiska eksperckie i kierownicze na wąskim rynku fashion wymagały 45–55 dni.",
+      "effect": "Redystrybucja zadań, automatyzacja i przebudowa procesów biznesowych pozwoliły obniżyć koszty i uniknąć zbędnej rekrutacji. Łączny efekt wyniósł 8% rocznego funduszu wynagrodzeń.",
+      "method": "Obliczenia uwzględniały dane z poprzedniego roku i zatwierdzony roczny plan funduszu wynagrodzeń z przewidywaną rekrutacją. Wskaźnik łączy obniżenie kosztów i uniknięte wydatki."
+    },
+    "engagement": {
+      "label": "Efekt wdrożenia / informacja zwrotna i retencja",
+      "title": "eNPS firmy +82. Ocena HR przez zespół +97. Rotacja 2,5%.",
+      "stats": [
+        [
+          "+35 → +82",
+          "eNPS firmy / w 2025 roku"
+        ],
+        [
+          "+56 → +97",
+          "ocena HR przez zespół / w 2025 roku"
+        ],
+        [
+          "14% → 2,5%",
+          "rotacja / 2024 → 2025"
+        ]
+      ],
+      "text": "W 2025 roku eNPS firmy wzrósł z +35 do +82, a wskaźnik oceny HR przez pracowników z +56 do +97. Wartości końcowe pochodzą z ostatniego pomiaru w roku.",
+      "effect": "W porównaniu danych rocznych rotacja spadła z 14% w 2024 roku do 2,5% w 2025 roku."
+    },
+    "mandate": "Pracowałem z dużą autonomią: określałem podejście HR i organizowałem realizację strategii. Z CEO uzgadniałem kierunki strategiczne, a z CFO analizowałem finansowe konsekwencje decyzji oraz koszty inicjatyw HR.",
+    "review": {
+      "title": "Performance review: od wątpliwości do jasnych decyzji o rozwoju.",
+      "intro": "Przejście do performance review z obowiązkowymi indywidualnymi planami rozwoju rozpocząłem od małych wdrożeń w zespołach produktu i sprzedaży.",
+      "concerns": [
+        [
+          "Pracownicy",
+          "Pracownicy wątpili, czy system zapewni przejrzyste kryteria i realne możliwości rozwoju zawodowego i finansowego."
+        ],
+        [
+          "Menedżerowie",
+          "Menedżerowie obawiali się, że ocena i monitorowanie planów rozwoju pochłoną zbyt wiele czasu na operacyjną pracę z zespołem."
+        ]
+      ],
+      "approachTitle": "Wdrożenie modułowe",
+      "approach": "Zamiast uruchamiać system w całej firmie jednocześnie, wdrażałem podejście modułami w ograniczonym zakresie. Indywidualne plany rozwoju prowadziliśmy podczas regularnych spotkań 1:1, a wyniki omawialiśmy na spotkaniach facylitacyjnych.",
+      "effectTitle": "Praktyczny efekt dla obu stron",
+      "effects": [
+        "Ograniczenie powtarzalnych czynności i automatyzacja części procesów biznesowych pomogły odpowiedzieć na obawy menedżerów.",
+        "Jasne oczekiwania dotyczące wyników oraz regularne rozmowy o postępach i warunkach rozwoju zwiększyły przejrzystość procesu dla pracowników."
+      ],
+      "scaleTitle": "Skalowanie na całą firmę",
+      "scale": "Wyniki małych wdrożeń wykorzystałem jako podstawę do rozszerzenia podejścia na całą firmę. W pierwszym kwartale po uruchomieniu systemu ocenę przeszło 100% zespołu."
+    },
+    "system": {
+      "title": "Co stało się systemem",
+      "intro": "Do końca 2025 roku cztery obszary praktyk HR stały się stałym elementem pracy.",
+      "groups": [
+        [
+          "Zasoby i onboarding",
+          "Planowanie rekrutacji, analiza obciążenia i liczebności zespołu, planowanie funduszu wynagrodzeń oraz spójny onboarding weszły do regularnej pracy."
+        ],
+        [
+          "Rozwój i kariera",
+          "Utrwalił się cykl zarządzania rozwojem: spotkania 1:1 z menedżerami i HR, performance review, ocena 240/360, monitorowanie indywidualnych planów rozwoju, przeglądy wynagrodzeń i ról oraz rozważanie rotacji wewnętrznych."
+        ],
+        [
+          "Ciągłość procesów",
+          "Aktualizacja bazy wiedzy, podział odpowiedzialności, sukcesja i zastępstwa stały się stałą praktyką. Działały usługi HR i automatyzacja zgłoszeń."
+        ],
+        [
+          "Informacja zwrotna i wyniki",
+          "Regularnie prowadzono badania i działania na podstawie informacji zwrotnej, analitykę HR, komunikację wewnętrzną oraz ustalanie i przegląd celów i KPI."
+        ]
+      ],
+      "nextTitle": "Kontynuacja w 2026 roku",
+      "next": "Kultura i marka pracodawcy oraz partnerski model współpracy HR z menedżerami były wdrożone częściowo. Ich pełna realizacja została przeniesiona na 2026 rok."
+    }
+  },
+  "es": {
+    "back": "Volver al portfolio",
+    "read": "Explorar la estrategia",
+    "try": "Ver decisiones",
+    "caseLabel": "WAISTLINE / CASO ESTRATÉGICO",
+    "hero": [
+      "Crece el negocio.",
+      "Se diseña el equipo."
+    ],
+    "lead": "Cómo desarrollé e implementé una estrategia de RR. HH. para una empresa de moda distribuida: de la auditoría de procesos a las decisiones sobre equipo, desarrollo y recursos.",
+    "note": "HR Strategy Partner / 4 especialistas de RR. HH. / reporte al CEO y Co-CEO",
+    "paperTitle": "Crecer exige un sistema.",
+    "paperFoot": "Economía del equipo / gestión / resiliencia",
+    "facts": [
+      "nuevas incorporaciones en un sistema de onboarding",
+      "tiempo dedicado al acompañamiento",
+      "meses de observación"
+    ],
+    "chapters": [
+      "Contexto",
+      "Diagnóstico",
+      "Arquitectura",
+      "Decisiones",
+      "Secuencia",
+      "Resultados"
+    ],
+    "contextTitle": "Un sistema de RR. HH. para una empresa que pasó de 37 a 94 empleados en un año.",
+    "context": "En 2025, Waistline amplió su equipo distribuido en el sector de la moda. El crecimiento exigía una contratación sistemática, un onboarding común, criterios claros de desarrollo y decisiones sobre el equipo con fundamento financiero.",
+    "role": "Como HR Strategy Partner, dirigí a cuatro especialistas de RR. HH. y reportaba a los dos fundadores, CEO y Co-CEO.",
+    "quote": "Antes de abrir una vacante, entender cómo se organiza el trabajo.",
+    "diagnosisTitle": "Cuatro problemas. Un sistema conectado.",
+    "diagnosisIntro": "Cuatro ámbitos de problemas relacionados en la organización del trabajo fueron el punto de partida de la estrategia.",
+    "issues": [
+      [
+        "Contratación sin plan común",
+        "Necesidades y presupuestos poco claros; requisitos cambiantes."
+      ],
+      [
+        "Carga de trabajo invisible",
+        "Visibilidad limitada de la capacidad y de las responsabilidades solapadas."
+      ],
+      [
+        "Prácticas de gestión desiguales",
+        "La incorporación, el feedback y el desarrollo dependen de cada responsable."
+      ],
+      [
+        "Dependencia de personas clave",
+        "Documentación, sucesión y automatización insuficientes."
+      ]
+    ],
+    "architectureTitle": "De iniciativas a una arquitectura de RR. HH.",
+    "architectureIntro": "Cuatro ámbitos estratégicos conectaban las necesidades del negocio con las decisiones de RR. HH. Su implementación y resultados se presentan a continuación.",
+    "problem": "Reto",
+    "decision": "Decisión",
+    "measure": "Seguimiento",
+    "domains": [
+      [
+        "01 / TEAM ECONOMICS",
+        "Plantilla y recursos",
+        "Relacionar las solicitudes de personal con los planes del negocio.",
+        "Planificación conjunta, análisis de roles y carga, colaboración con finanzas.",
+        "Cumplimiento del plan, precisión de previsiones y costes junto con calidad."
+      ],
+      [
+        "02 / MANAGEMENT",
+        "Calidad de gestión",
+        "Aclarar expectativas, feedback y desarrollo.",
+        "Reuniones 1:1, competencias y evaluación del desempeño; 360 como fuente de feedback.",
+        "Cumplimiento de acuerdos; resultados separados de competencias."
+      ],
+      [
+        "03 / CONTINUITY",
+        "Resiliencia de procesos",
+        "Reducir la dependencia individual y el trabajo manual.",
+        "Base de conocimiento, sucesión, responsables y automatización de solicitudes.",
+        "Cobertura de roles, uso del conocimiento y resolución sin intervención manual."
+      ],
+      [
+        "04 / EXPERIENCE",
+        "Cultura y diálogo",
+        "Conectar la promesa de empleo con la experiencia cotidiana.",
+        "EVP con marketing, feedback, comunicación interna y apoyo a líderes.",
+        "Participación, eNPS y cambios posteriores a las encuestas."
+      ]
+    ],
+    "roadTitle": "De la auditoría de procesos de negocio a la ejecución de la estrategia de RR. HH.",
+    "roadIntro": "La secuencia de trabajo desde mi incorporación como HR Strategy Partner.",
+    "phases": [
+      [
+        "01 / AUDITORÍA",
+        "Auditoría de RR. HH. y departamentos",
+        "Comencé con una auditoría de los procesos de negocio de la función de RR. HH. y de cada departamento. Este fue el punto de partida para definir las prioridades de la estrategia."
+      ],
+      [
+        "02 / ROADMAP",
+        "Estrategia y roadmap",
+        "Convertí las conclusiones de la auditoría en una estrategia de RR. HH. con una secuencia de iniciativas y plazos de ejecución. Acordé las líneas estratégicas con el CEO y analicé las consecuencias financieras y los costes de las iniciativas con el CFO."
+      ],
+      [
+        "03 / EJECUCIÓN",
+        "Lanzamiento e implementación",
+        "Tras su aprobación, puse en marcha el roadmap según los plazos establecidos en la estrategia. Organicé el trabajo del equipo de RR. HH. para implementar los cambios previstos."
+      ]
+    ],
+    "evidenceTitle": "Resultados de implementación",
+    "toolsTitle": "Herramientas independientes de RR. HH. de mi portfolio",
+    "toolsIntro": "Demos independientes sobre estructura de equipos, economía de decisiones de RR. HH. y servicios para empleados.",
+    "tools": [
+      "Estructura, capacidad y recursos.",
+      "Costes de retención y sustitución.",
+      "Prototipo de servicio de RR. HH."
+    ],
+    "endTitle": "La estrategia vale por sus decisiones.",
+    "endText": "Trabajo entre RR. HH., gestión y economía del equipo. Este caso muestra cómo diseño soluciones.",
+    "contact": "Hablemos del reto",
+    "cv": "CV",
+    "source": "Waistline / HR Strategy Partner / 2025–2026.",
+    "footer": "Denis Lanven / HR Strategy & People Leadership",
+    "preview": "Explorar el caso",
+    "previewTitle": "Waistline / People System",
+    "previewText": "Diagnóstico, planificación, desarrollo de responsables y procesos de RR. HH. en una estrategia.",
+    "outcome": {
+      "title": "El 100% de las nuevas incorporaciones en un sistema de onboarding. Un 27% menos de tiempo de acompañamiento.",
+      "text": "Diseñé un recorrido unificado de onboarding con un bot, una base de conocimiento y materiales de consulta autónoma. En seis meses, el sistema cubrió al 100% de las nuevas incorporaciones.",
+      "effect": "El tiempo total del equipo de RR. HH. y los responsables de área dedicado a todo el acompañamiento del onboarding se redujo un 27% frente al proceso anterior.",
+      "label": "Resultado de implementación / onboarding",
+      "method": "Basado en una comparación interna del tiempo dedicado antes y después de la implementación. Período de observación: seis meses. Incluye todo el acompañamiento del equipo de RR. HH. y los responsables de área."
+    },
+    "factValues": [
+      "100%",
+      "−27%",
+      "6"
+    ],
+    "assessment": {
+      "label": "Resultado de implementación / evaluación y desarrollo",
+      "title": "El 100% del equipo fue evaluado en el primer trimestre tras el lanzamiento.",
+      "text": "Diseñé un sistema de evaluación 240/360 con criterios comunes. Los resultados se tradujeron en planes individuales de desarrollo, revisión de roles y opciones de rotación interna acordadas entre cada empleado y la empresa.",
+      "effect": "La evaluación sirvió de base para decisiones sobre aumentos salariales y promociones. Los criterios se definían de antemano y los cambios económicos se incorporaban a la planificación de la masa salarial."
+    },
+    "hiring": {
+      "label": "Resultado de implementación / contratación y economía del equipo",
+      "title": "La contratación planificada pasó del 61% al 94% en el primer semestre. El impacto conjunto anualizado fue del 8% de la masa salarial.",
+      "stats": [
+        [
+          "61% → 94%",
+          "contratación planificada en el primer semestre"
+        ],
+        [
+          "7–30 días",
+          "plazo habitual para cubrir una vacante"
+        ],
+        [
+          "8%",
+          "impacto conjunto sobre la masa salarial anual"
+        ]
+      ],
+      "text": "Vinculé la planificación de la contratación con las necesidades del negocio, la carga del equipo y el presupuesto. En los primeros seis meses tras la implementación, la proporción de contratación planificada aumentó 33 puntos porcentuales.",
+      "timing": "Los plazos se volvieron previsibles y gestionables: normalmente 7–30 días según el nivel y las características del puesto. Algunas posiciones complejas, expertas y directivas en el mercado especializado de la moda requirieron 45–55 días.",
+      "effect": "La redistribución de tareas, la automatización y el rediseño de procesos permitieron reducir costes y evitar contrataciones innecesarias. El impacto conjunto equivalió al 8% de la masa salarial anual.",
+      "method": "El cálculo consideró los datos del año anterior y el plan anual aprobado de masa salarial con las contrataciones previstas. El indicador combina reducción de costes y gastos evitados."
+    },
+    "engagement": {
+      "label": "Resultado de implementación / feedback y retención",
+      "title": "eNPS de la empresa +82. Valoración de RR. HH. por el equipo +97. Rotación del 2,5%.",
+      "stats": [
+        [
+          "+35 → +82",
+          "eNPS de la empresa / durante 2025"
+        ],
+        [
+          "+56 → +97",
+          "valoración de RR. HH. / durante 2025"
+        ],
+        [
+          "14% → 2,5%",
+          "rotación / 2024 → 2025"
+        ]
+      ],
+      "text": "Durante 2025, el eNPS de la empresa subió de +35 a +82, mientras que el indicador de valoración de RR. HH. por los empleados pasó de +56 a +97. Los valores finales corresponden a la última medición del año.",
+      "effect": "Al comparar los datos anuales, la rotación descendió del 14% en 2024 al 2,5% en 2025."
+    },
+    "mandate": "Trabajaba con un alto grado de autonomía: definía los enfoques de RR. HH. y organizaba la ejecución de la estrategia. Acordaba las líneas estratégicas con el CEO y analizaba con el CFO las consecuencias financieras de las decisiones y los costes de las iniciativas de RR. HH.",
+    "review": {
+      "title": "Performance review: de las dudas a decisiones claras sobre desarrollo.",
+      "intro": "Inicié la transición a performance review con planes individuales de desarrollo obligatorios mediante pequeños lanzamientos en los equipos de producto y ventas.",
+      "concerns": [
+        [
+          "Empleados",
+          "Los empleados dudaban de que el sistema ofreciera criterios transparentes y oportunidades reales de crecimiento profesional y económico."
+        ],
+        [
+          "Responsables",
+          "Los responsables temían que la evaluación y el seguimiento de los planes de desarrollo exigieran demasiado tiempo de trabajo operativo con sus equipos."
+        ]
+      ],
+      "approachTitle": "Implementación modular",
+      "approach": "En lugar de un lanzamiento simultáneo en toda la empresa, introduje el enfoque por módulos de alcance limitado. Los planes individuales se acompañaban con reuniones 1:1 periódicas y los resultados se discutían en reuniones facilitadas.",
+      "effectTitle": "Valor práctico para ambas partes",
+      "effects": [
+        "La reducción de tareas rutinarias repetitivas y la automatización de parte de los procesos de negocio ayudaron a responder a las dudas de los responsables.",
+        "Las expectativas claras sobre resultados y las conversaciones periódicas sobre avances y condiciones de crecimiento hicieron el proceso más transparente para los empleados."
+      ],
+      "scaleTitle": "Escalado a toda la empresa",
+      "scale": "Utilicé los resultados de los pequeños lanzamientos como base para extender el enfoque a toda la empresa. En el primer trimestre tras el lanzamiento del sistema, el 100% del equipo completó la evaluación."
+    },
+    "system": {
+      "title": "Qué se convirtió en un sistema",
+      "intro": "Al cierre de 2025, cuatro ámbitos de prácticas de RR. HH. se habían consolidado en el trabajo habitual.",
+      "groups": [
+        [
+          "Recursos y onboarding",
+          "La planificación de contratación, el análisis de carga y plantilla, la planificación de la masa salarial y un onboarding común pasaron a formar parte del trabajo habitual."
+        ],
+        [
+          "Desarrollo y carrera",
+          "Se consolidó un ciclo de gestión del desarrollo: reuniones 1:1 con responsables y RR. HH., performance review, evaluaciones 240/360, seguimiento de planes individuales, revisión de salarios y roles y consideración de rotaciones internas."
+        ],
+        [
+          "Continuidad de procesos",
+          "La actualización de la base de conocimiento, el reparto de responsabilidades, la sucesión y las sustituciones se hicieron habituales. Funcionaban los servicios de RR. HH. y la automatización de solicitudes."
+        ],
+        [
+          "Feedback y resultados",
+          "Las encuestas y el trabajo con el feedback, la analítica de RR. HH., las comunicaciones internas y la definición y revisión de objetivos y KPI se realizaban con regularidad."
+        ]
+      ],
+      "nextTitle": "Continuidad en 2026",
+      "next": "La cultura y la marca empleadora, así como el modelo de colaboración entre RR. HH. y los responsables, estaban parcialmente implementados. Su implementación completa pasó a 2026."
+    }
+  },
+  "uk": {
+    "back": "До портфоліо",
+    "read": "Розібрати стратегію",
+    "try": "Подивитися рішення",
+    "caseLabel": "WAISTLINE / СТРАТЕГІЧНИЙ КЕЙС",
+    "hero": [
+      "Зростання бізнесу.",
+      "Система людей."
+    ],
+    "lead": "Як я розробляв і реалізовував HR-стратегію для розподіленого fashion-бізнесу: від аудиту процесів до рішень щодо команди, розвитку й ресурсів.",
+    "note": "HR Strategy Partner / HR-команда: 4 фахівці / підпорядкування CEO і Co-CEO",
+    "paperTitle": "Зростання потребує системи.",
+    "paperFoot": "Економіка команди / управління / стійкість",
+    "facts": [
+      "новачків у єдиній системі адаптації",
+      "витрат часу на супровід",
+      "місяців спостереження"
+    ],
+    "chapters": [
+      "Контекст",
+      "Діагностика",
+      "Архітектура",
+      "Рішення",
+      "Послідовність",
+      "Результати"
+    ],
+    "contextTitle": "HR-система для бізнесу, який виріс із 37 до 94 співробітників за рік.",
+    "context": "У 2025 році Waistline масштабував розподілену команду fashion-бізнесу. Зростання вимагало системного найму, єдиної адаптації, зрозумілих критеріїв розвитку та фінансово обґрунтованих рішень щодо команди.",
+    "role": "У ролі HR Strategy Partner я керував чотирма HR-фахівцями та підпорядковувався двом фаундерам, CEO і Co-CEO.",
+    "quote": "Перед відкриттям вакансії зрозуміти, як організована робота.",
+    "diagnosisTitle": "Чотири проблеми. Єдина система.",
+    "diagnosisIntro": "Відправною точкою стратегії стали чотири взаємопов’язані напрями проблем в організації роботи.",
+    "issues": [
+      [
+        "Найм без спільного плану",
+        "Незрозумілі майбутні ролі й бюджети; вимоги змінюються під час пошуку."
+      ],
+      [
+        "Невидиме навантаження",
+        "Бракує спільного розуміння завантаження й перетинів відповідальності."
+      ],
+      [
+        "Різні практики керівників",
+        "Адаптація, зворотний зв’язок і розвиток залежать від конкретного керівника."
+      ],
+      [
+        "Залежність від окремих людей",
+        "Слабка база знань, наступність і ручні операції підвищують вразливість."
+      ]
+    ],
+    "architectureTitle": "Від ініціатив до архітектури HR.",
+    "architectureIntro": "Чотири напрями стратегії пов’язували потреби бізнесу з HR-рішеннями. Їхню реалізацію та результати розкрито далі.",
+    "problem": "Завдання",
+    "decision": "Рішення",
+    "measure": "Контроль",
+    "domains": [
+      [
+        "01 / TEAM ECONOMICS",
+        "Чисельність і ресурси",
+        "Пов’язати запити на людей із планом бізнесу.",
+        "Спільне планування найму, аналіз ролей і навантаження, взаємодія HR та фінансів.",
+        "Виконання плану, точність прогнозу й витрати разом із якістю результату."
+      ],
+      [
+        "02 / MANAGEMENT",
+        "Якість управління",
+        "Зробити очікування й розвиток зрозумілими.",
+        "Регулярні 1:1, компетенції, performance review; 360 як джерело зворотного зв’язку.",
+        "Виконання домовленостей; результати окремо від компетенцій."
+      ],
+      [
+        "03 / CONTINUITY",
+        "Стійкість процесів",
+        "Зменшити залежність від людей і ручної роботи.",
+        "База знань, наступність, відповідальність та автоматизація HR-запитів.",
+        "Готовність заміщення, використання знань і обробка без ручної участі."
+      ],
+      [
+        "04 / EXPERIENCE",
+        "Культура й діалог",
+        "Поєднати обіцянки роботодавця з досвідом команди.",
+        "EVP із маркетингом, робота з відгуками, комунікації та підтримка керівників.",
+        "Участь, eNPS і зміни після опитувань."
+      ]
+    ],
+    "roadTitle": "Від аудиту бізнес-процесів до реалізації HR-стратегії.",
+    "roadIntro": "Послідовність роботи з моменту виходу на позицію HR Strategy Partner.",
+    "phases": [
+      [
+        "01 / АУДИТ",
+        "Аудит HR і підрозділів",
+        "Почав з аудиту бізнес-процесів HR-функції та кожного відділу. Це стало відправною точкою для визначення пріоритетів стратегії."
+      ],
+      [
+        "02 / ROADMAP",
+        "Стратегія та roadmap",
+        "Перевів висновки аудиту в HR-стратегію з послідовністю ініціатив і строками реалізації. Стратегічні напрями погодив із CEO, фінансові наслідки та витрати на ініціативи опрацював із CFO."
+      ],
+      [
+        "03 / РЕАЛІЗАЦІЯ",
+        "Запуск і реалізація",
+        "Після погодження запустив реалізацію roadmap за строками, встановленими в стратегії. Організував роботу HR-команди над впровадженням запланованих змін."
+      ]
+    ],
+    "evidenceTitle": "Результати впровадження",
+    "toolsTitle": "Самостійні HR-інструменти з портфоліо",
+    "toolsIntro": "Самостійні демо для роботи зі структурою команди, економікою HR-рішень і сервісами для співробітників.",
+    "tools": [
+      "Структура, навантаження та ресурси.",
+      "Витрати на утримання й заміну.",
+      "Прототип HR-сервісу для команди."
+    ],
+    "endTitle": "Цінність стратегії в рішеннях.",
+    "endText": "Працюю на перетині HR, управління й економіки команди. Кейс показує, як я проєктую рішення.",
+    "contact": "Обговорити завдання",
+    "cv": "Резюме",
+    "source": "Waistline / HR Strategy Partner / 2025–2026.",
+    "footer": "Денис Ланвен / HR Strategy & People Leadership",
+    "preview": "Розібрати кейс",
+    "previewTitle": "Waistline / People System",
+    "previewText": "Діагностика, планування команди, розвиток керівників і HR-процеси в єдиній стратегії.",
+    "outcome": {
+      "title": "100% новачків у єдиній системі адаптації. На 27% менше часу на супровід.",
+      "text": "Побудував єдиний маршрут онбордингу з ботом, базою знань і матеріалами для самостійного старту. За пів року система охопила 100% нових співробітників.",
+      "effect": "Сукупні витрати часу HR-команди та керівників напрямів на весь супровід адаптації скоротилися на 27% порівняно з попереднім процесом.",
+      "label": "Результат впровадження / адаптація",
+      "method": "На основі внутрішнього порівняння витрат часу до та після впровадження. Період спостереження: пів року. Враховується весь супровід адаптації HR-командою та керівниками напрямів."
+    },
+    "factValues": [
+      "100%",
+      "−27%",
+      "6"
+    ],
+    "assessment": {
+      "label": "Результат впровадження / оцінка та розвиток",
+      "title": "100% команди пройшли оцінку за перший квартал після запуску.",
+      "text": "Побудував систему оцінки 240/360 з єдиними критеріями. Результати переводили в індивідуальні плани розвитку, перегляд ролей і варіанти внутрішніх ротацій за погодженням співробітника та компанії.",
+      "effect": "Оцінка стала основою для рішень про підвищення зарплати й посадове зростання. Критерії підвищення визначали заздалегідь, фінансові зміни враховували під час планування фонду оплати праці."
+    },
+    "hiring": {
+      "label": "Результат впровадження / найм та економіка команди",
+      "title": "За перше півріччя частка планового найму зросла з 61% до 94%. Сукупний ефект щодо фонду оплати праці становив 8% у річному вимірі.",
+      "stats": [
+        [
+          "61% → 94%",
+          "планового найму за перше півріччя"
+        ],
+        [
+          "7–30 днів",
+          "звичайний строк закриття позиції"
+        ],
+        [
+          "8% ФОП",
+          "сукупний ефект у річному вимірі"
+        ]
+      ],
+      "text": "Пов’язав планування найму з потребами бізнесу, навантаженням команди та бюджетом. За перше півріччя після впровадження частка планового найму зросла на 33 відсоткові пункти.",
+      "timing": "Строки закриття стали прогнозованими й керованими: зазвичай 7–30 днів з урахуванням грейду та специфіки позиції. Для окремих складних, експертних і керівних ролей на вузькому fashion-ринку строки становили 45–55 днів.",
+      "effect": "Перерозподіл завдань, автоматизація та перебудова бізнес-процесів дозволили знизити витрати й уникнути надмірного найму. Сукупний ефект становив 8% річного фонду оплати праці.",
+      "method": "Розрахунок враховував дані попереднього року та затверджений річний план фонду оплати праці із запланованим наймом. Показник об’єднує зниження витрат і витрати, яких вдалося уникнути."
+    },
+    "engagement": {
+      "label": "Результат впровадження / зворотний зв’язок та утримання",
+      "title": "eNPS компанії +82. Оцінка HR командою +97. Плинність 2,5%.",
+      "stats": [
+        [
+          "+35 → +82",
+          "eNPS компанії / за 2025 рік"
+        ],
+        [
+          "+56 → +97",
+          "оцінка HR командою / за 2025 рік"
+        ],
+        [
+          "14% → 2,5%",
+          "плинність / 2024 → 2025"
+        ]
+      ],
+      "text": "За 2025 рік eNPS компанії зріс із +35 до +82, а показник оцінки HR співробітниками із +56 до +97. Підсумкові значення зафіксовано в останньому вимірюванні року.",
+      "effect": "При порівнянні річних даних плинність знизилася з 14% у 2024 році до 2,5% за підсумками 2025 року."
+    },
+    "mandate": "Працював із високою автономією: з боку HR визначав підходи й організовував реалізацію стратегії. Із CEO погоджував стратегічні напрями, із CFO аналізував фінансові наслідки рішень і витрати на HR-ініціативи.",
+    "review": {
+      "title": "Performance review: від сумнівів до зрозумілих рішень про розвиток.",
+      "intro": "Перехід до performance review з обов’язковими індивідуальними планами розвитку почав із міні-запусків у командах продукту та продажів.",
+      "concerns": [
+        [
+          "Співробітники",
+          "Співробітники сумнівалися, чи дасть система прозорі критерії та реальні можливості професійного й фінансового зростання."
+        ],
+        [
+          "Керівники",
+          "Керівники побоювалися, що оцінка та супровід планів розвитку потребуватимуть надто багато часу на операційну роботу з командою."
+        ]
+      ],
+      "approachTitle": "Модульне впровадження",
+      "approach": "Замість одночасного запуску на всю компанію впроваджував підхід модулями в обмеженому форматі. Плани розвитку супроводжували через регулярні 1:1, а підсумки обговорювали на фасилітаційних зустрічах.",
+      "effectTitle": "Практичний ефект для обох сторін",
+      "effects": [
+        "Скорочення повторюваних рутинних дій та автоматизація частини бізнес-процесів допомогли відповісти на побоювання керівників.",
+        "Зрозумілі очікування щодо результатів, регулярне обговорення прогресу й умов зростання зробили процес прозорішим для співробітників."
+      ],
+      "scaleTitle": "Масштабування на компанію",
+      "scale": "Результати міні-запусків використав як підставу для масштабування підходу на компанію. За перший квартал після запуску системи оцінку пройшли 100% команди."
+    },
+    "system": {
+      "title": "Що стало системою",
+      "intro": "За підсумками 2025 року в регулярній роботі закріпилися чотири напрями HR-практик.",
+      "groups": [
+        [
+          "Ресурси та адаптація",
+          "Планування найму, аналіз навантаження й чисельності, планування фонду оплати праці та єдина адаптація увійшли в регулярну роботу."
+        ],
+        [
+          "Розвиток і кар’єра",
+          "Закріпився цикл управління розвитком: 1:1 з керівниками та HR, performance review, оцінка 240/360, супровід індивідуальних планів розвитку, перегляд зарплат і ролей, розгляд внутрішніх ротацій."
+        ],
+        [
+          "Стійкість процесів",
+          "Постійною практикою стали оновлення бази знань, розподіл відповідальності, наступність і заміщення. Працювали HR-сервіси та автоматизація запитів."
+        ],
+        [
+          "Зворотний зв’язок і результати",
+          "Регулярно проводилися опитування та робота зі зворотним зв’язком, HR-аналітика, внутрішні комунікації, постановка й перегляд цілей і KPI."
+        ]
+      ],
+      "nextTitle": "Продовження у 2026 році",
+      "next": "Культура та HR-бренд, а також партнерська модель взаємодії HR із керівниками були реалізовані частково. Їхня остаточна реалізація перейшла у 2026 рік."
+    }
+  }
 };
-
-/* Approved onboarding result: 100% coverage; 27% combined HR/manager time saving; six-month observation. */
-(()=>{const updates={"ru": {"facts": ["новичков в единой системе адаптации", "затрат времени на сопровождение", "месяцев наблюдения"], "outcome": {"title": "100% новичков в единой системе адаптации. На 27% меньше времени на сопровождение.", "text": "Выстроил единый маршрут онбординга с ботом, базой знаний и материалами для самостоятельного старта. За полугодие система охватила 100% новых сотрудников.", "effect": "Совокупные затраты времени HR-команды и руководителей направлений на сопровождение адаптации сократились на 27% относительно прежнего процесса.", "label": "Результат внедрения / адаптация", "method": "На основе внутреннего сравнения затрат времени до и после внедрения. Период наблюдения: полугодие. Учитывается все сопровождение адаптации HR-командой и руководителями направлений."}, "evidenceNote": "Результат адаптации приведен по внутреннему сравнению затрат времени до и после внедрения. Остальные показатели исходной стратегии остаются целями; разные редакции процентов и сроков не объединяются в фактические результаты."}, "en": {"facts": ["new hires in one onboarding system", "time spent on onboarding support", "months observed"], "outcome": {"title": "100% of new hires in one onboarding system. 27% less support time.", "text": "Built a unified onboarding journey with a bot, knowledge base and self-service materials. Over six months, the system covered 100% of new hires.", "effect": "Combined time spent by the HR team and department heads on the full onboarding support process decreased by 27% compared with the previous process.", "label": "Implementation result / onboarding", "method": "Based on an internal comparison of time spent before and after implementation. Observation period: six months. Covers all onboarding support by the HR team and department heads."}, "evidenceNote": "The onboarding result comes from an internal before-and-after comparison of time spent. Other source-strategy measures remain targets; different versions of percentages and deadlines are not combined into achieved results."}, "pl": {"facts": ["nowych osób w jednym systemie wdrożenia", "czasu na wsparcie wdrożenia", "miesięcy obserwacji"], "outcome": {"title": "100% nowych osób w jednym systemie onboardingu. O 27% mniej czasu na wsparcie.", "text": "Zbudowałem jednolitą ścieżkę onboardingu z botem, bazą wiedzy i materiałami do samodzielnego startu. W ciągu półrocza system objął 100% nowych pracowników.", "effect": "Łączny czas zespołu HR i kierowników działów poświęcany na całość wsparcia onboardingu zmniejszył się o 27% w porównaniu z poprzednim procesem.", "label": "Efekt wdrożenia / onboarding", "method": "Na podstawie wewnętrznego porównania czasu przed i po wdrozeniu. Okres obserwacji: pół roku. Pomiar obejmuje całość wsparcia onboardingu przez zespół HR i kierowników działów."}, "evidenceNote": "Wynik onboardingu pochodzi z wewnętrznego porównania czasu przed i po wdrozeniu. Pozostałe mierniki strategii są celami; różne wersje procentów i terminów nie są łączone w osiągnięte wyniki."}, "es": {"facts": ["nuevas incorporaciones en un sistema de onboarding", "tiempo dedicado al acompañamiento", "meses de observación"], "outcome": {"title": "El 100% de las nuevas incorporaciones en un sistema de onboarding. Un 27% menos de tiempo de acompañamiento.", "text": "Diseñé un recorrido unificado de onboarding con un bot, una base de conocimiento y materiales de consulta autónoma. En seis meses, el sistema cubrió al 100% de las nuevas incorporaciones.", "effect": "El tiempo total del equipo de RR. HH. y los responsables de área dedicado a todo el acompañamiento del onboarding se redujo un 27% frente al proceso anterior.", "label": "Resultado de implementación / onboarding", "method": "Basado en una comparación interna del tiempo dedicado antes y después de la implementación. Período de observación: seis meses. Incluye todo el acompañamiento del equipo de RR. HH. y los responsables de área."}, "evidenceNote": "El resultado del onboarding procede de una comparación interna del tiempo antes y después de la implementación. Los demás indicadores de la estrategia siguen siendo objetivos; no se combinan versiones distintas como resultados alcanzados."}, "uk": {"facts": ["новачків у єдиній системі адаптації", "витрат часу на супровід", "місяців спостереження"], "outcome": {"title": "100% новачків у єдиній системі адаптації. На 27% менше часу на супровід.", "text": "Побудував єдиний маршрут онбордингу з ботом, базою знань і матеріалами для самостійного старту. За пів року система охопила 100% нових співробітників.", "effect": "Сукупні витрати часу HR-команди та керівників напрямів на весь супровід адаптації скоротилися на 27% порівняно з попереднім процесом.", "label": "Результат впровадження / адаптація", "method": "На основі внутрішнього порівняння витрат часу до та після впровадження. Період спостереження: пів року. Враховується весь супровід адаптації HR-командою та керівниками напрямів."}, "evidenceNote": "Результат адаптації наведено за внутрішнім порівнянням витрат часу до та після впровадження. Інші показники стратегії залишаються цілями; різні редакції відсотків і термінів не об’єднуються у фактичні результати."}};for(const [lang,values] of Object.entries(updates)){Object.assign(globalThis.WaistlineStrategyCopy[lang],values,{factValues:["100%","−27%","6"]});}})();
-
-/* Approved team assessment outcome: full coverage in the first quarter after launch. */
-(()=>{const updates={"ru": {"assessment": {"label": "Результат внедрения / оценка и развитие", "title": "100% команды прошли оценку за первый квартал после запуска.", "text": "Выстроил систему оценки 240/360 с едиными критериями. Результаты переводили в индивидуальные планы развития, пересмотр ролей и варианты внутренних ротаций по согласованию сотрудника и компании.", "effect": "Оценка стала основой для решений о повышении зарплаты и должностном росте. Критерии повышения определяли заранее, финансовые изменения учитывали при планировании ФОТ."}, "evidenceNote": "Результаты внедрения отражены в блоках адаптации и оценки команды с указанием периода. Экономия времени на адаптацию рассчитана по внутреннему сравнению до и после внедрения. Остальные показатели исходной стратегии остаются целями."}, "en": {"assessment": {"label": "Implementation result / assessment and development", "title": "100% of the team assessed in the first quarter after launch.", "text": "Built a 240/360 assessment system with shared criteria. Results informed individual development plans, role reviews and internal rotation options agreed between the employee and the company.", "effect": "Assessment informed salary increases and promotions. Criteria were defined in advance, and financial changes were incorporated into payroll planning."}, "evidenceNote": "Implementation results are presented in the onboarding and team assessment sections, with their respective periods. Onboarding time savings are based on an internal before-and-after comparison. Other measures in the source strategy remain targets."}, "pl": {"assessment": {"label": "Efekt wdrożenia / ocena i rozwój", "title": "100% zespołu przeszło ocenę w pierwszym kwartale po uruchomieniu systemu.", "text": "Zbudowałem system oceny 240/360 ze wspólnymi kryteriami. Wyniki przekładano na indywidualne plany rozwoju, przegląd ról i możliwości rotacji wewnętrznych uzgadniane między pracownikiem a firmą.", "effect": "Ocena stała się podstawą decyzji o podwyżkach wynagrodzeń i awansach. Kryteria ustalano z wyprzedzeniem, a zmiany finansowe uwzględniano w planowaniu funduszu wynagrodzeń."}, "evidenceNote": "Efekty wdrożenia przedstawiono w sekcjach onboardingu i oceny zespołu wraz z okresami pomiaru. Oszczędność czasu podczas onboardingu wynika z wewnętrznego porównania przed i po wdrożeniu. Pozostałe mierniki strategii pozostają celami."}, "es": {"assessment": {"label": "Resultado de implementación / evaluación y desarrollo", "title": "El 100% del equipo fue evaluado en el primer trimestre tras el lanzamiento.", "text": "Diseñé un sistema de evaluación 240/360 con criterios comunes. Los resultados se tradujeron en planes individuales de desarrollo, revisión de roles y opciones de rotación interna acordadas entre cada empleado y la empresa.", "effect": "La evaluación sirvió de base para decisiones sobre aumentos salariales y promociones. Los criterios se definían de antemano y los cambios económicos se incorporaban a la planificación de la masa salarial."}, "evidenceNote": "Los resultados de implementación figuran en los bloques de onboarding y evaluación del equipo, con sus respectivos períodos. El ahorro de tiempo en onboarding procede de una comparación interna antes y después. Los demás indicadores de la estrategia siguen siendo objetivos."}, "uk": {"assessment": {"label": "Результат впровадження / оцінка та розвиток", "title": "100% команди пройшли оцінку за перший квартал після запуску.", "text": "Побудував систему оцінки 240/360 з єдиними критеріями. Результати переводили в індивідуальні плани розвитку, перегляд ролей і варіанти внутрішніх ротацій за погодженням співробітника та компанії.", "effect": "Оцінка стала основою для рішень про підвищення зарплати й посадове зростання. Критерії підвищення визначали заздалегідь, фінансові зміни враховували під час планування фонду оплати праці."}, "evidenceNote": "Результати впровадження наведено в блоках адаптації та оцінки команди із зазначенням періоду. Економію часу на адаптацію розраховано за внутрішнім порівнянням до та після впровадження. Інші показники вихідної стратегії залишаються цілями."}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved hiring outcome: 61% to 94% in first six months; usual time to fill 7–30 days, exceptions 45–55; combined annual payroll impact 8%. */
-(()=>{const updates={"ru": {"hiring": {"label": "Результат внедрения / найм и экономика команды", "title": "За первые полгода доля планового найма выросла с 61% до 94%. Совокупный эффект по ФОТ составил 8% в годовом выражении.", "stats": [["61% → 94%", "планового найма за первые полгода"], ["7–30 дней", "обычный срок закрытия позиции"], ["8% ФОТ", "совокупный эффект в годовом выражении"]], "text": "Связал планирование найма с потребностями бизнеса, загрузкой команды и бюджетом. За первое полугодие после внедрения доля планового найма выросла на 33 процентных пункта.", "timing": "Сроки закрытия стали прогнозируемыми и управляемыми: обычно 7–30 дней с учетом грейда и специфики позиции. Для отдельных сложных, экспертных и руководящих ролей на узком fashion-рынке сроки составляли 45–55 дней.", "effect": "Перераспределение задач, автоматизация и перестройка бизнес-процессов позволили снизить затраты и избежать избыточного найма. Совокупный эффект составил 8% годового ФОТ.", "method": "Расчет учитывал данные прошлого года и утвержденный годовой план с предполагаемым наймом. Показатель объединяет снижение затрат и предотвращенные расходы."}, "evidenceNote": "Результаты внедрения приведены в блоках адаптации, оценки команды и планирования найма. Для каждого указаны период и контекст измерения. Эффект 8% годового ФОТ объединяет снижение затрат и предотвращенные расходы. Остальные показатели исходной стратегии остаются целями."}, "en": {"hiring": {"label": "Implementation result / hiring and team economics", "title": "Planned hiring grew from 61% to 94% in the first six months. The combined annualized payroll impact was 8%.", "stats": [["61% → 94%", "planned hiring in the first six months"], ["7–30 days", "usual time to fill a role"], ["8%", "combined annualized payroll impact"]], "text": "Connected hiring plans with business needs, team capacity and budget. In the first six months after implementation, the share of planned hiring increased by 33 percentage points.", "timing": "Time to fill became predictable and manageable: usually 7–30 days depending on grade and role requirements. A small number of complex, specialist and leadership roles in the narrow fashion talent market took 45–55 days.", "effect": "Redistributing work, automating tasks and redesigning business processes reduced costs and avoided unnecessary hiring. The combined impact amounted to 8% of annual payroll.", "method": "The calculation considered prior-year data and the approved annual payroll plan, including anticipated hiring. The measure combines cost reductions and avoided expenditure."}, "evidenceNote": "Implementation results are presented for onboarding, team assessment and hiring planning, with measurement periods and context. The 8% annual payroll impact combines cost reductions and avoided expenditure. Other source-strategy measures remain targets."}, "pl": {"hiring": {"label": "Efekt wdrożenia / rekrutacja i ekonomika zespołu", "title": "W pierwszym półroczu udział planowanej rekrutacji wzrósł z 61% do 94%. Łączny efekt w ujęciu rocznym wyniósł 8% funduszu wynagrodzeń.", "stats": [["61% → 94%", "planowanej rekrutacji w pierwszym półroczu"], ["7–30 dni", "typowy czas obsadzenia stanowiska"], ["8%", "rocznego funduszu wynagrodzeń: łączny efekt"]], "text": "Powiązałem planowanie rekrutacji z potrzebami biznesu, obciążeniem zespołu i budżetem. W pierwszym półroczu po wdrożeniu udział planowanej rekrutacji wzrósł o 33 punkty procentowe.", "timing": "Czas obsadzania stanowisk stał się przewidywalny i możliwy do kontrolowania: zwykle 7–30 dni, zależnie od poziomu i specyfiki roli. Nieliczne złożone stanowiska eksperckie i kierownicze na wąskim rynku fashion wymagały 45–55 dni.", "effect": "Redystrybucja zadań, automatyzacja i przebudowa procesów biznesowych pozwoliły obniżyć koszty i uniknąć zbędnej rekrutacji. Łączny efekt wyniósł 8% rocznego funduszu wynagrodzeń.", "method": "Obliczenia uwzględniały dane z poprzedniego roku i zatwierdzony roczny plan funduszu wynagrodzeń z przewidywaną rekrutacją. Wskaźnik łączy obniżenie kosztów i uniknięte wydatki."}, "evidenceNote": "Efekty wdrożenia przedstawiono dla onboardingu, oceny zespołu i planowania rekrutacji wraz z okresami i kontekstem pomiaru. Efekt 8% rocznego funduszu wynagrodzeń łączy obniżenie kosztów i uniknięte wydatki. Pozostałe mierniki strategii pozostają celami."}, "es": {"hiring": {"label": "Resultado de implementación / contratación y economía del equipo", "title": "La contratación planificada pasó del 61% al 94% en el primer semestre. El impacto conjunto anualizado fue del 8% de la masa salarial.", "stats": [["61% → 94%", "contratación planificada en el primer semestre"], ["7–30 días", "plazo habitual para cubrir una vacante"], ["8%", "impacto conjunto sobre la masa salarial anual"]], "text": "Vinculé la planificación de la contratación con las necesidades del negocio, la carga del equipo y el presupuesto. En los primeros seis meses tras la implementación, la proporción de contratación planificada aumentó 33 puntos porcentuales.", "timing": "Los plazos se volvieron previsibles y gestionables: normalmente 7–30 días según el nivel y las características del puesto. Algunas posiciones complejas, expertas y directivas en el mercado especializado de la moda requirieron 45–55 días.", "effect": "La redistribución de tareas, la automatización y el rediseño de procesos permitieron reducir costes y evitar contrataciones innecesarias. El impacto conjunto equivalió al 8% de la masa salarial anual.", "method": "El cálculo consideró los datos del año anterior y el plan anual aprobado de masa salarial con las contrataciones previstas. El indicador combina reducción de costes y gastos evitados."}, "evidenceNote": "Los resultados de implementación cubren onboarding, evaluación del equipo y planificación de contratación, con períodos y contexto de medición. El impacto del 8% de la masa salarial anual combina reducción de costes y gastos evitados. Los demás indicadores de la estrategia siguen siendo objetivos."}, "uk": {"hiring": {"label": "Результат впровадження / найм та економіка команди", "title": "За перше півріччя частка планового найму зросла з 61% до 94%. Сукупний ефект щодо фонду оплати праці становив 8% у річному вимірі.", "stats": [["61% → 94%", "планового найму за перше півріччя"], ["7–30 днів", "звичайний строк закриття позиції"], ["8% ФОП", "сукупний ефект у річному вимірі"]], "text": "Пов’язав планування найму з потребами бізнесу, навантаженням команди та бюджетом. За перше півріччя після впровадження частка планового найму зросла на 33 відсоткові пункти.", "timing": "Строки закриття стали прогнозованими й керованими: зазвичай 7–30 днів з урахуванням грейду та специфіки позиції. Для окремих складних, експертних і керівних ролей на вузькому fashion-ринку строки становили 45–55 днів.", "effect": "Перерозподіл завдань, автоматизація та перебудова бізнес-процесів дозволили знизити витрати й уникнути надмірного найму. Сукупний ефект становив 8% річного фонду оплати праці.", "method": "Розрахунок враховував дані попереднього року та затверджений річний план фонду оплати праці із запланованим наймом. Показник об’єднує зниження витрат і витрати, яких вдалося уникнути."}, "evidenceNote": "Результати впровадження наведено для адаптації, оцінки команди та планування найму із зазначенням періодів і контексту вимірювання. Ефект 8% річного фонду оплати праці об’єднує зниження витрат і витрати, яких вдалося уникнути. Інші показники вихідної стратегії залишаються цілями."}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved feedback and turnover results; survey changes during 2025, annual turnover comparison 2024 to 2025. */
-(()=>{const updates={"ru": {"engagement": {"label": "Результат внедрения / обратная связь и удержание", "title": "eNPS компании +82. Оценка HR со стороны команды +97. Текучесть 2,5%.", "stats": [["+35 → +82", "eNPS компании / за 2025 год"], ["+56 → +97", "оценка HR командой / за 2025 год"], ["14% → 2,5%", "текучесть / 2024 → 2025"]], "text": "За 2025 год eNPS компании вырос с +35 до +82, а показатель оценки HR со стороны сотрудников с +56 до +97. Итоговые значения зафиксированы в последнем замере года.", "effect": "При сравнении годовых данных текучесть снизилась с 14% в 2024 году до 2,5% по итогам 2025 года."}, "evidenceNote": "Результаты внедрения приведены в блоках адаптации, оценки команды, планирования найма и обратной связи. Периоды и контекст измерения указаны отдельно для каждого показателя. Эффект 8% годового ФОТ объединяет снижение затрат и предотвращенные расходы. Остальные показатели исходной стратегии остаются целями."}, "en": {"engagement": {"label": "Implementation result / feedback and retention", "title": "Company eNPS +82. Team rating of HR +97. Turnover 2.5%.", "stats": [["+35 → +82", "company eNPS / during 2025"], ["+56 → +97", "team rating of HR / during 2025"], ["14% → 2.5%", "turnover / 2024 → 2025"]], "text": "During 2025, company eNPS increased from +35 to +82, while the team’s rating of HR rose from +56 to +97. The final values were recorded in the last survey of the year.", "effect": "Comparing annual data, turnover decreased from 14% in 2024 to 2.5% in 2025."}, "evidenceNote": "Implementation results cover onboarding, team assessment, hiring planning and feedback. Measurement periods and context are stated separately for each indicator. The 8% annual payroll impact combines cost reductions and avoided expenditure. Other source-strategy measures remain targets."}, "pl": {"engagement": {"label": "Efekt wdrożenia / informacja zwrotna i retencja", "title": "eNPS firmy +82. Ocena HR przez zespół +97. Rotacja 2,5%.", "stats": [["+35 → +82", "eNPS firmy / w 2025 roku"], ["+56 → +97", "ocena HR przez zespół / w 2025 roku"], ["14% → 2,5%", "rotacja / 2024 → 2025"]], "text": "W 2025 roku eNPS firmy wzrósł z +35 do +82, a wskaźnik oceny HR przez pracowników z +56 do +97. Wartości końcowe pochodzą z ostatniego pomiaru w roku.", "effect": "W porównaniu danych rocznych rotacja spadła z 14% w 2024 roku do 2,5% w 2025 roku."}, "evidenceNote": "Efekty wdrożenia obejmują onboarding, ocenę zespołu, planowanie rekrutacji i informację zwrotną. Okresy oraz kontekst pomiaru podano osobno dla każdego wskaźnika. Efekt 8% rocznego funduszu wynagrodzeń łączy obniżenie kosztów i uniknięte wydatki. Pozostałe mierniki strategii pozostają celami."}, "es": {"engagement": {"label": "Resultado de implementación / feedback y retención", "title": "eNPS de la empresa +82. Valoración de RR. HH. por el equipo +97. Rotación del 2,5%.", "stats": [["+35 → +82", "eNPS de la empresa / durante 2025"], ["+56 → +97", "valoración de RR. HH. / durante 2025"], ["14% → 2,5%", "rotación / 2024 → 2025"]], "text": "Durante 2025, el eNPS de la empresa subió de +35 a +82, mientras que el indicador de valoración de RR. HH. por los empleados pasó de +56 a +97. Los valores finales corresponden a la última medición del año.", "effect": "Al comparar los datos anuales, la rotación descendió del 14% en 2024 al 2,5% en 2025."}, "evidenceNote": "Los resultados abarcan onboarding, evaluación del equipo, planificación de contratación y feedback. Los períodos y el contexto de medición se indican por separado para cada indicador. El impacto del 8% de la masa salarial anual combina reducción de costes y gastos evitados. Los demás indicadores de la estrategia siguen siendo objetivos."}, "uk": {"engagement": {"label": "Результат впровадження / зворотний зв’язок та утримання", "title": "eNPS компанії +82. Оцінка HR командою +97. Плинність 2,5%.", "stats": [["+35 → +82", "eNPS компанії / за 2025 рік"], ["+56 → +97", "оцінка HR командою / за 2025 рік"], ["14% → 2,5%", "плинність / 2024 → 2025"]], "text": "За 2025 рік eNPS компанії зріс із +35 до +82, а показник оцінки HR співробітниками із +56 до +97. Підсумкові значення зафіксовано в останньому вимірюванні року.", "effect": "При порівнянні річних даних плинність знизилася з 14% у 2024 році до 2,5% за підсумками 2025 року."}, "evidenceNote": "Результати впровадження наведено для адаптації, оцінки команди, планування найму та зворотного зв’язку. Періоди й контекст вимірювання зазначено окремо для кожного показника. Ефект 8% річного фонду оплати праці об’єднує зниження витрат і витрати, яких вдалося уникнути. Інші показники вихідної стратегії залишаються цілями."}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved 2025 context and mandate: 37 to 94 employees; four HR specialists led by the HR Strategy Partner. */
-(()=>{const updates={"ru": {"contextTitle": "HR-система для бизнеса, который вырос с 37 до 94 сотрудников за год.", "context": "В 2025 году Waistline масштабировал распределенную команду fashion-бизнеса. Рост требовал системного найма, единой адаптации, понятных критериев развития и финансово обоснованных решений о команде.", "role": "В роли HR Strategy Partner я руководил четырьмя HR-специалистами и подчинялся двум фаундерам, CEO и Co-CEO.", "mandate": "Работал с высокой автономией: со стороны HR определял подходы и организовывал реализацию стратегии. С CEO согласовывал стратегические контуры, с CFO анализировал финансовые последствия решений и затраты на HR-инициативы.", "note": "HR Strategy Partner / HR-команда: 4 специалиста / подчинение CEO и Co-CEO"}, "en": {"contextTitle": "An HR system for a business that grew from 37 to 94 employees in one year.", "context": "In 2025, Waistline scaled its distributed fashion-business team. Growth required systematic hiring, consistent onboarding, clear development criteria and financially sound team decisions.", "role": "As HR Strategy Partner, I led four HR specialists and reported to two founders, the CEO and Co-CEO.", "mandate": "Worked with a high degree of autonomy, defining HR approaches and organizing strategy delivery. Aligned the strategic direction with the CEO and analyzed the financial implications of decisions and HR initiative costs with the CFO.", "note": "HR Strategy Partner / 4 HR specialists / reporting to the CEO and Co-CEO"}, "pl": {"contextTitle": "System HR dla firmy, która w ciągu roku urosła z 37 do 94 pracowników.", "context": "W 2025 roku Waistline rozwijał rozproszony zespół w branży fashion. Wzrost wymagał systematycznej rekrutacji, spójnego onboardingu, jasnych kryteriów rozwoju i finansowo uzasadnionych decyzji dotyczących zespołu.", "role": "Jako HR Strategy Partner kierowałem czterema specjalistami HR i podlegałem dwóm założycielom, CEO i Co-CEO.", "mandate": "Pracowałem z dużą autonomią: określałem podejście HR i organizowałem realizację strategii. Z CEO uzgadniałem kierunki strategiczne, a z CFO analizowałem finansowe konsekwencje decyzji oraz koszty inicjatyw HR.", "note": "HR Strategy Partner / 4 specjalistów HR / podległość CEO i Co-CEO"}, "es": {"contextTitle": "Un sistema de RR. HH. para una empresa que pasó de 37 a 94 empleados en un año.", "context": "En 2025, Waistline amplió su equipo distribuido en el sector de la moda. El crecimiento exigía una contratación sistemática, un onboarding común, criterios claros de desarrollo y decisiones sobre el equipo con fundamento financiero.", "role": "Como HR Strategy Partner, dirigí a cuatro especialistas de RR. HH. y reportaba a los dos fundadores, CEO y Co-CEO.", "mandate": "Trabajaba con un alto grado de autonomía: definía los enfoques de RR. HH. y organizaba la ejecución de la estrategia. Acordaba las líneas estratégicas con el CEO y analizaba con el CFO las consecuencias financieras de las decisiones y los costes de las iniciativas de RR. HH.", "note": "HR Strategy Partner / 4 especialistas de RR. HH. / reporte al CEO y Co-CEO"}, "uk": {"contextTitle": "HR-система для бізнесу, який виріс із 37 до 94 співробітників за рік.", "context": "У 2025 році Waistline масштабував розподілену команду fashion-бізнесу. Зростання вимагало системного найму, єдиної адаптації, зрозумілих критеріїв розвитку та фінансово обґрунтованих рішень щодо команди.", "role": "У ролі HR Strategy Partner я керував чотирма HR-фахівцями та підпорядковувався двом фаундерам, CEO і Co-CEO.", "mandate": "Працював із високою автономією: з боку HR визначав підходи й організовував реалізацію стратегії. Із CEO погоджував стратегічні напрями, із CFO аналізував фінансові наслідки рішень і витрати на HR-ініціативи.", "note": "HR Strategy Partner / HR-команда: 4 фахівці / підпорядкування CEO і Co-CEO"}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved actual implementation sequence: cross-functional audit, agreed strategy and roadmap, delivery on strategy timelines. */
-(()=>{const updates={"ru": {"roadTitle": "От аудита бизнес-процессов к реализации HR-стратегии.", "roadIntro": "Последовательность работы с момента выхода на позицию HR Strategy Partner.", "phases": [["01 / АУДИТ", "Аудит HR и подразделений", "Начал с аудита бизнес-процессов HR-функции и каждого отдела. Это стало отправной точкой для определения приоритетов стратегии."], ["02 / ROADMAP", "Стратегия и roadmap", "Перевел выводы аудита в HR-стратегию с последовательностью инициатив и сроками реализации. Стратегические контуры согласовал с CEO, финансовые последствия и затраты на инициативы проработал с CFO."], ["03 / РЕАЛИЗАЦИЯ", "Запуск и реализация", "После согласования запустил реализацию roadmap по срокам, установленным в стратегии. Организовал работу HR-команды по внедрению запланированных изменений."]]}, "en": {"roadTitle": "From a business-process audit to HR strategy delivery.", "roadIntro": "The sequence of work from the start of my HR Strategy Partner role.", "phases": [["01 / AUDIT", "Audit of HR and departments", "Started by auditing business processes across the HR function and every department. This provided the starting point for setting strategic priorities."], ["02 / ROADMAP", "Strategy and roadmap", "Translated audit findings into an HR strategy with a sequence of initiatives and delivery timelines. Aligned the strategic direction with the CEO and worked through financial implications and initiative costs with the CFO."], ["03 / DELIVERY", "Launch and implementation", "Following approval, launched the roadmap against the timelines set out in the strategy. Organized the HR team’s work to implement the planned changes."]]}, "pl": {"roadTitle": "Od audytu procesów biznesowych do realizacji strategii HR.", "roadIntro": "Kolejność działań od objęcia roli HR Strategy Partner.", "phases": [["01 / AUDYT", "Audyt HR i działów", "Zacząłem od audytu procesów biznesowych funkcji HR oraz każdego działu. Był to punkt wyjścia do określenia priorytetów strategii."], ["02 / ROADMAP", "Strategia i roadmap", "Przełożyłem wnioski z audytu na strategię HR z kolejnością inicjatyw i terminami realizacji. Kierunki strategiczne uzgodniłem z CEO, a konsekwencje finansowe i koszty inicjatyw przeanalizowałem z CFO."], ["03 / REALIZACJA", "Uruchomienie i realizacja", "Po uzgodnieniu uruchomiłem realizację roadmapy według terminów określonych w strategii. Zorganizowałem pracę zespołu HR nad wdrożeniem zaplanowanych zmian."]]}, "es": {"roadTitle": "De la auditoría de procesos de negocio a la ejecución de la estrategia de RR. HH.", "roadIntro": "La secuencia de trabajo desde mi incorporación como HR Strategy Partner.", "phases": [["01 / AUDITORÍA", "Auditoría de RR. HH. y departamentos", "Comencé con una auditoría de los procesos de negocio de la función de RR. HH. y de cada departamento. Este fue el punto de partida para definir las prioridades de la estrategia."], ["02 / ROADMAP", "Estrategia y roadmap", "Convertí las conclusiones de la auditoría en una estrategia de RR. HH. con una secuencia de iniciativas y plazos de ejecución. Acordé las líneas estratégicas con el CEO y analicé las consecuencias financieras y los costes de las iniciativas con el CFO."], ["03 / EJECUCIÓN", "Lanzamiento e implementación", "Tras su aprobación, puse en marcha el roadmap según los plazos establecidos en la estrategia. Organicé el trabajo del equipo de RR. HH. para implementar los cambios previstos."]]}, "uk": {"roadTitle": "Від аудиту бізнес-процесів до реалізації HR-стратегії.", "roadIntro": "Послідовність роботи з моменту виходу на позицію HR Strategy Partner.", "phases": [["01 / АУДИТ", "Аудит HR і підрозділів", "Почав з аудиту бізнес-процесів HR-функції та кожного відділу. Це стало відправною точкою для визначення пріоритетів стратегії."], ["02 / ROADMAP", "Стратегія та roadmap", "Перевів висновки аудиту в HR-стратегію з послідовністю ініціатив і строками реалізації. Стратегічні напрями погодив із CEO, фінансові наслідки та витрати на ініціативи опрацював із CFO."], ["03 / РЕАЛІЗАЦІЯ", "Запуск і реалізація", "Після погодження запустив реалізацію roadmap за строками, встановленими в стратегії. Організував роботу HR-команди над впровадженням запланованих змін."]]}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved performance review implementation case: product and sales launches, development plans, facilitated reviews, company rollout. */
-(()=>{const updates={"ru": {"review": {"title": "Performance review: от сомнений к понятным решениям о развитии.", "intro": "Переход к performance review с обязательными ИПР начал с мини-запусков в командах продукта и продаж.", "concerns": [["Сотрудники", "Сотрудники сомневались, даст ли система прозрачные критерии и реальные возможности профессионального и финансового роста."], ["Руководители", "Руководители опасались, что оценка и сопровождение ИПР потребуют слишком много времени на операционную работу с командой."]], "approachTitle": "Модульное внедрение", "approach": "Вместо одновременного запуска на всю компанию внедрял подход модулями в ограниченном формате. ИПР сопровождали через регулярные 1:1, а итоги обсуждали на фасилитационных встречах.", "effectTitle": "Практический эффект для обеих сторон", "effects": ["Сокращение повторяющихся рутинных действий и автоматизация части бизнес-процессов помогли ответить на опасения руководителей.", "Понятные ожидания по результатам, регулярное обсуждение прогресса и условий роста сделали процесс прозрачнее для сотрудников."], "scaleTitle": "Масштабирование на компанию", "scale": "Результаты мини-запусков использовал как основание для масштабирования подхода на компанию. За первый квартал после запуска системы оценку прошли 100% команды."}}, "en": {"review": {"title": "Performance review: from doubts to clear development decisions.", "intro": "Started the move to performance reviews with mandatory individual development plans through small-scale launches in the product and sales teams.", "concerns": [["Employees", "Employees questioned whether the system would offer transparent criteria and real opportunities for professional and financial growth."], ["Managers", "Managers feared that assessments and development-plan follow-up would create too much additional operational work with their teams."]], "approachTitle": "Modular implementation", "approach": "Rather than launching across the entire company at once, introduced the approach in limited-scope modules. Followed up on individual development plans through regular 1:1s and discussed outcomes in facilitated meetings.", "effectTitle": "Practical value for both sides", "effects": ["Reducing repetitive routine work and automating parts of business processes helped address managers’ concerns.", "Clear expectations for results and regular discussions of progress and growth conditions made the process more transparent for employees."], "scaleTitle": "Scaling across the company", "scale": "Used the results of the small-scale launches as the basis for company-wide rollout. In the first quarter after the system launched, 100% of the team completed an assessment."}}, "pl": {"review": {"title": "Performance review: od wątpliwości do jasnych decyzji o rozwoju.", "intro": "Przejście do performance review z obowiązkowymi indywidualnymi planami rozwoju rozpocząłem od małych wdrożeń w zespołach produktu i sprzedaży.", "concerns": [["Pracownicy", "Pracownicy wątpili, czy system zapewni przejrzyste kryteria i realne możliwości rozwoju zawodowego i finansowego."], ["Menedżerowie", "Menedżerowie obawiali się, że ocena i monitorowanie planów rozwoju pochłoną zbyt wiele czasu na operacyjną pracę z zespołem."]], "approachTitle": "Wdrożenie modułowe", "approach": "Zamiast uruchamiać system w całej firmie jednocześnie, wdrażałem podejście modułami w ograniczonym zakresie. Indywidualne plany rozwoju prowadziliśmy podczas regularnych spotkań 1:1, a wyniki omawialiśmy na spotkaniach facylitacyjnych.", "effectTitle": "Praktyczny efekt dla obu stron", "effects": ["Ograniczenie powtarzalnych czynności i automatyzacja części procesów biznesowych pomogły odpowiedzieć na obawy menedżerów.", "Jasne oczekiwania dotyczące wyników oraz regularne rozmowy o postępach i warunkach rozwoju zwiększyły przejrzystość procesu dla pracowników."], "scaleTitle": "Skalowanie na całą firmę", "scale": "Wyniki małych wdrożeń wykorzystałem jako podstawę do rozszerzenia podejścia na całą firmę. W pierwszym kwartale po uruchomieniu systemu ocenę przeszło 100% zespołu."}}, "es": {"review": {"title": "Performance review: de las dudas a decisiones claras sobre desarrollo.", "intro": "Inicié la transición a performance review con planes individuales de desarrollo obligatorios mediante pequeños lanzamientos en los equipos de producto y ventas.", "concerns": [["Empleados", "Los empleados dudaban de que el sistema ofreciera criterios transparentes y oportunidades reales de crecimiento profesional y económico."], ["Responsables", "Los responsables temían que la evaluación y el seguimiento de los planes de desarrollo exigieran demasiado tiempo de trabajo operativo con sus equipos."]], "approachTitle": "Implementación modular", "approach": "En lugar de un lanzamiento simultáneo en toda la empresa, introduje el enfoque por módulos de alcance limitado. Los planes individuales se acompañaban con reuniones 1:1 periódicas y los resultados se discutían en reuniones facilitadas.", "effectTitle": "Valor práctico para ambas partes", "effects": ["La reducción de tareas rutinarias repetitivas y la automatización de parte de los procesos de negocio ayudaron a responder a las dudas de los responsables.", "Las expectativas claras sobre resultados y las conversaciones periódicas sobre avances y condiciones de crecimiento hicieron el proceso más transparente para los empleados."], "scaleTitle": "Escalado a toda la empresa", "scale": "Utilicé los resultados de los pequeños lanzamientos como base para extender el enfoque a toda la empresa. En el primer trimestre tras el lanzamiento del sistema, el 100% del equipo completó la evaluación."}}, "uk": {"review": {"title": "Performance review: від сумнівів до зрозумілих рішень про розвиток.", "intro": "Перехід до performance review з обов’язковими індивідуальними планами розвитку почав із міні-запусків у командах продукту та продажів.", "concerns": [["Співробітники", "Співробітники сумнівалися, чи дасть система прозорі критерії та реальні можливості професійного й фінансового зростання."], ["Керівники", "Керівники побоювалися, що оцінка та супровід планів розвитку потребуватимуть надто багато часу на операційну роботу з командою."]], "approachTitle": "Модульне впровадження", "approach": "Замість одночасного запуску на всю компанію впроваджував підхід модулями в обмеженому форматі. Плани розвитку супроводжували через регулярні 1:1, а підсумки обговорювали на фасилітаційних зустрічах.", "effectTitle": "Практичний ефект для обох сторін", "effects": ["Скорочення повторюваних рутинних дій та автоматизація частини бізнес-процесів допомогли відповісти на побоювання керівників.", "Зрозумілі очікування щодо результатів, регулярне обговорення прогресу й умов зростання зробили процес прозорішим для співробітників."], "scaleTitle": "Масштабування на компанію", "scale": "Результати міні-запусків використав як підставу для масштабування підходу на компанію. За перший квартал після запуску системи оцінку пройшли 100% команди."}}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
-
-/* Approved regular practices by end-2025; culture/employer brand and HR-manager partnership completion carried into 2026. */
-(()=>{const updates={"ru": {"system": {"title": "Что стало системой", "intro": "По итогам 2025 года в регулярной работе закрепились четыре направления HR-практик.", "groups": [["Ресурсы и адаптация", "Планирование найма, анализ загрузки и численности, планирование ФОТ и единая адаптация вошли в регулярную работу."], ["Развитие и карьера", "Закрепился цикл управления развитием: 1:1 с руководителями и HR, performance review, оценка 240/360, сопровождение ИПР, пересмотр зарплат и ролей, рассмотрение внутренних ротаций."], ["Устойчивость процессов", "Постоянной практикой стали обновление базы знаний, распределение ответственности, преемственность и замещение. Работали HR-сервисы и автоматизация запросов."], ["Обратная связь и результаты", "Регулярно проводились опросы и работа с обратной связью, HR-аналитика, внутренние коммуникации, постановка и пересмотр целей и KPI."]], "nextTitle": "Продолжение в 2026 году", "next": "Культура и HR-бренд, а также партнерская модель взаимодействия HR с руководителями были реализованы частично. Их окончательная реализация перешла в 2026 год."}}, "en": {"system": {"title": "What became a system", "intro": "By the end of 2025, four areas of HR practice were established as regular ways of working.", "groups": [["Resources and onboarding", "Hiring plans, workload and headcount analysis, payroll planning and consistent onboarding became regular practices."], ["Development and careers", "An ongoing development cycle took hold: 1:1s with managers and HR, performance reviews, 240/360 assessments, individual development plan follow-up, salary and role reviews, and consideration of internal rotations."], ["Process continuity", "Knowledge-base updates, clear ownership, succession and backup arrangements became regular practices. HR services and request automation were in use."], ["Feedback and results", "Surveys and feedback follow-up, HR analytics, internal communication, goal setting and reviews of goals and KPIs were conducted regularly."]], "nextTitle": "Continuing in 2026", "next": "Culture and employer branding, along with the HR–manager partnership model, were partially implemented. Their full implementation carried over into 2026."}}, "pl": {"system": {"title": "Co stało się systemem", "intro": "Do końca 2025 roku cztery obszary praktyk HR stały się stałym elementem pracy.", "groups": [["Zasoby i onboarding", "Planowanie rekrutacji, analiza obciążenia i liczebności zespołu, planowanie funduszu wynagrodzeń oraz spójny onboarding weszły do regularnej pracy."], ["Rozwój i kariera", "Utrwalił się cykl zarządzania rozwojem: spotkania 1:1 z menedżerami i HR, performance review, ocena 240/360, monitorowanie indywidualnych planów rozwoju, przeglądy wynagrodzeń i ról oraz rozważanie rotacji wewnętrznych."], ["Ciągłość procesów", "Aktualizacja bazy wiedzy, podział odpowiedzialności, sukcesja i zastępstwa stały się stałą praktyką. Działały usługi HR i automatyzacja zgłoszeń."], ["Informacja zwrotna i wyniki", "Regularnie prowadzono badania i działania na podstawie informacji zwrotnej, analitykę HR, komunikację wewnętrzną oraz ustalanie i przegląd celów i KPI."]], "nextTitle": "Kontynuacja w 2026 roku", "next": "Kultura i marka pracodawcy oraz partnerski model współpracy HR z menedżerami były wdrożone częściowo. Ich pełna realizacja została przeniesiona na 2026 rok."}}, "es": {"system": {"title": "Qué se convirtió en un sistema", "intro": "Al cierre de 2025, cuatro ámbitos de prácticas de RR. HH. se habían consolidado en el trabajo habitual.", "groups": [["Recursos y onboarding", "La planificación de contratación, el análisis de carga y plantilla, la planificación de la masa salarial y un onboarding común pasaron a formar parte del trabajo habitual."], ["Desarrollo y carrera", "Se consolidó un ciclo de gestión del desarrollo: reuniones 1:1 con responsables y RR. HH., performance review, evaluaciones 240/360, seguimiento de planes individuales, revisión de salarios y roles y consideración de rotaciones internas."], ["Continuidad de procesos", "La actualización de la base de conocimiento, el reparto de responsabilidades, la sucesión y las sustituciones se hicieron habituales. Funcionaban los servicios de RR. HH. y la automatización de solicitudes."], ["Feedback y resultados", "Las encuestas y el trabajo con el feedback, la analítica de RR. HH., las comunicaciones internas y la definición y revisión de objetivos y KPI se realizaban con regularidad."]], "nextTitle": "Continuidad en 2026", "next": "La cultura y la marca empleadora, así como el modelo de colaboración entre RR. HH. y los responsables, estaban parcialmente implementados. Su implementación completa pasó a 2026."}}, "uk": {"system": {"title": "Що стало системою", "intro": "За підсумками 2025 року в регулярній роботі закріпилися чотири напрями HR-практик.", "groups": [["Ресурси та адаптація", "Планування найму, аналіз навантаження й чисельності, планування фонду оплати праці та єдина адаптація увійшли в регулярну роботу."], ["Розвиток і кар’єра", "Закріпився цикл управління розвитком: 1:1 з керівниками та HR, performance review, оцінка 240/360, супровід індивідуальних планів розвитку, перегляд зарплат і ролей, розгляд внутрішніх ротацій."], ["Стійкість процесів", "Постійною практикою стали оновлення бази знань, розподіл відповідальності, наступність і заміщення. Працювали HR-сервіси та автоматизація запитів."], ["Зворотний зв’язок і результати", "Регулярно проводилися опитування та робота зі зворотним зв’язком, HR-аналітика, внутрішні комунікації, постановка й перегляд цілей і KPI."]], "nextTitle": "Продовження у 2026 році", "next": "Культура та HR-бренд, а також партнерська модель взаємодії HR із керівниками були реалізовані частково. Їхня остаточна реалізація перейшла у 2026 рік."}}};for(const [lang,values] of Object.entries(updates))Object.assign(globalThis.WaistlineStrategyCopy[lang],values);})();
