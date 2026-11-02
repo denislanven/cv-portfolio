@@ -131,7 +131,7 @@ globalThis.WaistlineStrategyCopy={
     "factValues": [
       "100%",
       "−27%",
-      "6"
+      "12"
     ],
     "assessment": {
       "label": "Результат внедрения / оценка и развитие",
@@ -361,7 +361,7 @@ globalThis.WaistlineStrategyCopy={
     "factValues": [
       "100%",
       "−27%",
-      "6"
+      "12"
     ],
     "assessment": {
       "label": "Implementation result / assessment and development",
@@ -591,7 +591,7 @@ globalThis.WaistlineStrategyCopy={
     "factValues": [
       "100%",
       "−27%",
-      "6"
+      "12"
     ],
     "assessment": {
       "label": "Efekt wdrożenia / ocena i rozwój",
@@ -821,7 +821,7 @@ globalThis.WaistlineStrategyCopy={
     "factValues": [
       "100%",
       "−27%",
-      "6"
+      "12"
     ],
     "assessment": {
       "label": "Resultado de implementación / evaluación y desarrollo",
@@ -1051,7 +1051,7 @@ globalThis.WaistlineStrategyCopy={
     "factValues": [
       "100%",
       "−27%",
-      "6"
+      "12"
     ],
     "assessment": {
       "label": "Результат впровадження / оцінка та розвиток",
