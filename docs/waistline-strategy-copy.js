@@ -1,4 +1,4 @@
-/* Waistline strategy case. Public copy approved by the author; comparison periods and measurement methods accompany the results. */
+/* Author-approved results and measurement methods. */
 globalThis.WaistlineStrategyCopy={
   "ru": {
     "back": "В портфолио",
@@ -120,13 +120,31 @@ globalThis.WaistlineStrategyCopy={
     "footer": "Денис Ланвен / HR Strategy & People Leadership",
     "preview": "Разобрать кейс",
     "previewTitle": "Waistline / People System",
-    "previewText": "Как я связывал диагностику, планирование команды, развитие руководителей и HR-процессы в единую стратегию.",
+    "previewText": "После внедрения доля успешного прохождения испытательного срока выросла с 67% до 91%. Выход на рабочий результат сократился с 5–6-й до 2–3-й недели. План найма: 61% → 94%. Экономика команды: 8% годового плана ФОТ.",
     "outcome": {
-      "title": "100% новичков в единой системе адаптации. На 27% меньше времени на сопровождение.",
-      "text": "Выстроил единый маршрут онбординга с ботом, базой знаний и материалами для самостоятельного старта. За полугодие система охватила 100% новых сотрудников.",
-      "effect": "Совокупные затраты времени HR-команды и руководителей направлений на сопровождение адаптации сократились на 27% относительно прежнего процесса.",
+      "title": "Адаптация, которая быстрее приводит к результату.",
+      "text": "Запустил бота с ежедневными шагами и сюжетной геймификацией: опыт команд, корпоративная валюта и внутренний маркет бенефитов. Система охватила 100% новичков. В личном сопровождении сохранили встречи, 1:1, обратную связь и обсуждение итогов испытательного срока с ИПР на следующий цикл.",
+      "effect": "После внедрения доля успешного прохождения испытательного срока выросла с 67% до 91%. Выход на рабочий результат сократился с 5–6-й до 2–3-й недели.",
       "label": "Результат внедрения / адаптация",
-      "method": "На основе внутреннего сравнения затрат времени до и после внедрения. Период наблюдения: полугодие. Учитывается все сопровождение адаптации HR-командой и руководителями направлений."
+      "method": "До / после внедрения. Динамику качества отслеживали девять месяцев со срезами каждые два месяца. Выход на результат: выполнение плана, самостоятельность и оценка руководителя. Экономия времени 27% рассчитана за первое полугодие по учету часов, длительности типовых встреч и задач, опросам до / после; учитывалось все сопровождение HR и руководителей. Общий период наблюдения за системой: 12 месяцев.",
+      "stats": [
+        [
+          "67% → 91%",
+          "успешное прохождение испытательного срока"
+        ],
+        [
+          "5–6 → 2–3",
+          "неделя выхода на рабочий результат"
+        ],
+        [
+          "−27%",
+          "времени HR и руководителей / за полугодие"
+        ],
+        [
+          "100%",
+          "охват новичков"
+        ]
+      ]
     },
     "factValues": [
       "100%",
@@ -136,34 +154,48 @@ globalThis.WaistlineStrategyCopy={
     "assessment": {
       "label": "Результат внедрения / оценка и развитие",
       "title": "100% команды прошли оценку за первый квартал после запуска.",
-      "text": "Выстроил систему оценки 240/360 с едиными критериями. Результаты переводили в индивидуальные планы развития, пересмотр ролей и варианты внутренних ротаций по согласованию сотрудника и компании.",
-      "effect": "Оценка стала основой для решений о повышении зарплаты и должностном росте. Критерии повышения определяли заранее, финансовые изменения учитывали при планировании ФОТ."
+      "text": "Ежеквартальный review объединял KPI/OKR, оценку компетенций, обратную связь руководителя и HR, итоговую оценку 360. За первый квартал после запуска через систему прошли 100% команды. Прогресс ИПР обсуждали на ежемесячных 1:1; руководитель и HR отслеживали его в автоматизированной форме с прогресс-баром и уведомлениями о показателях в красной зоне.",
+      "effect": "Выполнение не менее 80% квартального ИПР открывало рассмотрение повышения зарплаты или должности. Итоговое решение принимали руководитель и HR с учетом оценки 360 и бюджета ФОТ отдела. Результаты также использовали для пересмотра ролей и согласованных внутренних ротаций.",
+      "stats": [
+        [
+          "3 мес.",
+          "Квартальный review"
+        ],
+        [
+          "1:1",
+          "Ежемесячные 1:1 по ИПР"
+        ],
+        [
+          "≥80%",
+          "выполнение ИПР / порог рассмотрения повышения"
+        ]
+      ]
     },
     "hiring": {
       "label": "Результат внедрения / найм и экономика команды",
-      "title": "За первые полгода доля планового найма выросла с 61% до 94%. Совокупный эффект по ФОТ составил 8% в годовом выражении.",
+      "title": "План найма: 61% → 94%. Экономика команды: 8% годового плана ФОТ.",
       "stats": [
         [
           "61% → 94%",
-          "планового найма за первые полгода"
+          "выполнение плана / фактические выходы"
         ],
         [
           "7–30 дней",
-          "обычный срок закрытия позиции"
+          "от заявки до принятия оффера"
         ],
         [
-          "8% ФОТ",
-          "совокупный эффект в годовом выражении"
+          "8%",
+          "годовой эффект / от плана ФОТ"
         ]
       ],
-      "text": "Связал планирование найма с потребностями бизнеса, загрузкой команды и бюджетом. За первое полугодие после внедрения доля планового найма выросла на 33 процентных пункта.",
-      "timing": "Сроки закрытия стали прогнозируемыми и управляемыми: обычно 7–30 дней с учетом грейда и специфики позиции. Для отдельных сложных, экспертных и руководящих ролей на узком fashion-рынке сроки составляли 45–55 дней.",
-      "effect": "Перераспределение задач, автоматизация и перестройка бизнес-процессов позволили снизить затраты и избежать избыточного найма. Совокупный эффект составил 8% годового ФОТ.",
-      "method": "Расчет учитывал данные прошлого года и утвержденный годовой план с предполагаемым наймом. Показатель объединяет снижение затрат и предотвращенные расходы."
+      "text": "Провел аудит и с нуля запустил процедуру управления потребностью в людях: зачем бизнесу позиция, какую задачу она решает и как оценивать кандидата. Внедрил ежеквартальную сверку годового плана. Автоматизированная заявка давала заказчику предварительный анализ рынка, который HR-команда обновляла ежемесячно. Администрирование передал команде, сохранив стратегическую ответственность.",
+      "timing": "От заявки до принятия оффера: обычно 7–30 дней в зависимости от грейда и специфики позиции. Для отдельных сложных, экспертных и руководящих ролей на узком fashion-рынке: 45–55 дней.",
+      "effect": "Изменения, внедренные в 2025 году, дали совокупный годовой экономический эффект 8% от утвержденного годового плана ФОТ с предусмотренным наймом. Автоматизация и перераспределение функций снизили текущие затраты и предотвратили часть расходов на будущий найм. Сроки работы сохранились или сократились, нагрузка оставалась в пределах нормы.",
+      "method": "8% — эффект в расчете на полный год, а не сумма фактической экономии за месяцы внедрения. Учтены затраты на автоматизацию и дополнительные выплаты. Выполнение плана найма: фактические выходы / актуализированный план за период. Отмененные позиции исключались из плана при квартальной сверке. Рост с 61% до 94% за первое полугодие после внедрения."
     },
     "engagement": {
       "label": "Результат внедрения / обратная связь и удержание",
-      "title": "eNPS компании +82. Оценка HR со стороны команды +97. Текучесть 2,5%.",
+      "title": "Обратная связь и удержание: результат системных изменений.",
       "stats": [
         [
           "+35 → +82",
@@ -171,15 +203,16 @@ globalThis.WaistlineStrategyCopy={
         ],
         [
           "+56 → +97",
-          "оценка HR командой / за 2025 год"
+          "NPS HR-функции / 2025"
         ],
         [
           "14% → 2,5%",
           "текучесть / 2024 → 2025"
         ]
       ],
-      "text": "За 2025 год eNPS компании вырос с +35 до +82, а показатель оценки HR со стороны сотрудников с +56 до +97. Итоговые значения зафиксированы в последнем замере года.",
-      "effect": "При сравнении годовых данных текучесть снизилась с 14% в 2024 году до 2,5% по итогам 2025 года."
+      "text": "Анонимные ежеквартальные опросы: eNPS +35 → +82, NPS HR-функции +56 → +97 по последнему замеру 2025 года. Участие выросло с 65% на старте до 93% в пике. В комментариях отмечали прозрачность, понятный трек развития, культуру, инициативность и поддержку. Руководители отдельно оценивали качество найма и поддержку команд.",
+      "effect": "Общая текучесть снизилась с 14% в 2024 до 2,5% в 2025. Работали с перегрузкой, барьерами достижения результата и кросс-командной коммуникацией, повышали точность найма и развивали управленческие навыки. Сотрудников сохраняли через ИПР, ротации и работу с руководителем.",
+      "method": "Текучесть: все увольнения за год / средняя численность за соответствующий год × 100%, единая методика для обоих периодов. NPS: доля сторонников минус доля критиков; это не средняя оценка. 93% — пиковое участие в опросах, не обязательно последний замер."
     },
     "mandate": "Работал с высокой автономией: со стороны HR определял подходы и организовывал реализацию стратегии. С CEO согласовывал стратегические контуры, с CFO анализировал финансовые последствия решений и затраты на HR-инициативы.",
     "review": {
@@ -228,7 +261,8 @@ globalThis.WaistlineStrategyCopy={
       ],
       "nextTitle": "Продолжение в 2026 году",
       "next": "Культура и HR-бренд, а также партнерская модель взаимодействия HR с руководителями были реализованы частично. Их окончательная реализация перешла в 2026 год."
-    }
+    },
+    "methodLabel": "Методика и период"
   },
   "en": {
     "back": "Back to portfolio",
@@ -350,13 +384,31 @@ globalThis.WaistlineStrategyCopy={
     "footer": "Denis Lanven / HR Strategy & People Leadership",
     "preview": "Explore the case",
     "previewTitle": "Waistline / People System",
-    "previewText": "How I connected diagnosis, workforce planning, manager development and HR processes in one strategy.",
+    "previewText": "After implementation, probation pass rate rose from 67% to 91%. Time to working results fell from weeks 5–6 to weeks 2–3. Hiring plan delivery: 61% → 94%. Annual payroll plan impact: 8%.",
     "outcome": {
-      "title": "100% of new hires in one onboarding system. 27% less support time.",
-      "text": "Built a unified onboarding journey with a bot, knowledge base and self-service materials. Over six months, the system covered 100% of new hires.",
-      "effect": "Combined time spent by the HR team and department heads on the full onboarding support process decreased by 27% compared with the previous process.",
+      "title": "Onboarding that gets people to results sooner.",
+      "text": "Launched a bot with daily steps and story-led gamification: team experience, corporate currency and an internal benefits marketplace. It covered 100% of new hires. Personal meetings, 1:1s, feedback and probation reviews remained, followed by an individual development plan.",
+      "effect": "After implementation, probation pass rate rose from 67% to 91%. Time to working results fell from weeks 5–6 to weeks 2–3.",
       "label": "Implementation result / onboarding",
-      "method": "Based on an internal comparison of time spent before and after implementation. Observation period: six months. Covers all onboarding support by the HR team and department heads."
+      "method": "Before / after implementation. Quality tracked for nine months, with reviews every two months. Results meant delivery against plan, independent work and manager assessment. The 27% reduction in total HR and manager support time was measured over the first six months using hours logged, typical meeting/task duration and before/after surveys. Overall system observation: 12 months.",
+      "stats": [
+        [
+          "67% → 91%",
+          "probation pass rate"
+        ],
+        [
+          "5–6 → 2–3",
+          "week of reaching working results"
+        ],
+        [
+          "−27%",
+          "HR and manager time / six months"
+        ],
+        [
+          "100%",
+          "new hires covered"
+        ]
+      ]
     },
     "factValues": [
       "100%",
@@ -366,34 +418,48 @@ globalThis.WaistlineStrategyCopy={
     "assessment": {
       "label": "Implementation result / assessment and development",
       "title": "100% of the team assessed in the first quarter after launch.",
-      "text": "Built a 240/360 assessment system with shared criteria. Results informed individual development plans, role reviews and internal rotation options agreed between the employee and the company.",
-      "effect": "Assessment informed salary increases and promotions. Criteria were defined in advance, and financial changes were incorporated into payroll planning."
+      "text": "Quarterly reviews combined KPI/OKR delivery, competencies, manager and HR feedback and a final 360 assessment. 100% of the team completed the first quarterly cycle. Monthly development-plan 1:1s were supported by an automated progress form with alerts for red indicators, monitored jointly by the manager and HR.",
+      "effect": "Completing at least 80% of the quarterly development plan enabled consideration for a salary increase or promotion. Managers and HR made the final decision using 360 feedback and the department payroll budget. Reviews also informed role changes and agreed internal rotations.",
+      "stats": [
+        [
+          "3 mo.",
+          "Quarterly review"
+        ],
+        [
+          "1:1",
+          "Monthly development 1:1s"
+        ],
+        [
+          "≥80%",
+          "development-plan completion / promotion consideration"
+        ]
+      ]
     },
     "hiring": {
       "label": "Implementation result / hiring and team economics",
-      "title": "Planned hiring grew from 61% to 94% in the first six months. The combined annualized payroll impact was 8%.",
+      "title": "Hiring plan delivery: 61% → 94%. Annual payroll plan impact: 8%.",
       "stats": [
         [
           "61% → 94%",
-          "planned hiring in the first six months"
+          "plan delivery / actual employee starts"
         ],
         [
           "7–30 days",
-          "usual time to fill a role"
+          "request to accepted offer"
         ],
         [
           "8%",
-          "combined annualized payroll impact"
+          "annualized benefit / payroll plan"
         ]
       ],
-      "text": "Connected hiring plans with business needs, team capacity and budget. In the first six months after implementation, the share of planned hiring increased by 33 percentage points.",
-      "timing": "Time to fill became predictable and manageable: usually 7–30 days depending on grade and role requirements. A small number of complex, specialist and leadership roles in the narrow fashion talent market took 45–55 days.",
-      "effect": "Redistributing work, automating tasks and redesigning business processes reduced costs and avoided unnecessary hiring. The combined impact amounted to 8% of annual payroll.",
-      "method": "The calculation considered prior-year data and the approved annual payroll plan, including anticipated hiring. The measure combines cost reductions and avoided expenditure."
+      "text": "Audited processes and built workforce-demand governance from scratch: why a role was needed, the business problem and candidate criteria. Introduced quarterly hiring-plan reviews and automated requests with preliminary market analysis, refreshed monthly by HR. Delegated administration while retaining strategic accountability.",
+      "timing": "Request to accepted offer: usually 7–30 days depending on grade and role. Selected complex, expert and leadership searches in the niche fashion market took 45–55 days.",
+      "effect": "Changes implemented in 2025 delivered an annualized economic benefit equal to 8% of the approved annual payroll plan including planned hiring. Automation and redistribution reduced existing costs and avoided future hiring spend. Delivery timelines were maintained or improved, with workload staying within normal limits.",
+      "method": "8% is a full-year equivalent, not cash savings accumulated during implementation. Automation costs and additional payments were included. Hiring-plan delivery uses actual employee starts / the updated plan. Cancelled roles were removed at quarterly reviews. Delivery rose from 61% to 94% in the first six months."
     },
     "engagement": {
       "label": "Implementation result / feedback and retention",
-      "title": "Company eNPS +82. Team rating of HR +97. Turnover 2.5%.",
+      "title": "Feedback and retention: the outcome of connected changes.",
       "stats": [
         [
           "+35 → +82",
@@ -401,15 +467,16 @@ globalThis.WaistlineStrategyCopy={
         ],
         [
           "+56 → +97",
-          "team rating of HR / during 2025"
+          "HR-function NPS / 2025"
         ],
         [
           "14% → 2.5%",
           "turnover / 2024 → 2025"
         ]
       ],
-      "text": "During 2025, company eNPS increased from +35 to +82, while the team’s rating of HR rose from +56 to +97. The final values were recorded in the last survey of the year.",
-      "effect": "Comparing annual data, turnover decreased from 14% in 2024 to 2.5% in 2025."
+      "text": "Anonymous quarterly surveys: eNPS +35 → +82 and HR-function NPS +56 → +97 in the final 2025 survey. Participation rose from 65% initially to a peak of 93%. Comments highlighted transparency, clear development paths, culture, initiative and support. Managers separately assessed hiring quality and team support.",
+      "effect": "Total annual turnover fell from 14% in 2024 to 2.5% in 2025. Addressed excessive hours, barriers to results and cross-team communication, improved hiring precision and developed managers. Retention cases included development plans, internal rotations and work with managers.",
+      "method": "Turnover: all annual departures / average headcount for that year × 100%, using the same method for both years. NPS: share of promoters minus detractors, not an average rating. 93% is peak survey participation, not necessarily the final survey."
     },
     "mandate": "Worked with a high degree of autonomy, defining HR approaches and organizing strategy delivery. Aligned the strategic direction with the CEO and analyzed the financial implications of decisions and HR initiative costs with the CFO.",
     "review": {
@@ -458,7 +525,8 @@ globalThis.WaistlineStrategyCopy={
       ],
       "nextTitle": "Continuing in 2026",
       "next": "Culture and employer branding, along with the HR–manager partnership model, were partially implemented. Their full implementation carried over into 2026."
-    }
+    },
+    "methodLabel": "Method and period"
   },
   "pl": {
     "back": "Do portfolio",
@@ -580,13 +648,31 @@ globalThis.WaistlineStrategyCopy={
     "footer": "Denis Lanven / HR Strategy & People Leadership",
     "preview": "Poznaj studium",
     "previewTitle": "Waistline / People System",
-    "previewText": "Diagnoza, planowanie zatrudnienia, rozwój liderów i procesy HR w jednej strategii.",
+    "previewText": "Po wdrożeniu odsetek osób pomyślnie kończących okres próbny wzrósł z 67% do 91%. Wyniki osiągano w 2–3 tygodniu zamiast w 5–6. Realizacja planu rekrutacji: 61% → 94%. Efekt roczny: 8% planu płac.",
     "outcome": {
-      "title": "100% nowych osób w jednym systemie onboardingu. O 27% mniej czasu na wsparcie.",
-      "text": "Zbudowałem jednolitą ścieżkę onboardingu z botem, bazą wiedzy i materiałami do samodzielnego startu. W ciągu półrocza system objął 100% nowych pracowników.",
-      "effect": "Łączny czas zespołu HR i kierowników działów poświęcany na całość wsparcia onboardingu zmniejszył się o 27% w porównaniu z poprzednim procesem.",
+      "title": "Onboarding, który szybciej prowadzi do wyników.",
+      "text": "Wdrożyłem bota z codziennymi krokami i grywalizacją fabularną: doświadczenia zespołów, waluta firmowa i wewnętrzny market benefitów. System objął 100% nowych osób. Zachowaliśmy spotkania, 1:1, feedback i ocenę okresu próbnego z planem rozwoju na kolejny cykl.",
+      "effect": "Po wdrożeniu odsetek osób pomyślnie kończących okres próbny wzrósł z 67% do 91%. Wyniki osiągano w 2–3 tygodniu zamiast w 5–6.",
       "label": "Efekt wdrożenia / onboarding",
-      "method": "Na podstawie wewnętrznego porównania czasu przed i po wdrozeniu. Okres obserwacji: pół roku. Pomiar obejmuje całość wsparcia onboardingu przez zespół HR i kierowników działów."
+      "method": "Przed / po wdrożeniu. Jakość monitorowano przez dziewięć miesięcy, co dwa miesiące. Wynik: realizacja planu, samodzielność i ocena menedżera. Spadek czasu wsparcia HR i menedżerów o 27% zmierzono w pierwszym półroczu: ewidencja godzin, czas typowych spotkań i zadań, ankiety przed/po. Łączna obserwacja systemu: 12 miesięcy.",
+      "stats": [
+        [
+          "67% → 91%",
+          "pomyślne zakończenie okresu próbnego"
+        ],
+        [
+          "5–6 → 2–3",
+          "tydzień osiągania wyników"
+        ],
+        [
+          "−27%",
+          "czas HR i menedżerów / półrocze"
+        ],
+        [
+          "100%",
+          "objętych nowych osób"
+        ]
+      ]
     },
     "factValues": [
       "100%",
@@ -596,34 +682,48 @@ globalThis.WaistlineStrategyCopy={
     "assessment": {
       "label": "Efekt wdrożenia / ocena i rozwój",
       "title": "100% zespołu przeszło ocenę w pierwszym kwartale po uruchomieniu systemu.",
-      "text": "Zbudowałem system oceny 240/360 ze wspólnymi kryteriami. Wyniki przekładano na indywidualne plany rozwoju, przegląd ról i możliwości rotacji wewnętrznych uzgadniane między pracownikiem a firmą.",
-      "effect": "Ocena stała się podstawą decyzji o podwyżkach wynagrodzeń i awansach. Kryteria ustalano z wyprzedzeniem, a zmiany finansowe uwzględniano w planowaniu funduszu wynagrodzeń."
+      "text": "Kwartalne review łączyło KPI/OKR, kompetencje, feedback menedżera i HR oraz ocenę 360. Pierwszy cykl objął 100% zespołu. Comiesięczne 1:1 dotyczące planów rozwoju wspierał formularz z paskiem postępu i alertami czerwonych wskaźników. Postęp monitorowali menedżer i HR.",
+      "effect": "Realizacja co najmniej 80% kwartalnego planu rozwoju umożliwiała rozpatrzenie podwyżki lub awansu. Decyzję podejmowali menedżer i HR, uwzględniając ocenę 360 i budżet płac działu. Wyniki wspierały też zmiany ról i uzgodnione rotacje wewnętrzne.",
+      "stats": [
+        [
+          "3 mies.",
+          "Kwartalne review"
+        ],
+        [
+          "1:1",
+          "Comiesięczne 1:1 rozwojowe"
+        ],
+        [
+          "≥80%",
+          "realizacja planu rozwoju / rozpatrzenie awansu"
+        ]
+      ]
     },
     "hiring": {
       "label": "Efekt wdrożenia / rekrutacja i ekonomika zespołu",
-      "title": "W pierwszym półroczu udział planowanej rekrutacji wzrósł z 61% do 94%. Łączny efekt w ujęciu rocznym wyniósł 8% funduszu wynagrodzeń.",
+      "title": "Realizacja planu rekrutacji: 61% → 94%. Efekt roczny: 8% planu płac.",
       "stats": [
         [
           "61% → 94%",
-          "planowanej rekrutacji w pierwszym półroczu"
+          "realizacja planu / rozpoczęcia pracy"
         ],
         [
           "7–30 dni",
-          "typowy czas obsadzenia stanowiska"
+          "od zgłoszenia do akceptacji oferty"
         ],
         [
           "8%",
-          "rocznego funduszu wynagrodzeń: łączny efekt"
+          "efekt roczny / plan płac"
         ]
       ],
-      "text": "Powiązałem planowanie rekrutacji z potrzebami biznesu, obciążeniem zespołu i budżetem. W pierwszym półroczu po wdrożeniu udział planowanej rekrutacji wzrósł o 33 punkty procentowe.",
-      "timing": "Czas obsadzania stanowisk stał się przewidywalny i możliwy do kontrolowania: zwykle 7–30 dni, zależnie od poziomu i specyfiki roli. Nieliczne złożone stanowiska eksperckie i kierownicze na wąskim rynku fashion wymagały 45–55 dni.",
-      "effect": "Redystrybucja zadań, automatyzacja i przebudowa procesów biznesowych pozwoliły obniżyć koszty i uniknąć zbędnej rekrutacji. Łączny efekt wyniósł 8% rocznego funduszu wynagrodzeń.",
-      "method": "Obliczenia uwzględniały dane z poprzedniego roku i zatwierdzony roczny plan funduszu wynagrodzeń z przewidywaną rekrutacją. Wskaźnik łączy obniżenie kosztów i uniknięte wydatki."
+      "text": "Przeprowadziłem audyt i zbudowałem proces zarządzania zapotrzebowaniem na pracowników: cel biznesowy roli i kryteria oceny kandydatów. Wdrożyłem kwartalne przeglądy planu i automatyczne wnioski ze wstępną analizą rynku, aktualizowaną co miesiąc przez HR. Administrację przekazałem zespołowi, zachowując odpowiedzialność strategiczną.",
+      "timing": "Od zgłoszenia do akceptacji oferty: zwykle 7–30 dni; wybrane złożone, eksperckie i kierownicze role na niszowym rynku fashion: 45–55 dni.",
+      "effect": "Zmiany wdrożone w 2025 r. dały roczny efekt ekonomiczny równy 8% zatwierdzonego rocznego planu płac z planowanym zatrudnieniem. Automatyzacja i redystrybucja funkcji obniżyły bieżące koszty i zapobiegły części przyszłych wydatków na zatrudnienie. Terminy utrzymano lub skrócono, obciążenie pozostało w normie.",
+      "method": "8% to efekt w przeliczeniu na pełny rok, nie suma oszczędności za miesiące wdrożenia. Uwzględniono koszty automatyzacji i dodatkowe wypłaty. Realizacja planu: faktyczne rozpoczęcia pracy / aktualny plan. Anulowane role usuwano przy kwartalnych przeglądach. Wzrost 61% → 94% w pierwszym półroczu."
     },
     "engagement": {
       "label": "Efekt wdrożenia / informacja zwrotna i retencja",
-      "title": "eNPS firmy +82. Ocena HR przez zespół +97. Rotacja 2,5%.",
+      "title": "Feedback i retencja: rezultat systemowych zmian.",
       "stats": [
         [
           "+35 → +82",
@@ -631,15 +731,16 @@ globalThis.WaistlineStrategyCopy={
         ],
         [
           "+56 → +97",
-          "ocena HR przez zespół / w 2025 roku"
+          "NPS funkcji HR / 2025"
         ],
         [
           "14% → 2,5%",
           "rotacja / 2024 → 2025"
         ]
       ],
-      "text": "W 2025 roku eNPS firmy wzrósł z +35 do +82, a wskaźnik oceny HR przez pracowników z +56 do +97. Wartości końcowe pochodzą z ostatniego pomiaru w roku.",
-      "effect": "W porównaniu danych rocznych rotacja spadła z 14% w 2024 roku do 2,5% w 2025 roku."
+      "text": "Anonimowe ankiety kwartalne: eNPS +35 → +82, NPS funkcji HR +56 → +97 w ostatnim pomiarze 2025 r. Udział wzrósł z 65% do maksymalnie 93%. Wskazywano przejrzystość, ścieżki rozwoju, kulturę, inicjatywę i wsparcie. Menedżerowie osobno oceniali jakość rekrutacji i wsparcie zespołów.",
+      "effect": "Ogólna rotacja spadła z 14% w 2024 do 2,5% w 2025. Ograniczaliśmy przeciążenie, bariery w realizacji celów i problemy komunikacji, poprawialiśmy trafność rekrutacji i rozwijaliśmy menedżerów. Retencję wspierały plany rozwoju, rotacje i praca z przełożonym.",
+      "method": "Rotacja: wszystkie odejścia w roku / średnie zatrudnienie w danym roku × 100%, ta sama metoda w obu latach. NPS: udział promotorów minus krytyków, nie średnia ocena. 93% to maksymalny udział w ankietach."
     },
     "mandate": "Pracowałem z dużą autonomią: określałem podejście HR i organizowałem realizację strategii. Z CEO uzgadniałem kierunki strategiczne, a z CFO analizowałem finansowe konsekwencje decyzji oraz koszty inicjatyw HR.",
     "review": {
@@ -688,7 +789,8 @@ globalThis.WaistlineStrategyCopy={
       ],
       "nextTitle": "Kontynuacja w 2026 roku",
       "next": "Kultura i marka pracodawcy oraz partnerski model współpracy HR z menedżerami były wdrożone częściowo. Ich pełna realizacja została przeniesiona na 2026 rok."
-    }
+    },
+    "methodLabel": "Metoda i okres"
   },
   "es": {
     "back": "Volver al portfolio",
@@ -810,13 +912,31 @@ globalThis.WaistlineStrategyCopy={
     "footer": "Denis Lanven / HR Strategy & People Leadership",
     "preview": "Explorar el caso",
     "previewTitle": "Waistline / People System",
-    "previewText": "Diagnóstico, planificación, desarrollo de responsables y procesos de RR. HH. en una estrategia.",
+    "previewText": "Tras la implantación, la superación del periodo de prueba pasó del 67% al 91%. Los resultados llegaron en las semanas 2–3 en lugar de las 5–6. Cumplimiento del plan: 61% → 94%. Impacto anual: 8% del plan salarial.",
     "outcome": {
-      "title": "El 100% de las nuevas incorporaciones en un sistema de onboarding. Un 27% menos de tiempo de acompañamiento.",
-      "text": "Diseñé un recorrido unificado de onboarding con un bot, una base de conocimiento y materiales de consulta autónoma. En seis meses, el sistema cubrió al 100% de las nuevas incorporaciones.",
-      "effect": "El tiempo total del equipo de RR. HH. y los responsables de área dedicado a todo el acompañamiento del onboarding se redujo un 27% frente al proceso anterior.",
+      "title": "Onboarding que acelera la llegada a resultados.",
+      "text": "Implanté un bot con pasos diarios y gamificación narrativa: experiencias de los equipos, moneda corporativa y un mercado interno de beneficios. Cubrió al 100% de las incorporaciones. Mantuvimos reuniones, 1:1, feedback y evaluación del periodo de prueba con un plan de desarrollo posterior.",
+      "effect": "Tras la implantación, la superación del periodo de prueba pasó del 67% al 91%. Los resultados llegaron en las semanas 2–3 en lugar de las 5–6.",
       "label": "Resultado de implementación / onboarding",
-      "method": "Basado en una comparación interna del tiempo dedicado antes y después de la implementación. Período de observación: seis meses. Incluye todo el acompañamiento del equipo de RR. HH. y los responsables de área."
+      "method": "Antes / después. Seguimiento de calidad durante nueve meses, con revisiones cada dos meses. Resultado: cumplimiento del plan, autonomía y evaluación del responsable. El 27% menos de tiempo de acompañamiento se midió en el primer semestre mediante horas registradas, duración de reuniones y tareas, encuestas antes/después. Observación total: 12 meses.",
+      "stats": [
+        [
+          "67% → 91%",
+          "superación del periodo de prueba"
+        ],
+        [
+          "5–6 → 2–3",
+          "semana de llegada a resultados"
+        ],
+        [
+          "−27%",
+          "tiempo de RR. HH. y responsables / semestre"
+        ],
+        [
+          "100%",
+          "incorporaciones cubiertas"
+        ]
+      ]
     },
     "factValues": [
       "100%",
@@ -826,34 +946,48 @@ globalThis.WaistlineStrategyCopy={
     "assessment": {
       "label": "Resultado de implementación / evaluación y desarrollo",
       "title": "El 100% del equipo fue evaluado en el primer trimestre tras el lanzamiento.",
-      "text": "Diseñé un sistema de evaluación 240/360 con criterios comunes. Los resultados se tradujeron en planes individuales de desarrollo, revisión de roles y opciones de rotación interna acordadas entre cada empleado y la empresa.",
-      "effect": "La evaluación sirvió de base para decisiones sobre aumentos salariales y promociones. Los criterios se definían de antemano y los cambios económicos se incorporaban a la planificación de la masa salarial."
+      "text": "Review trimestral con KPI/OKR, competencias, feedback del responsable y RR. HH. y evaluación 360 final. El primer ciclo cubrió al 100% del equipo. Seguimiento mensual del plan de desarrollo en 1:1, con formulario automatizado, barra de progreso y alertas de indicadores en rojo.",
+      "effect": "Completar al menos el 80% del plan trimestral de desarrollo permitía considerar una subida salarial o promoción. Responsable y RR. HH. decidían según la evaluación 360 y el presupuesto salarial del departamento. También se revisaban roles y rotaciones internas acordadas.",
+      "stats": [
+        [
+          "3 meses",
+          "Review trimestral"
+        ],
+        [
+          "1:1",
+          "1:1 de desarrollo mensuales"
+        ],
+        [
+          "≥80%",
+          "plan de desarrollo completado / considerar promoción"
+        ]
+      ]
     },
     "hiring": {
       "label": "Resultado de implementación / contratación y economía del equipo",
-      "title": "La contratación planificada pasó del 61% al 94% en el primer semestre. El impacto conjunto anualizado fue del 8% de la masa salarial.",
+      "title": "Cumplimiento del plan: 61% → 94%. Impacto anual: 8% del plan salarial.",
       "stats": [
         [
           "61% → 94%",
-          "contratación planificada en el primer semestre"
+          "cumplimiento / incorporaciones efectivas"
         ],
         [
           "7–30 días",
-          "plazo habitual para cubrir una vacante"
+          "solicitud a aceptación de oferta"
         ],
         [
           "8%",
-          "impacto conjunto sobre la masa salarial anual"
+          "beneficio anualizado / plan salarial"
         ]
       ],
-      "text": "Vinculé la planificación de la contratación con las necesidades del negocio, la carga del equipo y el presupuesto. En los primeros seis meses tras la implementación, la proporción de contratación planificada aumentó 33 puntos porcentuales.",
-      "timing": "Los plazos se volvieron previsibles y gestionables: normalmente 7–30 días según el nivel y las características del puesto. Algunas posiciones complejas, expertas y directivas en el mercado especializado de la moda requirieron 45–55 días.",
-      "effect": "La redistribución de tareas, la automatización y el rediseño de procesos permitieron reducir costes y evitar contrataciones innecesarias. El impacto conjunto equivalió al 8% de la masa salarial anual.",
-      "method": "El cálculo consideró los datos del año anterior y el plan anual aprobado de masa salarial con las contrataciones previstas. El indicador combina reducción de costes y gastos evitados."
+      "text": "Audité procesos y creé la gestión de necesidades de personal: finalidad de cada rol y criterios de evaluación. Introduje revisiones trimestrales y solicitudes automatizadas con análisis preliminar del mercado, actualizado mensualmente por RR. HH. Delegué la administración y mantuve la responsabilidad estratégica.",
+      "timing": "Desde la solicitud hasta la aceptación de oferta: normalmente 7–30 días; determinadas posiciones complejas, expertas y directivas del mercado fashion: 45–55 días.",
+      "effect": "Los cambios implantados en 2025 generaron un beneficio anualizado del 8% del plan salarial anual aprobado, incluida la contratación prevista. Automatización y redistribución redujeron costes existentes y evitaron futuras contrataciones. Los plazos se mantuvieron o mejoraron, con carga de trabajo dentro de lo normal.",
+      "method": "8% es el equivalente anual, no el ahorro acumulado en los meses de implantación. Incluye costes de automatización y pagos adicionales. Cumplimiento: incorporaciones efectivas / plan actualizado. Se retiraban roles cancelados en las revisiones trimestrales. Mejora 61% → 94% en el primer semestre."
     },
     "engagement": {
       "label": "Resultado de implementación / feedback y retención",
-      "title": "eNPS de la empresa +82. Valoración de RR. HH. por el equipo +97. Rotación del 2,5%.",
+      "title": "Feedback y retención: resultados de cambios conectados.",
       "stats": [
         [
           "+35 → +82",
@@ -861,15 +995,16 @@ globalThis.WaistlineStrategyCopy={
         ],
         [
           "+56 → +97",
-          "valoración de RR. HH. / durante 2025"
+          "NPS de RR. HH. / 2025"
         ],
         [
           "14% → 2,5%",
           "rotación / 2024 → 2025"
         ]
       ],
-      "text": "Durante 2025, el eNPS de la empresa subió de +35 a +82, mientras que el indicador de valoración de RR. HH. por los empleados pasó de +56 a +97. Los valores finales corresponden a la última medición del año.",
-      "effect": "Al comparar los datos anuales, la rotación descendió del 14% en 2024 al 2,5% en 2025."
+      "text": "Encuestas trimestrales anónimas: eNPS +35 → +82 y NPS de RR. HH. +56 → +97 en la última medición de 2025. La participación pasó del 65% a un máximo del 93%. Destacaban transparencia, desarrollo, cultura, iniciativa y apoyo. Los responsables evaluaban además la calidad de contratación y apoyo a equipos.",
+      "effect": "La rotación total pasó del 14% en 2024 al 2,5% en 2025. Abordamos sobrecarga, barreras a resultados y comunicación entre equipos, mejoramos la selección y desarrollamos responsables. Retención mediante planes de desarrollo, rotaciones y trabajo con el responsable.",
+      "method": "Rotación: todas las salidas anuales / plantilla media del año × 100%, misma metodología ambos años. NPS: proporción de promotores menos detractores, no una media. El 93% es participación máxima, no necesariamente la última encuesta."
     },
     "mandate": "Trabajaba con un alto grado de autonomía: definía los enfoques de RR. HH. y organizaba la ejecución de la estrategia. Acordaba las líneas estratégicas con el CEO y analizaba con el CFO las consecuencias financieras de las decisiones y los costes de las iniciativas de RR. HH.",
     "review": {
@@ -918,7 +1053,8 @@ globalThis.WaistlineStrategyCopy={
       ],
       "nextTitle": "Continuidad en 2026",
       "next": "La cultura y la marca empleadora, así como el modelo de colaboración entre RR. HH. y los responsables, estaban parcialmente implementados. Su implementación completa pasó a 2026."
-    }
+    },
+    "methodLabel": "Método y periodo"
   },
   "uk": {
     "back": "До портфоліо",
@@ -1040,13 +1176,31 @@ globalThis.WaistlineStrategyCopy={
     "footer": "Денис Ланвен / HR Strategy & People Leadership",
     "preview": "Розібрати кейс",
     "previewTitle": "Waistline / People System",
-    "previewText": "Діагностика, планування команди, розвиток керівників і HR-процеси в єдиній стратегії.",
+    "previewText": "Після впровадження успішне проходження випробувального строку зросло з 67% до 91%. Вихід на робочий результат скоротився з 5–6-го до 2–3-го тижня. Виконання плану найму: 61% → 94%. Річний ефект: 8% плану ФОП.",
     "outcome": {
-      "title": "100% новачків у єдиній системі адаптації. На 27% менше часу на супровід.",
-      "text": "Побудував єдиний маршрут онбордингу з ботом, базою знань і матеріалами для самостійного старту. За пів року система охопила 100% нових співробітників.",
-      "effect": "Сукупні витрати часу HR-команди та керівників напрямів на весь супровід адаптації скоротилися на 27% порівняно з попереднім процесом.",
+      "title": "Адаптація, що швидше приводить до результату.",
+      "text": "Запустив бота зі щоденними кроками та сюжетною гейміфікацією: досвід команд, корпоративна валюта й внутрішній маркет бенефітів. Система охопила 100% новачків. Зберегли особисті зустрічі, 1:1, зворотний зв’язок та оцінку випробувального строку з ІПР на наступний цикл.",
+      "effect": "Після впровадження успішне проходження випробувального строку зросло з 67% до 91%. Вихід на робочий результат скоротився з 5–6-го до 2–3-го тижня.",
       "label": "Результат впровадження / адаптація",
-      "method": "На основі внутрішнього порівняння витрат часу до та після впровадження. Період спостереження: пів року. Враховується весь супровід адаптації HR-командою та керівниками напрямів."
+      "method": "До / після впровадження. Якість відстежували дев’ять місяців зі зрізами кожні два місяці. Результат: виконання плану, самостійність та оцінка керівника. Економію часу 27% виміряли за перше півріччя: облік годин, тривалість типових зустрічей і завдань, опитування до/після. Загальне спостереження: 12 місяців.",
+      "stats": [
+        [
+          "67% → 91%",
+          "успішне проходження випробувального строку"
+        ],
+        [
+          "5–6 → 2–3",
+          "тиждень виходу на робочий результат"
+        ],
+        [
+          "−27%",
+          "час HR і керівників / півріччя"
+        ],
+        [
+          "100%",
+          "охоплення новачків"
+        ]
+      ]
     },
     "factValues": [
       "100%",
@@ -1056,34 +1210,48 @@ globalThis.WaistlineStrategyCopy={
     "assessment": {
       "label": "Результат впровадження / оцінка та розвиток",
       "title": "100% команди пройшли оцінку за перший квартал після запуску.",
-      "text": "Побудував систему оцінки 240/360 з єдиними критеріями. Результати переводили в індивідуальні плани розвитку, перегляд ролей і варіанти внутрішніх ротацій за погодженням співробітника та компанії.",
-      "effect": "Оцінка стала основою для рішень про підвищення зарплати й посадове зростання. Критерії підвищення визначали заздалегідь, фінансові зміни враховували під час планування фонду оплати праці."
+      "text": "Щоквартальний review поєднував KPI/OKR, компетенції, зворотний зв’язок керівника й HR та підсумкову оцінку 360. За перший квартал систему пройшли 100% команди. Щомісячні 1:1 щодо ІПР підтримувала автоматизована форма з прогрес-баром і сповіщеннями про червоні показники. Прогрес відстежували керівник та HR.",
+      "effect": "Виконання не менше 80% квартального ІПР відкривало розгляд підвищення зарплати або посади. Рішення ухвалювали керівник і HR з урахуванням оцінки 360 та бюджету ФОП відділу. Оцінка також підтримувала перегляд ролей і погоджені внутрішні ротації.",
+      "stats": [
+        [
+          "3 міс.",
+          "Щоквартальний review"
+        ],
+        [
+          "1:1",
+          "Щомісячні 1:1 щодо ІПР"
+        ],
+        [
+          "≥80%",
+          "виконання ІПР / поріг розгляду підвищення"
+        ]
+      ]
     },
     "hiring": {
       "label": "Результат впровадження / найм та економіка команди",
-      "title": "За перше півріччя частка планового найму зросла з 61% до 94%. Сукупний ефект щодо фонду оплати праці становив 8% у річному вимірі.",
+      "title": "Виконання плану найму: 61% → 94%. Річний ефект: 8% плану ФОП.",
       "stats": [
         [
           "61% → 94%",
-          "планового найму за перше півріччя"
+          "виконання плану / фактичні виходи"
         ],
         [
           "7–30 днів",
-          "звичайний строк закриття позиції"
+          "від заявки до прийняття офера"
         ],
         [
-          "8% ФОП",
-          "сукупний ефект у річному вимірі"
+          "8%",
+          "річний ефект / план ФОП"
         ]
       ],
-      "text": "Пов’язав планування найму з потребами бізнесу, навантаженням команди та бюджетом. За перше півріччя після впровадження частка планового найму зросла на 33 відсоткові пункти.",
-      "timing": "Строки закриття стали прогнозованими й керованими: зазвичай 7–30 днів з урахуванням грейду та специфіки позиції. Для окремих складних, експертних і керівних ролей на вузькому fashion-ринку строки становили 45–55 днів.",
-      "effect": "Перерозподіл завдань, автоматизація та перебудова бізнес-процесів дозволили знизити витрати й уникнути надмірного найму. Сукупний ефект становив 8% річного фонду оплати праці.",
-      "method": "Розрахунок враховував дані попереднього року та затверджений річний план фонду оплати праці із запланованим наймом. Показник об’єднує зниження витрат і витрати, яких вдалося уникнути."
+      "text": "Провів аудит і з нуля запустив управління потребою в людях: бізнес-завдання ролі та критерії оцінки. Впровадив щоквартальну звірку плану й автоматизовану заявку з попереднім аналізом ринку, який HR оновлював щомісяця. Адміністрування передав команді, зберігши стратегічну відповідальність.",
+      "timing": "Від заявки до прийняття офера: зазвичай 7–30 днів; окремі складні, експертні й керівні ролі на вузькому fashion-ринку: 45–55 днів.",
+      "effect": "Зміни 2025 року дали сукупний річний економічний ефект 8% від затвердженого річного плану ФОП із передбаченим наймом. Автоматизація й перерозподіл функцій знизили поточні та запобігли частині майбутніх витрат. Строки збереглися або скоротилися, навантаження залишилося в нормі.",
+      "method": "8% — ефект у розрахунку на повний рік, не сума фактичної економії за місяці впровадження. Враховано витрати на автоматизацію й додаткові виплати. Виконання найму: фактичні виходи / актуальний план. Скасовані ролі виключали під час квартальної звірки. Зростання 61% → 94% за перше півріччя."
     },
     "engagement": {
       "label": "Результат впровадження / зворотний зв’язок та утримання",
-      "title": "eNPS компанії +82. Оцінка HR командою +97. Плинність 2,5%.",
+      "title": "Зворотний зв’язок та утримання: результат системних змін.",
       "stats": [
         [
           "+35 → +82",
@@ -1091,15 +1259,16 @@ globalThis.WaistlineStrategyCopy={
         ],
         [
           "+56 → +97",
-          "оцінка HR командою / за 2025 рік"
+          "NPS HR-функції / 2025"
         ],
         [
           "14% → 2,5%",
           "плинність / 2024 → 2025"
         ]
       ],
-      "text": "За 2025 рік eNPS компанії зріс із +35 до +82, а показник оцінки HR співробітниками із +56 до +97. Підсумкові значення зафіксовано в останньому вимірюванні року.",
-      "effect": "При порівнянні річних даних плинність знизилася з 14% у 2024 році до 2,5% за підсумками 2025 року."
+      "text": "Анонімні щоквартальні опитування: eNPS +35 → +82, NPS HR-функції +56 → +97 в останньому замірі 2025 року. Участь зросла з 65% до пікових 93%. Відзначали прозорість, розвиток, культуру, ініціативність і підтримку. Керівники окремо оцінювали якість найму й підтримку команд.",
+      "effect": "Загальна плинність знизилася з 14% у 2024 до 2,5% у 2025. Працювали з перевантаженням, бар’єрами результативності й комунікацією, точністю найму та навичками керівників. Утримували співробітників через ІПР, ротації й роботу з керівником.",
+      "method": "Плинність: усі звільнення за рік / середня чисельність за відповідний рік × 100%, однакова методика. NPS: частка прихильників мінус критики, не середня оцінка. 93% — пікова участь, не обов’язково останній замір."
     },
     "mandate": "Працював із високою автономією: з боку HR визначав підходи й організовував реалізацію стратегії. Із CEO погоджував стратегічні напрями, із CFO аналізував фінансові наслідки рішень і витрати на HR-ініціативи.",
     "review": {
@@ -1148,6 +1317,7 @@ globalThis.WaistlineStrategyCopy={
       ],
       "nextTitle": "Продовження у 2026 році",
       "next": "Культура та HR-бренд, а також партнерська модель взаємодії HR із керівниками були реалізовані частково. Їхня остаточна реалізація перейшла у 2026 рік."
-    }
+    },
+    "methodLabel": "Методика та період"
   }
 };

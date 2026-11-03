@@ -18,3 +18,14 @@
 html{scroll-padding-top:170px}@media(max-width:600px){html{scroll-padding-top:155px}}
 
 .chapter-nav{scrollbar-width:none}.chapter-nav::-webkit-scrollbar{display:none}
+
+/* Results as an editorial scorecard: endpoint comparisons, no invented trends. */
+.outcome-scorecards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:#10111630;border:1px solid #10111630;margin:28px 0 30px}
+.outcome-scorecard{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:26px;background:#f1f0eb;min-width:0}
+.outcome-scorecard:first-child{background:#b8ff3b}.outcome-scorecard strong{color:#101116;font-size:clamp(30px,3.8vw,58px);line-height:1.08;letter-spacing:-.055em;font-weight:800;max-width:100%}
+.outcome-scorecard>span:last-child{font-size:15px;line-height:1.5;max-width:290px;color:#37393f}.score-index{font-size:11px;letter-spacing:.14em;color:#55595c}
+.review-scores{grid-template-columns:repeat(3,minmax(0,1fr))}.review-scores .outcome-scorecard{border-top:3px solid #1638e2}.review-scores .outcome-scorecard:first-child{background:#e5e8fb}
+.outcome-scorecard{transition:background .25s ease,box-shadow .25s ease}.outcome-scorecard:hover{box-shadow:inset 0 -4px #1638e2}
+@media(max-width:600px){.outcome-scorecards,.review-scores{grid-template-columns:1fr}.outcome-scorecard{padding:22px}.outcome-scorecard strong{color:#101116;font-size:42px}.outcome-scorecard>span:last-child{max-width:none}}
+@media(prefers-reduced-motion:reduce){.outcome-scorecard{transition:none}}
+@media print{.outcome-scorecards{break-inside:avoid}.outcome-scorecard{background:#fff!important;box-shadow:none!important}.score-index{color:#555}}
