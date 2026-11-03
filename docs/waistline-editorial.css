@@ -5,3 +5,15 @@ body{background:var(--bg)}.site-head{background:#101116;color:#F7F4F3;border-col
 @media(max-width:700px){.hero-grid{grid-template-columns:1fr;gap:20px;margin:28px 0}.hero{padding-top:28px}h1{font-size:clamp(48px,11vw,76px)}.journal-index{padding:0}.journal-index>.kicker{display:none}.journal-index a{padding:16px 0}.journal-index strong{font-size:19px}.journal-results{grid-template-columns:1fr;padding:10px 0 20px}.journal-results>div,.journal-results>div:first-child{padding:22px 0;border-right:0;border-bottom:1px solid var(--line);gap:10px}.journal-results strong{font-size:52px}.journal-results span{max-width:none}.story-break{padding:32px 24px;min-height:220px}.break-statement{font-size:42px}.onboarding-outcome{padding:28px 0}.hero .actions{flex-direction:row}.hero .button{width:auto}.site-head .monogram{font-size:20px}}
 @media print{.journal-index{display:none}.journal-results{display:flex}.journal-results>div{flex:1}.story-break,.payroll-spotlight,.reflection{background:white!important;color:black!important}.story-break strong{color:black!important}}
 .module-button[aria-expanded=true] small{color:#141313}.review-scale h3,.review-scale p{color:#35302e}.signed-track:after{background:#19131355}.onboarding-outcome .outcome-method{color:#56504e}.outcome-method summary{color:#a63220}
+/* White display type on coral; smaller copy gets a milk reading surface. */
+.story-break:not(.story-break-2) .break-statement,.story-break:not(.story-break-2) .break-statement strong{color:#fff}
+.story-break:not(.story-break-2) .kicker{align-self:flex-start;background:#F7F4F3;color:#a63220;padding:6px 10px}
+.payroll-spotlight strong,.payroll-spotlight>div>p,.pilot-total strong{color:#fff}
+.payroll-spotlight>.kicker{display:table;background:#F7F4F3;color:#a63220;padding:7px 11px}
+.payroll-spotlight>p:last-child{background:#F7F4F3;color:#35302e;padding:24px;margin:28px 0 0;max-width:850px}
+.pilot-total>span{justify-self:start;background:#F7F4F3;color:#a63220;padding:7px 10px;margin-bottom:12px}
+.pilot-total p{background:#F7F4F3;color:#35302e;padding:20px}
+.button:not(.secondary){background:#b4412d;border-color:#b4412d;color:#fff}.button:not(.secondary):hover{background:#963321;border-color:#963321}
+.module-button[aria-expanded=true]{background:#b4412d;border-color:#b4412d;color:#fff}.module-button[aria-expanded=true] small{color:#fff}
+@media(max-width:700px){.payroll-spotlight>p:last-child{padding:20px}.pilot-total p{margin-top:14px;padding:18px}}
+@media print{.payroll-spotlight strong,.payroll-spotlight>div>p,.pilot-total strong,.story-break .break-statement{color:#111!important}}
