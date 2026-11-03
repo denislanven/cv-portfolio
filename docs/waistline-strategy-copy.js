@@ -85,8 +85,8 @@ globalThis.WaistlineStrategyCopy={
         "Участие, eNPS и качественная обратная связь; изменения в работе после опросов."
       ]
     ],
-    "roadTitle": "От аудита бизнес-процессов к реализации HR-стратегии.",
-    "roadIntro": "Последовательность работы с момента выхода на позицию HR Strategy Partner.",
+    "roadTitle": "Как я управлял изменениями",
+    "roadIntro": "Пять управленческих шагов: от диагностики до регулярной работы. Логика решений и основания для перехода к следующему шагу.",
     "phases": [
       [
         "01 / АУДИТ",
@@ -272,7 +272,53 @@ globalThis.WaistlineStrategyCopy={
       "nextTitle": "Продолжение в 2026 году",
       "next": "В 2025 году работа с руководителями уже велась через планирование, оценку, ИПР и решения о команде. При этом партнерская модель HR как целостное направление стратегии, а также культура и HR-бренд были реализованы частично. Завершение этих направлений перешло в 2026 год."
     },
-    "methodLabel": "Методика и период"
+    "methodLabel": "Методика и период",
+    "leadership": {
+      "title": "Как я управлял изменениями",
+      "intro": "Пять управленческих шагов: от диагностики до регулярной работы. Логика решений и основания для перехода к следующему шагу.",
+      "labels": [
+        "Ситуация",
+        "Мое решение",
+        "Основание для следующего шага"
+      ],
+      "fork": [
+        "Нанять",
+        "Перераспределить",
+        "Автоматизировать"
+      ],
+      "rows": [
+        [
+          "Диагностика до инициатив",
+          "Рост команды требовал понять причины проблем в работе, прежде чем выбирать HR-инструменты.",
+          "Провел аудит HR-функции и бизнес-процессов каждого отдела.",
+          "Выводы аудита стали основой приоритетов и последовательности инициатив."
+        ],
+        [
+          "Стратегия и ресурсы",
+          "Изменения затрагивали работу подразделений и затраты компании.",
+          "Сформировал roadmap; согласовал стратегические контуры с CEO, финансовые последствия и затраты проработал с CFO.",
+          "Согласованная стратегия и сроки стали основанием для запуска работы HR-команды."
+        ],
+        [
+          "Управление потребностью в найме",
+          "Заявку на человека нужно было связать с задачей бизнеса и существующей загрузкой.",
+          "Внедрил обоснование заявки и автоматическую выдачу предварительного анализа рынка. HR-команда обновляла анализ ежемесячно, план найма сверяли ежеквартально.",
+          "Аудит нагрузки и процессов позволял выбирать между наймом, перераспределением функций и автоматизацией."
+        ],
+        [
+          "Проверка подхода на пилоте",
+          "Сотрудники сомневались в возможностях роста, руководители опасались дополнительной рутины.",
+          "Запустил performance review с ИПР в командах продукта и продаж, сопровождал через 1:1 и фасилитационные встречи.",
+          "Снижение повторяющихся действий и прозрачность результатов и условий развития дали основания масштабировать подход."
+        ],
+        [
+          "Масштабирование и контроль",
+          "Проверенные практики нужно было закрепить в регулярной работе всей компании.",
+          "Масштабировал оценку, закрепил квартальный review и ежемесячные 1:1 по ИПР. Администрирование найма передал HR-команде, сохранив стратегическую ответственность.",
+          "Регулярные циклы оценки, обратной связи и сверки плана поддерживали дальнейшую корректировку системы."
+        ]
+      ]
+    }
   },
   "en": {
     "back": "Back to portfolio",
@@ -359,8 +405,8 @@ globalThis.WaistlineStrategyCopy={
         "Participation, eNPS, qualitative feedback and changes made after surveys."
       ]
     ],
-    "roadTitle": "From a business-process audit to HR strategy delivery.",
-    "roadIntro": "The sequence of work from the start of my HR Strategy Partner role.",
+    "roadTitle": "How I led the change",
+    "roadIntro": "Five management steps, from diagnosis to regular practice: decisions and the basis for moving forward.",
     "phases": [
       [
         "01 / AUDIT",
@@ -546,7 +592,53 @@ globalThis.WaistlineStrategyCopy={
       "nextTitle": "Continuing in 2026",
       "next": "In 2025, work with managers already included planning, assessment, development plans and team decisions. The overarching HR partnership model, culture and employer branding were partially implemented; completion carried over into 2026."
     },
-    "methodLabel": "Method and period"
+    "methodLabel": "Method and period",
+    "leadership": {
+      "title": "How I led the change",
+      "intro": "Five management steps, from diagnosis to regular practice: decisions and the basis for moving forward.",
+      "labels": [
+        "Situation",
+        "My decision",
+        "Basis for the next step"
+      ],
+      "fork": [
+        "Hire",
+        "Redistribute",
+        "Automate"
+      ],
+      "rows": [
+        [
+          "Diagnose before launching initiatives",
+          "Team growth required understanding operational problems before choosing HR tools.",
+          "Audited the HR function and business processes in every department.",
+          "Audit findings informed priorities and the sequence of initiatives."
+        ],
+        [
+          "Align strategy and resources",
+          "Changes affected departmental work and company costs.",
+          "Built a roadmap, aligned strategic direction with the CEO and reviewed financial implications and initiative costs with the CFO.",
+          "The agreed strategy and timeline provided the basis for the HR team to start implementation."
+        ],
+        [
+          "Manage hiring demand",
+          "A request for a person needed to connect to business needs and existing workload.",
+          "Introduced justified requests with automated preliminary market analysis. HR updated the analysis monthly; the hiring plan was reviewed quarterly.",
+          "Workload and process reviews supported a choice between hiring, redistributing responsibilities and automation."
+        ],
+        [
+          "Test the approach in a pilot",
+          "Employees doubted growth opportunities; managers expected extra administrative work.",
+          "Piloted performance reviews with development plans in Product and Sales, supported by 1:1s and facilitated sessions.",
+          "Less repetitive work and clearer results and growth conditions supported wider rollout."
+        ],
+        [
+          "Scale and maintain control",
+          "Proven practices needed to become regular company-wide work.",
+          "Scaled assessment, established quarterly reviews and monthly development 1:1s. Delegated hiring administration to HR while retaining strategic accountability.",
+          "Regular assessment, feedback and hiring-plan reviews supported further adjustments."
+        ]
+      ]
+    }
   },
   "pl": {
     "back": "Do portfolio",
@@ -633,8 +725,8 @@ globalThis.WaistlineStrategyCopy={
         "Udział, eNPS i zmiany wprowadzone po badaniach."
       ]
     ],
-    "roadTitle": "Od audytu procesów biznesowych do realizacji strategii HR.",
-    "roadIntro": "Kolejność działań od objęcia roli HR Strategy Partner.",
+    "roadTitle": "Jak zarządzałem zmianą",
+    "roadIntro": "Pięć kroków zarządczych: od diagnozy do regularnej praktyki. Decyzje i podstawy kolejnych kroków.",
     "phases": [
       [
         "01 / AUDYT",
@@ -820,7 +912,53 @@ globalThis.WaistlineStrategyCopy={
       "nextTitle": "Kontynuacja w 2026 roku",
       "next": "W 2025 r. współpraca z menedżerami obejmowała już planowanie, ocenę, plany rozwoju i decyzje o zespole. Całościowy model partnerstwa HR, kultura i marka pracodawcy były wdrożone częściowo; zakończenie przeniesiono na 2026 r."
     },
-    "methodLabel": "Metoda i okres"
+    "methodLabel": "Metoda i okres",
+    "leadership": {
+      "title": "Jak zarządzałem zmianą",
+      "intro": "Pięć kroków zarządczych: od diagnozy do regularnej praktyki. Decyzje i podstawy kolejnych kroków.",
+      "labels": [
+        "Sytuacja",
+        "Moja decyzja",
+        "Podstawa kolejnego kroku"
+      ],
+      "fork": [
+        "Zatrudnić",
+        "Podzielić zadania",
+        "Zautomatyzować"
+      ],
+      "rows": [
+        [
+          "Diagnoza przed inicjatywami",
+          "Wzrost zespołu wymagał zrozumienia problemów przed wyborem narzędzi HR.",
+          "Przeprowadziłem audyt HR i procesów biznesowych każdego działu.",
+          "Wnioski określiły priorytety i kolejność inicjatyw."
+        ],
+        [
+          "Strategia i zasoby",
+          "Zmiany wpływały na działy i koszty firmy.",
+          "Zbudowałem roadmapę; kierunki uzgodniłem z CEO, skutki finansowe i koszty omówiłem z CFO.",
+          "Uzgodniona strategia i terminy pozwoliły rozpocząć wdrożenie."
+        ],
+        [
+          "Zarządzanie potrzebą zatrudnienia",
+          "Wniosek o pracownika należało powiązać z celem biznesowym i obciążeniem.",
+          "Wdrożyłem uzasadnienie wniosku i automatyczną wstępną analizę rynku. HR aktualizował ją co miesiąc, plan zatrudnienia weryfikowano kwartalnie.",
+          "Analiza pracy pozwalała wybierać zatrudnienie, redystrybucję zadań lub automatyzację."
+        ],
+        [
+          "Sprawdzenie w pilotażu",
+          "Pracownicy wątpili w możliwości rozwoju, menedżerowie obawiali się dodatkowej pracy.",
+          "Uruchomiłem performance review i plany rozwoju w Produkcie i Sprzedaży, ze spotkaniami 1:1 i facylitacją.",
+          "Mniej rutyny i przejrzyste warunki rozwoju uzasadniały skalowanie."
+        ],
+        [
+          "Skalowanie i kontrola",
+          "Sprawdzone praktyki wymagały utrwalenia w całej firmie.",
+          "Rozszerzyłem ocenę, wdrożyłem kwartalne review i miesięczne 1:1. Administrację rekrutacji przekazałem HR, zachowując odpowiedzialność strategiczną.",
+          "Regularna ocena, feedback i przegląd planu pozwalały korygować system."
+        ]
+      ]
+    }
   },
   "es": {
     "back": "Volver al portfolio",
@@ -907,8 +1045,8 @@ globalThis.WaistlineStrategyCopy={
         "Participación, eNPS y cambios posteriores a las encuestas."
       ]
     ],
-    "roadTitle": "De la auditoría de procesos de negocio a la ejecución de la estrategia de RR. HH.",
-    "roadIntro": "La secuencia de trabajo desde mi incorporación como HR Strategy Partner.",
+    "roadTitle": "Cómo lideré el cambio",
+    "roadIntro": "Cinco pasos de gestión, del diagnóstico a la práctica habitual: decisiones y fundamentos para avanzar.",
     "phases": [
       [
         "01 / AUDITORÍA",
@@ -1094,7 +1232,53 @@ globalThis.WaistlineStrategyCopy={
       "nextTitle": "Continuidad en 2026",
       "next": "En 2025, el trabajo con responsables ya incluía planificación, evaluación, planes de desarrollo y decisiones sobre el equipo. El modelo integral de colaboración de RR. HH., la cultura y la marca empleadora estaban parcialmente implantados; su finalización pasó a 2026."
     },
-    "methodLabel": "Método y periodo"
+    "methodLabel": "Método y periodo",
+    "leadership": {
+      "title": "Cómo lideré el cambio",
+      "intro": "Cinco pasos de gestión, del diagnóstico a la práctica habitual: decisiones y fundamentos para avanzar.",
+      "labels": [
+        "Situación",
+        "Mi decisión",
+        "Base para el siguiente paso"
+      ],
+      "fork": [
+        "Contratar",
+        "Redistribuir",
+        "Automatizar"
+      ],
+      "rows": [
+        [
+          "Diagnosticar antes de actuar",
+          "El crecimiento exigía entender los problemas antes de elegir herramientas de RR. HH.",
+          "Audité RR. HH. y los procesos de cada departamento.",
+          "Los hallazgos definieron prioridades y secuencia de iniciativas."
+        ],
+        [
+          "Estrategia y recursos",
+          "Los cambios afectaban a los departamentos y los costes.",
+          "Creé una hoja de ruta; acordé la dirección con el CEO y revisé costes e implicaciones financieras con el CFO.",
+          "La estrategia y los plazos acordados permitieron iniciar la implantación."
+        ],
+        [
+          "Gestionar la necesidad de contratar",
+          "Cada solicitud debía responder a una necesidad del negocio y a la carga existente.",
+          "Implanté solicitudes justificadas con análisis preliminar de mercado automático. RR. HH. lo actualizaba mensualmente; revisábamos el plan trimestralmente.",
+          "La revisión de cargas y procesos permitía elegir contratación, redistribución o automatización."
+        ],
+        [
+          "Validar en un piloto",
+          "Los empleados dudaban del crecimiento y los responsables temían más tareas administrativas.",
+          "Piloté performance review con planes de desarrollo en Producto y Ventas, con reuniones 1:1 y facilitación.",
+          "Menos tareas repetitivas y mayor claridad sobre resultados y desarrollo apoyaron el escalado."
+        ],
+        [
+          "Escalar y mantener el control",
+          "Las prácticas validadas debían integrarse en toda la empresa.",
+          "Amplié la evaluación y establecí revisiones trimestrales y reuniones mensuales. Delegué la administración de contratación y conservé la responsabilidad estratégica.",
+          "Los ciclos de evaluación, feedback y revisión del plan permitían ajustar el sistema."
+        ]
+      ]
+    }
   },
   "uk": {
     "back": "До портфоліо",
@@ -1181,8 +1365,8 @@ globalThis.WaistlineStrategyCopy={
         "Участь, eNPS і зміни після опитувань."
       ]
     ],
-    "roadTitle": "Від аудиту бізнес-процесів до реалізації HR-стратегії.",
-    "roadIntro": "Послідовність роботи з моменту виходу на позицію HR Strategy Partner.",
+    "roadTitle": "Як я керував змінами",
+    "roadIntro": "П’ять управлінських кроків: від діагностики до регулярної роботи. Рішення та підстави для наступного кроку.",
     "phases": [
       [
         "01 / АУДИТ",
@@ -1368,6 +1552,52 @@ globalThis.WaistlineStrategyCopy={
       "nextTitle": "Продовження у 2026 році",
       "next": "У 2025 році робота з керівниками вже включала планування, оцінку, ІПР і рішення щодо команди. Водночас цілісна партнерська модель HR, культура та HR-бренд були реалізовані частково; завершення перейшло у 2026 рік."
     },
-    "methodLabel": "Методика та період"
+    "methodLabel": "Методика та період",
+    "leadership": {
+      "title": "Як я керував змінами",
+      "intro": "П’ять управлінських кроків: від діагностики до регулярної роботи. Рішення та підстави для наступного кроку.",
+      "labels": [
+        "Ситуація",
+        "Моє рішення",
+        "Підстава для наступного кроку"
+      ],
+      "fork": [
+        "Найняти",
+        "Перерозподілити",
+        "Автоматизувати"
+      ],
+      "rows": [
+        [
+          "Діагностика до ініціатив",
+          "Зростання вимагало зрозуміти причини проблем до вибору HR-інструментів.",
+          "Провів аудит HR та бізнес-процесів кожного відділу.",
+          "Висновки стали основою пріоритетів і послідовності ініціатив."
+        ],
+        [
+          "Стратегія та ресурси",
+          "Зміни зачіпали роботу підрозділів і витрати.",
+          "Сформував roadmap; узгодив стратегічні контури з CEO, фінансові наслідки та витрати опрацював із CFO.",
+          "Узгоджена стратегія й строки стали підставою для запуску."
+        ],
+        [
+          "Управління потребою в наймі",
+          "Заявку на людину треба було пов’язати із завданням бізнесу та навантаженням.",
+          "Впровадив обґрунтування заявки й автоматичний попередній аналіз ринку. HR оновлював аналіз щомісяця, план найму звіряли щоквартально.",
+          "Аудит дозволяв обирати найм, перерозподіл функцій або автоматизацію."
+        ],
+        [
+          "Перевірка підходу на пілоті",
+          "Працівники сумнівалися в можливостях зростання, керівники боялися зайвої рутини.",
+          "Запустив performance review з ІПР у продукті та продажах, із супроводом через 1:1 і фасилітаційні зустрічі.",
+          "Менше повторюваних дій і прозорі умови розвитку дали підстави для масштабування."
+        ],
+        [
+          "Масштабування та контроль",
+          "Перевірені практики треба було закріпити в усій компанії.",
+          "Масштабував оцінку, закріпив квартальний review і щомісячні 1:1. Адміністрування найму передав HR, зберігши стратегічну відповідальність.",
+          "Регулярна оцінка, зворотний зв’язок і звірка плану підтримували коригування системи."
+        ]
+      ]
+    }
   }
 };
