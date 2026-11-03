@@ -2,7 +2,12 @@
 const copy=globalThis.WaistlineStrategyCopy;if(!copy)return;
 const supported=Object.keys(copy),chapters=['context','diagnosis','architecture','sequence','decisions','evidence'];
 const root=document.getElementById('main');
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+// Escape content first, then protect complete numeric expressions (never fragments of words).
+const numberUnit='(?:дней|дня|день|месяцев|месяца|мес\\.|недель|недели|неделя|годах|годами|году|года|год)';
+const numericExpression=new RegExp('(&[#\\w]+;)|(?:[≥≤]?[+−-]?\\d+(?:[.,]\\d+)?(?:%|–[+−-]?\\d+(?:[.,]\\d+)?%?|[:/]\\d+)(?:\\s+'+numberUnit+'(?![А-Яа-яA-Za-z]))?|\\d+\\s+'+numberUnit+'(?![А-Яа-яA-Za-z]))','g');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
+ .replace(numericExpression,(match,entity)=>entity||'<span class="type-number">'+match+'</span>');
+
 function language(){let l='ru';try{l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('lang')||'ru'}catch{}return supported.includes(l)?l:'ru'}
 let lang=language();
 const link=(path,l=lang)=>path+(path.includes('?')?'&':'?')+'lang='+l;
