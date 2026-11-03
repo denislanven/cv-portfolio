@@ -25,3 +25,6 @@ body{background:var(--bg)}.site-head{background:#101116;color:#F7F4F3;border-col
 .site-head .case-language .languages button:hover{background:#fce2da;color:#141313}
 .site-head .case-language .languages button[aria-pressed=true]{background:#b4412d;color:#fff}
 .site-head .case-language summary:focus-visible,.site-head .case-language button:focus-visible{outline-color:#FF674D}
+
+/* Measurement basis stays beside each result, outside the single disclosure. */
+.metric-basis{display:block;font-size:12px!important;line-height:1.5;color:#625b56!important;font-weight:400;letter-spacing:0;margin-top:12px;max-width:36ch}.outcome-scorecard .metric-basis{grid-column:1/-1}.hiring-metrics>div{align-content:start}

@@ -113,7 +113,7 @@ globalThis.WaistlineStrategyCopy={
       "Прототип HR-сервиса для сотрудников."
     ],
     "endTitle": "Стратегия становится ценной в решениях.",
-    "endText": "Мне интересны задачи на стыке HR, управления и экономики команды. Этот кейс показывает, как я подхожу к их проектированию.",
+    "endText": "Мне интересны задачи на стыке HR, управления и экономики команды. Этот кейс показывает, как я выстраиваю и внедряю HR-систему под задачи бизнеса.",
     "contact": "Обсудить задачу",
     "cv": "Резюме",
     "source": "Waistline / HR Strategy Partner / 2025–2026.",
@@ -130,19 +130,23 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "67% → 91%",
-          "успешное прохождение испытательного срока"
+          "успешное прохождение испытательного срока",
+          "До / после внедрения; качество отслеживали 9 месяцев"
         ],
         [
           "5–6 → 2–3",
-          "неделя выхода на рабочий результат"
+          "неделя выхода на рабочий результат",
+          "Выполнение плана, самостоятельность, оценка руководителя"
         ],
         [
           "−27%",
-          "времени HR и руководителей / за полугодие"
+          "времени HR и руководителей / за полугодие",
+          "Первое полугодие; часы HR и руководителей"
         ],
         [
           "100%",
-          "охват новичков"
+          "охват новичков",
+          "Все новички в единой системе"
         ]
       ]
     },
@@ -173,19 +177,22 @@ globalThis.WaistlineStrategyCopy={
     },
     "hiring": {
       "label": "Результат внедрения / найм и экономика команды",
-      "title": "План найма: 61% → 94%. Экономика команды: 8% годового плана ФОТ.",
+      "title": "Управляемый найм и экономика команды",
       "stats": [
         [
           "61% → 94%",
-          "выполнение плана / фактические выходы"
+          "выполнение плана / фактические выходы",
+          "Фактические выходы / актуализированный план; первое полугодие"
         ],
         [
           "7–30 дней",
-          "от заявки до принятия оффера"
+          "от заявки до принятия оффера",
+          "Сложные и узкие позиции: 45–55 дней"
         ],
         [
           "8%",
-          "годовой эффект / от плана ФОТ"
+          "годовой эффект / от плана ФОТ",
+          "Эффект полного года; план ФОТ с наймом, затраты внедрения учтены"
         ]
       ],
       "text": "Провел аудит и с нуля запустил процедуру управления потребностью в людях: зачем бизнесу позиция, какую задачу она решает и как оценивать кандидата. Внедрил ежеквартальную сверку годового плана. Автоматизированная заявка давала заказчику предварительный анализ рынка, который HR-команда обновляла ежемесячно. Администрирование передал команде, сохранив стратегическую ответственность.",
@@ -199,15 +206,18 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "+35 → +82",
-          "eNPS компании / за 2025 год"
+          "eNPS компании / за 2025 год",
+          "Анонимные квартальные опросы; последний замер 2025"
         ],
         [
           "+56 → +97",
-          "NPS HR-функции / 2025"
+          "NPS HR-функции / 2025",
+          "Доля сторонников минус доля критиков; последний замер 2025"
         ],
         [
           "14% → 2,5%",
-          "текучесть / 2024 → 2025"
+          "текучесть / 2024 → 2025",
+          "Все увольнения / среднегодовая численность × 100%"
         ]
       ],
       "text": "Анонимные ежеквартальные опросы: eNPS +35 → +82, NPS HR-функции +56 → +97 по последнему замеру 2025 года. Участие выросло с 65% на старте до 93% в пике. В комментариях отмечали прозрачность, понятный трек развития, культуру, инициативность и поддержку. Руководители отдельно оценивали качество найма и поддержку команд.",
@@ -260,7 +270,7 @@ globalThis.WaistlineStrategyCopy={
         ]
       ],
       "nextTitle": "Продолжение в 2026 году",
-      "next": "Культура и HR-бренд, а также партнерская модель взаимодействия HR с руководителями были реализованы частично. Их окончательная реализация перешла в 2026 год."
+      "next": "В 2025 году работа с руководителями уже велась через планирование, оценку, ИПР и решения о команде. При этом партнерская модель HR как целостное направление стратегии, а также культура и HR-бренд были реализованы частично. Завершение этих направлений перешло в 2026 год."
     },
     "methodLabel": "Методика и период"
   },
@@ -377,7 +387,7 @@ globalThis.WaistlineStrategyCopy={
       "An employee HR-service prototype."
     ],
     "endTitle": "Strategy earns its value in decisions.",
-    "endText": "I work at the intersection of HR, management and team economics. This case shows how I design that work.",
+    "endText": "I work at the intersection of HR, management and team economics. This case shows how I build and implement HR systems around business needs.",
     "contact": "Discuss a challenge",
     "cv": "CV",
     "source": "Waistline / HR Strategy Partner / 2025–2026.",
@@ -394,19 +404,23 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "67% → 91%",
-          "probation pass rate"
+          "probation pass rate",
+          "Before / after implementation; quality tracked for 9 months"
         ],
         [
           "5–6 → 2–3",
-          "week of reaching working results"
+          "week of reaching working results",
+          "Plan delivery, independence and manager assessment"
         ],
         [
           "−27%",
-          "HR and manager time / six months"
+          "HR and manager time / six months",
+          "First six months; HR and manager hours"
         ],
         [
           "100%",
-          "new hires covered"
+          "new hires covered",
+          "All new hires in one system"
         ]
       ]
     },
@@ -437,19 +451,22 @@ globalThis.WaistlineStrategyCopy={
     },
     "hiring": {
       "label": "Implementation result / hiring and team economics",
-      "title": "Hiring plan delivery: 61% → 94%. Annual payroll plan impact: 8%.",
+      "title": "Managed hiring and team economics",
       "stats": [
         [
           "61% → 94%",
-          "plan delivery / actual employee starts"
+          "plan delivery / actual employee starts",
+          "Actual starts / updated plan; first six months"
         ],
         [
           "7–30 days",
-          "request to accepted offer"
+          "request to accepted offer",
+          "Complex and niche roles: 45–55 days"
         ],
         [
           "8%",
-          "annualized benefit / payroll plan"
+          "annualized benefit / payroll plan",
+          "Full-year equivalent; payroll plan including hiring, implementation costs included"
         ]
       ],
       "text": "Audited processes and built workforce-demand governance from scratch: why a role was needed, the business problem and candidate criteria. Introduced quarterly hiring-plan reviews and automated requests with preliminary market analysis, refreshed monthly by HR. Delegated administration while retaining strategic accountability.",
@@ -463,15 +480,18 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "+35 → +82",
-          "company eNPS / during 2025"
+          "company eNPS / during 2025",
+          "Anonymous quarterly surveys; final 2025 reading"
         ],
         [
           "+56 → +97",
-          "HR-function NPS / 2025"
+          "HR-function NPS / 2025",
+          "Promoters minus detractors; final 2025 reading"
         ],
         [
           "14% → 2.5%",
-          "turnover / 2024 → 2025"
+          "turnover / 2024 → 2025",
+          "All annual departures / average annual headcount × 100%"
         ]
       ],
       "text": "Anonymous quarterly surveys: eNPS +35 → +82 and HR-function NPS +56 → +97 in the final 2025 survey. Participation rose from 65% initially to a peak of 93%. Comments highlighted transparency, clear development paths, culture, initiative and support. Managers separately assessed hiring quality and team support.",
@@ -524,7 +544,7 @@ globalThis.WaistlineStrategyCopy={
         ]
       ],
       "nextTitle": "Continuing in 2026",
-      "next": "Culture and employer branding, along with the HR–manager partnership model, were partially implemented. Their full implementation carried over into 2026."
+      "next": "In 2025, work with managers already included planning, assessment, development plans and team decisions. The overarching HR partnership model, culture and employer branding were partially implemented; completion carried over into 2026."
     },
     "methodLabel": "Method and period"
   },
@@ -641,7 +661,7 @@ globalThis.WaistlineStrategyCopy={
       "Prototyp serwisu HR dla zespołu."
     ],
     "endTitle": "Wartość strategii widać w decyzjach.",
-    "endText": "Łączę HR, zarządzanie i ekonomikę zespołu. Ten przypadek pokazuje sposób projektowania rozwiązań.",
+    "endText": "Pracuję na styku HR, zarządzania i ekonomii zespołu. Ten przypadek pokazuje, jak buduję i wdrażam system HR pod potrzeby biznesu.",
     "contact": "Porozmawiajmy",
     "cv": "CV",
     "source": "Waistline / HR Strategy Partner / 2025–2026.",
@@ -658,19 +678,23 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "67% → 91%",
-          "pomyślne zakończenie okresu próbnego"
+          "pomyślne zakończenie okresu próbnego",
+          "Przed / po wdrożeniu; jakość monitorowana przez 9 miesięcy"
         ],
         [
           "5–6 → 2–3",
-          "tydzień osiągania wyników"
+          "tydzień osiągania wyników",
+          "Realizacja planu, samodzielność, ocena menedżera"
         ],
         [
           "−27%",
-          "czas HR i menedżerów / półrocze"
+          "czas HR i menedżerów / półrocze",
+          "Pierwsze półrocze; godziny HR i menedżerów"
         ],
         [
           "100%",
-          "objętych nowych osób"
+          "objętych nowych osób",
+          "Wszyscy nowi pracownicy w jednym systemie"
         ]
       ]
     },
@@ -701,19 +725,22 @@ globalThis.WaistlineStrategyCopy={
     },
     "hiring": {
       "label": "Efekt wdrożenia / rekrutacja i ekonomika zespołu",
-      "title": "Realizacja planu rekrutacji: 61% → 94%. Efekt roczny: 8% planu płac.",
+      "title": "Zarządzanie rekrutacją i ekonomią zespołu",
       "stats": [
         [
           "61% → 94%",
-          "realizacja planu / rozpoczęcia pracy"
+          "realizacja planu / rozpoczęcia pracy",
+          "Faktyczne rozpoczęcia / aktualny plan; pierwsze półrocze"
         ],
         [
           "7–30 dni",
-          "od zgłoszenia do akceptacji oferty"
+          "od zgłoszenia do akceptacji oferty",
+          "Trudne i niszowe role: 45–55 dni"
         ],
         [
           "8%",
-          "efekt roczny / plan płac"
+          "efekt roczny / plan płac",
+          "Efekt pełnego roku; plan płac z zatrudnieniem, koszty wdrożenia uwzględnione"
         ]
       ],
       "text": "Przeprowadziłem audyt i zbudowałem proces zarządzania zapotrzebowaniem na pracowników: cel biznesowy roli i kryteria oceny kandydatów. Wdrożyłem kwartalne przeglądy planu i automatyczne wnioski ze wstępną analizą rynku, aktualizowaną co miesiąc przez HR. Administrację przekazałem zespołowi, zachowując odpowiedzialność strategiczną.",
@@ -727,15 +754,18 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "+35 → +82",
-          "eNPS firmy / w 2025 roku"
+          "eNPS firmy / w 2025 roku",
+          "Anonimowe ankiety kwartalne; ostatni pomiar 2025"
         ],
         [
           "+56 → +97",
-          "NPS funkcji HR / 2025"
+          "NPS funkcji HR / 2025",
+          "Promotorzy minus krytycy; ostatni pomiar 2025"
         ],
         [
           "14% → 2,5%",
-          "rotacja / 2024 → 2025"
+          "rotacja / 2024 → 2025",
+          "Wszystkie odejścia / średnia roczna liczba pracowników × 100%"
         ]
       ],
       "text": "Anonimowe ankiety kwartalne: eNPS +35 → +82, NPS funkcji HR +56 → +97 w ostatnim pomiarze 2025 r. Udział wzrósł z 65% do maksymalnie 93%. Wskazywano przejrzystość, ścieżki rozwoju, kulturę, inicjatywę i wsparcie. Menedżerowie osobno oceniali jakość rekrutacji i wsparcie zespołów.",
@@ -788,7 +818,7 @@ globalThis.WaistlineStrategyCopy={
         ]
       ],
       "nextTitle": "Kontynuacja w 2026 roku",
-      "next": "Kultura i marka pracodawcy oraz partnerski model współpracy HR z menedżerami były wdrożone częściowo. Ich pełna realizacja została przeniesiona na 2026 rok."
+      "next": "W 2025 r. współpraca z menedżerami obejmowała już planowanie, ocenę, plany rozwoju i decyzje o zespole. Całościowy model partnerstwa HR, kultura i marka pracodawcy były wdrożone częściowo; zakończenie przeniesiono na 2026 r."
     },
     "methodLabel": "Metoda i okres"
   },
@@ -905,7 +935,7 @@ globalThis.WaistlineStrategyCopy={
       "Prototipo de servicio de RR. HH."
     ],
     "endTitle": "La estrategia vale por sus decisiones.",
-    "endText": "Trabajo entre RR. HH., gestión y economía del equipo. Este caso muestra cómo diseño soluciones.",
+    "endText": "Trabajo entre RR. HH., gestión y economía del equipo. Este caso muestra cómo construyo e implanto sistemas de RR. HH. para las necesidades del negocio.",
     "contact": "Hablemos del reto",
     "cv": "CV",
     "source": "Waistline / HR Strategy Partner / 2025–2026.",
@@ -922,19 +952,23 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "67% → 91%",
-          "superación del periodo de prueba"
+          "superación del periodo de prueba",
+          "Antes / después; seguimiento de calidad durante 9 meses"
         ],
         [
           "5–6 → 2–3",
-          "semana de llegada a resultados"
+          "semana de llegada a resultados",
+          "Cumplimiento del plan, autonomía y evaluación del responsable"
         ],
         [
           "−27%",
-          "tiempo de RR. HH. y responsables / semestre"
+          "tiempo de RR. HH. y responsables / semestre",
+          "Primer semestre; horas de RR. HH. y responsables"
         ],
         [
           "100%",
-          "incorporaciones cubiertas"
+          "incorporaciones cubiertas",
+          "Todas las nuevas incorporaciones"
         ]
       ]
     },
@@ -965,19 +999,22 @@ globalThis.WaistlineStrategyCopy={
     },
     "hiring": {
       "label": "Resultado de implementación / contratación y economía del equipo",
-      "title": "Cumplimiento del plan: 61% → 94%. Impacto anual: 8% del plan salarial.",
+      "title": "Contratación gestionada y economía del equipo",
       "stats": [
         [
           "61% → 94%",
-          "cumplimiento / incorporaciones efectivas"
+          "cumplimiento / incorporaciones efectivas",
+          "Incorporaciones efectivas / plan actualizado; primer semestre"
         ],
         [
           "7–30 días",
-          "solicitud a aceptación de oferta"
+          "solicitud a aceptación de oferta",
+          "Puestos complejos y especializados: 45–55 días"
         ],
         [
           "8%",
-          "beneficio anualizado / plan salarial"
+          "beneficio anualizado / plan salarial",
+          "Equivalente anual; plan salarial con contratación y costes de implantación incluidos"
         ]
       ],
       "text": "Audité procesos y creé la gestión de necesidades de personal: finalidad de cada rol y criterios de evaluación. Introduje revisiones trimestrales y solicitudes automatizadas con análisis preliminar del mercado, actualizado mensualmente por RR. HH. Delegué la administración y mantuve la responsabilidad estratégica.",
@@ -991,15 +1028,18 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "+35 → +82",
-          "eNPS de la empresa / durante 2025"
+          "eNPS de la empresa / durante 2025",
+          "Encuestas trimestrales anónimas; última medición de 2025"
         ],
         [
           "+56 → +97",
-          "NPS de RR. HH. / 2025"
+          "NPS de RR. HH. / 2025",
+          "Promotores menos detractores; última medición de 2025"
         ],
         [
           "14% → 2,5%",
-          "rotación / 2024 → 2025"
+          "rotación / 2024 → 2025",
+          "Todas las salidas / plantilla media anual × 100%"
         ]
       ],
       "text": "Encuestas trimestrales anónimas: eNPS +35 → +82 y NPS de RR. HH. +56 → +97 en la última medición de 2025. La participación pasó del 65% a un máximo del 93%. Destacaban transparencia, desarrollo, cultura, iniciativa y apoyo. Los responsables evaluaban además la calidad de contratación y apoyo a equipos.",
@@ -1052,7 +1092,7 @@ globalThis.WaistlineStrategyCopy={
         ]
       ],
       "nextTitle": "Continuidad en 2026",
-      "next": "La cultura y la marca empleadora, así como el modelo de colaboración entre RR. HH. y los responsables, estaban parcialmente implementados. Su implementación completa pasó a 2026."
+      "next": "En 2025, el trabajo con responsables ya incluía planificación, evaluación, planes de desarrollo y decisiones sobre el equipo. El modelo integral de colaboración de RR. HH., la cultura y la marca empleadora estaban parcialmente implantados; su finalización pasó a 2026."
     },
     "methodLabel": "Método y periodo"
   },
@@ -1169,7 +1209,7 @@ globalThis.WaistlineStrategyCopy={
       "Прототип HR-сервісу для команди."
     ],
     "endTitle": "Цінність стратегії в рішеннях.",
-    "endText": "Працюю на перетині HR, управління й економіки команди. Кейс показує, як я проєктую рішення.",
+    "endText": "Мені цікаві завдання на стику HR, управління та економіки команди. Цей кейс показує, як я будую та впроваджую HR-систему під завдання бізнесу.",
     "contact": "Обговорити завдання",
     "cv": "Резюме",
     "source": "Waistline / HR Strategy Partner / 2025–2026.",
@@ -1186,19 +1226,23 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "67% → 91%",
-          "успішне проходження випробувального строку"
+          "успішне проходження випробувального строку",
+          "До / після впровадження; якість відстежували 9 місяців"
         ],
         [
           "5–6 → 2–3",
-          "тиждень виходу на робочий результат"
+          "тиждень виходу на робочий результат",
+          "Виконання плану, самостійність, оцінка керівника"
         ],
         [
           "−27%",
-          "час HR і керівників / півріччя"
+          "час HR і керівників / півріччя",
+          "Перше півріччя; години HR та керівників"
         ],
         [
           "100%",
-          "охоплення новачків"
+          "охоплення новачків",
+          "Усі новачки в єдиній системі"
         ]
       ]
     },
@@ -1229,19 +1273,22 @@ globalThis.WaistlineStrategyCopy={
     },
     "hiring": {
       "label": "Результат впровадження / найм та економіка команди",
-      "title": "Виконання плану найму: 61% → 94%. Річний ефект: 8% плану ФОП.",
+      "title": "Керований найм та економіка команди",
       "stats": [
         [
           "61% → 94%",
-          "виконання плану / фактичні виходи"
+          "виконання плану / фактичні виходи",
+          "Фактичні виходи / актуальний план; перше півріччя"
         ],
         [
           "7–30 днів",
-          "від заявки до прийняття офера"
+          "від заявки до прийняття офера",
+          "Складні та вузькі позиції: 45–55 днів"
         ],
         [
           "8%",
-          "річний ефект / план ФОП"
+          "річний ефект / план ФОП",
+          "Ефект повного року; план ФОП із наймом, витрати впровадження враховані"
         ]
       ],
       "text": "Провів аудит і з нуля запустив управління потребою в людях: бізнес-завдання ролі та критерії оцінки. Впровадив щоквартальну звірку плану й автоматизовану заявку з попереднім аналізом ринку, який HR оновлював щомісяця. Адміністрування передав команді, зберігши стратегічну відповідальність.",
@@ -1255,15 +1302,18 @@ globalThis.WaistlineStrategyCopy={
       "stats": [
         [
           "+35 → +82",
-          "eNPS компанії / за 2025 рік"
+          "eNPS компанії / за 2025 рік",
+          "Анонімні квартальні опитування; останній замір 2025"
         ],
         [
           "+56 → +97",
-          "NPS HR-функції / 2025"
+          "NPS HR-функції / 2025",
+          "Прихильники мінус критики; останній замір 2025"
         ],
         [
           "14% → 2,5%",
-          "плинність / 2024 → 2025"
+          "плинність / 2024 → 2025",
+          "Усі звільнення / середньорічна чисельність × 100%"
         ]
       ],
       "text": "Анонімні щоквартальні опитування: eNPS +35 → +82, NPS HR-функції +56 → +97 в останньому замірі 2025 року. Участь зросла з 65% до пікових 93%. Відзначали прозорість, розвиток, культуру, ініціативність і підтримку. Керівники окремо оцінювали якість найму й підтримку команд.",
@@ -1316,7 +1366,7 @@ globalThis.WaistlineStrategyCopy={
         ]
       ],
       "nextTitle": "Продовження у 2026 році",
-      "next": "Культура та HR-бренд, а також партнерська модель взаємодії HR із керівниками були реалізовані частково. Їхня остаточна реалізація перейшла у 2026 рік."
+      "next": "У 2025 році робота з керівниками вже включала планування, оцінку, ІПР і рішення щодо команди. Водночас цілісна партнерська модель HR, культура та HR-бренд були реалізовані частково; завершення перейшло у 2026 рік."
     },
     "methodLabel": "Методика та період"
   }
