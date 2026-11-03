@@ -17,3 +17,11 @@ body{background:var(--bg)}.site-head{background:#101116;color:#F7F4F3;border-col
 .module-button[aria-expanded=true]{background:#b4412d;border-color:#b4412d;color:#fff}.module-button[aria-expanded=true] small{color:#fff}
 @media(max-width:700px){.payroll-spotlight>p:last-child{padding:20px}.pilot-total p{margin-top:14px;padding:18px}}
 @media print{.payroll-spotlight strong,.payroll-spotlight>div>p,.pilot-total strong,.story-break .break-statement{color:#111!important}}
+/* Case chrome follows Waistline's coral/milk identity, including open language menus. */
+.reading-progress span{background:#FF674D}
+.site-head .case-language summary{border-color:#F7F4F350}
+.site-head .case-language .languages{background:#F7F4F3;border-color:#19131325;box-shadow:0 12px 30px #19131325}
+.site-head .case-language .languages button{color:#35302e;border-radius:0}
+.site-head .case-language .languages button:hover{background:#fce2da;color:#141313}
+.site-head .case-language .languages button[aria-pressed=true]{background:#b4412d;color:#fff}
+.site-head .case-language summary:focus-visible,.site-head .case-language button:focus-visible{outline-color:#FF674D}
