@@ -39,3 +39,7 @@ Booking runs separately at https://lanven-open-dialogue.livelyprawn258.chatgpt.s
 ## Waistline strategy case
 
 `docs/waistline-strategy.html` presents the author-approved Waistline implementation case: business growth and leadership mandate, audit and roadmap, a performance review rollout, measured outcomes with comparison periods and calculation context, regular practices established by end-2025, and the continuation into 2026. Independent portfolio demos follow the company case. Available in all five portfolio languages. The internal source PDF and personal records are not included.
+
+## SkyCoach strategy case
+
+`docs/skycoach-strategy.html` is the Russian-language implementation case with NDA-rounded results, personal responsibility, rollout criteria, hiring-pivot story, Capacity and Payroll process demonstrations, and five result domains. Links appear in all five CV/portfolio languages and explicitly identify the case as Russian outside RU. The companion PDF is built with `scripts/build_skycoach_case_pdf.py`. Illustrations come from the official SkyCoach catalog; provenance is in `docs/assets/skycoach/CREDITS.md`.
