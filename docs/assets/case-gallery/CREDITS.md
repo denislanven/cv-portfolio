@@ -1,0 +1,1 @@
+Official brand assets used as the covers and entry transitions of employer case studies. Waistline product photography and wordmark: https://waistline.shop/ . SkyCoach inventory chest and coins: https://skycoach.gg/ . SkyCoach hero and wordmark reuse ../skycoach/ assets. Artwork belongs to the respective rights holders. No generated or stock imagery has been added.

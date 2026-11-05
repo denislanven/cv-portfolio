@@ -1,0 +1,36 @@
+(()=>{
+ let busy=false;
+ const assets={waistline:['assets/case-gallery/wl-body.webp','assets/case-gallery/wl-close.webp','assets/case-gallery/wl-logo.svg'],skycoach:['assets/skycoach/sky-elf.webp','assets/case-gallery/sky-chest.webp','assets/case-gallery/sky-coins.webp','assets/skycoach/sky-logo.svg','assets/skycoach/sky-light.svg']},cache={};
+ function load(id){if(!assets[id])return Promise.resolve();if(!cache[id])cache[id]=Promise.all(assets[id].map(src=>new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(true);img.onerror=()=>resolve(false);img.src=src})));return cache[id]}
+ const gallery=document.getElementById('strategy-carousel');if(gallery){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){load('waistline');load('skycoach');io.disconnect()}},{rootMargin:'900px'});io.observe(gallery)}
+ function fashion(){return `<div class="entry-world wl-world"><div class="wl-word-shadow" aria-hidden="true">waistline</div><div class="entry-depth"><div class="wl-product"><img src="assets/case-gallery/wl-close.webp" alt=""></div><div class="wl-hero"><img src="assets/case-gallery/wl-body.webp" alt=""></div><div class="wl-copy"><img class="entry-logo" src="assets/case-gallery/wl-logo.svg" alt=""><span class="entry-kicker">THE PEOPLE BEHIND THE FORM</span><p>Форма.<br><em>Люди.</em><br>Система.</p></div><span class="wl-edition">FASHION E-COMMERCE<br>HR STRATEGY PARTNER / DENIS LANVEN</span><div class="wl-tick" aria-hidden="true"><span>01</span><i></i><span>PEOPLE<br>& CULTURE</span></div></div><div class="entry-aperture"></div></div>`}
+ function gaming(){return `<div class="entry-world sky-world"><img class="sky-light" src="assets/skycoach/sky-light.svg" alt=""><div class="sky-orbital" aria-hidden="true"></div><div class="entry-depth"><div class="sky-type-bg" aria-hidden="true">LEVEL UP</div><img class="sky-entry-chest" src="assets/case-gallery/sky-chest.webp" alt=""><img class="sky-entry-coins" src="assets/case-gallery/sky-coins.webp" alt=""><img class="sky-entry-hero" src="assets/skycoach/sky-elf.webp" alt=""><div class="sky-copy"><img class="entry-logo" src="assets/skycoach/sky-logo.svg" alt=""><span class="entry-kicker">THE PEOPLE BEHIND THE PLAY</span><p>Игровые<br>миры.<br><em>Сильная<br>команда.</em></p></div><div class="sky-floor" aria-hidden="true"></div><span class="sky-edition">GAMING / PEOPLE & OPERATIONS<br>DENIS LANVEN</span><span class="sky-stage-no">02 / ENTER THE SYSTEM</span></div><div class="entry-aperture"></div></div>`}
+  window.openStrategyCase=async(anchor,id,rect)=>{
+  if(busy)return;const navigate=()=>{location.assign(anchor.href)};
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches||document.body.classList.contains('case-motion-off')){navigate();return}
+  busy=true;await load(id);const r=rect||anchor.getBoundingClientRect();
+  const layer=document.createElement('div');layer.className='brand-entry '+(id==='waistline'?'entry-waistline':'entry-skycoach');layer.setAttribute('role','dialog');layer.setAttribute('aria-modal','true');layer.setAttribute('aria-label',document.documentElement.lang==='ru'?'Открытие стратегического кейса':'Opening strategic case');
+  layer.innerHTML=id==='waistline'?fashion():id==='skycoach'?gaming():`<div class="entry-world neutral-world"><span>Changellenge</span><div class="entry-aperture"></div></div>`;
+  document.body.append(layer);const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';const skipButton=document.createElement('button');skipButton.className='entry-skip';skipButton.textContent=document.documentElement.lang==='ru'?'Перейти к кейсу →':'Open case →';layer.append(skipButton);layer.querySelector('.entry-world')?.setAttribute('aria-hidden','true');skipButton.focus({preventScroll:true});
+  const animations=[],duration=3100;let timer,done=false;
+  function animate(el,frames,options){if(el)animations.push(el.animate(frames,{fill:'both',...options}))}
+  function cleanup(){if(done)return;done=true;clearTimeout(timer);layer.remove();animations.forEach(a=>a.cancel());busy=false;document.body.style.overflow=previousOverflow;document.removeEventListener('keydown',skip)}
+  const skip=e=>{if(e.key==='Tab'){e.preventDefault();skipButton.focus();return}if(e.key==='Escape'){e.preventDefault();cleanup();anchor.focus()}};document.addEventListener('keydown',skip);
+  skipButton.addEventListener('click',()=>{cleanup();navigate()});
+  const inset=`inset(${Math.max(0,r.top)}px ${Math.max(0,innerWidth-r.right)}px ${Math.max(0,innerHeight-r.bottom)}px ${Math.max(0,r.left)}px round 4px)`;
+  animate(layer,[{clipPath:inset},{clipPath:'inset(0 0 0 0 round 0px)'}],{duration:700,easing:'cubic-bezier(.16,1,.3,1)'});
+  const world=layer.querySelector('.entry-depth');
+  animate(world,[{transform:'perspective(1200px) translateZ(-90px)',opacity:.7,offset:0},{transform:'perspective(1200px) translateZ(0px)',opacity:1,offset:.3},{transform:'perspective(1200px) translateZ(0px)',opacity:1,offset:.51},{transform:'perspective(1200px) translateZ(820px)',opacity:1,filter:'blur(3px)',offset:1}],{duration:duration*.88,easing:'cubic-bezier(.4,0,.4,1)'});
+  if(id==='waistline'){
+   animate(layer.querySelector('.wl-hero'),[{transform:'translate(16%,10%) rotate(4deg)'},{transform:'translate(0,0) rotate(0deg)',offset:.35},{transform:'translate(0,0) rotate(0deg)',offset:.58},{transform:'translate(15%,-4%) rotate(-5deg)'}],{duration:duration*.86,easing:'cubic-bezier(.2,.7,.3,1)'});
+   animate(layer.querySelector('.wl-product'),[{transform:'translate(-30%,15%) rotate(-12deg)'},{transform:'translate(0,0) rotate(-7deg)',offset:.4},{transform:'translate(-35%,8%) rotate(-13deg)'}],{duration:duration*.88,easing:'ease-in-out'});
+   animate(layer.querySelector('.wl-film'),[{transform:'translate(-15%,20%) rotate(10deg)'},{transform:'translate(0,0) rotate(5deg)',offset:.4},{transform:'translate(-40%,-15%) rotate(15deg)'}],{duration:duration*.88,easing:'ease-in-out'});
+  }else{
+   animate(layer.querySelector('.sky-entry-hero'),[{transform:'translate(12%,15%) scale(.9)',opacity:0},{transform:'translate(0,0) scale(1)',opacity:1,offset:.32},{transform:'translate(0,0) scale(1)',opacity:1,offset:.58},{transform:'translate(23%,8%) scale(1.16)',opacity:1}],{duration:duration*.88,easing:'cubic-bezier(.2,.7,.3,1)'});
+   animate(layer.querySelector('.sky-entry-chest'),[{transform:'translate(-25%,20%) rotate(-20deg) scale(.7)',opacity:0},{transform:'translate(0,0) rotate(-10deg) scale(1)',opacity:1,offset:.35},{transform:'translate(-80%,-45%) rotate(-25deg) scale(1.4)',opacity:1}],{duration:duration*.88,easing:'ease-in-out'});
+   animate(layer.querySelector('.sky-entry-coins'),[{transform:'translate(20%,50%) rotate(20deg) scale(.7)'},{transform:'translate(0,0) rotate(8deg) scale(1)',offset:.4},{transform:'translate(-60%,70%) rotate(25deg) scale(1.5)'}],{duration:duration*.88,easing:'ease-in-out'});
+  }
+  animate(layer.querySelector('.entry-aperture'),[{transform:'translate(-50%,-50%) scale(.02)',opacity:0,offset:0},{transform:'translate(-50%,-50%) scale(.02)',opacity:0,offset:.56},{transform:'translate(-50%,-50%) scale(.2)',opacity:1,offset:.7},{transform:'translate(-50%,-50%) scale(3.2)',opacity:1,offset:1}],{duration:duration*.91,easing:'cubic-bezier(.65,0,.7,.4)'});
+  timer=setTimeout(()=>{cleanup();navigate()},duration);
+ };
+})();
