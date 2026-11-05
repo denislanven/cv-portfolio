@@ -13,7 +13,7 @@
 @media print{[data-motion]{opacity:1!important;transform:none!important}.reading-progress,.module-controls,.expand-workstreams,.architecture-lines{display:none}.story-break,.payroll-spotlight,.pilot-total{background:#fff;color:#111;border:1px solid #777}.break-statement strong,.payroll-spotlight strong{color:#111}.scan-stage,.result-graphs,.pilot-lanes{display:block}.scan-core{display:none}.scan-issue,.result-chart,.pilot-story{background:#fff!important;color:#111!important;margin:14px 0;break-inside:avoid}.domain-body{display:block}.domain-body p,.scan-details p{color:#222!important}.onboarding-outcome{color:#111}.onboarding-outcome>p:not(.kicker){color:#333}.chart-bar{background:#777!important;transform:none!important}}
 /* Keep every chapter readable during fast anchor jumps; animate only on arrival. */
 .motion-ready [data-motion]:not(.is-seen){opacity:1;transform:none}
-@keyframes story-arrive{from{opacity:.18;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+@keyframes story-arrive{from{transform:translateY(12px)}to{transform:translateY(0)}}
 .motion-ready [data-motion].is-seen{animation:story-arrive .65s var(--ease-out) both;animation-delay:var(--delay,0ms)}
 @keyframes scan-focus{0%,100%{box-shadow:inset 0 0 0 0 transparent}45%{box-shadow:inset 0 0 0 1px #FF674D,0 0 28px #FF674D12}}
 .motion-ready .scan-stage.is-seen .scan-issue{animation:scan-focus 1.25s var(--ease-out) both;animation-delay:calc(var(--order)*180ms)}
@@ -25,3 +25,6 @@
 @media(max-width:760px){.architecture-lines{display:none}.module-controls{grid-template-columns:1fr;margin:24px 0 0 12px;padding-left:16px;border-left:1px solid #FF674D80;gap:12px}.module-button{position:relative;display:grid;grid-template-columns:24px 1fr 18px;align-items:center;gap:12px;min-height:72px;padding:16px}.module-button:before{content:'';position:absolute;width:16px;height:1px;background:#FF674D80;left:-17px;top:50%}.module-button>span{align-self:center}.module-button strong{font-size:18px}.architecture-origin{position:relative}.architecture-origin:after{content:'';position:absolute;bottom:-25px;left:12px;width:1px;height:24px;background:#FF674D80}}
 
 .result-notes>summary,.expand-workstreams{min-height:44px}@media(max-width:420px){.scan-details summary{min-height:44px}}
+
+/* Never fade already-visible reading content during startup. */
+.motion-ready [data-motion].is-initial,.motion-ready .scan-stage.is-initial .scan-issue{animation:none!important}

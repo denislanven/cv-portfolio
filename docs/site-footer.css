@@ -1,0 +1,4 @@
+/* Scoped footer utility, independent of page typography. */
+footer .site-privacy{box-sizing:border-box;width:100%;max-width:1200px;margin:20px auto 0;padding:0 24px 24px;font-family:var(--sans,Arial,sans-serif);font-size:12px!important;font-weight:400!important;line-height:1.6!important;letter-spacing:normal!important;text-align:left;overflow-wrap:anywhere;color:var(--muted,#aeb2be)}
+footer .site-privacy a{display:inline;font:inherit!important;letter-spacing:inherit!important;color:inherit!important;text-decoration:underline;text-underline-offset:3px;background:transparent!important;padding:0!important;border:0!important}
+@media(max-width:520px){footer .site-privacy{padding-inline:18px}}
