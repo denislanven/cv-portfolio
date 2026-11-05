@@ -1,5 +1,7 @@
 (()=>{
  let busy=false;
+ function challenge(){return '<div class="entry-world ch-entry-world"><div class="ch-door ch-left"></div><div class="ch-door ch-right"></div><div class="ch-entry-word">CHANGELLENGE »</div></div>'}
+
  const assets={waistline:['assets/case-gallery/wl-body.webp','assets/case-gallery/wl-close.webp','assets/case-gallery/wl-logo.svg'],skycoach:['assets/skycoach/sky-elf.webp','assets/case-gallery/sky-chest.webp','assets/case-gallery/sky-coins.webp','assets/skycoach/sky-logo.svg','assets/skycoach/sky-light.svg']},cache={};
  function load(id){if(!assets[id])return Promise.resolve();if(!cache[id])cache[id]=Promise.all(assets[id].map(src=>new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(true);img.onerror=()=>resolve(false);img.src=src})));return cache[id]}
  const gallery=document.getElementById('strategy-carousel');if(gallery){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){load('waistline');load('skycoach');io.disconnect()}},{rootMargin:'900px'});io.observe(gallery)}
@@ -9,10 +11,10 @@
   if(busy)return;const navigate=()=>{location.assign(anchor.href)};
   if(matchMedia('(prefers-reduced-motion:reduce)').matches||document.body.classList.contains('case-motion-off')){navigate();return}
   busy=true;await load(id);const r=rect||anchor.getBoundingClientRect();
-  const layer=document.createElement('div');layer.className='brand-entry '+(id==='waistline'?'entry-waistline':'entry-skycoach');layer.setAttribute('role','dialog');layer.setAttribute('aria-modal','true');layer.setAttribute('aria-label',document.documentElement.lang==='ru'?'Открытие стратегического кейса':'Opening strategic case');
-  layer.innerHTML=id==='waistline'?fashion():id==='skycoach'?gaming():`<div class="entry-world neutral-world"><span>Changellenge</span><div class="entry-aperture"></div></div>`;
+  const layer=document.createElement('div');layer.className='brand-entry '+(id==='waistline'?'entry-waistline':id==='skycoach'?'entry-skycoach':'entry-changellenge');layer.setAttribute('role','dialog');layer.setAttribute('aria-modal','true');layer.setAttribute('aria-label',document.documentElement.lang==='ru'?'Открытие стратегического кейса':'Opening strategic case');
+  layer.innerHTML=id==='waistline'?fashion():id==='skycoach'?gaming():id==='changellenge'?challenge():`<div class="entry-world neutral-world"><span>Changellenge</span><div class="entry-aperture"></div></div>`;
   document.body.append(layer);const previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';const skipButton=document.createElement('button');skipButton.className='entry-skip';skipButton.textContent=document.documentElement.lang==='ru'?'Перейти к кейсу →':'Open case →';layer.append(skipButton);layer.querySelector('.entry-world')?.setAttribute('aria-hidden','true');skipButton.focus({preventScroll:true});
-  const animations=[],duration=3100;let timer,done=false;
+  const animations=[],duration=id==='changellenge'?1250:3100;let timer,done=false;
   function animate(el,frames,options){if(el)animations.push(el.animate(frames,{fill:'both',...options}))}
   function cleanup(){if(done)return;done=true;clearTimeout(timer);layer.remove();animations.forEach(a=>a.cancel());busy=false;document.body.style.overflow=previousOverflow;document.removeEventListener('keydown',skip)}
   const skip=e=>{if(e.key==='Tab'){e.preventDefault();skipButton.focus();return}if(e.key==='Escape'){e.preventDefault();cleanup();anchor.focus()}};document.addEventListener('keydown',skip);
@@ -21,7 +23,7 @@
   animate(layer,[{clipPath:inset},{clipPath:'inset(0 0 0 0 round 0px)'}],{duration:700,easing:'cubic-bezier(.16,1,.3,1)'});
   const world=layer.querySelector('.entry-depth');
   animate(world,[{transform:'perspective(1200px) translateZ(-90px)',opacity:.7,offset:0},{transform:'perspective(1200px) translateZ(0px)',opacity:1,offset:.3},{transform:'perspective(1200px) translateZ(0px)',opacity:1,offset:.51},{transform:'perspective(1200px) translateZ(820px)',opacity:1,filter:'blur(3px)',offset:1}],{duration:duration*.88,easing:'cubic-bezier(.4,0,.4,1)'});
-  if(id==='waistline'){
+  if(id==='changellenge'){animate(layer.querySelector('.ch-left'),[{transform:'translateX(0)'},{transform:'translateX(-140%)'}],{delay:420,duration:750,easing:'cubic-bezier(.6,0,.2,1)'});animate(layer.querySelector('.ch-right'),[{transform:'translateX(0)'},{transform:'translateX(140%)'}],{delay:420,duration:750,easing:'cubic-bezier(.6,0,.2,1)'});animate(layer.querySelector('.ch-entry-word'),[{opacity:1},{opacity:0}],{delay:400,duration:350})}else if(id==='waistline'){
    animate(layer.querySelector('.wl-hero'),[{transform:'translate(16%,10%) rotate(4deg)'},{transform:'translate(0,0) rotate(0deg)',offset:.35},{transform:'translate(0,0) rotate(0deg)',offset:.58},{transform:'translate(15%,-4%) rotate(-5deg)'}],{duration:duration*.86,easing:'cubic-bezier(.2,.7,.3,1)'});
    animate(layer.querySelector('.wl-product'),[{transform:'translate(-30%,15%) rotate(-12deg)'},{transform:'translate(0,0) rotate(-7deg)',offset:.4},{transform:'translate(-35%,8%) rotate(-13deg)'}],{duration:duration*.88,easing:'ease-in-out'});
    animate(layer.querySelector('.wl-film'),[{transform:'translate(-15%,20%) rotate(10deg)'},{transform:'translate(0,0) rotate(5deg)',offset:.4},{transform:'translate(-40%,-15%) rotate(15deg)'}],{duration:duration*.88,easing:'ease-in-out'});
