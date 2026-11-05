@@ -25,17 +25,38 @@
 .cover-nav > .signature { flex-shrink: 0; white-space: nowrap; }
 .header nav a { white-space: nowrap; }
 
+.sky-language,
+.language-control { position: relative; }
+.sky-language::after,
+.language-control::after,
+.wl-language > summary::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-75%) rotate(45deg);
+  pointer-events: none;
+}
+.language-control { color: #d9d1db; }
+
 .sky-language select,
 .language-control .case-language {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: none;
   display: block;
   box-sizing: border-box;
-  width: 64px;
-  min-width: 64px;
+  width: 80px;
+  min-width: 80px;
   max-width: none;
   height: 40px;
   min-height: 40px;
   margin: 0;
-  padding: 8px 10px;
+  padding: 0 34px 0 16px;
   font-size: 12px;
   line-height: normal;
   vertical-align: middle;
@@ -45,15 +66,20 @@
   outline-offset: 4px;
 }
 .wl-language > summary {
+  position: relative;
   box-sizing: border-box;
-  justify-content: center;
-  min-width: 64px;
+  justify-content: flex-start;
+  width: 80px;
+  min-width: 80px;
   min-height: 40px;
-  padding: 8px 10px;
-  font-size: 12px;
+  padding: 0 34px 0 16px;
+  /* The arrow is drawn consistently instead of using the font's caret. */
+  font-size: 0;
   line-height: 1;
   white-space: nowrap;
 }
+.wl-current-language { font-size: 12px; line-height: 1; }
+.wl-language[open] > summary::after { transform: translateY(-25%) rotate(225deg); }
 .wl-language > div { min-width: 88px; }
 .wl-language > div > button { min-height: 40px; }
 .cover-nav > .wl-language { justify-self: end; }
@@ -93,11 +119,14 @@
   .header { gap: 8px; }
   .sky-language select,
   .language-control .case-language {
-    width: 56px;
-    min-width: 56px;
-    padding-inline: 6px;
+    width: 72px;
+    min-width: 72px;
+    padding: 0 30px 0 12px;
   }
-  .wl-language > summary { min-width: 56px; gap: 6px; }
+  .wl-language > summary { width: 72px; min-width: 72px; padding: 0 30px 0 12px; gap: 0; }
+  .sky-language::after,
+  .language-control::after,
+  .wl-language > summary::after { right: 13px; }
   .header > .motion { width: 28px; }
   .header > .mobile-chapters select { max-width: 60px; font-size: 9px; }
   .cover-top > .prototype { display: none; }
