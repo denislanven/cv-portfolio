@@ -1,10 +1,6 @@
-/* Keep the default case fully readable before JavaScript and without a network waterfall. */
-const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
-const base=path.resolve(__dirname,'../docs');
-const root={dataset:{},innerHTML:''},dummy={};
-const document={documentElement:{},getElementById:id=>id==='main'?root:null,querySelector:()=>dummy,querySelectorAll:()=>[]};
-const c={document,location:{search:'',href:'https://denislanven.github.io/cv-portfolio/waistline-strategy.html'},URL,URLSearchParams,localStorage:{getItem:()=>null},console};vm.createContext(c);
-for(const file of ['waistline-strategy-copy.js','waistline-strategy.js'])vm.runInContext(fs.readFileSync(path.join(base,file),'utf8'),c);
-if(!root.innerHTML.includes('id="evidence"'))throw Error('Incomplete prerender');
-const file=path.join(base,'waistline-strategy.html');let html=fs.readFileSync(file,'utf8');html=html.replace(/<main id="main"[^>]*>[\s\S]*?<\/main>/,'<main id="main" data-rendered-lang="ru">'+root.innerHTML+'</main>');fs.writeFileSync(file,html);
-console.log('Waistline default case prerendered.');
+/* The editorial case is authored as complete static HTML. Validate it without overwriting it. */
+const fs=require('node:fs'),path=require('node:path');
+const file=path.resolve(__dirname,'../docs/waistline-strategy.html'),html=fs.readFileSync(file,'utf8');
+for(const id of ['context','strategy','implementation','onboarding','development','culture','team','results','methodology'])if(!html.includes('id="'+id+'"'))throw Error('Incomplete static Waistline case: '+id);
+if(/<script[^>]+src="waistline-strategy\.js/.test(html))throw Error('Legacy renderer must not overwrite the editorial case');
+console.log('Waistline static case is complete; no prerender rewrite required.');
